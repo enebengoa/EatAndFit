@@ -1,0 +1,102 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block title %}Lista de técnicas{% endblock %}
+{% block stylesheets %}
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <!-- Main Content -->
+        <div class="container-fluid">
+                <div class="side-body">
+                    <div class="page-title">
+                        <span class="title">TÉCNICAS</span>
+                        <div class="description"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                    <div class="title">Lista de técnicas</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <a class="btn btn-default" href="{{path('App_admin_addTecnica') }}">Añadir</a>
+                                    <div class="card-body">
+                                        <table id="myTable" class="datatable table table-striped" cellspacing="0" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nombre</th>
+                                                    <th>Descripción</th>
+                                                    <th>Fecha de creación</th>
+                                                    <th>Utensilios requeridos</th>
+                                                    <th>Video</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% for tecnica in tecnicas %}
+                                                <tr>
+                                                    <td>{{tecnica.nombre}}</td>
+                                                    <td>{{tecnica.descripcion}}</td>
+                                                    <td>{{ tecnica.fechaCreacion|date('Y-m-d') }}</td>
+                                                    <td>{% for utensilio in tecnica.utensilios %}
+                                                        {{utensilio.nombre}},
+                                                    {% endfor %}</td>
+                                                    {% if tecnica.vid==NULL%}
+                                                    <td>No video disponible</td>
+                                                    {% else%}
+                                                    <td><iframe width="75%" height="75%" src="{{tecnica.vid}}" frameborder="0" allowfullscreen></iframe></td>
+                                                    {% endif%}
+                                                    <td>
+                                                        <div class="btn-group" role="group" aria-label="Default button group">
+                                                            <a class="btn btn-default" href="{{path('App_admin_modifyTecnica',{id : tecnica.id}) }}">Ver/Modificar</a>
+                                                            <a class="btn btn-default" data-toggle="modal" data-target="#confirm-delete" data-href="{{path('App_admin_deleteTecnica',{id : tecnica.id}) }}">Eliminar</a>
+                                                        </div>
+                                                    </td> 
+                                                </tr>
+                                            {% endfor %}
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <div>
+
+<!-- Mensaje de confirmación de eliminación-->
+    <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Mensaje de confirmación
+                </div>
+                <div class="modal-body">
+                    ¿Esta seguro de eliminar el elemento seleccionado?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-danger btn-ok">Eliminar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+ <!-- /.Botón de confirmación de eliminar-->
+    <script>
+        $('#confirm-delete').on('show.bs.modal', function(e) 
+        {$(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));});
+    </script>
+
+    <script>
+        $(document).ready(function(){$('#myTable').DataTable();
+        });
+    </script>
+
+{% endblock %}

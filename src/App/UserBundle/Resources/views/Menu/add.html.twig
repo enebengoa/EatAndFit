@@ -1,0 +1,5 @@
+{{ form_start(formMenu, {'class': 'ajaxForm', 'action': path('App_user_addMenu'), 'attr': {'class': 'ajaxForm'}}) }}
+
+{% include "UserBundle:Menu:form.html.twig"  with {'formMenu': formMenu} %}
+
+{{ form_end(formMenu) }}

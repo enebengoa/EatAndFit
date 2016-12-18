@@ -1,0 +1,7 @@
+{# src/App/UserBundle/Resources/views/Comentario/add.html.twig #}
+
+{{ form_start(form, {'class': 'ajaxForm', 'action': path('App_user_add_comentario', { 'id' : receta.id,'user': app.user.id }), 'attr': {'class': 'ajaxForm'}}) }}
+
+{% include "UserBundle:Comentario:form.html.twig"  with {'form': form} %}
+
+{{ form_end(form) }}

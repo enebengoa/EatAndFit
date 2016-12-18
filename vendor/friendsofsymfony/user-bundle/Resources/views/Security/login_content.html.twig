@@ -1,0 +1,51 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="login-box">
+            <div>
+                <div class="login-form row">
+                    <div class="col-sm-12 text-center login-header">
+                        <i class="icon fa fa-cutlery"></i>
+                        <h4 class="login-title">Eat&Fit</h4>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="login-body">
+                            <div class="progress hidden" id="login-progress">
+                                <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                    Log In...
+                                </div>
+                            </div>
+                            {% if error %}
+							    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+							{% endif %}
+                            <form action="{{ path("fos_user_security_check") }}" method="post">
+							    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+								<div class="control">
+							    <label for="username">{{ 'security.login.username'|trans }}</label>
+							    <input type="text" class="form-control" id="username" name="_username" value="{{ last_username }}" required="required" />
+							    </div>
+							    <div class="control">
+							    <label for="password">{{ 'security.login.password'|trans }}</label>
+							    <input type="password" class="form-control" id="password" name="_password" required="required" />
+							    </div>
+							    <div class="control">
+							    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+							    <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+							    </div>
+							    <div class="login-button text-center">
+							    <input type="submit" class="btn btn-primary" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+							    </div>
+							</form>
+                        </div>
+                        <div class="login-footer">
+                            <span class="text-right"><a href="{{path('fos_user_registration_register')}}" class="color-white">New account</a></span>
+                        </div>
+                        <div class="login-footer">
+                            <span class="text-right"><a href="{{path('fos_user_resetting_request')}}"   class="color-white">Forgot password?</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+
+
+

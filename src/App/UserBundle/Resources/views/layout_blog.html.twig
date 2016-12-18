@@ -1,0 +1,56 @@
+{% extends 'baseuser.html.twig' %}
+{% block stylesheets %}
+
+{% block title %}Eat&Fit{% endblock%}
+{{ parent() }}
+
+{% endblock %}
+
+{% block head %}
+	
+{% endblock %}
+
+{% block body %}
+
+
+
+<!--content-->
+<div class="blog">
+	<div class="container">
+		<div class="menu-top">
+			<div class="col-md-4 menu-left">
+				<h3>{% block head2 %} {% endblock %}</h3>
+				<label><i class="glyphicon glyphicon-menu-up"></i></label>
+				<span></span>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+
+		{% block body2 %} {% endblock %}
+		<div class="col-md-3 categories-grid">
+
+				
+				{% block body3 %} {% endblock %}
+				
+				<div class="blog-bottom animated wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+						<h4>Recetas recientes</h4>	
+						{% for lastReceta in lastRecetas %}
+							<div class="product-go">
+								<a href="single.html" class="fashion"><img class="img-responsive " src="{{ asset ('imagenes/'~lastReceta.imagen)}}" alt=""></a>
+								<div class="grid-product">
+									<a href="{{ path('App_user_showReceta', { 'id': lastReceta.id }) }}" class="elit">{{lastReceta.nombre}}</a>
+									<p>{{lastReceta.descripcion(20)}}</p>
+								</div>
+								<div class="clearfix"> </div>
+							</div>
+						{% endfor %}	
+				</div>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+</div>
+
+</div>
+<!--//content-->
+
+{% endblock %}

@@ -1,0 +1,115 @@
+{% extends 'baseuser.html.twig' %}
+{% block stylesheets %}
+
+{% block title %}Eat&Fit{% endblock%}
+{{ parent() }}
+
+{% endblock %}
+
+{% block head %}
+	
+{% endblock %}
+
+{% block body %}
+
+<div class="content" id="content-down">
+    <div class="content-top-top">
+        <div class="container">
+              <div class="events-top">
+                  <div class="col-md-4 events-left animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
+                    <h3><a href="{{ path('App_user_showServicio') }}">Foro</a></h3>
+                    <label><i class="glyphicon glyphicon-menu-up"></i></label>
+                    <span>Pregunta y responde</span>
+                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                      </br>
+                      </br>
+                      <a class="btn btn-lg btn-success" href="{{path('App_user_addForo') }}">Añadir nuevo tema</a>
+                    {% else %}
+                      </br>
+                      </br>
+                      <a class="btn btn-lg btn-success" href="{{path('fos_user_security_login') }}">Login</a>
+                    {% endif %}
+                  </div>
+                  <div class="clearfix"> </div>
+            </div>
+            <div class="content-mid">
+                 <div class="bs-example" data-example-id="simple-table">
+                    <table id="myTable" class="datatable table table-striped" cellspacing="0" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Nombre</th>
+                                                    <th>Descripción</th>
+                                                    <th>Fecha de publicación</th>
+                                                    <th>Creador</th>
+                                                    <th>Nº Comentarios</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% set fila=0%}
+                                            {% for foro in foros %}
+                                            {% set fila=fila+1%} 
+                                                <tr>
+                                                    <td scope="row">{{fila}}</td>
+                                                    <td>{{foro.nombre}}</td>
+                                                    <td>{{foro.descripcion}}</td>
+                                                    <td>@{{ foro.fechaCreacion|date('Y-m-d') }}</td>
+                                                    <td>{{foro.Usuariooo.username}}</td>
+                                                    <td>4</td>
+                                                    <td>
+                                                      <a class="btn btn-1 btn-primary" href="{{ path('App_user_showForo', { 'id': foro.id }) }}">Ver</a>
+                                                      <a class="btn btn-1 btn-danger" data-toggle="modal" data-target="#confirm-delete" data-href="{{path('App_admin_deleteTemaForo',{id : foro.id}) }}">Eliminar</a>
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+
+
+
+
+
+                    
+                  </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mensaje de confirmación de eliminación-->
+    <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Mensaje de confirmación
+                </div>
+                <div class="modal-body">
+                    ¿Esta seguro de eliminar el elemento seleccionado?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-danger btn-ok">Eliminar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+ <!-- /.Botón de confirmación de eliminar-->
+    <script>
+        $('#confirm-delete').on('show.bs.modal', function(e) 
+        {$(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));});
+    </script>
+
+    <script>
+        $(document).ready(function(){$('#myTable').DataTable();
+        });
+    </script>
+     
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% block body %}
+	{{ form_start(form) }}
+	<div class="form-group">
+		{{ form_row(form.nombre) }}
+	</div>
+	<div class="form-group">
+		{{ form_row(form.descripcion) }}
+	</div>
+	<div class="form-group">
+		{{ form_row(form.tiempoPreparacion) }}
+	</div>
+	<div class="form-group">
+		{{ form_row(form.numeroComensales) }}
+	</div>
+	<div class="form-group">
+		{{ form_row(form.TipoReceta) }}
+	</div>
+	<div class="form-group">
+		{{ form_row(form.utensilios) }}
+	</div>
+	<div class="form-group">
+		{{ form_label(form.dificultad) }}</br>{{ form_widget(form.dificultad) }}
+	</div>
+	<div class="form-group">
+		{{ form_row(form.horasIngesta) }}
+	</div>
+	<div class="form-group">
+		{{ form_row(form.imagen) }}
+	</div>
+	<div class="form-group">
+        <p class="required"><b>Ingredientes utilizados</b></p>
+		<ul class="tags" data-prototype="{{ form_widget(form.cantidadesUtilizadas.vars.prototype)|e('html_attr') }}">
+	        {# iterate over each existing item and render its only field: you want #}
+	        {# En add se puede quitar pero si hacemos un solo form no #}
+	        {% for cant in form.cantidadesUtilizadas %}
+	            <li>{{ form_row(cant.cantidad) }}</li>
+	           	<li>{{ form_row(cant.Ingrediente) }}</li>
+	        {% endfor %}
+	    </ul>
+	</div>
+		 {{ form_errors(form) }}
+	{{ form_end(form) }}
+
+{% endblock %}
+
+{% block javascripts %}
+
+<script src="{{ asset('js/embededForm.js') }}"></script>
+
+{% endblock %}

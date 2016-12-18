@@ -1,0 +1,24 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+        <div class="login-box">
+            <div>
+                <div class="login-form row">
+                    <div class="col-sm-12 text-center login-header">
+                        <i class="icon fa fa-cutlery"></i>
+                        <h4 class="login-title">Eat&Fit</h4>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="login-body">
+                            {{ form_widget(form) }}
+                                <div class="login-button text-center">
+                                    <input type="submit" class="btn btn-primary" id="_submit" name="_submit" value="{{ 'registration.submit'|trans }}" />
+                                </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+		</div>
+{{ form_end(form) }}
+
+

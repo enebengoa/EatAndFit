@@ -1,0 +1,38 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block title %}Ver/Modificar técnica {{entidad.nombre}}{% endblock %}
+{% block stylesheets %}
+{{ parent() }}
+{% endblock %}
+{% block body %}
+<!-- Main Content -->
+        <div class="container-fluid">
+                <div class="side-body">
+                    <div class="page-title">
+                        <span class="title">TÉCNICAS</span>
+                        <div class="description"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        <div class="title">Ver/Modificar técnica "{{entidad.nombre}}"
+                                            <a href="{{ path('App_admin_listTecnica')}}">
+                                                <span class="glyphicon glyphicon-arrow-up"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="card-body">
+                                        {% include "AdminBundle:Tecnica:form.html.twig" %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <div>       
+{% endblock %}
+

@@ -1,0 +1,11 @@
+<h2>El menú seleccionado tiene las siguientes recetas: </h2>
+<hr>
+<ol>
+		{% set calorias = 0 %}
+        {% for receta in recetas %}
+                <li><h3>{{receta.nombre}}</h3></li> 
+                {% set calorias = calorias + receta.calorias %}                           
+        {% endfor %}	   		
+</ol>
+<hr>
+<h3>Total de calorias: <strong>{{calorias}}</strong></h3>

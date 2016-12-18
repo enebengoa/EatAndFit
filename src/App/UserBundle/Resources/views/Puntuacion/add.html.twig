@@ -1,0 +1,7 @@
+{# src/App/UserBundle/Resources/views/Puntuacion/add.html.twig #}
+
+{{ form_start(form2, {'class': 'ajaxForm2', 'action': path('App_user_add_puntuacion', { 'id2' : receta.id,'user2': app.user.id }), 'attr': {'class': 'ajaxForm2'}}) }}
+
+{% include "UserBundle:Puntuacion:form.html.twig"  with {'form2': form2} %}
+
+{{ form_end(form2) }}

@@ -1,0 +1,16 @@
+<div class="comment">
+								<h3>Commentarios</h3>
+								{% for comentario in comentarios %}
+									 <div class="media wow fadeInLeft animated" data-wow-delay=".5s">
+										<div class="code-in">
+											<p class="smith"><a>{{ comentario.Usuarioo.username}}</a> <span>{{ comentario.fechaCreacion|date('Y-M-d') }}</span></p>
+
+											<div class="clearfix"> </div>
+										</div>
+									    <div class="media-left"></div>
+									    <div class="media-body">
+											<p>{{ comentario.contenido}}</p>
+									     </div>
+									</div>
+								{% endfor %}
+				</div>

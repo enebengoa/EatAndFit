@@ -1,0 +1,81 @@
+{% extends 'baseuser.html.twig' %}
+{% block stylesheets %}
+
+{% block title %}Eat&Fit{% endblock%}
+{{ parent() }}
+
+{% endblock %}
+
+{% block head %}
+	
+{% endblock %}
+
+{% block body %}
+<!--content-->
+<div class="content">
+	<div class="events">
+		<div class="container">
+			<div class="events-top">
+				<div class="col-md-4 events-left animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
+					<h3><a href="{{ path('App_user_showBlog') }}">Técnicas</a></h3>
+					<label><i class="glyphicon glyphicon-menu-up"></i></label>
+					<span>Para los más entusiastas</span>
+				</div>
+				<div class="col-md-8 events-right animated wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="500ms">
+				</div>
+				<div class="clearfix"> </div>
+				<div class="buscador">
+					{{form_start(form)}}
+						<div class="form-group">
+							{{ form_row(form.nombre) }}
+						</div>
+					{{form_end(form)}}
+				</div>
+			</div>
+			{% for tecnica in pagination %}
+				<div class="events-bottom">
+					<div class="col-md-7 events-bottom2 animated wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
+						<h3>{{tecnica.nombre}}</h3>
+						<label><i class="glyphicon glyphicon-menu-up"></i></label>
+						<p>{{tecnica.descripcion}}</p>
+						<div class="bs-example" data-example-id="simple-table">
+		                    <table class="table">
+		                      <thead>
+		                        <tr>
+		                          <th>#</th>
+		                          <th>Utensilio</th>
+		                        </tr>
+		                      </thead>
+		                      <tbody>
+		                        {% set fila=0%}
+		                        {% for utensilio in tecnica.utensilios %}
+		                          {% set fila=fila+1%}   
+		                            <tr>
+		                              <th scope="row">{{fila}}</th>
+		                              <td>{{utensilio.nombre}}</td>
+		                            </tr>
+		                        {% endfor %}
+		                      </tbody>
+		                    </table>
+		                    </div>
+					</div>
+					<div class="col-md-5 events-bottom1 animated wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+						<div class="videoWrapper">
+						    <!-- Copy & Pasted from YouTube -->
+						    <iframe width="400" height="250" src="{{tecnica.vid}}" frameborder="0" allowfullscreen></iframe>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			{% endfor %}
+			</br>
+			<div class="navigation">
+			    {{ knp_pagination_render(pagination) }}
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}
+

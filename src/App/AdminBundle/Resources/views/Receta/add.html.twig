@@ -1,0 +1,38 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block title %}Añadir receta {% endblock %}
+{% block stylesheets %}
+{{ parent() }}
+	<link href="{{ asset('css/form.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
+{% block body %}
+<!-- Main Content -->
+        <div class="container-fluid">
+                <div class="side-body">
+                    <div class="page-title">
+                        <span class="title">RECETAS</span>
+                        <div class="description"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                        <div class="title">Añadir nueva receta 
+                                            <a href="{{ path('App_admin_listReceta')}}">
+                                                <span class="glyphicon glyphicon-arrow-up"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="card-body">
+                                        {% include "AdminBundle:Receta:form.html.twig" %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <div>
+{% endblock %}

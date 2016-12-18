@@ -1,0 +1,195 @@
+{% extends 'baseuser.html.twig' %}
+{% block stylesheets %}
+
+{% block title %}Eat&Fit{% endblock%}
+{{ parent() }}
+
+{% endblock %}
+
+{% block head %}
+	<div class="banner">
+        <p class="animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">Para tener un cuerpo saludable es esencial comer saludable</p>
+        <label></label>
+        <h4 class="animated wow fadeInTop" data-wow-duration="1000ms" data-wow-delay="500ms">Calidad + Variedad + Salud</h4>
+        <a class="scroll down" href="#content-down"><img src="{{ asset('TemplateUser/images/down.png') }}" alt=""></a>
+    </div>
+    <br></br>	
+{% endblock %}
+
+{% block body %}
+<!--content-->
+<div class="content" id="content-down">
+    <div class="content-top-top">
+        <div class="container">
+            <div class="content-top">
+                <div class="col-md-4 content-left animated wow fadeInLeft" data-wow-duration="100ms" data-wow-delay="500ms">
+                    <h3>Blog</h3>
+                    <label><i class="glyphicon glyphicon-menu-up"></i></label>
+                    <span>Existe una gran variedad</span>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="content-mid">
+                <a  href="{{ path('App_user_listReceta') }}">
+                    <div class="col-md-4 food-grid animated wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms" >
+                        <div class=" hover-fold">
+                          <h4>RECETAS</h4>
+                          <div class="top">
+                            <div class="back face" >
+                            <p>Hay una gran variedad de recetas disponibles que se adaptan a tus gustos y necesidades </p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </a>
+                <a  href="{{ path('App_user_listUtensilio') }}">
+                    <div class="col-md-4 food-grid animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
+                        <div class=" hover-fold">
+                          <h4>UTENSILIOS</h4>
+                          <div class="top">
+                            <div class="back face">
+                            <p>Hay una gran variedad de utensilios que te ayudarán a realizar tus recetas eficiente y eficazmente</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </a>
+                <a  href="{{ path('App_user_listTecnica') }}">
+                    <div class="col-md-4 food-grid animated wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+                        <div class=" hover-fold">
+                          <h4>TÉCNICAS</h4>
+                          <div class="top">
+                            <div class="back face">
+                            <p>Hay una gran variedad de técnicas que te ayudarán a obtener las habilidades culinarias necesarias para iniciarte en el mundo de la comida saludable</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+<!--services-->
+{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+<div class="services">
+    <div class="container">
+        <div class="services-top">      
+            <div class="col-md-8 services-right animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
+                    <p>A través de Eat&Fit va a ser capaz de  crear diferentes menús personalizados a tus necesidades y gustos los cuales podrás agregar a una lista de supermercado virtual la cuál te ayudará a realizar tu compra facilmente, y al mismo tiempo podrá consultar cualquier duda existente tanto a diferentes expertos en la materia de nutrición como a los otros usuarios a través de un foro interactivo</p>
+            </div>
+            <div class="col-md-4 services-left animated wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="500ms">
+                <h3>Servicios</h3>
+                <label><i class="glyphicon glyphicon-menu-up"></i></label>
+                <span>Pensados para tí</span>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="service-top">
+            <div class="content-mid">
+                <a  href="{{ path('App_user_listForo') }}">
+                    <div class="col-md-4 food-grid animated wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
+                        <div class=" hover-fold">
+                          <h4>FORO</h4>
+                          <div class="top">
+                            <div class="back face" >
+                            <p>En caso de que tengas una duda que quieras compartir con el resto de usuarios podrás crear nuevos temas para el foro para lograr así obtener diferentes respuestas a la duda planteada</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </a>
+                <a  href="{{ path('App_user_listMenu') }}">
+                    <div class="col-md-4 food-grid animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
+                        <div class=" hover-fold">
+                          <h4>MENÚ</h4>
+                          <div class="top">
+                            <div class="back face">
+                            <p>Con las diferentes recetas disponibles serás capaz de crear menús totalmente personalizados a tus necesidades</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </a>
+                <a  href="{{ path('App_user_listForo') }}">
+                    <div class="col-md-4 food-grid animated wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+                        <div class=" hover-fold">
+                          <h4>LISTA DE COMPRA</h4>
+                          <div class="top">
+                            <div class="back face">
+                            <p>Por último, a través de esta herramienta serás capaz de crear diferentes listas de mercado conformada por los ingredientes de las recetas y menús seleccionados</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="services">
+    <div class="container">
+        <div class="services-top">      
+            <div class="col-md-8 services-right animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
+                    <p>A través de Eat&Fit va a ser capaz de  crear diferentes menús personalizados a tus necesidades y gustos los cuales podrás agregar a una lista de supermercado virtual la cuál te ayudará a realizar tu compra facilmente, y al mismo tiempo podrá consultar cualquier duda existente tanto a diferentes expertos en la materia de nutrición como a los otros usuarios a través de un foro interactivo</p>
+            </div>
+            <div class="col-md-4 services-left animated wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="500ms">
+                <h3>Servicios</h3>
+                <label><i class="glyphicon glyphicon-menu-up"></i></label>
+                <span>Pensados para tí</span>
+                </br>
+                </br>
+                <a class="btn btn-lg btn-success" href="{{path('fos_user_security_login') }}">Login para utilizar servicios</a>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+<!--//services-->
+<!--news-->
+    <div class="content-top-top">
+        <div class="container">
+            <div class="content-top">
+                <div class="col-md-4 content-left animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
+                    <h3>Top recetas</h3>
+                    <label><i class="glyphicon glyphicon-menu-up"></i></label>
+                    <span>¿Qué opinan los usuarios?</span>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="news-bottom"> 
+                {% set numReceta=1 %}
+                    <div class="news-bot"> 
+                        {% for receta in lastRecetas %}
+                                <div class="col-md-6 news-bottom1 animated wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
+                                    <a href="{{ path('App_user_showReceta', { 'id': receta.id }) }}">
+                                        <div class="content-item" style="background-image: url({{ asset ('imagenes/'~receta.imagen)}});">
+                                            <div class="overlay"></div>
+                                            <div class=" news-bottom2">
+                                                <ul class="grid-news">
+                                                    <li><span><i class="glyphicon glyphicon-calendar"> </i>{{ receta.fechaCreacion|date('Y-m-d') }}</span><b>/</b></li>
+                                                    <li><span><i class="glyphicon glyphicon-comment"> </i>{{receta.comentarios|length}} comentarios</span><b>/</b></li>
+                                                    <li><span><i class="glyphicon glyphicon-share"> </i>Agregar</span></li>
+                                                </ul>
+                                                <p>{{receta.nombre()}}</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                              {% if (numReceta % 2 == 0) and (numReceta != 4) %}
+                                    </div>
+                                    <div class="news-bot">
+                                {% endif %}
+                            {% set numReceta=numReceta+1%}  
+
+                        {% endfor %}
+                    </div>   
+            </div>
+        </div>
+    </div>
+</div>
+	
+{% endblock %}

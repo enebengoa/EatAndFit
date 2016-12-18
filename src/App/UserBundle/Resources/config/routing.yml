@@ -1,0 +1,124 @@
+App_user_homepage:
+    path:     /
+    defaults: { _controller: UserBundle:User:home }
+
+App_user_contacto:
+    path:     /contacto
+    defaults: { _controller: UserBundle:User:contacto}
+
+App_user_listReceta:
+    path:     /blogListReceta
+    defaults: { _controller: UserBundle:User:listReceta}
+
+App_user_listRecetaHoraIngesta:
+    path:     /blogListRecetaHoraIngesta/{id}
+    defaults: { _controller: UserBundle:User:listRecetaHoraIngesta}
+
+App_user_listRecetaTipoReceta:
+    path:     /blogListRecetaTipoReceta/{id}
+    defaults: { _controller: UserBundle:User:listRecetaTipoReceta}
+
+App_user_listRecetaLastThree:
+    path:     /blogListRecetaLastThree
+    defaults: { _controller: UserBundle:User:listLastThreeReceta}
+
+App_user_showReceta:
+    path:     /blogShowReceta/{id}
+    defaults: { _controller: UserBundle:User:showReceta}
+
+App_user_listUtensilio:
+    path:     /blogListUtensilio
+    defaults: { _controller: UserBundle:User:listUtensilio}
+    options:
+        expose: true
+
+App_user_listTecnica:
+    path:     /bloglistTecnica
+    defaults: { _controller: UserBundle:User:listTecnica}
+
+App_user_listMenu:
+    path:     /ListMenu
+    defaults: { _controller: UserBundle:User:listMenu}
+
+App_user_addMenu:
+    path:     /AddMenu
+    defaults: { _controller: UserBundle:User:addMenu}
+    condition: "request.isXmlHttpRequest()"
+
+App_user_showMenu:
+    path:     /ShowMenu/{id}
+    defaults: { _controller: UserBundle:User:showMenu}
+
+App_user_addSubMenu:
+    path:     /AddSubMenu/{Menu}/{Receta}/{horasIngesta}
+    defaults: { _controller: UserBundle:User:addSubMenu}
+
+App_user_deleteSubMenu:
+    path:     /DeleteSubMenu/{receta}/{menu}/{horaIngesta}
+    defaults: { _controller: UserBundle:User:deleteSubMenu}
+
+App_user_listLista:
+    path:     /listLista
+    defaults: { _controller: UserBundle:User:listLista}
+
+App_user_addLista:
+    path:     /addLista
+    defaults: { _controller: UserBundle:User:addLista}
+    condition: "request.isXmlHttpRequest()"
+
+App_user_showLista:
+    path:     /showLista/{id}
+    defaults: { _controller: UserBundle:User:showLista}
+
+App_user_showListaJson:
+    path:     /showListaJson/{id}
+    defaults: { _controller: UserBundle:User:renderJsonShowLista}
+
+
+App_user_addOrdenCompra:
+    path:     /AddOrdenCompra/{Lista}/{Menu}/{cantidad}
+    defaults: { _controller: UserBundle:User:addOrdenCompra}
+
+App_user_listForo:
+    path:     /listForo
+    defaults: { _controller: UserBundle:User:listForo}
+
+App_user_addForo:
+    path:     /addForo
+    defaults: { _controller: UserBundle:User:addForo}
+
+App_user_showForo:
+    path:     /showForo/{id}
+    defaults: { _controller: UserBundle:User:showForo}
+
+App_user_showBlog:
+    path:     /showBlog
+    defaults: { _controller: UserBundle:User:showBlog}
+
+App_user_showServicio:
+    path:     /showServicio
+    defaults: { _controller: UserBundle:User:showServicio}
+
+App_user_add_comentario:
+    path:     /addComentario/{id}{user}
+    defaults: { _controller: UserBundle:Comentario:addComentario}
+
+App_user_add_puntuacion:
+    path:     /addPuntuacion/{id2}{user2}
+    defaults: { _controller: UserBundle:Comentario:addPuntuacion}
+
+App_user_RecetasMenu:
+    path:     /RecetasMenu/{Menu}
+    defaults: { _controller: UserBundle:User:RecetasMenu}
+
+App_user_addOrdenCompraLista:
+    path:     /addOrdenCompraLista/{id}
+    defaults: { _controller: UserBundle:User:addOrdenCompraLista}
+
+App_user_deleteOrdenCompra:
+    path:     /deleteOrdenCompra/{id}
+    defaults: { _controller: UserBundle:User:deleteOrdenCompra}
+
+App_user_modifyEstadoOrdenCompra:
+    path:     /modifyEstadoOrdenCompra/{id}
+    defaults: { _controller: UserBundle:User:modifyEstado}

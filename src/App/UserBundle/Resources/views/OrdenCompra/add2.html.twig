@@ -1,0 +1,4 @@
+{{ form_start(formOrdenCompra, {'class': 'ajaxForm', 'action': path('App_user_addOrdenCompraLista',{id : lista.id}), 'attr': {'class': 'ajaxForm'}}) }}
+
+{% include "UserBundle:OrdenCompra:form2.html.twig"  with {'formOrdenCompra': formOrdenCompra} %}
+{{ form_end(formOrdenCompra) }}

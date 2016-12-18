@@ -1,0 +1,25 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{{ form_start(form, { 'action': path('fos_user_resetting_reset', {'token': token}), 'attr': { 'class': 'fos_user_resetting_reset' } }) }}
+
+<div class="login-box">
+    <div>
+        <div class="login-form row">
+            <div class="col-sm-12 text-center login-header">
+                <i class="icon fa fa-cutlery"></i>
+                <h4 class="login-title">Eat&Fit</h4>
+            </div>
+            <div class="col-sm-12">
+                <div class="login-body">
+                    {{ form_widget(form) }}
+    					<div>
+        					<input type="submit" value="{{ 'resetting.reset.submit'|trans }}" />
+    					</div>
+					{{ form_end(form) }}
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>
+
+    

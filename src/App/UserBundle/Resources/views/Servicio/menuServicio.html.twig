@@ -1,0 +1,61 @@
+{% extends 'baseuser.html.twig' %}
+{% block stylesheets %}
+
+{% block title %}Eat&Fit{% endblock%}
+{{ parent() }}
+
+{% endblock %}
+
+{% block head %}
+	
+{% endblock %}
+
+{% block body %}
+
+<div class="content" id="content-down">
+    <div class="content-top-top">
+        <div class="container">
+            <div class="content-mid">
+                <a  href="{{ path('App_user_listForo') }}">
+                    <div class="col-md-4 food-grid animated wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
+                        <div class=" hover-fold">
+                          <h4>FORO</h4>
+                          <div class="top">
+                            <div class="back face" >
+                            <p>En caso de que tengas una duda que quieras compartir con el resto de usuarios podrás crear nuevos temas para el foro para lograr así obtener diferentes respuestas a la duda planteada</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </a>
+                <a  href="{{ path('App_user_listMenu') }}">
+                    <div class="col-md-4 food-grid animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
+                        <div class=" hover-fold">
+                          <h4>MENÚ</h4>
+                          <div class="top">
+                            <div class="back face">
+                            <p>Con las diferentes recetas disponibles serás capaz de crear menús totalmente personalizados a tus necesidades</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </a>
+                <a  href="{{ path('App_user_listLista') }}">
+                    <div class="col-md-4 food-grid animated wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+                        <div class=" hover-fold">
+                          <h4>LISTA DE COMPRA</h4>
+                          <div class="top">
+                            <div class="back face">
+                            <p>Por último, a través de esta herramienta serás capaz de crear diferentes listas de mercado conformada por los ingredientes de las recetas y menús seleccionados</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,167 @@
+{% extends 'UserBundle::layout_blog.html.twig' %}
+
+
+{% block title %}Eat&Fit{% endblock%}
+
+
+{% block head2 %}
+<a href="{{ path('App_user_showBlog') }}">Recetas</a>
+{% endblock %}
+
+{% block body3 %}
+<div class="grid-categories animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
+					<h4>Categoría</h4>
+					<div class="buscador">
+							{{form_start(form)}}
+								<div class="form-group">
+									{{ form_row(form.nombre) }}
+									{{ form_row(form.numeroComensales) }}
+									{{ form_row(form.TipoReceta) }}
+									{{ form_row(form.celiaco) }}
+								</div>
+							{{form_end(form)}}
+					</div>
+					</br>
+					{% if formMenu!=NULL%}
+						<h4>Menú</h4>
+									<div class="buscador">
+											{{form_start(formMenu)}}
+												<div class="form-group">
+													{{ form_row(formMenu.menu) }}
+												</div>
+											{{form_end(formMenu)}}
+											<button id="verMenu" class="btn btn-success" >Ver</button>
+									</div>
+					{% endif %}
+				</div>
+{% endblock %}
+
+
+{% block body2 %}
+
+
+
+<div class="col-md-9 blog-header">
+
+	</br>
+	{% set numReceta=0%}
+	<div class=" blog-head">
+	{% for receta in pagination %}
+        {% set numReceta=numReceta+1%}                                     
+			<div class="col-md-4 blog-top">
+				<div class="blog-in">
+					<img class="img-responsive" src="{{ asset ('imagenes/'~receta.imagen)}}" alt=" ">
+					<div class="blog-grid">
+						<h3><a href="{{ path('App_user_showReceta', { 'id': receta.id }) }}">{{receta.nombre}}</a></h3>
+						<div class="date">
+							<span class="date-in"><i class="glyphicon glyphicon-calendar"> </i>{{ receta.fechaCreacion|date('Y-m-d') }}</span>
+							<a href="single.html" class="comments"><i class="glyphicon glyphicon-comment"></i>{{receta.comentarios|length}}</a>
+							<div class="clearfix"> </div>
+						</div>
+						<p>{{receta.descripcion(40)}}</p>
+						{% if formMenu!=NULL%}
+						<a class="btn btn-success" data-href={{receta.id}} data-toggle="modal" data-target="#confirm-comision"><i class="glyphicon glyphicon-plus"> </i></a>
+						{% endif %}
+
+						<div class="more">						
+							<a class="link link-yaku" href="{{ path('App_user_showReceta', { 'id': receta.id }) }}">
+								<span>L</span><span>e</span><span>e</span><span>r</span> <span>m</span><span>á</span><span>s</span>	
+							</a>
+						</div>
+					</div>					
+				</div>
+			</div>	
+	{% if (numReceta % 3 == 0)%}
+		</div>
+		<div class="clearfix"> </div>
+		<div class=" blog-head">
+	{% endif %}
+		{% endfor %}
+		</br>
+		<div class="navigation">
+			{{ knp_pagination_render(pagination) }}
+		</div>
+	</div>
+</div>
+
+<!-- Modal  ADDING -->
+  
+
+        <!-- Modal  ADDING Confirm -->
+        <div id="addConfirm" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"></h4>
+              </div>
+              <div class="modal-body">
+              <div id="menuActual"> </div>
+					                
+
+              </div>
+              <div class="modal-footer">
+                <button  type="button" class="from-submit btn btn-default" data-dismiss="modal">Aceptar</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="modal fade" id="confirm-comision" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Mensaje de confirmación</h4>
+                    </div>
+
+                    <div class="modal-body">
+                                              {% include "UserBundle:SubMenu:add.html.twig"  with {'formSubMenu': formSubMenu} %}
+
+                        <p class="debug-url"></p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <a id="recetaAdd"class="btn btn-success btn-ok">Guardar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+  <script type="text/javascript" src="{{ asset('js/addReceta.js') }}"></script>
+
+  <script>
+
+
+            $("#verMenu").on('click',(function () {
+                    var menu= jQuery('#form_menu').val();
+
+                    $.ajax({
+                        type: 'POST',
+                        url: "http://127.0.0.1/pfg_eneko/web/app_dev.php/RecetasMenu/"+menu,
+                        data: $(this).serialize(),
+                          success: function(returnData) {
+                             $("#menuActual").html(returnData['html']);
+                             console.log(returnData['html']);
+                             jQuery('#addConfirm').modal('show');
+                           
+               
+                        }
+                       
+                    });
+
+            }));
+
+
+
+  </script>
+ {% endblock %}

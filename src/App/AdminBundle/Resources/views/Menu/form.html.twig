@@ -1,0 +1,73 @@
+{% block body %}
+	{{ form_start(form) }}
+	<div class="form-group">
+		{{ form_row(form.nombre) }}
+	</div>
+	<div class="form-group">
+		{{ form_row(form.descripcion) }}
+	</div>
+	<div class="form-group">
+		{{ form_label(form.publico) }}</br>{{ form_widget(form.publico) }}
+	</div>
+	<div class="form-group">
+		{{ form_row(form.imagen) }}
+	</div>
+	<div class="form-group">
+		<p class="required"><b>Recetas </b></p>
+		<ul class="tags" data-prototype="{{ form_widget(form.subMenus.vars.prototype)|e('html_attr') }}">
+	        {# iterate over each existing item and render its only field: you want #}
+	        {# En add se puede quitar pero si hacemos un solo form no #}
+	        {% for subMenu in form.subMenus %}
+	            <li>{{ form_row(subMenu.HoraIngesta) }}</li>
+	           	<li>{{ form_row(subMenu.recetas) }}</li>
+	        {% endfor %}
+	    </ul>
+	</div>
+
+		 {{ form_errors(form) }}
+	{{ form_end(form) }}
+{% endblock %}
+
+{% block javascripts %}
+
+<script src="{{ asset('js/embededForm.js') }}"></script>
+
+<script>
+
+	
+
+
+    var $HoraIngesta = $('#menu_subMenus_1_HoraIngesta');
+
+    var $form = $HoraIngesta.closest('form');
+
+    // cada vez que el usuario cambie el HoraIngesta en el select
+    $HoraIngesta.on('change', function() {
+
+        // creamos la data, solo con el HoraIngesta del HoraIngesta,
+        // ya que es el dato relevante en este caso.
+        var data = $HoraIngesta.serialize();
+
+        // Hacemos un envío del formulario, lo que ejecutará el evento preSubmit
+        // del listener AddHoraIngestaFieldSubscriber,
+        // y actualizará el HoraIngesta invernadero, con los estados del HoraIngesta seleccionado.
+
+        $.ajax({
+            url : "{{ path('App_admin_ajax_add_subMenu_form') }}",
+            type: $form.attr('method'),
+            data : data,
+            success: function(html) {
+
+                // la variable html representa toda la página junto con el select de estados.
+                // el cual tomamos y colocamos para reemplazar el select actual.
+
+                $('##menu_subMenus_1_Receta').replaceWith($(html).find('#menu_subMenus_1_Receta'));
+            }
+        });
+    });
+</script>
+
+{% endblock %}
+
+
+

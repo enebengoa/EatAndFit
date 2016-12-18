@@ -1,0 +1,32 @@
+</br>
+Hola {{usuario.username}}, 
+</br>
+</br>
+Las <strong>TOP 3 RECETAS</strong> de esta semana son:
+</br>
+</br>
+{% set i = 0 %}
+{% for lastReceta in lastRecetas %}
+    <tr>
+    {% set i = i + 1 %}
+        <td>{{i}}.- {{lastReceta.nombre}}</td></br>                                          
+    </tr>
+{% endfor %}
+</br>
+Para acceder a la descripción de las recetas mostradas, acceder al <strong>PDF</strong> adjuntado.
+</br>
+</br>
+Un cordial saludo,
+</br>
+</br>
+Equipo de Eat&Fit
+</br>
+</br>
+</br>
+</br>
+</br>
+<strong>Contacto:</strong></br>
+<i>Eneko Bengo San Sebastián</i></br>
+Telf: <i> +34 680 11 43 44</i></br>
+Email: <i> enebengoa@hotmail.com</i>
+

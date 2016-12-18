@@ -1,0 +1,61 @@
+{% extends 'baseuser.html.twig' %}
+{% block stylesheets %}
+
+{% block title %}Eat&Fit{% endblock%}
+{{ parent() }}
+
+{% endblock %}
+
+{% block head %}
+	
+{% endblock %}
+
+{% block body %}
+
+<div class="content" id="content-down">
+    <div class="content-top-top">
+        <div class="container">
+            <div class="content-mid">
+                <a  href="{{ path('App_user_listReceta') }}">
+                    <div class="col-md-4 food-grid animated wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms" >
+                        <div class=" hover-fold">
+                          <h4>RECETAS</h4>
+                          <div class="top">
+                            <div class="back face" >
+                            <p>Hay una gran variedad de recetas disponibles que se adaptan a tus gustos y necesidades </p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </a>
+                <a  href="{{ path('App_user_listUtensilio') }}">
+                    <div class="col-md-4 food-grid animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
+                        <div class=" hover-fold">
+                          <h4>UTENSILIOS</h4>
+                          <div class="top">
+                            <div class="back face">
+                            <p>Hay una gran variedad de utensilios que te ayudarán a realizar tus recetas eficiente y eficazmente</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </a>
+                <a  href="{{ path('App_user_listTecnica') }}">
+                    <div class="col-md-4 food-grid animated wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+                        <div class=" hover-fold">
+                          <h4>TÉCNICAS</h4>
+                          <div class="top">
+                            <div class="back face">
+                            <p>Hay una gran variedad de técnicas que te ayudarán a obtener las habilidades culinarias necesarias para iniciarte en el mundo de la comida saludable</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </a>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

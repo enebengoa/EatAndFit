@@ -1,0 +1,290 @@
+{% extends 'UserBundle::layout_menu.html.twig' %}
+
+{% block title %}Eat&Fit{% endblock%}
+
+{% block head2 %}<a href="{{ path('App_user_listMenu') }}">Menú "{{menu.nombre}}"</a>{% endblock %}
+
+{% block body2 %}
+
+<div class="col-md-12 blog-header">
+<a class="btn btn-lg btn-success" href="{{path('App_user_listReceta') }}">Añadir nueva receta</a>
+</br>
+</br>
+{% if (desayuno is empty)%}
+{% else %}
+<div class="col-md-9 blog-header">
+	<h2>Desayuno</h2>
+	{% set numReceta=0%}
+	<div class=" blog-head">
+	{% for receta in desayuno %}
+        {% set numReceta=numReceta+1%} 
+        <div id="{{receta.id}}-6">                                    
+			<div class="col-md-4 blog-top">
+				<div class="blog-in">
+					<img class="img-responsive" src="{{ asset ('imagenes/'~receta.imagen)}}" alt=" ">
+					<div class="blog-grid">
+						<h3><a href="{{ path('App_user_showReceta', { 'id': receta.id }) }}">{{receta.nombre}}</a></h3>
+						<div class="date">
+							<span class="date-in"><i class="glyphicon glyphicon-calendar"> </i>{{ receta.fechaCreacion|date('Y-m-d') }}</span>
+							<a href="single.html" class="comments"><i class="glyphicon glyphicon-comment"></i>{{receta.comentarios|length}}</a>
+							<div class="clearfix"> </div>
+						</div>
+						<p>{{receta.descripcion(40)}}</p>
+						<button class="btn btn-danger" data-href="{{ path('App_user_deleteSubMenu', { 'receta': receta.id , 'menu': menu.id, 'horaIngesta' : 6}) }}" data-toggle="modal" data-target="#confirm-delete"><i class="glyphicon glyphicon-trash"> </i></button>
+						<div class="more">						
+							<a class="link link-yaku" href="{{ path('App_user_showReceta', { 'id': receta.id }) }}">
+								<span>L</span><span>e</span><span>e</span><span>r</span> <span>m</span><span>á</span><span>s</span>	
+							</a>
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>	
+	{% if (numReceta % 3 == 0)%}
+		</div>
+		<div class="clearfix"> </div>
+		<div class=" blog-head">
+	{% endif %}
+		{% endfor %}
+		</br>
+	</div>
+</div>
+{% endif %}
+
+{% if (almuerzo is empty)%}
+
+{% else %}
+
+
+<div class="col-md-9 blog-header">
+	</br>
+	<h2>Almuerzo</h2>
+	{% set numReceta=0%}
+	<div class=" blog-head">
+	{% for receta in almuerzo %}
+        {% set numReceta=numReceta+1%}
+        <div id="{{receta.id}}-7">                                      
+			<div class="col-md-4 blog-top">
+				<div class="blog-in">
+					<img class="img-responsive" src="{{ asset ('imagenes/'~receta.imagen)}}" alt=" ">
+					<div class="blog-grid">
+						<h3><a href="{{ path('App_user_showReceta', { 'id': receta.id }) }}">{{receta.nombre}}</a></h3>
+						<div class="date">
+							<span class="date-in"><i class="glyphicon glyphicon-calendar"> </i>{{ receta.fechaCreacion|date('Y-m-d') }}</span>
+							<a href="single.html" class="comments"><i class="glyphicon glyphicon-comment"></i>{{receta.comentarios|length}}</a>
+							<div class="clearfix"> </div>
+						</div>
+						<p>{{receta.descripcion(40)}}</p>
+						<button class="btn btn-danger" data-href="{{ path('App_user_deleteSubMenu', { 'receta': receta.id , 'menu': menu.id, 'horaIngesta' : 7}) }}" data-toggle="modal" data-target="#confirm-delete"><i class="glyphicon glyphicon-trash"> </i></button>
+						<div class="more">						
+							<a class="link link-yaku" href="{{ path('App_user_showReceta', { 'id': receta.id }) }}">
+								<span>L</span><span>e</span><span>e</span><span>r</span> <span>m</span><span>á</span><span>s</span>	
+							</a>
+						</div>
+					</div>					
+				</div>
+			</div>	
+		</div>	
+	{% if (numReceta % 3 == 0)%}
+		</div>
+		<div class="clearfix"> </div>
+		<div class=" blog-head">
+	{% endif %}
+		{% endfor %}
+		</br>
+	</div>
+</div>
+
+{% endif %}
+
+
+
+{% if (comida is empty)%}
+
+{% else %}
+<div class="col-md-9 blog-header">
+	<h2>Comida</h2>
+	{% set numReceta=0%}
+	<div class=" blog-head">
+	{% for receta in comida %}
+        {% set numReceta=numReceta+1%} 
+        <div id="{{receta.id}}-8">                                     
+			<div class="col-md-4 blog-top">
+				<div class="blog-in">
+					<img class="img-responsive" src="{{ asset ('imagenes/'~receta.imagen)}}" alt=" ">
+					<div class="blog-grid">
+						<h3><a href="{{ path('App_user_showReceta', { 'id': receta.id }) }}">{{receta.nombre}}</a></h3>
+						<div class="date">
+							<span class="date-in"><i class="glyphicon glyphicon-calendar"> </i>{{ receta.fechaCreacion|date('Y-m-d') }}</span>
+							<a href="single.html" class="comments"><i class="glyphicon glyphicon-comment"></i>{{receta.comentarios|length}}</a>
+							<div class="clearfix"> </div>
+						</div>
+						<p>{{receta.descripcion(40)}}</p>
+						<button class="btn btn-danger" data-href="{{ path('App_user_deleteSubMenu', { 'receta': receta.id , 'menu': menu.id, 'horaIngesta' : 8}) }}" data-toggle="modal" data-target="#confirm-delete"><i class="glyphicon glyphicon-trash"> </i></button>
+						<div class="more">						
+							<a class="link link-yaku" href="{{ path('App_user_showReceta', { 'id': receta.id }) }}">
+								<span>L</span><span>e</span><span>e</span><span>r</span> <span>m</span><span>á</span><span>s</span>	
+							</a>
+						</div>
+					</div>					
+				</div>
+			</div>	
+		</div>	
+	{% if (numReceta % 3 == 0)%}
+		</div>
+		<div class="clearfix"> </div>
+		<div class=" blog-head">
+	{% endif %}
+		{% endfor %}
+		</br>
+	</div>
+</div>
+{% endif %}
+
+{% if (merienda is empty)%}
+
+{% else %}
+<div class="col-md-9 blog-header">
+	<h2>Merienda</h2>
+	{% set numReceta=0%}
+	<div class=" blog-head">
+	{% for receta in merienda %}
+        {% set numReceta=numReceta+1%} 
+        <div id="{{receta.id}}-9">                                     
+			<div class="col-md-4 blog-top">
+				<div class="blog-in">
+					<img class="img-responsive" src="{{ asset ('imagenes/'~receta.imagen)}}" alt=" ">
+					<div class="blog-grid">
+						<h3><a href="{{ path('App_user_showReceta', { 'id': receta.id }) }}">{{receta.nombre}}</a></h3>
+						<div class="date">
+							<span class="date-in"><i class="glyphicon glyphicon-calendar"> </i>{{ receta.fechaCreacion|date('Y-m-d') }}</span>
+							<a href="single.html" class="comments"><i class="glyphicon glyphicon-comment"></i>{{receta.comentarios|length}}</a>
+							<div class="clearfix"> </div>
+						</div>
+						<p>{{receta.descripcion(40)}}</p>
+						<button class="btn btn-danger" data-href="{{ path('App_user_deleteSubMenu', { 'receta': receta.id , 'menu': menu.id, 'horaIngesta' : 9}) }}" data-toggle="modal" data-target="#confirm-delete"><i class="glyphicon glyphicon-trash"> </i></button>
+						<div class="more">						
+							<a class="link link-yaku" href="{{ path('App_user_showReceta', { 'id': receta.id }) }}">
+								<span>L</span><span>e</span><span>e</span><span>r</span> <span>m</span><span>á</span><span>s</span>	
+							</a>
+						</div>
+					</div>					
+				</div>
+			</div>	
+		</div>	
+	{% if (numReceta % 3 == 0)%}
+		</div>
+		<div class="clearfix"> </div>
+		<div class=" blog-head">
+	{% endif %}
+		{% endfor %}
+		</br>
+	</div>
+</div>
+{% endif %}
+
+{% if (cena is empty)%}
+
+{% else %}
+<div class="col-md-9 blog-header">
+	<h2>Cena</h2>
+	{% set numReceta=0%}
+	<div class=" blog-head">
+	{% for receta in cena %}
+        {% set numReceta=numReceta+1%} 
+        <div id="{{receta.id}}-10">                                     
+			<div class="col-md-4 blog-top">
+				<div class="blog-in">
+					<img class="img-responsive" src="{{ asset ('imagenes/'~receta.imagen)}}" alt=" ">
+					<div class="blog-grid">
+						<h3><a href="{{ path('App_user_showReceta', { 'id': receta.id }) }}">{{receta.nombre}}</a></h3>
+						<div class="date">
+							<span class="date-in"><i class="glyphicon glyphicon-calendar"> </i>{{ receta.fechaCreacion|date('Y-m-d') }}</span>
+							<a href="single.html" class="comments"><i class="glyphicon glyphicon-comment"></i>{{receta.comentarios|length}}</a>
+							<div class="clearfix"> </div>
+						</div>
+						<p>{{receta.descripcion(40)}}</p>
+						<button class="btn btn-danger" data-href="{{ path('App_user_deleteSubMenu', { 'receta': receta.id , 'menu': menu.id, 'horaIngesta' : 10}) }}" data-toggle="modal" data-target="#confirm-delete"><i class="glyphicon glyphicon-trash"> </i></button>
+						<div class="more">						
+							<a class="link link-yaku" href="{{ path('App_user_showReceta', { 'id': receta.id }) }}">
+								<span>L</span><span>e</span><span>e</span><span>r</span> <span>m</span><span>á</span><span>s</span>	
+							</a>
+						</div>
+					</div>					
+				</div>
+			</div>	
+		</div>	
+	{% if (numReceta % 3 == 0)%}
+		</div>
+		<div class="clearfix"> </div>
+		<div class=" blog-head">
+	{% endif %}
+		{% endfor %}
+		</br>
+	</div>
+</div>
+{% endif %}
+</div>
+
+
+<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Mensaje de confirmación</h4>
+                </div>
+
+                <div class="modal-body">
+                    <p>¿Desea borrar la receta de este menú?</p>
+                    <p class="debug-url"></p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-danger btn-ok">Borrar</a>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
+{% block javascripts %}
+<script>
+        $('#confirm-delete').on('show.bs.modal', function(e) {
+            $(".btn-ok").click(function () {
+
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    url: $(e.relatedTarget).data('href'),
+                    success: function(jqXHR) {
+                    	console.log(jqXHR.id);
+                        $(jqXHR.id).remove();
+                        $('#confirm-delete').modal('hide');
+                        
+
+                        $('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        $('#addConfirm').find('.modal-title').html('Borrar')
+                        $('#addConfirm').modal('show');
+                        $("#addConfirm").modal();
+
+
+
+                    },
+                    error: function(jqXHR) {
+                        $('#confirm-delete').modal('hide');
+
+                        $('#addConfirm').find('.modal-body').html(jqXHR.responseJSON.message);
+                        $('#addConfirm').find('.modal-title').html('NO Borrado')
+                        $('#addConfirm').modal('show');
+                        $("#addConfirm").modal();
+
+                    },
+                });
+            });
+        });
+  </script>
+  
+ {% endblock %}
+

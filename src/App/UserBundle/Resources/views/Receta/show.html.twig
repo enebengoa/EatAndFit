@@ -1,0 +1,132 @@
+{% extends 'UserBundle::layout_blog.html.twig' %}
+
+{% block title %}Eat&Fit{% endblock%}
+
+{% block head2 %}<a href="{{ path('App_user_listReceta') }}">Receta "{{receta.nombre}}"</a>{% endblock %}
+
+{% block body2 %}
+
+<!--content-->
+		<div class="col-md-9 ">
+			<div class="single">
+				<div class="single-top">
+					<img class="img-responsive wow fadeInUp animated" data-wow-delay=".5s" src="{{ asset ('imagenes/'~receta.imagen)}}" alt="" />
+						<div class="lone-line">
+							<h4>{{receta.nombre}}</h4>	
+
+								<ul class="grid-blog">
+									<li><span><i class="glyphicon glyphicon-time"> </i>{{ receta.fechaCreacion|date('Y-m-d') }}/ /</span></li>
+									<li><span><i> </i> Tiempo de preparación: {{receta.tiempoPreparacion|date('H:i')}} /</span></li>
+									<li><span><i> </i> {{receta.numeroComensales}} comensales</span></li>
+									</br>
+									</br>
+									<li><span><i class="glyphicon glyphicon-comment"> </i>{{comentarios|length}} comentarios /</span></li>
+									<li><span><i> </i> Dificultad: {{receta.dificultad}} sobre 5 / </span></li>
+									<li><span><i> </i> Apto para celiacos: {{receta.celiaco ? 'Sí':'No'}}  </span></li>
+									</br>
+									</br>
+									{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+												<div id="stars">
+													{% include "UserBundle:Puntuacion:add.html.twig" with { 'form2' : form2, 'id2': receta.id, 'user2': app.user.id} %}
+												</div>
+										
+					                {% else %}
+					                {{ puntuacionMedia|rating() }}
+					                </br>
+					                <a class="btn btn-lg btn-success" href="{{path('fos_user_security_login') }}">Login</a>			            
+					                {% endif %}	
+									
+								</ul>
+								</br>
+								<table class="table">
+		                      <thead>
+		                        <tr>
+		                          <th>#</th>
+		                          <th>Ingrediente</th>
+		                          <th>Cantidad</th>
+		                          <th>Unidad</th>
+		                        </tr>
+		                      </thead>
+		                      <tbody>
+		                        {% set fila=0%}
+		                        {% for cu in receta.cantidadesUtilizadas %}
+		                          {% set fila=fila+1%}   
+		                            <tr>
+		                              <th scope="row">{{fila}}</th>
+		                              <td>{{cu.Ingrediente.nombre}}</td>
+		                              <td>{{cu.cantidad}}</td>
+		                              <td>{{cu.Ingrediente.unidadMedida}}</td>
+		                            </tr>
+		                        {% endfor %}
+		                      </tbody>
+		                  </table>
+		                  </br>
+								<p class="wow fadeInLeft animated" data-wow-delay=".5s"><span>{{receta.descripcion}}</span></p>
+						</div>
+						
+			</div>
+			{% include "UserBundle:Comentario:list.html.twig" with { 'comentarios' : comentarios} %}
+
+				{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+	                <div class="leave">
+						<h3>Agrega un comentario</h3>
+							
+								<div class="single-grid wow fadeInLeft animated" data-wow-delay=".5s">
+									
+										{% include "UserBundle:Comentario:add.html.twig" with { 'form' : form, 'id': receta.id, 'username': app.user.id} %}
+								</div>
+							
+					</div>       
+                {% else %}
+                <a class="btn btn-lg btn-success" href="{{path('fos_user_security_login') }}">Login</a>			            
+                {% endif %}			
+	</div>
+</div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+<script>
+        $('body').on('submit', '.ajaxForm', function (e) {
+
+        e.preventDefault();
+
+        $.ajax({
+            type: $(this).attr('method'),
+            url: $(this).attr('action'),
+            data: $(this).serialize(),
+            success: function(returnData) {
+         		$(".comment").html(returnData['html']);
+                        
+                    },
+                    error: function(jqXHR) {
+                       
+                    },
+            });
+        });
+    </script>
+
+
+    <script>
+        $('body').on('submit','.ajaxForm2', function (e) {
+
+        e.preventDefault();
+
+
+        $.ajax({
+            type: $(this).attr('method'),
+            url: $(this).attr('action'),
+            data: $(this).serialize(),
+            success: function(returnData) {
+                        $("#stars").html(returnData['html']);
+                    },
+                    error: function(jqXHR) {
+                       
+                    },
+            });
+        });
+    </script>
+
+
+{% endblock %}

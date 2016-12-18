@@ -1,0 +1,199 @@
+App_admin_homepage:
+    path:     /
+    defaults: { _controller: AdminBundle:Admin:dashboard }
+
+App_admin_addIngrediente:
+    path:     /addIngrediente
+    defaults: { _controller: AdminBundle:Admin:addIngrediente }
+
+App_admin_listIngrediente:
+    path:     /listIngrediente
+    defaults: { _controller: AdminBundle:Admin:listIngrediente }
+
+App_admin_modifyIngrediente:
+    path:     /modifyIngrediente/{id}
+    defaults: { _controller: AdminBundle:Admin:modifyIngrediente }
+
+App_admin_deleteIngrediente:
+    path:     /deleteIngrediente/{id}
+    defaults: { _controller: AdminBundle:Admin:deleteIngrediente }
+
+App_admin_addTipoReceta:
+    path:     /addTipoReceta
+    defaults: { _controller: AdminBundle:Admin:addTipoReceta}
+
+App_admin_listTipoReceta:
+    path:     /listTipoReceta
+    defaults: { _controller: AdminBundle:Admin:listTipoReceta }
+
+App_admin_modifyTipoReceta:
+    path:     /modifyTipoReceta/{id}
+    defaults: { _controller: AdminBundle:Admin:modifyTipoReceta }
+
+App_admin_deleteTipoReceta:
+    path:     /deleteTipoReceta/{id}
+    defaults: { _controller: AdminBundle:Admin:deleteTipoReceta }
+
+App_admin_addHoraIngesta:
+    path:     /addHoraIngesta
+    defaults: { _controller: AdminBundle:Admin:addHoraIngesta}
+
+App_admin_listHoraIngesta:
+    path:     /listHoraIngesta
+    defaults: { _controller: AdminBundle:Admin:listHoraIngesta }
+
+App_admin_modifyHoraIngesta:
+    path:     /modifyHoraIngesta/{id}
+    defaults: { _controller: AdminBundle:Admin:modifyHoraIngesta }
+
+App_admin_deleteHoraIngesta:
+    path:     /deleteHoraIngesta/{id}
+    defaults: { _controller: AdminBundle:Admin:deleteHoraIngesta }
+
+App_admin_addUtensilio:
+    path:     /addUtensilio
+    defaults: { _controller: AdminBundle:Admin:addUtensilio}
+
+App_admin_listUtensilio:
+    path:     /listUtensilio
+    defaults: { _controller: AdminBundle:Admin:listUtensilio }
+
+App_admin_modifyUtensilio:
+    path:     /modifyUtensilio/{id}
+    defaults: { _controller: AdminBundle:Admin:modifyUtensilio }
+
+App_admin_deleteUtensilio:
+    path:     /deleteUtensilio/{id}
+    defaults: { _controller: AdminBundle:Admin:deleteUtensilio}
+
+App_admin_addTecnica:
+    path:     /addTecnica
+    defaults: { _controller: AdminBundle:Admin:addTecnica}
+
+App_admin_listTecnica:
+    path:     /listTecnica
+    defaults: { _controller: AdminBundle:Admin:listTecnica }
+
+App_admin_showTecnica:
+    path:     /showTecnica/{id}
+    defaults: { _controller: AdminBundle:Admin:showTecnica}
+
+App_admin_modifyTecnica:
+    path:     /modifyTecnica/{id}
+    defaults: { _controller: AdminBundle:Admin:modifyTecnica }
+
+App_admin_deleteTecnica:
+    path:     /deleteTecnica/{id}
+    defaults: { _controller: AdminBundle:Admin:deleteTecnica}
+
+App_admin_addReceta:
+    path:     /addReceta
+    defaults: { _controller: AdminBundle:Admin:addReceta }
+
+App_admin_listReceta:
+    path:     /listReceta
+    defaults: { _controller: AdminBundle:Admin:listReceta }
+
+App_admin_modifyReceta:
+    path:     /modifyReceta/{id}
+    defaults: { _controller: AdminBundle:Admin:modifyReceta }
+
+App_admin_deleteReceta:
+    path:     /deleteReceta/{id}
+    defaults: { _controller: AdminBundle:Admin:deleteReceta }
+
+App_admin_addMenu:
+    path:     /addMenu
+    defaults: { _controller: AdminBundle:Admin:addMenu }
+
+App_admin_ajax_add_subMenu_form:
+    path:     /ajaxAddSubMenuform
+    defaults: { _controller: AdminBundle:Admin:SubMenuAjaxForm}
+
+App_admin_listMenu:
+    path:     /listMenu
+    defaults: { _controller: AdminBundle:Admin:listMenu }
+
+App_admin_modifyMenu:
+    path:     /modifyMenu/{id}
+    defaults: { _controller: AdminBundle:Admin:modifyMenu }
+
+App_admin_deleteMenu:
+    path:     /deleteMenu/{id}
+    defaults: { _controller: AdminBundle:Admin:deleteMenu }
+
+App_admin_addSubMenu:
+    path:     /addSubMenu
+    defaults: { _controller: AdminBundle:Admin:addSubMenu }
+
+App_admin_addLista:
+    path:     /addLista
+    defaults: { _controller: AdminBundle:Admin:addLista }
+
+App_admin_listLista:
+    path:     /listLista
+    defaults: { _controller: AdminBundle:Admin:listLista }
+
+App_admin_modifyLista:
+    path:     /modifyLista/{id}
+    defaults: { _controller: AdminBundle:Admin:modifyLista }
+
+App_admin_deleteLista:
+    path:     /deleteLista/{id}
+    defaults: { _controller: AdminBundle:Admin:deleteLista }
+
+App_admin_addTemaForo:
+    path:     /addTemaForo
+    defaults: { _controller: AdminBundle:Admin:addTemaForo }
+
+App_admin_listTemaForo:
+    path:     /listTemaForo
+    defaults: { _controller: AdminBundle:Admin:listTemaForo}
+
+App_admin_modifyTemaForo:
+    path:     /modifyTemaForo/{id}
+    defaults: { _controller: AdminBundle:Admin:modifyTemaForo }
+
+App_admin_deleteTemaForo:
+    path:     /deleteTemaForo/{id}
+    defaults: { _controller: AdminBundle:Admin:deleteTemaForo }
+
+App_admin_addComentario:
+    path:     /addComentario
+    defaults: { _controller: AdminBundle:Admin:addComentario }
+
+App_admin_listComentario:
+    path:     /listComentario
+    defaults: { _controller: AdminBundle:Admin:listComentario}
+
+App_admin_deleteComentario:
+    path:     /deleteComentario/{id}
+    defaults: { _controller: AdminBundle:Admin:deleteComentario }
+
+App_admin_listUsuario:
+    path:     /listUsuario
+    defaults: { _controller: AdminBundle:Admin:listUsuario }
+
+App_admin_deleteUsuario:
+    path:     /deleteUsuario/{id}
+    defaults: { _controller: AdminBundle:Admin:deleteUsuario }
+
+App_admin_addTipoUsuario:
+    path:     /addTipoUsuario
+    defaults: { _controller: AdminBundle:Admin:addTipoUsuario }
+
+App_admin_listTipoUsuario:
+    path:     /listTipoUsuario
+    defaults: { _controller: AdminBundle:Admin:listTipoUsuario }
+
+App_admin_modifyTipoUsuario:
+    path:     /modifyTipoUsuario/{id}
+    defaults: { _controller: AdminBundle:Admin:modifyTipoUsuario }
+
+App_admin_deleteTipoUsuario:
+    path:     /deleteTipoUsuario/{id}
+    defaults: { _controller: AdminBundle:Admin:deleteTipoUsuario }
+
+App_admin_sendEmail:
+    path:     /sendEmail
+    defaults: { _controller: AdminBundle:Admin:sendEmail }
