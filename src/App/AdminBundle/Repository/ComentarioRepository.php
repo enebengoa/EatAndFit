@@ -17,6 +17,18 @@ class ComentarioRepository extends \Doctrine\ORM\EntityRepository
 		return $qp->getQuery()->getSingleScalarResult();
 	}
 
+	public function getComentarioReceta($receta)
+	{
+		$qp = $this->createQueryBuilder('r')->select('r')->where('r.Receta = :Receta')->setParameter('Receta', $receta)->addOrderBy('r.fechaCreacion', 'ASC');
+		return $qp->getQuery()->getResult();
+	}
+
+	public function getComentarioForo($foro)
+	{
+		$qp = $this->createQueryBuilder('r')->select('r')->where('r.Temaforo = :Temaforo')->setParameter('Temaforo', $foro)->addOrderBy('r.fechaCreacion', 'ASC');
+		return $qp->getQuery()->getResult();
+	}
+
 
 
 }
