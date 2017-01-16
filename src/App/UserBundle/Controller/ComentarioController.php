@@ -41,7 +41,7 @@ class ComentarioController extends Controller
                 return $this->redirectToRoute('App_user_listReceta');
 
             }else{
-                $comentarios = $this->get('doctrine')->getManager()->getRepository('AdminBundle:Comentario')->findAll();
+                $comentarios = $this->get('doctrine')->getManager()->getRepository('AdminBundle:Comentario')->getComentarioReceta($id);
                 $answer['html'] = $this->render('UserBundle:Comentario:list.html.twig', array('comentarios' => $comentarios))->getContent(); 
                 $response = new Response();                                                
                 $response->headers->set('Content-type', 'application/json; charset=utf-8');
@@ -101,6 +101,42 @@ class ComentarioController extends Controller
             return $this->render('UserBundle:Puntuacion:add.html.twig',array('form2' => $form->createView()));
         }else{
             return new JsonResponse( array('form2' => $this->renderView('UserBundle:Puntuacion:add.html.twig', array('receta'=>$id2,'form2' => $form->createView(),))), 400);
+        }
+    }
+
+    public function addComentarioForoAction(Request $request, TemaForo $id, $user)
+    {
+
+        $Comentario = new Comentario();
+        
+        $form   = $this->createForm(ComentarioType::class, $Comentario);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $usuario = $this->getDoctrine()->getManager()->getRepository('AdminBundle:Usuario')->findOneBy(array('id' => $user));
+            $Comentario->setTemaforo($id);
+            $Comentario->setUsuarioo($usuario);
+            $Comentario->setFechaCreacion(new \DateTime());
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($Comentario);
+            $flush=$em->flush();
+            if (!$request->isXmlHttpRequest()) {
+                return $this->redirectToRoute('App_user_listForo');
+
+            }else{
+                $comentarios = $this->get('doctrine')->getManager()->getRepository('AdminBundle:Comentario')->getComentarioForo($id);
+                $answer['html'] = $this->render('UserBundle:Comentario:list.html.twig', array('comentarios' => $comentarios))->getContent(); 
+                $response = new Response();                                                
+                $response->headers->set('Content-type', 'application/json; charset=utf-8');
+                $response->setContent(json_encode($answer));
+                return $response;
+            } 
+        }
+
+        if (!$request->isXmlHttpRequest()) {
+            return $this->render('UserBundle:Comentario:add.html.twig',array('form' => $form->createView()));
+        }else{
+            return new JsonResponse( array('form' => $this->renderView('UserBundle:Comentario:add.html.twig', array('Comentario' => $Comentario,'form' => $form->createView(),))), 400);
         }
     }
 
