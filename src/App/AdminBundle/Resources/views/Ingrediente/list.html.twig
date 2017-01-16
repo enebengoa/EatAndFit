@@ -24,7 +24,8 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
-                                    <a class="btn btn-default" href="{{path('App_admin_addIngrediente') }}">Añadir</a>
+                                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-plus"></i>&nbsp;  Añadir nuevo ingrediente</button>
+                                    <hr>
                                     <div class="card-body">
                                         <table id="myTable" class="datatable table table-striped" cellspacing="0" width="100%">
                                             <thead>
@@ -39,22 +40,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                            {% for ingrediente in ingredientes %}
-                                                <tr>
-                                                    <td>{{ingrediente.nombre}}</td>
-                                                    <td>{{ingrediente.descripcion}}</td>
-                                                    <td>{{ingrediente.tipoIngrediente}}</td>
-                                                    <td>{{ingrediente.unidadMedida}}</td>
-                                                    <td>{{ingrediente.caloriasUnidad}}</td>
-                                                    <td>{{ingrediente.celiaco ? 'Sí':'No'}}</td>
-                                                    <td>
-                                                        <div class="btn-group" role="group" aria-label="Default button group">
-                                                            <a class="btn btn-default" href="{{path('App_admin_modifyIngrediente',{id : ingrediente.id}) }}">Ver/Modificar</a>
-                                                            <a class="btn btn-default" data-toggle="modal" data-target="#confirm-delete" data-href="{{path('App_admin_deleteIngrediente',{id : ingrediente.id}) }}">Eliminar</a>
-                                                        </div>
-                                                    </td> 
-                                                </tr>
-                                            {% endfor %}
+                                            </tbody>
                                         </table>
                                     </div>
                                 </div>
@@ -65,6 +51,68 @@
         <div>
 
 <!-- Mensaje de confirmación de eliminación-->
+    <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Mensaje de confirmación
+                </div>
+                <div class="modal-body">
+                    ¿Esta seguro de eliminar el elemento seleccionado?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <button class="btn btn-danger btn-ok" id = "delete">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal  ADDING -->
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Añadir Ingrediente</h4>
+              </div>
+              <div class="modal-body">
+                  <div id="form_body">
+                      {% include "AdminBundle:Ingrediente:add.html.twig"  with {'formIngrediente': formIngrediente} %}
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="from-submit btn btn-default" data-dismiss="modal">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Modal  ADDING Confirm -->
+        <div id="addConfirm" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"></h4>
+              </div>
+              <div class="modal-body">
+
+              </div>
+              <div class="modal-footer">
+                <button  type="button" class="from-submit btn btn-default" data-dismiss="modal">Aceptar</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Mensaje de confirmación de eliminación-->
     <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -93,7 +141,139 @@
     </script>
 
     <script>
-        $(document).ready(function(){$('#myTable').DataTable();
+    $(document).ready(function() {
+        var table = $('#myTable').DataTable( {
+            destroy: true,
+            dom: 'Bfrtip',
+            buttons: [
+                'copyHtml5',
+                'excelHtml5',
+                'csvHtml5',
+                {
+                    extend: 'pdfHtml5',
+                    title: 'Lista de ingredientes',
+                    exportOptions: {
+                        columns: ':visible'
+                    },
+                    download: 'open'
+                },                
+                'colvis',
+                {
+                    text : 'Recargar',
+                    action : function ( e, dt, node, config ) {
+                        dt.ajax.reload();
+                    }
+                }
+            ],
+             "language": {
+                "url": "{{asset ('datatable/js/Spanish.json')}}"
+            },
+            autoWidth: false,
+            "sAjaxDataProp":"",
+            "sAjaxSource": "{{ path('App_admin_listIngrediente_reload')}}",
+            "columns": [
+                {
+                    "data": "nombre", // can be null or undefined
+                    "defaultContent": "<i>Not set</i>"
+                },
+                {
+                    "data": "descripcion", // can be null or undefined
+                    "defaultContent": "<i>Not set</i>"
+                },
+                {
+                    "data": "tipoIngrediente", // can be null or undefined
+                    "defaultContent": "<i>Not set</i>"
+                },  
+                {
+                    "data": "unidadMedida", // can be null or undefined
+                    "defaultContent": "<i>Not set</i>"
+                },  
+                {
+                    "data": "caloriasUnidad", // can be null or undefined
+                    "defaultContent": "<i>Not set</i>"
+                }, 
+                {
+                    "data": "celiaco", // can be null or undefined
+                    "defaultContent": "<i>Not set</i>"
+                },
+                {
+                    "data": "id",
+                    bSortable: false,
+                    mRender: 
+                    function (data, type, row) {                            
+                           
+                           myUrlShow = "http://127.0.0.1/pfg_eneko/web/app_dev.php/admin/modifyIngrediente/"+ data;
+
+                           myUrlEdit = "http://127.0.0.1/pfg_eneko/web/app_dev.php/admin/deleteIngrediente/"+ data;
+
+                           return '<a href=\"' + myUrlShow + '\" class="btn btn-primary" > Ver</a> <a data-href=\"' + myUrlEdit + '\" class="btn btn-default" data-toggle="modal"data-target="#confirm-delete"> Eliminar</a>';
+                        }
+                }
+                ]
+            });
+        });
+    </script>
+
+    <script>
+        $('body').on('submit', '.ajaxForm', function (e) {
+
+        e.preventDefault();
+
+        $.ajax({
+            type: $(this).attr('method'),
+            url: $(this).attr('action'),
+            data: $(this).serialize(),
+            success: function(jqXHR) {
+                        $('#myModal').modal('hide');
+
+                        $('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        $('#addConfirm').find('.modal-title').html('Mensaje de confirmación')
+                        $('#addConfirm').modal('show');
+                        $("#addConfirm").modal();
+                        $('#myTable').DataTable().ajax.reload();
+
+                    },
+                    error: function(jqXHR) {
+                        if (jqXHR.responseJSON.hasOwnProperty('form')) {
+                            $('#form_body').html(jqXHR.responseJSON.form);
+                        }
+
+                        $('.form_error').html(jqXHR.responseJSON.message);
+                    },
+            });
+        });
+    </script>
+
+    <script>
+        $('#confirm-delete').on('show.bs.modal', function(e) {
+
+            $("#delete").click(function () {
+               
+
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    url: $(e.relatedTarget).data('href'),
+                    success: function(jqXHR) {
+                        $('#confirm-delete').modal('hide');
+
+                        $('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        $('#addConfirm').find('.modal-title').html('Borrar ingrediente')
+                        $('#addConfirm').modal('show');
+                        $("#addConfirm").modal();
+                        $('#myTable').DataTable().ajax.reload(); 
+
+                    },
+                    error: function(jqXHR) {
+                        $('#confirm-delete').modal('hide');
+
+                        $('#addConfirm').find('.modal-body').html(jqXHR.responseJSON.message);
+                        $('#addConfirm').find('.modal-title').html('No ha sido eliminado el ingrediente')
+                        $('#addConfirm').modal('show');
+                        $("#addConfirm").modal();
+                    },
+                }); 
+            });
         });
     </script>
 
