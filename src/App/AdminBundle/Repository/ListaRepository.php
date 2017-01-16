@@ -34,11 +34,7 @@ class ListaRepository extends \Doctrine\ORM\EntityRepository
 	        return $consulta;
 	  }
 
-	  public function check($menu, $lista)
-	{
-		$qp = $this->createQueryBuilder('l')->select('l')->where('l.id = :lista')->setParameter('lista', $lista->getId())->innerJoin('l.menus','m')->andWhere('m.id = :menu')->setParameter('menu', $menu->getId());
-		return $qp->getQuery()->getOneOrnullResult();
-	}
+	 
 
 	     public function listTable($lista)
     {
@@ -68,5 +64,18 @@ class ListaRepository extends \Doctrine\ORM\EntityRepository
 		return $qp->getQuery()->getSingleScalarResult();
 	}
 
+	public function listMenuTable($lista)
+    {
+        return $this->getEntityManager()
+            ->createQueryBuilder()
+            ->select('l.id','m.id as idMenu', 'ml.numeroComensales as comensales', 'm.nombre as menu' )
+                ->from('AdminBundle:Lista', 'l')
+                ->where('l.id = :id')
+                ->setParameter('id',$lista->getId())
+                ->innerJoin('l.menus_listas','ml')
+                ->innerJoin('ml.Menu','m')
+            ->getQuery()
+            ->getResult();
+    }
 
 }
