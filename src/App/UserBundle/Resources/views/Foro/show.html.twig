@@ -9,98 +9,101 @@
 
 <!--content-->
 
-
 <div class="content" id="content-down">
     <div class="content-top-top">
         <div class="container">
-              <div class="events-top">
-                  <div class="col-md-12 events-left animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
-                    <h3><a href="{{ path('App_user_listForo') }}">Foro "{{foro.nombre}}"</a></h3>
-                    <label><i class="glyphicon glyphicon-menu-up"></i></label>
-                    <span></span>
-                  </div>
-                  <div class="clearfix"> </div>
-            </div>    
-            <div class="content-mid">
-
-            	<div class="col-md-9 ">
-			<div class="single">
-				<div class="single-top">
-						<div class="lone-line">
-							<h4>{{foro.nombre}}</h4>
-								<ul class="grid-blog">
-									<li><span><i class="glyphicon glyphicon-time"> </i>{{ foro.fechaCreacion|date('Y-m-d') }}</span></li>
-									<li><a href="#"><i class="glyphicon glyphicon-comment"> </i>4 Comment</a></li>
-								</ul>
-								<p class="wow fadeInLeft animated" data-wow-delay=".5s"><span>{{foro.descripcion}}</span></p>
-						</div>
-			</div>
-			<div class="comment">
-								<h3>Commentarios</h3>
-								 <div class="media wow fadeInLeft animated" data-wow-delay=".5s">
-									<div class="code-in">
-										<p class="smith"><a href="#">Eneko</a> <span>15 Noviembre 2016</span></p>
-										<div class="clearfix"> </div>
+	              <div class="events-top">
+	                  <div class="col-md-12 events-left animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
+	                    <h3><a href="{{ path('App_user_listForo') }}">Foro "{{foro.nombre}}"</a></h3>
+	                    <label><i class="glyphicon glyphicon-menu-up"></i></label>
+	                    <span></span>
+	                  </div>
+	                  <div class="clearfix"> </div>
+	               </div>    
+	            <div class="content-mid">
+	            	<div class="col-md-9 ">
+						<div class="single">
+							<div class="single-top">
+									<div class="lone-line">
+										<h4>{{foro.nombre}}</h4>
+											<ul class="grid-blog">
+												<li><span><i class="glyphicon glyphicon-time"> </i>{{ foro.fechaCreacion|date('Y-m-d') }}</span></li>
+												<li><a href="#"><i class="glyphicon glyphicon-comment"> </i>{{foro.comentarios|length}} comentario/s</a></li>
+											</ul>
+											<p class="wow fadeInLeft animated" data-wow-delay=".5s"><span>{{foro.descripcion}}</span></p>
 									</div>
-								    <div class="media-left">
-								        <a href="#">
-								        </a>
-								     </div>
-								    <div class="media-body">
-			
-										<p>La avena con leche de almendras es un desayuno muy saludable.</p>
-								      </div>
-								    </div>
-								    <div class="media media-1 wow fadeInUp animated" data-wow-delay=".5s">
-									<div class="code-in">
-										<p class="smith"><a href="#"> Naia</a> <span>16 Noviembre 2016</span></p>
-										<div class="clearfix"> </div>
-									</div>
-								    <div class="media-left">
-								     </div>
-								    <div class="media-body">
-			
-										<p>La ingesta de fruta también es considerada uno de los mejores desayunos.</p>
-								      </div>
-								    </div>
-								</div>
-				</div>
-				<div class="leave">
-					<h3>Leave a comment</h3>
-						<form>
-							<div class="single-grid wow fadeInLeft animated" data-wow-delay=".5s">
-								
-									<input type="text" value="Name" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Name';}">
-								
-									<input type="text" value="E-mail" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'E-mail';}">
-								
-								
-									<input type="text" value="Web site" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Web site';}">
-								
-									<textarea value=" " onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Comment';}">Comment</textarea>
-									<label class="hvr-rectangle-out">
-											<input type="submit" value="Send">
-									</label>						
 							</div>
-						</form>
+						</div>
+
+				{% include "UserBundle:Comentario:list.html.twig" with { 'comentarios' : comentarios} %}
+
+				{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+	                <div class="leave">
+						<h3>Agrega un comentario</h3>
+							
+								<div class="single-grid wow fadeInLeft animated" data-wow-delay=".5s">
+									
+										{% include "UserBundle:Comentario:add2.html.twig" with { 'form' : form, 'id': foro.id, 'username': app.user.id} %}
+								</div>
+							
+					</div>       
+                {% else %}
+                <a class="btn btn-lg btn-success" href="{{path('fos_user_security_login') }}">Login</a>			            
+                {% endif %}	
+
+                </div>
 				</div>
-	</div>
-                    
-
-
-
-
-
-                <div class="clearfix"></div>
-            </div>
+		        <div class="clearfix"></div>
         </div>
     </div>
 </div>
 
 
 
+{% endblock %}
 
-		
-</div>
+{% block javascripts %}
+
+<script>
+        $('body').on('submit', '.ajaxForm', function (e) {
+
+        e.preventDefault();
+
+        $.ajax({
+            type: $(this).attr('method'),
+            url: $(this).attr('action'),
+            data: $(this).serialize(),
+            success: function(returnData) {
+         		$(".comment").html(returnData['html']);
+                        
+                    },
+                    error: function(jqXHR) {
+                       
+                    },
+            });
+        });
+    </script>
+
+
+    <script>
+        $('body').on('submit','.ajaxForm2', function (e) {
+
+        e.preventDefault();
+
+
+        $.ajax({
+            type: $(this).attr('method'),
+            url: $(this).attr('action'),
+            data: $(this).serialize(),
+            success: function(returnData) {
+                        $("#stars").html(returnData['html']);
+                    },
+                    error: function(jqXHR) {
+                       
+                    },
+            });
+        });
+    </script>
+
 
 {% endblock %}
