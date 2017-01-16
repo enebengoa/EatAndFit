@@ -77,11 +77,11 @@ class Menu
 
     private $subMenus;
 
-        /**
-     * @ORM\ManyToMany(targetEntity="Lista", inversedBy="menus")
-     * @ORM\JoinTable(name="menus_listas")
-     */
-    private $listas;
+      /**
+    * @ORM\OneToMany(targetEntity="menus_listas", mappedBy="Menu",cascade={"all"})
+    */
+
+    private $menus_listas;
 
      /**
     * @ORM\ManyToOne(targetEntity="Usuario", inversedBy="menus")
@@ -92,13 +92,14 @@ class Menu
     
     
    
+    
     /**
      * Constructor
      */
     public function __construct()
     {
         $this->subMenus = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->listas = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->menus_listas = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -290,37 +291,37 @@ class Menu
     }
 
     /**
-     * Add lista
+     * Add menusLista
      *
-     * @param \App\AdminBundle\Entity\Lista $lista
+     * @param \App\AdminBundle\Entity\menus_listas $menusLista
      *
      * @return Menu
      */
-    public function addLista(\App\AdminBundle\Entity\Lista $lista)
+    public function addMenusLista(\App\AdminBundle\Entity\menus_listas $menusLista)
     {
-        $this->listas[] = $lista;
+        $this->menus_listas[] = $menusLista;
 
         return $this;
     }
 
     /**
-     * Remove lista
+     * Remove menusLista
      *
-     * @param \App\AdminBundle\Entity\Lista $lista
+     * @param \App\AdminBundle\Entity\menus_listas $menusLista
      */
-    public function removeLista(\App\AdminBundle\Entity\Lista $lista)
+    public function removeMenusLista(\App\AdminBundle\Entity\menus_listas $menusLista)
     {
-        $this->listas->removeElement($lista);
+        $this->menus_listas->removeElement($menusLista);
     }
 
     /**
-     * Get listas
+     * Get menusListas
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getListas()
+    public function getMenusListas()
     {
-        return $this->listas;
+        return $this->menus_listas;
     }
 
     /**
