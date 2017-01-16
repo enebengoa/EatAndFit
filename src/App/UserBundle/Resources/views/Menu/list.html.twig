@@ -60,7 +60,7 @@
             {% for submenu in menu.subMenus %} 
                 {% set calorias = calorias + (submenu.receta.calorias/submenu.receta.numeroComensales) %}                           
             {% endfor %}
-            <p><string>Calorías:</strong> {{calorias}} cl/persona </p>
+            <p><string>Calorías:</strong> {{calorias|round}} cl/persona </p>
             <button class="btn btn-success" data-href={{menu.id}} data-toggle="modal" data-target="#confirm-comision" onclick="myFunction({{menu.id}})"><i class="glyphicon glyphicon-plus"> </i></button>
 						{% if menu.Usuario == app.user %}
                 <button class="btn btn-danger" data-href="{{ path('App_user_deleteMenu', { 'id': menu.id }) }}" data-toggle="modal" data-target="#confirm-delete"><i class="glyphicon glyphicon-trash"> </i></button>

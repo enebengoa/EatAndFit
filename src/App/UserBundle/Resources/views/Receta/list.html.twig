@@ -58,7 +58,7 @@
 							<a  class="comments"><i class="glyphicon glyphicon-comment"></i>{{receta.comentarios|length}}</a>
 							<div class="clearfix"> </div>
 						</div>
-						<p><strong>Calorías: </strong> {{receta.calorias/receta.numeroComensales}} cal/persona </p>
+						<p><strong>Calorías: </strong> {{(receta.calorias/receta.numeroComensales)|round}} cal/persona </p>
 						{% if formMenu!=NULL%}
 						<a class="btn btn-success" data-href={{receta.id}} data-toggle="modal" data-target="#confirm-comision"><i class="glyphicon glyphicon-plus"> </i></a>
 						{% endif %}
