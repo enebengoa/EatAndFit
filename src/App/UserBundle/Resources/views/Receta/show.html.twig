@@ -17,7 +17,8 @@
 								<ul class="grid-blog">
 									<li><span><i class="glyphicon glyphicon-time"> </i>{{ receta.fechaCreacion|date('Y-m-d') }}/ /</span></li>
 									<li><span><i> </i> Tiempo de preparación: {{receta.tiempoPreparacion|date('H:i')}} /</span></li>
-									<li><span><i> </i> {{receta.numeroComensales}} comensales</span></li>
+									<li><span><i> </i> {{receta.numeroComensales}} personas</span> /</li> 
+									<li><span><i> </i>{{receta.calorias/receta.numeroComensales}} cal/persona</span></li>
 									</br>
 									</br>
 									<li><span><i class="glyphicon glyphicon-comment"> </i>{{comentarios|length}} comentarios /</span></li>
