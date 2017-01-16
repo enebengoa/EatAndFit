@@ -1,10 +1,16 @@
+        var requestSend =false;
+        var data;
         $('#confirm-comision').on('show.bs.modal', function(e) {
             event.preventDefault();
-            var data = $(e.relatedTarget).data();
+            data = $(e.relatedTarget).data();
 
             $('.btn-ok', this).data('href', data.href);
-            var requestSend =false;
+            
+
+           });
             jQuery("#menuAdd").on('click',(function () {
+                                                        console.log("eeee");
+
                 if(!requestSend)
                 {
                     requestSend=true;
@@ -27,9 +33,12 @@
                             $("#addConfirm").modal();
                         },
                         error: function(jqXHR) {
+                                        console.log(jqXHR);
+                                        console.log("eeee");
+
                             jQuery('#confirm-comision').modal('hide');
                             requestSend=false;
-                            $('#addConfirm').find('.modal-body').html(jqXHR.responseJSON.message);
+                            $('#addConfirm').find('.modal-body').html(jqXHR.JsonReponse.message);
                             $('#addConfirm').find('.modal-title').html('Error')
                             $('#addConfirm').modal('show');
                             $("#addConfirm").modal();
@@ -41,4 +50,4 @@
                 }
 
             }));
-        });
+     
