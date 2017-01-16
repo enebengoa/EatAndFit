@@ -38,13 +38,14 @@
 	<div class=" blog-head">
 	{% for lista in pagination %}
         {% set numLista=numLista+1%}                                     
-			<div class="col-md-4 blog-top">
+			<div class="col-md-4 blog-top" id="{{lista.id}}">
 				<div class="blog-in">
 					<div class="blog-grid">
 						<h3><a href="{{ path('App_user_showLista', { 'id': lista.id }) }}">{{lista.nombre}}</a></h3>
 						<div class="date">
 							<span class="date-in"><i class="glyphicon glyphicon-calendar"> </i>{{ lista.fechaCreacion|date('Y-m-d') }}</span>
 							<div class="clearfix"> </div>
+              <button class="btn btn-danger" data-href="{{ path('App_user_deleteLista', { 'id': lista.id }) }}" data-toggle="modal" data-target="#confirm-delete"><i class="glyphicon glyphicon-trash"> </i></button>
 						</div>
 						<div class="more">						
 							<a class="link link-yaku" href="{{ path('App_user_showLista', { 'id': lista.id }) }}">
@@ -89,6 +90,53 @@
           </div>
         </div>
 
+        <!-- Modal  ADDING Confirm -->
+        <div id="addConfirm" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"></h4>
+              </div>
+              <div class="modal-body">
+
+              </div>
+              <div class="modal-footer">
+                <button  type="button" class="from-submit btn btn-default" data-dismiss="modal">Aceptar</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+
+           <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Mensaje de confirmación</h4>
+                </div>
+
+                <div class="modal-body">
+                    <p>¿Desea borrar la lista seleccionada?</p>
+                    <p class="debug-url"></p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-danger btn-ok">Borrar</a>
+                </div>
+            </div>
+        </div>
+        </div>
+
 {% endblock %}
 
 {% block javascripts %}
@@ -104,7 +152,11 @@
             success: function(jqXHR) {
                         $('#myModal').modal('hide');
 
-
+                        $('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        $('#addConfirm').find('.modal-title').html('Añadir')
+                        $('#addConfirm').modal('show');
+                        $("#addConfirm").modal();
+                        window.location.reload();
 
                     },
                     error: function(jqXHR) {
@@ -119,9 +171,45 @@
     </script>
 
 
-<script>
+    <script>
         function addReceta(){
         window.location.href= "http://127.0.0.1/pfg_eneko/web/app_dev.php/";
         }
     </script>
+
+    <script>
+        var ei;
+        $('#confirm-delete').on('show.bs.modal', function(e) {
+          ei = e;
+        });
+            $(".btn-ok").click(function () {
+
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    url: $(ei.relatedTarget).data('href'),
+                    success: function(jqXHR) {
+                      console.log(jqXHR);
+                        $('#'+jqXHR.id).remove();
+                        $('#confirm-delete').modal('hide');
+
+                        $('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        $('#addConfirm').find('.modal-title').html('Borrar')
+                        $('#addConfirm').modal('show');
+                        $("#addConfirm").modal();
+
+                    },
+                    error: function(jqXHR) {
+                        $('#confirm-delete').modal('hide');
+
+                        $('#addConfirm').find('.modal-body').html("La lista No ha sido borrada correctamente");
+                        $('#addConfirm').find('.modal-title').html('NO Borrado')
+                        $('#addConfirm').modal('show');
+                        $("#addConfirm").modal();
+
+                    },
+                
+            });
+        });
+  </script>
    {% endblock %}
