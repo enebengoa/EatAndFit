@@ -20,7 +20,7 @@ class OrdenCompra2Type extends AbstractType
     {
         $builder
         ->add('Ingrediente',EntityType::class,array('class' => 'AdminBundle:Ingrediente',"label"=>"Ingrediente","required"=>"required","attr"=>array("class"=>"from-name form-control")))
-        ->add('cantidad', IntegerType::class,array('label'=>"Cantidad","required"=>"required","attr"=>array("class"=>"from-name form-control")))
+        ->add('cantidad', IntegerType::class,array('label'=>"Número de comensales","required"=>"required","attr"=>array("class"=>"from-name form-control")))
         ->add('Guardar',SubmitType::class,array("attr"=>array("class"=>"from-submit btn btn-primary")))
          ;
     }

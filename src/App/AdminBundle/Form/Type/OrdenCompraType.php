@@ -17,7 +17,7 @@ class OrdenCompraType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-        ->add('cantidad', IntegerType::class,array('label'=>"Cantidad","required"=>"required","attr"=>array("class"=>"from-name form-control")))
+        ->add('cantidad', IntegerType::class,array('label'=>"Número de comensales","required"=>"required","attr"=>array("class"=>"from-name form-control")))
         ;
     }
     
