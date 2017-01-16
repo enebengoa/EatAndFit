@@ -17,7 +17,7 @@
                             <div class="card">
                                 <div class="card-header">
                                     <div class="card-title">
-                                        <div class="title">Ver/Modificar hora de ingesta"{{entidad.nombre}}"
+                                        <div class="title">Ver/Modificar hora de ingesta "{{entidad.nombre}}"
                                             <a href="{{ path('App_admin_listHoraIngesta')}}">
                                                 <span class="glyphicon glyphicon-arrow-up"></span>
                                             </a>
@@ -26,7 +26,9 @@
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="card-body">
+                                    {{ form_start(formHora)}}
                                         {% include "AdminBundle:HoraIngesta:form.html.twig" %}
+                                    {{ form_end(formHora) }}
                                     </div>
                                 </div>
                             </div>
