@@ -25,6 +25,7 @@ use App\AdminBundle\Form\Type\SubMenuType;
 use App\UserBundle\Form\Type\ContactType;
 use App\AdminBundle\Form\Type\ComentarioType;
 use App\AdminBundle\Form\Type\PuntuacionType;
+use App\AdminBundle\Entity\menus_listas;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -39,6 +40,13 @@ class UserController extends Controller
         $lastRecetas = $this->get('doctrine')->getManager()->getRepository('AdminBundle:Receta')->getTopReceta('4');
 
         return $this->render('UserBundle:Home:main.html.twig', array('lastRecetas' => $lastRecetas));
+    } 
+
+    public function PYRAction()
+    {
+        $lastRecetas = $this->get('doctrine')->getManager()->getRepository('AdminBundle:Receta')->getTopReceta('4');
+
+        return $this->render('UserBundle:PYR:show.html.twig', array('lastRecetas' => $lastRecetas));
     } 
 
     public function contactoAction(Request $request)
@@ -128,7 +136,7 @@ class UserController extends Controller
 
                     'query_builder' => function (MenuRepository $er) 
                     {
-                        return $er->createQueryBuilder('m')->where('m.Usuario= :userId')->setParameter(':userId', $this->getUser()->getId())->orderBy('m.fechaCreacion', 'DESC');
+                        return $er->createQueryBuilder('m')->where('m.Usuario= :userId OR m.publico = 1')->setParameter(':userId', $this->getUser()->getId())->orderBy('m.fechaCreacion', 'DESC');
                     },
 
 
@@ -190,7 +198,7 @@ class UserController extends Controller
         $tiposReceta = $this->get('doctrine')->getManager()->getRepository('AdminBundle:TipoReceta')->findBy(array(), array('id' => 'ASC'));
         $lastRecetas = $this->get('doctrine')->getManager()->getRepository('AdminBundle:Receta')->getlastThreeReceta('3');
         $puntuacionMedia = $this->get('doctrine')->getManager()->getRepository('AdminBundle:Receta')->getPuntuacionMedia($id);
-        $comentarios = $this->get('doctrine')->getManager()->getRepository('AdminBundle:Comentario')->findAll();
+        $comentarios = $this->get('doctrine')->getManager()->getRepository('AdminBundle:Comentario')->getComentarioReceta($id);
         
 
         $Puntuacion= new Puntuacion();
@@ -373,7 +381,7 @@ public function addMenuAction(Request $request)
             }
         }
         if ($request->isXmlHttpRequest()) {
-            return new JsonResponse( array('form' => $this->renderView('UserBundle:Menu:add.html.twig', array('menu' => $menu,'form' => $form->createView()))), 400);
+            return new JsonResponse( array('form' => $this->renderView('UserBundle:Menu:add.html.twig', array('menu' => $menu,'formMenu' => $form->createView()))), 400);
 
         }
     }
@@ -381,16 +389,111 @@ public function addMenuAction(Request $request)
     public function showMenuAction($id)
     {
         $menu = $this->get('doctrine')->getManager()->getRepository('AdminBundle:Menu')->find($id);
-        $desayuno = $this->get('doctrine')->getManager()->getRepository('AdminBundle:Receta')->getRecetaHoraIngesta($id,'6');
-        $almuerzo = $this->get('doctrine')->getManager()->getRepository('AdminBundle:Receta')->getRecetaHoraIngesta($id,'7');
-        $comida = $this->get('doctrine')->getManager()->getRepository('AdminBundle:Receta')->getRecetaHoraIngesta($id,'8');
-        $merienda = $this->get('doctrine')->getManager()->getRepository('AdminBundle:Receta')->getRecetaHoraIngesta($id,'9');
-        $cena = $this->get('doctrine')->getManager()->getRepository('AdminBundle:Receta')->getRecetaHoraIngesta($id,'10');
+        $desayuno = $this->get('doctrine')->getManager()->getRepository('AdminBundle:Receta')->getRecetaHoraIngesta($id,'1');
+        $almuerzo = $this->get('doctrine')->getManager()->getRepository('AdminBundle:Receta')->getRecetaHoraIngesta($id,'2');
+        $comida = $this->get('doctrine')->getManager()->getRepository('AdminBundle:Receta')->getRecetaHoraIngesta($id,'3');
+        $merienda = $this->get('doctrine')->getManager()->getRepository('AdminBundle:Receta')->getRecetaHoraIngesta($id,'4');
+        $cena = $this->get('doctrine')->getManager()->getRepository('AdminBundle:Receta')->getRecetaHoraIngesta($id,'6');
         
         if (!$menu) {
             throw $this->createNotFoundException('No se ha encontrado el menu seleccionado');
         }
         return $this->render('UserBundle:Menu:show.html.twig', array('menu' => $menu, 'desayuno' => $desayuno, 'almuerzo' => $almuerzo, 'comida' => $comida, 'merienda' => $merienda, 'cena' => $cena ));
+    }
+
+    public function deleteMenuAction(Menu $menu)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        if (!$menu) {
+            throw $this->createNotFoundException('No entity found');
+                    return new JsonResponse(array('message' => 'El menú '.$menu->getNombre().' NO ha sido borrado correctamente'), 400);
+
+        }
+        $id=$menu->getId();
+        $em->remove($menu);
+        $em->flush();
+
+        return new JsonResponse(array('message' => 'El menú '.$menu->getNombre().' ha sido borrado correctamente', 'id' =>$id), 200);
+    }
+
+        public function deleteMenuListaAction(Menu $Menu,Lista $Lista)
+    {
+
+        $em = $this->getDoctrine()->getManager();
+
+        $menuLista = $em->getRepository('AdminBundle:menus_listas')->check($Menu, $Lista);
+
+
+        if (!$menuLista) {
+            throw $this->createNotFoundException('No entity found');
+                    return new JsonResponse(array('message' => 'El menú '.$Menu->getNombre().' NO ha sido borrado correctamente'), 400);
+
+        }
+                
+        $ordenes=$Lista->getOrdenescompras();
+ 
+            foreach ($ordenes as $orden) {
+                $em->remove($orden);
+            }
+
+        $em->remove($menuLista);
+        $em->flush();
+
+
+        $Lista = $em->getRepository('AdminBundle:Lista')->findOneBy(array('id' => $Lista->getId()));
+
+
+
+        $menusListas= $Lista->getMenusListas();
+        foreach ( $menusListas as $menuLista){
+            $cantidad= $menuLista->getNumeroComensales();
+            $Menu=$menuLista->getMenu();
+            foreach ($Menu->getSubMenus() as $submenu)
+                {
+                    $receta=$submenu->getReceta();
+                    $numComensales=$receta->getNumeroComensales();
+                       
+                        foreach ($receta->getCantidadesUtilizadas() as $cantidadUtilizada)
+                        {
+                           $ingrediente=$cantidadUtilizada->getIngrediente();
+
+                           $query = $em->getRepository('AdminBundle:OrdenCompra')->check($ingrediente, $Lista);
+                           if($query==NULL)
+                            {
+                                 $ordenCompra = new OrdenCompra();
+                                 $ordenCompra->setIngrediente($ingrediente);
+                                 $ordenCompra->setLista($Lista);
+                                 
+                            }
+                            else
+                            {
+                                $ordenCompra=$query;
+                            }
+
+                            $cantidadNueva=(($cantidadUtilizada->getCantidad())*$cantidad)/$numComensales;
+                            $cantidadVieja=$ordenCompra->getCantidad();
+
+
+                            $cant=$cantidadNueva+$cantidadVieja;
+
+                            $ordenCompra->setCantidad($cant);
+
+                            $em->persist($ordenCompra);
+                            $Lista->addOrdenescompra($ordenCompra);
+                            $em->flush();
+
+                        }
+                
+                } 
+        }
+            $em->persist($Lista);
+            
+            $flush=$em->flush();
+
+
+
+        return new JsonResponse(array('message' => 'El menú '.$Menu->getNombre().' ha sido borrado correctamente'), 200);
     }
 
          public function RecetasMenuAction(Request $request, Menu $Menu)
@@ -416,17 +519,25 @@ public function addMenuAction(Request $request)
             $em = $this->getDoctrine()->getManager();
                             $existe = $this->get('doctrine')->getManager()->getRepository('AdminBundle:subMenu')->check($subMenu);
 
-            if($existe==NULL){
+            if($existe==NULL)
+            {
                 $em->persist($subMenu);
-            }
-            
-            $flush=$em->flush();
-           if ($request->isXmlHttpRequest()) {
+                $flush=$em->flush();
+                if ($request->isXmlHttpRequest()) 
+                {
               
                 return new JsonResponse(array('message' => 'La receta '.$Receta->getNombre().' ha sido agregada correctamente'), 200);
 
-            }
+                }
 
+            }
+            else
+            {
+                return new JsonResponse(array('message' => 'La receta '.$Receta->getNombre().' ya ha sido agregada en esa hora de ingesta en el menú seleccionado'), 400);
+
+            }
+            
+            
     }
 
     public function deleteSubMenuAction(Receta $receta, Menu $menu, HoraIngesta $horaIngesta)
@@ -473,6 +584,8 @@ public function addMenuAction(Request $request)
         $user = $this->getUser();
         $query = $em->getRepository('AdminBundle:Lista')->queryAll($data, $user);
 
+
+
         $paginator  = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
             $query, /* query NOT result */
@@ -507,7 +620,7 @@ public function addMenuAction(Request $request)
             }
         }
         if ($request->isXmlHttpRequest()) {
-            return new JsonResponse( array('form' => $this->renderView('UserBundle:Lista:add.html.twig', array('lista' => $lista,'form' => $form->createView()))), 400);
+            return new JsonResponse( array('form' => $this->renderView('UserBundle:Lista:add.html.twig', array('lista' => $lista,'formLista' => $form->createView()))), 400);
 
         }
     }
@@ -525,6 +638,22 @@ public function addMenuAction(Request $request)
         return $this->render('UserBundle:Lista:show.html.twig', array('lista' => $lista, 'formOrdenCompra' => $formOrdenCompra->createView()));
     }
 
+    public function deleteListaAction(Lista $lista)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        if (!$lista) {
+            throw $this->createNotFoundException('No entity found');
+                    return new JsonResponse(array('message' => 'La lista '.$lista->getNombre().' NO ha sido borrada correctamente'), 400);
+
+        }
+        $id=$lista->getId();
+        $em->remove($lista);
+        $em->flush();
+
+        return new JsonResponse(array('message' => 'La lista '.$lista->getNombre().' ha sido borrada correctamente', 'id' =>$id), 200);
+    }
+
     public function renderJsonShowListaAction(Request $request, Lista $id)
     {
 
@@ -537,65 +666,103 @@ public function addMenuAction(Request $request)
         return new Response($response);
     }
 
+        public function renderJsonShowMenuListaAction(Request $request, Lista $id)
+    {
+
+
+        $lista = $this->get('doctrine')->getManager()->getRepository('AdminBundle:Lista')->listMenuTable($id);
+
+        $serializer = $this->get('jms_serializer');
+        $response = $serializer->serialize($lista,'json');
+
+        return new Response($response);
+    }
+
      public function addOrdenCompraAction(Request $request,Menu $Menu, Lista $Lista, $cantidad)
     {
         
         
         $em = $this->getDoctrine()->getManager();
-
-        $queryy = $em->getRepository('AdminBundle:Lista')->check($Menu, $Lista);
-        if($queryy!=NULL)
+        $menusLista = $em->getRepository('AdminBundle:menus_listas')->check($Menu, $Lista);
+        if($menusLista!=NULL)
         {
-            return new JsonResponse(array('message' => 'El menú '.$Menu->getNombre().' ya se encuentra en la lista'),400);          
-        }
-        $Lista->addMenu($Menu);
-        $Menu->addLista($Lista);
-        $em->persist($Menu);
-
-        foreach ($Menu->getSubMenus() as $submenu)
-            {
-                $receta=$submenu->getReceta();
-                $numComensales=$receta->getNumeroComensales();
-                   
-                    foreach ($receta->getCantidadesUtilizadas() as $cantidadUtilizada)
-                    {
-                       $ingrediente=$cantidadUtilizada->getIngrediente();
-
-                       $query = $em->getRepository('AdminBundle:OrdenCompra')->check($ingrediente, $Lista);
-                       if($query==NULL)
-                        {
-                             $ordenCompra = new OrdenCompra();
-                             $ordenCompra->setIngrediente($ingrediente);
-                             $ordenCompra->setLista($Lista);
-                             
-                        }
-                        else
-                        {
-                            $ordenCompra=$query;
-                        }
-
-                        $cantidadNueva=(($cantidadUtilizada->getCantidad())*$cantidad)/$numComensales;
-                        $cantidadVieja=$ordenCompra->getCantidad();
-
-                        $cant=$cantidadNueva+$cantidadVieja;
-
-                        $ordenCompra->setCantidad($cant);
-
-                        $em->persist($ordenCompra);
-                        $Lista->addOrdenescompra($ordenCompra);
-  
-                    }
             
-            } 
+        }else{
+            $menusLista = new menus_listas();
+            $menusLista->setMenu($Menu);
+            $menusLista->setLista($Lista);
+        }
+        
+        
+        $menusLista->setNumeroComensales($cantidad);
 
-            $em->persist($Lista);
+        $Lista->addMenusLista($menusLista);
+        $Menu->addMenusLista($menusLista);
+        $em->persist($menusLista);
+                    $em->flush();
+
+       $ordenes=$Lista->getOrdenescompras();
+ 
+            foreach ($ordenes as $orden) {
+                $em->remove($orden);
+            }
+
+        $em->flush();
+
+
+        $Lista = $em->getRepository('AdminBundle:Lista')->findOneBy(array('id' => $Lista->getId()));
+
+
+
+        $menusListas= $Lista->getMenusListas();
+        foreach ( $menusListas as $menuLista){
+            $cantidad= $menuLista->getNumeroComensales();
+            $Menu=$menuLista->getMenu();
+            foreach ($Menu->getSubMenus() as $submenu)
+                {
+                    $receta=$submenu->getReceta();
+                    $numComensales=$receta->getNumeroComensales();
+                       
+                        foreach ($receta->getCantidadesUtilizadas() as $cantidadUtilizada)
+                        {
+                           $ingrediente=$cantidadUtilizada->getIngrediente();
+
+                           $query = $em->getRepository('AdminBundle:OrdenCompra')->check($ingrediente, $Lista);
+                           if($query==NULL)
+                            {
+                                 $ordenCompra = new OrdenCompra();
+                                 $ordenCompra->setIngrediente($ingrediente);
+                                 $ordenCompra->setLista($Lista);
+                                 
+                            }
+                            else
+                            {
+                                $ordenCompra=$query;
+                            }
+
+                            $cantidadNueva=(($cantidadUtilizada->getCantidad())*$cantidad)/$numComensales;
+                            $cantidadVieja=$ordenCompra->getCantidad();
+
+
+                            $cant=$cantidadNueva+$cantidadVieja;
+
+                            $ordenCompra->setCantidad($cant);
+
+                            $em->persist($ordenCompra);
+                            $Lista->addOrdenescompra($ordenCompra);
+                            $em->flush();
+
+                        }
+                
+                } 
+        }
+             $em->persist($Lista);
             
             $flush=$em->flush();
-           if ($request->isXmlHttpRequest()) {
-              
+
                 return new JsonResponse(array('message' => 'El menú '.$Menu->getNombre().' ha sido agregada correctamente a la lista'), 200);
 
-            }
+            
 
     }
 
@@ -613,6 +780,19 @@ public function addMenuAction(Request $request)
         $em->flush();
 
        return new JsonResponse(array('message' => 'El ingrediente '.$entidad->getIngrediente()->getNombre().' ha sido eliminado de la lista'), 200);
+
+    }
+
+    public function comensalesAction(Menu $Menu, Lista $Lista)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $entidad = $em->getRepository('AdminBundle:menus_listas')->check($Menu, $Lista);
+
+        if (!$entidad) {
+            return new JsonResponse(array('message' => 0), 200);        
+        }
+
+       return new JsonResponse(array('message' => $entidad->getNumeroComensales()), 200);
 
     }
     
@@ -688,27 +868,40 @@ public function addMenuAction(Request $request)
             $em->persist($TemaForo);
             $em->flush();
              
-            return $this->redirect($this->generateUrl('App_user_listForo'));
+            if ($request->isXmlHttpRequest()) {
+              
+                return new JsonResponse(array('message' => 'El tema '.$TemaForo->getNombre().' ha sido creado correctamente'), 200);
+
+            }
         }
-        return $this->render('UserBundle:Foro:add.html.twig', array('TemaForo' => $TemaForo,'form'   => $form->createView()));  
+        if ($request->isXmlHttpRequest()) {
+            return new JsonResponse( array('form' => $this->renderView('UserBundle:Temaforo:add.html.twig', array('TemaForo' => $TemaForo,'form' => $form->createView()))), 400);
+
+        }  
     }
 
     public function listForoAction()
     {
         $em = $this->getDoctrine()->getManager();
         $foros= $em->getRepository('AdminBundle:TemaForo')->findAll();
+        $tema = new TemaForo();
+        $formForo=$this->createForm(TemaForoType::class,$tema, array('action'=>$this->generateUrl('App_user_addForo'),'method'=>'POST'));
+
         
-        return $this->render('UserBundle:Foro:list.html.twig', array('foros' => $foros));
+        return $this->render('UserBundle:Foro:list.html.twig', array('foros' => $foros, 'tema' => $tema, 'formForo'   => $formForo->createView()));
         
     } 
 
     public function showForoAction($id)
     {
         $foro = $this->get('doctrine')->getManager()->getRepository('AdminBundle:TemaForo')->find($id);
-        
+        $comentarios = $this->get('doctrine')->getManager()->getRepository('AdminBundle:Comentario')->getComentarioForo($id);
+
+        $form   = $this->createForm(ComentarioType::class, new Comentario());
+
         if (!$foro) {
-            throw $this->createNotFoundException('No se ha encontrado el foro seleccionada');
+            throw $this->createNotFoundException('No se ha encontrado el foro seleccionado');
         }
-        return $this->render('UserBundle:Foro:show.html.twig', array('foro' => $foro));
+        return $this->render('UserBundle:Foro:show.html.twig', array('foro' => $foro,'comentarios' => $comentarios, 'form'   => $form->createView()));
     }
 }
