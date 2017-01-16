@@ -1,38 +1,5 @@
-{% extends 'baseadmin.html.twig' %}
+{{ form_start(formTecnica, {'class': 'ajaxForm', 'action': path('App_admin_addTecnica'), 'attr': {'class': 'ajaxForm'}}) }}
 
-{% block title %}Añadir técnica{% endblock %}
-{% block stylesheets %}
-{{ parent() }}
-	<link href="{{ asset('css/form.css') }}" type="text/css" rel="stylesheet" />
-{% endblock %}
-{% block body %}
-<!-- Main Content -->
-        <div class="container-fluid">
-                <div class="side-body">
-                    <div class="page-title">
-                        <span class="title">TÉCNICAS</span>
-                        <div class="description"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <div class="card-title">
-                                        <div class="title">Añadir nueva técnica 
-                                            <a href="{{ path('App_admin_listTecnica')}}">
-                                                <span class="glyphicon glyphicon-arrow-up"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="card-body">
-                                        {% include "AdminBundle:Tecnica:form.html.twig" %}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        <div>
-{% endblock %}
+{% include "AdminBundle:Tecnica:form.html.twig"  with {'formTecnica': formTecnica} %}
+
+{{ form_end(formTecnica) }}
