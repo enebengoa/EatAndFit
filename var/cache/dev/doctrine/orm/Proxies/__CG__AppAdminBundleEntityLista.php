@@ -64,10 +64,10 @@ class Lista extends \App\AdminBundle\Entity\Lista implements \Doctrine\ORM\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\AdminBundle\\Entity\\Lista' . "\0" . 'id', '' . "\0" . 'App\\AdminBundle\\Entity\\Lista' . "\0" . 'nombre', '' . "\0" . 'App\\AdminBundle\\Entity\\Lista' . "\0" . 'fechaCreacion', '' . "\0" . 'App\\AdminBundle\\Entity\\Lista' . "\0" . 'ordenescompras', '' . "\0" . 'App\\AdminBundle\\Entity\\Lista' . "\0" . 'Usuario', '' . "\0" . 'App\\AdminBundle\\Entity\\Lista' . "\0" . 'menus'];
+            return ['__isInitialized__', '' . "\0" . 'App\\AdminBundle\\Entity\\Lista' . "\0" . 'id', '' . "\0" . 'App\\AdminBundle\\Entity\\Lista' . "\0" . 'nombre', '' . "\0" . 'App\\AdminBundle\\Entity\\Lista' . "\0" . 'fechaCreacion', '' . "\0" . 'App\\AdminBundle\\Entity\\Lista' . "\0" . 'ordenescompras', '' . "\0" . 'App\\AdminBundle\\Entity\\Lista' . "\0" . 'Usuario', '' . "\0" . 'App\\AdminBundle\\Entity\\Lista' . "\0" . 'menus_listas'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\AdminBundle\\Entity\\Lista' . "\0" . 'id', '' . "\0" . 'App\\AdminBundle\\Entity\\Lista' . "\0" . 'nombre', '' . "\0" . 'App\\AdminBundle\\Entity\\Lista' . "\0" . 'fechaCreacion', '' . "\0" . 'App\\AdminBundle\\Entity\\Lista' . "\0" . 'ordenescompras', '' . "\0" . 'App\\AdminBundle\\Entity\\Lista' . "\0" . 'Usuario', '' . "\0" . 'App\\AdminBundle\\Entity\\Lista' . "\0" . 'menus'];
+        return ['__isInitialized__', '' . "\0" . 'App\\AdminBundle\\Entity\\Lista' . "\0" . 'id', '' . "\0" . 'App\\AdminBundle\\Entity\\Lista' . "\0" . 'nombre', '' . "\0" . 'App\\AdminBundle\\Entity\\Lista' . "\0" . 'fechaCreacion', '' . "\0" . 'App\\AdminBundle\\Entity\\Lista' . "\0" . 'ordenescompras', '' . "\0" . 'App\\AdminBundle\\Entity\\Lista' . "\0" . 'Usuario', '' . "\0" . 'App\\AdminBundle\\Entity\\Lista' . "\0" . 'menus_listas'];
     }
 
     /**
@@ -301,34 +301,34 @@ class Lista extends \App\AdminBundle\Entity\Lista implements \Doctrine\ORM\Proxy
     /**
      * {@inheritDoc}
      */
-    public function addMenu(\App\AdminBundle\Entity\Menu $menu)
+    public function addMenusLista(\App\AdminBundle\Entity\menus_listas $menusLista)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addMenu', [$menu]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addMenusLista', [$menusLista]);
 
-        return parent::addMenu($menu);
+        return parent::addMenusLista($menusLista);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function removeMenu(\App\AdminBundle\Entity\Menu $menu)
+    public function removeMenusLista(\App\AdminBundle\Entity\menus_listas $menusLista)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeMenu', [$menu]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeMenusLista', [$menusLista]);
 
-        return parent::removeMenu($menu);
+        return parent::removeMenusLista($menusLista);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getMenus()
+    public function getMenusListas()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getMenus', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getMenusListas', []);
 
-        return parent::getMenus();
+        return parent::getMenusListas();
     }
 
 }

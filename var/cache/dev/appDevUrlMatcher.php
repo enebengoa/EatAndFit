@@ -114,6 +114,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'App\\UserBundle\\Controller\\UserController::homeAction',  '_route' => 'App_user_homepage',);
         }
 
+        // App_user_PYR
+        if ($pathinfo === '/PreguntasRespuestas') {
+            return array (  '_controller' => 'App\\UserBundle\\Controller\\UserController::PYRAction',  '_route' => 'App_user_PYR',);
+        }
+
         // App_user_contacto
         if ($pathinfo === '/contacto') {
             return array (  '_controller' => 'App\\UserBundle\\Controller\\UserController::contactoAction',  '_route' => 'App_user_contacto',);
@@ -166,13 +171,18 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // App_user_addMenu
-        if ($pathinfo === '/AddMenu' && $request->isXmlHttpRequest()) {
+        if ($pathinfo === '/AddMenu') {
             return array (  '_controller' => 'App\\UserBundle\\Controller\\UserController::addMenuAction',  '_route' => 'App_user_addMenu',);
         }
 
         // App_user_showMenu
         if (0 === strpos($pathinfo, '/ShowMenu') && preg_match('#^/ShowMenu/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'App_user_showMenu')), array (  '_controller' => 'App\\UserBundle\\Controller\\UserController::showMenuAction',));
+        }
+
+        // App_user_deleteMenu
+        if (0 === strpos($pathinfo, '/deleteMenu') && preg_match('#^/deleteMenu/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'App_user_deleteMenu')), array (  '_controller' => 'App\\UserBundle\\Controller\\UserController::deleteMenuAction',));
         }
 
         // App_user_addSubMenu
@@ -195,15 +205,25 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'App\\UserBundle\\Controller\\UserController::addListaAction',  '_route' => 'App_user_addLista',);
         }
 
-        if (0 === strpos($pathinfo, '/showLista')) {
-            // App_user_showLista
-            if (preg_match('#^/showLista/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'App_user_showLista')), array (  '_controller' => 'App\\UserBundle\\Controller\\UserController::showListaAction',));
-            }
+        // App_user_showLista
+        if (0 === strpos($pathinfo, '/showLista') && preg_match('#^/showLista/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'App_user_showLista')), array (  '_controller' => 'App\\UserBundle\\Controller\\UserController::showListaAction',));
+        }
 
+        // App_user_deleteLista
+        if (0 === strpos($pathinfo, '/deleteLista') && preg_match('#^/deleteLista/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'App_user_deleteLista')), array (  '_controller' => 'App\\UserBundle\\Controller\\UserController::deleteListaAction',));
+        }
+
+        if (0 === strpos($pathinfo, '/show')) {
             // App_user_showListaJson
             if (0 === strpos($pathinfo, '/showListaJson') && preg_match('#^/showListaJson/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'App_user_showListaJson')), array (  '_controller' => 'App\\UserBundle\\Controller\\UserController::renderJsonShowListaAction',));
+            }
+
+            // App_user_showMenuListaJson
+            if (0 === strpos($pathinfo, '/showMenuListaJson') && preg_match('#^/showMenuListaJson/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'App_user_showMenuListaJson')), array (  '_controller' => 'App\\UserBundle\\Controller\\UserController::renderJsonShowMenuListaAction',));
             }
 
         }
@@ -242,9 +262,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         if (0 === strpos($pathinfo, '/add')) {
-            // App_user_add_comentario
-            if (0 === strpos($pathinfo, '/addComentario') && preg_match('#^/addComentario/(?P<id>[^/]+)(?P<user>[^/]++)$#s', $pathinfo, $matches)) {
-                return $this->mergeDefaults(array_replace($matches, array('_route' => 'App_user_add_comentario')), array (  '_controller' => 'App\\UserBundle\\Controller\\ComentarioController::addComentarioAction',));
+            if (0 === strpos($pathinfo, '/addComentario')) {
+                // App_user_add_comentario
+                if (preg_match('#^/addComentario/(?P<id>[^/]+)(?P<user>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'App_user_add_comentario')), array (  '_controller' => 'App\\UserBundle\\Controller\\ComentarioController::addComentarioAction',));
+                }
+
+                // App_user_add_comentario_foro
+                if (0 === strpos($pathinfo, '/addComentarioForo') && preg_match('#^/addComentarioForo/(?P<id>[^/]+)(?P<user>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'App_user_add_comentario_foro')), array (  '_controller' => 'App\\UserBundle\\Controller\\ComentarioController::addComentarioForoAction',));
+                }
+
             }
 
             // App_user_add_puntuacion
@@ -274,6 +302,16 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'App_user_modifyEstadoOrdenCompra')), array (  '_controller' => 'App\\UserBundle\\Controller\\UserController::modifyEstadoAction',));
         }
 
+        // App_user_getNumeroComensales
+        if (0 === strpos($pathinfo, '/GetNumeroComensales') && preg_match('#^/GetNumeroComensales/(?P<Menu>[^/]++)/(?P<Lista>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'App_user_getNumeroComensales')), array (  '_controller' => 'App\\UserBundle\\Controller\\UserController::comensalesAction',));
+        }
+
+        // App_user_deleteMenuLista
+        if (0 === strpos($pathinfo, '/deleteMenuLista') && preg_match('#^/deleteMenuLista/(?P<Menu>[^/]++)/(?P<Lista>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'App_user_deleteMenuLista')), array (  '_controller' => 'App\\UserBundle\\Controller\\UserController::deleteMenuListaAction',));
+        }
+
         if (0 === strpos($pathinfo, '/admin')) {
             // App_admin_homepage
             if (rtrim($pathinfo, '/') === '/admin') {
@@ -287,6 +325,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             // App_admin_addIngrediente
             if ($pathinfo === '/admin/addIngrediente') {
                 return array (  '_controller' => 'App\\AdminBundle\\Controller\\AdminController::addIngredienteAction',  '_route' => 'App_admin_addIngrediente',);
+            }
+
+            // App_admin_listIngrediente_reload
+            if ($pathinfo === '/admin/reloadIngrediente') {
+                return array (  '_controller' => 'App\\AdminBundle\\Controller\\AdminController::renderJsonIngredienteAction',  '_route' => 'App_admin_listIngrediente_reload',);
             }
 
             // App_admin_listIngrediente
@@ -510,9 +553,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'App_admin_deleteUsuario')), array (  '_controller' => 'App\\AdminBundle\\Controller\\AdminController::deleteUsuarioAction',));
             }
 
-            // App_admin_addTipoUsuario
-            if ($pathinfo === '/admin/addTipoUsuario') {
-                return array (  '_controller' => 'App\\AdminBundle\\Controller\\AdminController::addTipoUsuarioAction',  '_route' => 'App_admin_addTipoUsuario',);
+            if (0 === strpos($pathinfo, '/admin/a')) {
+                // App_admin_activateUsuario
+                if (0 === strpos($pathinfo, '/admin/activateUsuario') && preg_match('#^/admin/activateUsuario/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'App_admin_activateUsuario')), array (  '_controller' => 'App\\AdminBundle\\Controller\\AdminController::activateUsuarioAction',));
+                }
+
+                // App_admin_addTipoUsuario
+                if ($pathinfo === '/admin/addTipoUsuario') {
+                    return array (  '_controller' => 'App\\AdminBundle\\Controller\\AdminController::addTipoUsuarioAction',  '_route' => 'App_admin_addTipoUsuario',);
+                }
+
             }
 
             // App_admin_listTipoUsuario

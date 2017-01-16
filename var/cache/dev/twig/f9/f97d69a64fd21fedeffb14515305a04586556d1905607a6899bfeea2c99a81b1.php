@@ -15,8 +15,8 @@ class __TwigTemplate_85578a5e4323503f6c9e11b58effde4c8ae105fb3cd3d06f25577adc7ca
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_5487707b4f885bef16fd4d93a9859adaa3684583b20b94a362469bf0a4725c19 = $this->env->getExtension("native_profiler");
-        $__internal_5487707b4f885bef16fd4d93a9859adaa3684583b20b94a362469bf0a4725c19->enter($__internal_5487707b4f885bef16fd4d93a9859adaa3684583b20b94a362469bf0a4725c19_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle:SubMenu:add.html.twig"));
+        $__internal_c0d60e82dc6d3af0ff295c8842fcc2fde199d6e48f390616677861d4aeaf703b = $this->env->getExtension("native_profiler");
+        $__internal_c0d60e82dc6d3af0ff295c8842fcc2fde199d6e48f390616677861d4aeaf703b->enter($__internal_c0d60e82dc6d3af0ff295c8842fcc2fde199d6e48f390616677861d4aeaf703b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle:SubMenu:add.html.twig"));
 
         // line 1
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formSubMenu"]) ? $context["formSubMenu"] : $this->getContext($context, "formSubMenu")), 'form_start', array("class" => "ajaxForm", "attr" => array("class" => "ajaxForm")));
@@ -33,7 +33,7 @@ class __TwigTemplate_85578a5e4323503f6c9e11b58effde4c8ae105fb3cd3d06f25577adc7ca
         echo "
 ";
         
-        $__internal_5487707b4f885bef16fd4d93a9859adaa3684583b20b94a362469bf0a4725c19->leave($__internal_5487707b4f885bef16fd4d93a9859adaa3684583b20b94a362469bf0a4725c19_prof);
+        $__internal_c0d60e82dc6d3af0ff295c8842fcc2fde199d6e48f390616677861d4aeaf703b->leave($__internal_c0d60e82dc6d3af0ff295c8842fcc2fde199d6e48f390616677861d4aeaf703b_prof);
 
     }
 

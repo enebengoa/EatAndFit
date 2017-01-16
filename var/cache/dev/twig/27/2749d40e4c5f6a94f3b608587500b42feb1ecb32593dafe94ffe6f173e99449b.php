@@ -23,48 +23,48 @@ class __TwigTemplate_85fe914fd8576f3d9c61e4789f5aa83b47f957ba6e29b469c751aefde0c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_136621d47047851672bec0afa3747aa67e07fb74e4e5b7defb8ddccd2bbb15b4 = $this->env->getExtension("native_profiler");
-        $__internal_136621d47047851672bec0afa3747aa67e07fb74e4e5b7defb8ddccd2bbb15b4->enter($__internal_136621d47047851672bec0afa3747aa67e07fb74e4e5b7defb8ddccd2bbb15b4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AdminBundle:Ingrediente:modify.html.twig"));
+        $__internal_4cd914a673c589b03aee4beba869c41e15316c9071e6787ad4fefe3ca5cad6bd = $this->env->getExtension("native_profiler");
+        $__internal_4cd914a673c589b03aee4beba869c41e15316c9071e6787ad4fefe3ca5cad6bd->enter($__internal_4cd914a673c589b03aee4beba869c41e15316c9071e6787ad4fefe3ca5cad6bd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AdminBundle:Ingrediente:modify.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_136621d47047851672bec0afa3747aa67e07fb74e4e5b7defb8ddccd2bbb15b4->leave($__internal_136621d47047851672bec0afa3747aa67e07fb74e4e5b7defb8ddccd2bbb15b4_prof);
+        $__internal_4cd914a673c589b03aee4beba869c41e15316c9071e6787ad4fefe3ca5cad6bd->leave($__internal_4cd914a673c589b03aee4beba869c41e15316c9071e6787ad4fefe3ca5cad6bd_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_2d6de5420db2d660f3d5e542b70ac9cf30e923f0d2b27bbf56953cf6310fadc6 = $this->env->getExtension("native_profiler");
-        $__internal_2d6de5420db2d660f3d5e542b70ac9cf30e923f0d2b27bbf56953cf6310fadc6->enter($__internal_2d6de5420db2d660f3d5e542b70ac9cf30e923f0d2b27bbf56953cf6310fadc6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_1e4405c1ad9dcd2f42b620ed90a0df493eb61310eab00b504098f701f06a6320 = $this->env->getExtension("native_profiler");
+        $__internal_1e4405c1ad9dcd2f42b620ed90a0df493eb61310eab00b504098f701f06a6320->enter($__internal_1e4405c1ad9dcd2f42b620ed90a0df493eb61310eab00b504098f701f06a6320_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Ver/Modificar ingrediente ";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entidad"]) ? $context["entidad"] : $this->getContext($context, "entidad")), "nombre", array()), "html", null, true);
         
-        $__internal_2d6de5420db2d660f3d5e542b70ac9cf30e923f0d2b27bbf56953cf6310fadc6->leave($__internal_2d6de5420db2d660f3d5e542b70ac9cf30e923f0d2b27bbf56953cf6310fadc6_prof);
+        $__internal_1e4405c1ad9dcd2f42b620ed90a0df493eb61310eab00b504098f701f06a6320->leave($__internal_1e4405c1ad9dcd2f42b620ed90a0df493eb61310eab00b504098f701f06a6320_prof);
 
     }
 
     // line 4
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_45c5c580de3f2a34d5ebaa090dae187b0dbc8b45a0b58945a2b3ee4d146cc2eb = $this->env->getExtension("native_profiler");
-        $__internal_45c5c580de3f2a34d5ebaa090dae187b0dbc8b45a0b58945a2b3ee4d146cc2eb->enter($__internal_45c5c580de3f2a34d5ebaa090dae187b0dbc8b45a0b58945a2b3ee4d146cc2eb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_15c7c4cca5d78fd114849bfdffe83643f6a80fcf1825595195bbc4f77a4bd387 = $this->env->getExtension("native_profiler");
+        $__internal_15c7c4cca5d78fd114849bfdffe83643f6a80fcf1825595195bbc4f77a4bd387->enter($__internal_15c7c4cca5d78fd114849bfdffe83643f6a80fcf1825595195bbc4f77a4bd387_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 5
         $this->displayParentBlock("stylesheets", $context, $blocks);
         echo "
 ";
         
-        $__internal_45c5c580de3f2a34d5ebaa090dae187b0dbc8b45a0b58945a2b3ee4d146cc2eb->leave($__internal_45c5c580de3f2a34d5ebaa090dae187b0dbc8b45a0b58945a2b3ee4d146cc2eb_prof);
+        $__internal_15c7c4cca5d78fd114849bfdffe83643f6a80fcf1825595195bbc4f77a4bd387->leave($__internal_15c7c4cca5d78fd114849bfdffe83643f6a80fcf1825595195bbc4f77a4bd387_prof);
 
     }
 
     // line 7
     public function block_body($context, array $blocks = array())
     {
-        $__internal_3b2e1eedeca88faddd7181856853f4ea2eff26a60639d81da171a3db90ef8075 = $this->env->getExtension("native_profiler");
-        $__internal_3b2e1eedeca88faddd7181856853f4ea2eff26a60639d81da171a3db90ef8075->enter($__internal_3b2e1eedeca88faddd7181856853f4ea2eff26a60639d81da171a3db90ef8075_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_c7f4ebf097ecee32a9a8471de7579b755d19f925e457426def33963e43301a0a = $this->env->getExtension("native_profiler");
+        $__internal_c7f4ebf097ecee32a9a8471de7579b755d19f925e457426def33963e43301a0a->enter($__internal_c7f4ebf097ecee32a9a8471de7579b755d19f925e457426def33963e43301a0a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 8
         echo "<!-- Main Content -->
@@ -94,11 +94,18 @@ class __TwigTemplate_85fe914fd8576f3d9c61e4789f5aa83b47f957ba6e29b469c751aefde0c
                                 </div>
                                 <div class=\"col-lg-12\">
                                     <div class=\"card-body\">
-                                        ";
+                                    ";
         // line 29
-        $this->loadTemplate("AdminBundle:Ingrediente:form.html.twig", "AdminBundle:Ingrediente:modify.html.twig", 29)->display($context);
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formIngrediente"]) ? $context["formIngrediente"] : $this->getContext($context, "formIngrediente")), 'form_start');
+        echo "
+                                        ";
         // line 30
-        echo "                                    </div>
+        $this->loadTemplate("AdminBundle:Ingrediente:form.html.twig", "AdminBundle:Ingrediente:modify.html.twig", 30)->display($context);
+        // line 31
+        echo "                                    ";
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formIngrediente"]) ? $context["formIngrediente"] : $this->getContext($context, "formIngrediente")), 'form_end');
+        echo "
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +114,7 @@ class __TwigTemplate_85fe914fd8576f3d9c61e4789f5aa83b47f957ba6e29b469c751aefde0c
         <div>       
 ";
         
-        $__internal_3b2e1eedeca88faddd7181856853f4ea2eff26a60639d81da171a3db90ef8075->leave($__internal_3b2e1eedeca88faddd7181856853f4ea2eff26a60639d81da171a3db90ef8075_prof);
+        $__internal_c7f4ebf097ecee32a9a8471de7579b755d19f925e457426def33963e43301a0a->leave($__internal_c7f4ebf097ecee32a9a8471de7579b755d19f925e457426def33963e43301a0a_prof);
 
     }
 
@@ -123,7 +130,7 @@ class __TwigTemplate_85fe914fd8576f3d9c61e4789f5aa83b47f957ba6e29b469c751aefde0c
 
     public function getDebugInfo()
     {
-        return array (  101 => 30,  99 => 29,  88 => 21,  84 => 20,  70 => 8,  64 => 7,  55 => 5,  49 => 4,  36 => 3,  11 => 1,);
+        return array (  105 => 31,  103 => 30,  99 => 29,  88 => 21,  84 => 20,  70 => 8,  64 => 7,  55 => 5,  49 => 4,  36 => 3,  11 => 1,);
     }
 
     public function getSource()
@@ -156,7 +163,9 @@ class __TwigTemplate_85fe914fd8576f3d9c61e4789f5aa83b47f957ba6e29b469c751aefde0c
                                 </div>
                                 <div class=\"col-lg-12\">
                                     <div class=\"card-body\">
+                                    {{ form_start(formIngrediente)}}
                                         {% include \"AdminBundle:Ingrediente:form.html.twig\" %}
+                                    {{ form_end(formIngrediente) }}
                                     </div>
                                 </div>
                             </div>

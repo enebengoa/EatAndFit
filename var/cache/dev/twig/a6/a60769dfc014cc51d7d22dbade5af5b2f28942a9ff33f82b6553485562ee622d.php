@@ -17,8 +17,8 @@ class __TwigTemplate_c10020fca0f488fb87a5cc62628904569c65c2e66237c9b0cc3287aa848
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c62e13428080ccd08173720aa94d6e91af9ab7cc761331e65053650eb1035984 = $this->env->getExtension("native_profiler");
-        $__internal_c62e13428080ccd08173720aa94d6e91af9ab7cc761331e65053650eb1035984->enter($__internal_c62e13428080ccd08173720aa94d6e91af9ab7cc761331e65053650eb1035984_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "StarRatingBundle::rating.html.twig"));
+        $__internal_2f8597f91cb899adfdf3701210f7b1db957238b5a5bf6526cf78165941f5bc6f = $this->env->getExtension("native_profiler");
+        $__internal_2f8597f91cb899adfdf3701210f7b1db957238b5a5bf6526cf78165941f5bc6f->enter($__internal_2f8597f91cb899adfdf3701210f7b1db957238b5a5bf6526cf78165941f5bc6f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "StarRatingBundle::rating.html.twig"));
 
         // line 2
         $this->displayBlock('rating_widget', $context, $blocks);
@@ -28,15 +28,15 @@ class __TwigTemplate_c10020fca0f488fb87a5cc62628904569c65c2e66237c9b0cc3287aa848
         // line 17
         $this->displayBlock('rating_widget_container_attributes', $context, $blocks);
         
-        $__internal_c62e13428080ccd08173720aa94d6e91af9ab7cc761331e65053650eb1035984->leave($__internal_c62e13428080ccd08173720aa94d6e91af9ab7cc761331e65053650eb1035984_prof);
+        $__internal_2f8597f91cb899adfdf3701210f7b1db957238b5a5bf6526cf78165941f5bc6f->leave($__internal_2f8597f91cb899adfdf3701210f7b1db957238b5a5bf6526cf78165941f5bc6f_prof);
 
     }
 
     // line 2
     public function block_rating_widget($context, array $blocks = array())
     {
-        $__internal_7dc9096d6e4030f339ee5e962c6d3e28936bf5a8781b3567235fbfcec6e3c13e = $this->env->getExtension("native_profiler");
-        $__internal_7dc9096d6e4030f339ee5e962c6d3e28936bf5a8781b3567235fbfcec6e3c13e->enter($__internal_7dc9096d6e4030f339ee5e962c6d3e28936bf5a8781b3567235fbfcec6e3c13e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "rating_widget"));
+        $__internal_33a2e7f7273e0d90fa495bbb23af874351cdcb7abf3fdb9a36a4bff279dc2e57 = $this->env->getExtension("native_profiler");
+        $__internal_33a2e7f7273e0d90fa495bbb23af874351cdcb7abf3fdb9a36a4bff279dc2e57->enter($__internal_33a2e7f7273e0d90fa495bbb23af874351cdcb7abf3fdb9a36a4bff279dc2e57_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "rating_widget"));
 
         // line 3
         echo "  ";
@@ -74,15 +74,15 @@ class __TwigTemplate_c10020fca0f488fb87a5cc62628904569c65c2e66237c9b0cc3287aa848
   ";
         echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
         
-        $__internal_7dc9096d6e4030f339ee5e962c6d3e28936bf5a8781b3567235fbfcec6e3c13e->leave($__internal_7dc9096d6e4030f339ee5e962c6d3e28936bf5a8781b3567235fbfcec6e3c13e_prof);
+        $__internal_33a2e7f7273e0d90fa495bbb23af874351cdcb7abf3fdb9a36a4bff279dc2e57->leave($__internal_33a2e7f7273e0d90fa495bbb23af874351cdcb7abf3fdb9a36a4bff279dc2e57_prof);
 
     }
 
     // line 17
     public function block_rating_widget_container_attributes($context, array $blocks = array())
     {
-        $__internal_ba5260176c398baaf6036aaaf6f1d368f08b28a881f33d72480a8d2b0d4c9174 = $this->env->getExtension("native_profiler");
-        $__internal_ba5260176c398baaf6036aaaf6f1d368f08b28a881f33d72480a8d2b0d4c9174->enter($__internal_ba5260176c398baaf6036aaaf6f1d368f08b28a881f33d72480a8d2b0d4c9174_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "rating_widget_container_attributes"));
+        $__internal_25f6ab89d2169430ecdc6c3aa4a825720bdb2238a23b610172a31d0098daabad = $this->env->getExtension("native_profiler");
+        $__internal_25f6ab89d2169430ecdc6c3aa4a825720bdb2238a23b610172a31d0098daabad->enter($__internal_25f6ab89d2169430ecdc6c3aa4a825720bdb2238a23b610172a31d0098daabad_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "rating_widget_container_attributes"));
 
         // line 18
         ob_start();
@@ -120,7 +120,7 @@ $context["attrvalue"] === false)) {
         $context = array_intersect_key($context, $_parent) + $_parent;
         echo trim(preg_replace('/>\s+</', '><', ob_get_clean()));
         
-        $__internal_ba5260176c398baaf6036aaaf6f1d368f08b28a881f33d72480a8d2b0d4c9174->leave($__internal_ba5260176c398baaf6036aaaf6f1d368f08b28a881f33d72480a8d2b0d4c9174_prof);
+        $__internal_25f6ab89d2169430ecdc6c3aa4a825720bdb2238a23b610172a31d0098daabad->leave($__internal_25f6ab89d2169430ecdc6c3aa4a825720bdb2238a23b610172a31d0098daabad_prof);
 
     }
 

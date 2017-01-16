@@ -15,8 +15,8 @@ class __TwigTemplate_c3c22ee5cbe90edb22ee04553701b137be71a2f1d6fbe1571c6c455c19a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_45af16588063777213f475dedc92a5b56321a826e352c896d148a4dbae3d7e73 = $this->env->getExtension("native_profiler");
-        $__internal_45af16588063777213f475dedc92a5b56321a826e352c896d148a4dbae3d7e73->enter($__internal_45af16588063777213f475dedc92a5b56321a826e352c896d148a4dbae3d7e73_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle:OrdenCompra:form2.html.twig"));
+        $__internal_9de8d9f638e59dc1324e6f7857921ead5784ae375b7cf19752f9708550b0ce01 = $this->env->getExtension("native_profiler");
+        $__internal_9de8d9f638e59dc1324e6f7857921ead5784ae375b7cf19752f9708550b0ce01->enter($__internal_9de8d9f638e59dc1324e6f7857921ead5784ae375b7cf19752f9708550b0ce01_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle:OrdenCompra:form2.html.twig"));
 
         // line 1
         echo "\t<div class=\"form-group\">
@@ -38,7 +38,7 @@ class __TwigTemplate_c3c22ee5cbe90edb22ee04553701b137be71a2f1d6fbe1571c6c455c19a
 
 ";
         
-        $__internal_45af16588063777213f475dedc92a5b56321a826e352c896d148a4dbae3d7e73->leave($__internal_45af16588063777213f475dedc92a5b56321a826e352c896d148a4dbae3d7e73_prof);
+        $__internal_9de8d9f638e59dc1324e6f7857921ead5784ae375b7cf19752f9708550b0ce01->leave($__internal_9de8d9f638e59dc1324e6f7857921ead5784ae375b7cf19752f9708550b0ce01_prof);
 
     }
 

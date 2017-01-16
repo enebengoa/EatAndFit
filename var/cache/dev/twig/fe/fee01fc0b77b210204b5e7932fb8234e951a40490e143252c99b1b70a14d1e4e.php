@@ -10,78 +10,49 @@ class __TwigTemplate_8bfd24b539f1ec499e0dd1a59609153a84f9c1295005093bc7bd778f99c
         $this->parent = false;
 
         $this->blocks = array(
-            'body' => array($this, 'block_body'),
         );
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_18239bad301eac12d240f9cd1d4b3bc134ccbe8702dd89d6b542c5c5f4cdf084 = $this->env->getExtension("native_profiler");
-        $__internal_18239bad301eac12d240f9cd1d4b3bc134ccbe8702dd89d6b542c5c5f4cdf084->enter($__internal_18239bad301eac12d240f9cd1d4b3bc134ccbe8702dd89d6b542c5c5f4cdf084_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AdminBundle:Tecnica:form.html.twig"));
+        $__internal_8f0fc042a284b13bd932bb560fbb328790c211a8398c13ce7e4089e21805f8cd = $this->env->getExtension("native_profiler");
+        $__internal_8f0fc042a284b13bd932bb560fbb328790c211a8398c13ce7e4089e21805f8cd->enter($__internal_8f0fc042a284b13bd932bb560fbb328790c211a8398c13ce7e4089e21805f8cd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AdminBundle:Tecnica:form.html.twig"));
 
         // line 1
-        $this->displayBlock('body', $context, $blocks);
-        
-        $__internal_18239bad301eac12d240f9cd1d4b3bc134ccbe8702dd89d6b542c5c5f4cdf084->leave($__internal_18239bad301eac12d240f9cd1d4b3bc134ccbe8702dd89d6b542c5c5f4cdf084_prof);
-
-    }
-
-    public function block_body($context, array $blocks = array())
-    {
-        $__internal_8b6bb21019db5547ca3460b8924e994739c3f53f3faaeb17449b428d87e15ab1 = $this->env->getExtension("native_profiler");
-        $__internal_8b6bb21019db5547ca3460b8924e994739c3f53f3faaeb17449b428d87e15ab1->enter($__internal_8b6bb21019db5547ca3460b8924e994739c3f53f3faaeb17449b428d87e15ab1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
-
-        // line 2
-        echo "\t<form class=\"blogger\" method=\"post\" >
-\t";
+        echo "
+\t<div class=\"form-group\">
+\t\t";
         // line 3
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
-        echo "
-\t<div class=\"form-group\">
-\t\t";
-        // line 5
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nombre", array()), 'row');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formTecnica"]) ? $context["formTecnica"] : $this->getContext($context, "formTecnica")), "nombre", array()), 'row');
         echo "
 \t</div>
 \t<div class=\"form-group\">
 \t\t";
-        // line 8
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "fechaCreacion", array()), 'row');
+        // line 6
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formTecnica"]) ? $context["formTecnica"] : $this->getContext($context, "formTecnica")), "descripcion", array()), 'row');
         echo "
 \t</div>
 \t<div class=\"form-group\">
 \t\t";
-        // line 11
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "descripcion", array()), 'row');
+        // line 9
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formTecnica"]) ? $context["formTecnica"] : $this->getContext($context, "formTecnica")), "vid", array()), 'row');
         echo "
 \t</div>
 \t<div class=\"form-group\">
 \t\t";
-        // line 14
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "vid", array()), 'row');
-        echo "
-\t</div>
-\t<div class=\"form-group\">
-\t\t";
-        // line 17
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "utensilios", array()), 'row');
+        // line 12
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formTecnica"]) ? $context["formTecnica"] : $this->getContext($context, "formTecnica")), "utensilios", array()), 'row');
         echo "
 \t</div>
 
         ";
-        // line 20
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'errors');
+        // line 15
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["formTecnica"]) ? $context["formTecnica"] : $this->getContext($context, "formTecnica")), 'errors');
         echo "
-\t\t
-\t";
-        // line 22
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
-        echo "
-\t</form>
 
 ";
         
-        $__internal_8b6bb21019db5547ca3460b8924e994739c3f53f3faaeb17449b428d87e15ab1->leave($__internal_8b6bb21019db5547ca3460b8924e994739c3f53f3faaeb17449b428d87e15ab1_prof);
+        $__internal_8f0fc042a284b13bd932bb560fbb328790c211a8398c13ce7e4089e21805f8cd->leave($__internal_8f0fc042a284b13bd932bb560fbb328790c211a8398c13ce7e4089e21805f8cd_prof);
 
     }
 
@@ -90,38 +61,34 @@ class __TwigTemplate_8bfd24b539f1ec499e0dd1a59609153a84f9c1295005093bc7bd778f99c
         return "AdminBundle:Tecnica:form.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  78 => 22,  73 => 20,  67 => 17,  61 => 14,  55 => 11,  49 => 8,  43 => 5,  38 => 3,  35 => 2,  23 => 1,);
+        return array (  50 => 15,  44 => 12,  38 => 9,  32 => 6,  26 => 3,  22 => 1,);
     }
 
     public function getSource()
     {
-        return "{% block body %}
-\t<form class=\"blogger\" method=\"post\" >
-\t{{ form_start(form) }}
+        return "
 \t<div class=\"form-group\">
-\t\t{{ form_row(form.nombre) }}
+\t\t{{ form_row(formTecnica.nombre) }}
 \t</div>
 \t<div class=\"form-group\">
-\t\t{{ form_row(form.fechaCreacion) }}
+\t\t{{ form_row(formTecnica.descripcion) }}
 \t</div>
 \t<div class=\"form-group\">
-\t\t{{ form_row(form.descripcion) }}
+\t\t{{ form_row(formTecnica.vid) }}
 \t</div>
 \t<div class=\"form-group\">
-\t\t{{ form_row(form.vid) }}
-\t</div>
-\t<div class=\"form-group\">
-\t\t{{ form_row(form.utensilios) }}
+\t\t{{ form_row(formTecnica.utensilios) }}
 \t</div>
 
-        {{ form_errors(form) }}
-\t\t
-\t{{ form_end(form) }}
-\t</form>
+        {{ form_errors(formTecnica) }}
 
-{% endblock %}
 ";
     }
 }

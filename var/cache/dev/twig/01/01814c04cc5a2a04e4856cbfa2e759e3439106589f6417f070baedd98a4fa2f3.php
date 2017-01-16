@@ -25,32 +25,32 @@ class __TwigTemplate_7b0e29c74f7ee669b23ca179486f693a73d1dee3c902c7edcf2991bfd15
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9ee61d8de8e3bb3ae2c276e1ca1440594f762dcf1bb29f2f4a66c29b10f3df37 = $this->env->getExtension("native_profiler");
-        $__internal_9ee61d8de8e3bb3ae2c276e1ca1440594f762dcf1bb29f2f4a66c29b10f3df37->enter($__internal_9ee61d8de8e3bb3ae2c276e1ca1440594f762dcf1bb29f2f4a66c29b10f3df37_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle:Lista:list.html.twig"));
+        $__internal_517c926ff66129e8bf0129983f778e5813076827a239e2d6641b9ecd0f5a9b00 = $this->env->getExtension("native_profiler");
+        $__internal_517c926ff66129e8bf0129983f778e5813076827a239e2d6641b9ecd0f5a9b00->enter($__internal_517c926ff66129e8bf0129983f778e5813076827a239e2d6641b9ecd0f5a9b00_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle:Lista:list.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_9ee61d8de8e3bb3ae2c276e1ca1440594f762dcf1bb29f2f4a66c29b10f3df37->leave($__internal_9ee61d8de8e3bb3ae2c276e1ca1440594f762dcf1bb29f2f4a66c29b10f3df37_prof);
+        $__internal_517c926ff66129e8bf0129983f778e5813076827a239e2d6641b9ecd0f5a9b00->leave($__internal_517c926ff66129e8bf0129983f778e5813076827a239e2d6641b9ecd0f5a9b00_prof);
 
     }
 
     // line 4
     public function block_title($context, array $blocks = array())
     {
-        $__internal_99e6e30c258370599328f24dcde0ffefe7f953dae1631fe2f9e9c98de19cb1f2 = $this->env->getExtension("native_profiler");
-        $__internal_99e6e30c258370599328f24dcde0ffefe7f953dae1631fe2f9e9c98de19cb1f2->enter($__internal_99e6e30c258370599328f24dcde0ffefe7f953dae1631fe2f9e9c98de19cb1f2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_a53970db974a15aa6470bf9fb2ea6fc491f3eeffeb1097a885f8b314d0202311 = $this->env->getExtension("native_profiler");
+        $__internal_a53970db974a15aa6470bf9fb2ea6fc491f3eeffeb1097a885f8b314d0202311->enter($__internal_a53970db974a15aa6470bf9fb2ea6fc491f3eeffeb1097a885f8b314d0202311_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Eat&Fit";
         
-        $__internal_99e6e30c258370599328f24dcde0ffefe7f953dae1631fe2f9e9c98de19cb1f2->leave($__internal_99e6e30c258370599328f24dcde0ffefe7f953dae1631fe2f9e9c98de19cb1f2_prof);
+        $__internal_a53970db974a15aa6470bf9fb2ea6fc491f3eeffeb1097a885f8b314d0202311->leave($__internal_a53970db974a15aa6470bf9fb2ea6fc491f3eeffeb1097a885f8b314d0202311_prof);
 
     }
 
     // line 7
     public function block_head2($context, array $blocks = array())
     {
-        $__internal_206dce5d454e767f5db9f3dd0f32e55962d1abaab22d2f6a998b9bf7973bc2e7 = $this->env->getExtension("native_profiler");
-        $__internal_206dce5d454e767f5db9f3dd0f32e55962d1abaab22d2f6a998b9bf7973bc2e7->enter($__internal_206dce5d454e767f5db9f3dd0f32e55962d1abaab22d2f6a998b9bf7973bc2e7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "head2"));
+        $__internal_e5bc7c8b6745f4a5168f6f981099f043f6c708ab642c44737de778a13e8b075b = $this->env->getExtension("native_profiler");
+        $__internal_e5bc7c8b6745f4a5168f6f981099f043f6c708ab642c44737de778a13e8b075b->enter($__internal_e5bc7c8b6745f4a5168f6f981099f043f6c708ab642c44737de778a13e8b075b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "head2"));
 
         // line 8
         echo "<a href=\"";
@@ -58,15 +58,15 @@ class __TwigTemplate_7b0e29c74f7ee669b23ca179486f693a73d1dee3c902c7edcf2991bfd15
         echo "\">Listas de compra</a>
 ";
         
-        $__internal_206dce5d454e767f5db9f3dd0f32e55962d1abaab22d2f6a998b9bf7973bc2e7->leave($__internal_206dce5d454e767f5db9f3dd0f32e55962d1abaab22d2f6a998b9bf7973bc2e7_prof);
+        $__internal_e5bc7c8b6745f4a5168f6f981099f043f6c708ab642c44737de778a13e8b075b->leave($__internal_e5bc7c8b6745f4a5168f6f981099f043f6c708ab642c44737de778a13e8b075b_prof);
 
     }
 
     // line 11
     public function block_body3($context, array $blocks = array())
     {
-        $__internal_c87a6e354e726f784c7ee071a437452aafd6e54d82eee9b29dc618e4043de494 = $this->env->getExtension("native_profiler");
-        $__internal_c87a6e354e726f784c7ee071a437452aafd6e54d82eee9b29dc618e4043de494->enter($__internal_c87a6e354e726f784c7ee071a437452aafd6e54d82eee9b29dc618e4043de494_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body3"));
+        $__internal_5f6a9eb64ce3f461ad34ed044340f8a712b7cff0c2b8eb601413e0897efdaeb3 = $this->env->getExtension("native_profiler");
+        $__internal_5f6a9eb64ce3f461ad34ed044340f8a712b7cff0c2b8eb601413e0897efdaeb3->enter($__internal_5f6a9eb64ce3f461ad34ed044340f8a712b7cff0c2b8eb601413e0897efdaeb3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body3"));
 
         // line 12
         echo "
@@ -92,15 +92,15 @@ class __TwigTemplate_7b0e29c74f7ee669b23ca179486f693a73d1dee3c902c7edcf2991bfd15
 \t\t\t\t</div>
 ";
         
-        $__internal_c87a6e354e726f784c7ee071a437452aafd6e54d82eee9b29dc618e4043de494->leave($__internal_c87a6e354e726f784c7ee071a437452aafd6e54d82eee9b29dc618e4043de494_prof);
+        $__internal_5f6a9eb64ce3f461ad34ed044340f8a712b7cff0c2b8eb601413e0897efdaeb3->leave($__internal_5f6a9eb64ce3f461ad34ed044340f8a712b7cff0c2b8eb601413e0897efdaeb3_prof);
 
     }
 
     // line 27
     public function block_body2($context, array $blocks = array())
     {
-        $__internal_7d9545a0fa9285fe131039c635b6f894e57c40a7a84c3a3e7e4832731721d379 = $this->env->getExtension("native_profiler");
-        $__internal_7d9545a0fa9285fe131039c635b6f894e57c40a7a84c3a3e7e4832731721d379->enter($__internal_7d9545a0fa9285fe131039c635b6f894e57c40a7a84c3a3e7e4832731721d379_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body2"));
+        $__internal_3f40c1cd739cdf1e4dcf3e636df578f1b68030022732d536248fcc3cab01e3da = $this->env->getExtension("native_profiler");
+        $__internal_3f40c1cd739cdf1e4dcf3e636df578f1b68030022732d536248fcc3cab01e3da->enter($__internal_3f40c1cd739cdf1e4dcf3e636df578f1b68030022732d536248fcc3cab01e3da_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body2"));
 
         // line 28
         echo "
@@ -126,7 +126,10 @@ class __TwigTemplate_7b0e29c74f7ee669b23ca179486f693a73d1dee3c902c7edcf2991bfd15
             echo "        ";
             $context["numLista"] = ((isset($context["numLista"]) ? $context["numLista"] : $this->getContext($context, "numLista")) + 1);
             echo "                                     
-\t\t\t<div class=\"col-md-4 blog-top\">
+\t\t\t<div class=\"col-md-4 blog-top\" id=\"";
+            // line 41
+            echo twig_escape_filter($this->env, $this->getAttribute($context["lista"], "id", array()), "html", null, true);
+            echo "\">
 \t\t\t\t<div class=\"blog-in\">
 \t\t\t\t\t<div class=\"blog-grid\">
 \t\t\t\t\t\t<h3><a href=\"";
@@ -141,10 +144,14 @@ class __TwigTemplate_7b0e29c74f7ee669b23ca179486f693a73d1dee3c902c7edcf2991bfd15
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["lista"], "fechaCreacion", array()), "Y-m-d"), "html", null, true);
             echo "</span>
 \t\t\t\t\t\t\t<div class=\"clearfix\"> </div>
+              <button class=\"btn btn-danger\" data-href=\"";
+            // line 48
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_user_deleteLista", array("id" => $this->getAttribute($context["lista"], "id", array()))), "html", null, true);
+            echo "\" data-toggle=\"modal\" data-target=\"#confirm-delete\"><i class=\"glyphicon glyphicon-trash\"> </i></button>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"more\">\t\t\t\t\t\t
 \t\t\t\t\t\t\t<a class=\"link link-yaku\" href=\"";
-            // line 50
+            // line 51
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_user_showLista", array("id" => $this->getAttribute($context["lista"], "id", array()))), "html", null, true);
             echo "\">
 \t\t\t\t\t\t\t\t<span>L</span><span>e</span><span>e</span><span>r</span> <span>m</span><span>á</span><span>s</span>\t
@@ -154,25 +161,25 @@ class __TwigTemplate_7b0e29c74f7ee669b23ca179486f693a73d1dee3c902c7edcf2991bfd15
 \t\t\t\t</div>
 \t\t\t</div>\t
 \t";
-            // line 57
+            // line 58
             if ((((isset($context["numLista"]) ? $context["numLista"] : $this->getContext($context, "numLista")) % 3) == 0)) {
-                // line 58
+                // line 59
                 echo "\t\t</div>
 \t\t<div class=\"clearfix\"> </div>
 \t\t<div class=\" blog-head\">
 \t";
             }
-            // line 62
+            // line 63
             echo "\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['lista'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 63
+        // line 64
         echo "\t\t</br>
 \t\t<div class=\"navigation\">
 \t\t\t";
-        // line 65
+        // line 66
         echo $this->env->getExtension('knp_pagination')->render($this->env, (isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")));
         echo "
 \t\t</div>
@@ -192,9 +199,9 @@ class __TwigTemplate_7b0e29c74f7ee669b23ca179486f693a73d1dee3c902c7edcf2991bfd15
               <div class=\"modal-body\">
                   <div id=\"form_body\">
                       ";
-        // line 82
-        $this->loadTemplate("UserBundle:Lista:add.html.twig", "UserBundle:Lista:list.html.twig", 82)->display(array_merge($context, array("formLista" => (isset($context["formLista"]) ? $context["formLista"] : $this->getContext($context, "formLista")))));
         // line 83
+        $this->loadTemplate("UserBundle:Lista:add.html.twig", "UserBundle:Lista:list.html.twig", 83)->display(array_merge($context, array("formLista" => (isset($context["formLista"]) ? $context["formLista"] : $this->getContext($context, "formLista")))));
+        // line 84
         echo "                  </div>
               </div>
               <div class=\"modal-footer\">
@@ -204,19 +211,66 @@ class __TwigTemplate_7b0e29c74f7ee669b23ca179486f693a73d1dee3c902c7edcf2991bfd15
           </div>
         </div>
 
+        <!-- Modal  ADDING Confirm -->
+        <div id=\"addConfirm\" class=\"modal fade\" role=\"dialog\">
+          <div class=\"modal-dialog\">
+
+            <!-- Modal content-->
+            <div class=\"modal-content\">
+              <div class=\"modal-header\">
+                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                <h4 class=\"modal-title\"></h4>
+              </div>
+              <div class=\"modal-body\">
+
+              </div>
+              <div class=\"modal-footer\">
+                <button  type=\"button\" class=\"from-submit btn btn-default\" data-dismiss=\"modal\">Aceptar</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+
+           <div class=\"modal fade\" id=\"confirm-delete\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
+        <div class=\"modal-dialog\">
+            <div class=\"modal-content\">
+
+                <div class=\"modal-header\">
+                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>
+                    <h4 class=\"modal-title\" id=\"myModalLabel\">Mensaje de confirmación</h4>
+                </div>
+
+                <div class=\"modal-body\">
+                    <p>¿Desea borrar la lista seleccionada?</p>
+                    <p class=\"debug-url\"></p>
+                </div>
+
+                <div class=\"modal-footer\">
+                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Cancelar</button>
+                    <a class=\"btn btn-danger btn-ok\">Borrar</a>
+                </div>
+            </div>
+        </div>
+        </div>
+
 ";
         
-        $__internal_7d9545a0fa9285fe131039c635b6f894e57c40a7a84c3a3e7e4832731721d379->leave($__internal_7d9545a0fa9285fe131039c635b6f894e57c40a7a84c3a3e7e4832731721d379_prof);
+        $__internal_3f40c1cd739cdf1e4dcf3e636df578f1b68030022732d536248fcc3cab01e3da->leave($__internal_3f40c1cd739cdf1e4dcf3e636df578f1b68030022732d536248fcc3cab01e3da_prof);
 
     }
 
-    // line 94
+    // line 142
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_67a8a6e056c3fbc4979abee4e75e1838dd6de29f4db617c3cc7fc0adac919a04 = $this->env->getExtension("native_profiler");
-        $__internal_67a8a6e056c3fbc4979abee4e75e1838dd6de29f4db617c3cc7fc0adac919a04->enter($__internal_67a8a6e056c3fbc4979abee4e75e1838dd6de29f4db617c3cc7fc0adac919a04_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_830f362ee1e11835a713dd1ce2dec50e215003bd83fa3dfcc72d20b3614d4fc4 = $this->env->getExtension("native_profiler");
+        $__internal_830f362ee1e11835a713dd1ce2dec50e215003bd83fa3dfcc72d20b3614d4fc4->enter($__internal_830f362ee1e11835a713dd1ce2dec50e215003bd83fa3dfcc72d20b3614d4fc4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 95
+        // line 143
         echo "<script>
         \$('body').on('submit', '.ajaxForm', function (e) {
 
@@ -229,7 +283,11 @@ class __TwigTemplate_7b0e29c74f7ee669b23ca179486f693a73d1dee3c902c7edcf2991bfd15
             success: function(jqXHR) {
                         \$('#myModal').modal('hide');
 
-
+                        \$('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        \$('#addConfirm').find('.modal-title').html('Añadir')
+                        \$('#addConfirm').modal('show');
+                        \$(\"#addConfirm\").modal();
+                        window.location.reload();
 
                     },
                     error: function(jqXHR) {
@@ -244,14 +302,50 @@ class __TwigTemplate_7b0e29c74f7ee669b23ca179486f693a73d1dee3c902c7edcf2991bfd15
     </script>
 
 
-<script>
+    <script>
         function addReceta(){
         window.location.href= \"http://127.0.0.1/pfg_eneko/web/app_dev.php/\";
         }
     </script>
+
+    <script>
+        var ei;
+        \$('#confirm-delete').on('show.bs.modal', function(e) {
+          ei = e;
+        });
+            \$(\".btn-ok\").click(function () {
+
+                \$.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    url: \$(ei.relatedTarget).data('href'),
+                    success: function(jqXHR) {
+                      console.log(jqXHR);
+                        \$('#'+jqXHR.id).remove();
+                        \$('#confirm-delete').modal('hide');
+
+                        \$('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        \$('#addConfirm').find('.modal-title').html('Borrar')
+                        \$('#addConfirm').modal('show');
+                        \$(\"#addConfirm\").modal();
+
+                    },
+                    error: function(jqXHR) {
+                        \$('#confirm-delete').modal('hide');
+
+                        \$('#addConfirm').find('.modal-body').html(\"La lista No ha sido borrada correctamente\");
+                        \$('#addConfirm').find('.modal-title').html('NO Borrado')
+                        \$('#addConfirm').modal('show');
+                        \$(\"#addConfirm\").modal();
+
+                    },
+                
+            });
+        });
+  </script>
    ";
         
-        $__internal_67a8a6e056c3fbc4979abee4e75e1838dd6de29f4db617c3cc7fc0adac919a04->leave($__internal_67a8a6e056c3fbc4979abee4e75e1838dd6de29f4db617c3cc7fc0adac919a04_prof);
+        $__internal_830f362ee1e11835a713dd1ce2dec50e215003bd83fa3dfcc72d20b3614d4fc4->leave($__internal_830f362ee1e11835a713dd1ce2dec50e215003bd83fa3dfcc72d20b3614d4fc4_prof);
 
     }
 
@@ -267,7 +361,7 @@ class __TwigTemplate_7b0e29c74f7ee669b23ca179486f693a73d1dee3c902c7edcf2991bfd15
 
     public function getDebugInfo()
     {
-        return array (  220 => 95,  214 => 94,  198 => 83,  196 => 82,  176 => 65,  172 => 63,  166 => 62,  160 => 58,  158 => 57,  148 => 50,  141 => 46,  134 => 44,  126 => 40,  122 => 39,  119 => 38,  117 => 37,  106 => 28,  100 => 27,  89 => 21,  84 => 19,  79 => 17,  72 => 12,  66 => 11,  56 => 8,  50 => 7,  38 => 4,  11 => 1,);
+        return array (  274 => 143,  268 => 142,  205 => 84,  203 => 83,  183 => 66,  179 => 64,  173 => 63,  167 => 59,  165 => 58,  155 => 51,  149 => 48,  144 => 46,  137 => 44,  131 => 41,  126 => 40,  122 => 39,  119 => 38,  117 => 37,  106 => 28,  100 => 27,  89 => 21,  84 => 19,  79 => 17,  72 => 12,  66 => 11,  56 => 8,  50 => 7,  38 => 4,  11 => 1,);
     }
 
     public function getSource()
@@ -312,13 +406,14 @@ class __TwigTemplate_7b0e29c74f7ee669b23ca179486f693a73d1dee3c902c7edcf2991bfd15
 \t<div class=\" blog-head\">
 \t{% for lista in pagination %}
         {% set numLista=numLista+1%}                                     
-\t\t\t<div class=\"col-md-4 blog-top\">
+\t\t\t<div class=\"col-md-4 blog-top\" id=\"{{lista.id}}\">
 \t\t\t\t<div class=\"blog-in\">
 \t\t\t\t\t<div class=\"blog-grid\">
 \t\t\t\t\t\t<h3><a href=\"{{ path('App_user_showLista', { 'id': lista.id }) }}\">{{lista.nombre}}</a></h3>
 \t\t\t\t\t\t<div class=\"date\">
 \t\t\t\t\t\t\t<span class=\"date-in\"><i class=\"glyphicon glyphicon-calendar\"> </i>{{ lista.fechaCreacion|date('Y-m-d') }}</span>
 \t\t\t\t\t\t\t<div class=\"clearfix\"> </div>
+              <button class=\"btn btn-danger\" data-href=\"{{ path('App_user_deleteLista', { 'id': lista.id }) }}\" data-toggle=\"modal\" data-target=\"#confirm-delete\"><i class=\"glyphicon glyphicon-trash\"> </i></button>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"more\">\t\t\t\t\t\t
 \t\t\t\t\t\t\t<a class=\"link link-yaku\" href=\"{{ path('App_user_showLista', { 'id': lista.id }) }}\">
@@ -363,6 +458,53 @@ class __TwigTemplate_7b0e29c74f7ee669b23ca179486f693a73d1dee3c902c7edcf2991bfd15
           </div>
         </div>
 
+        <!-- Modal  ADDING Confirm -->
+        <div id=\"addConfirm\" class=\"modal fade\" role=\"dialog\">
+          <div class=\"modal-dialog\">
+
+            <!-- Modal content-->
+            <div class=\"modal-content\">
+              <div class=\"modal-header\">
+                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                <h4 class=\"modal-title\"></h4>
+              </div>
+              <div class=\"modal-body\">
+
+              </div>
+              <div class=\"modal-footer\">
+                <button  type=\"button\" class=\"from-submit btn btn-default\" data-dismiss=\"modal\">Aceptar</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+
+           <div class=\"modal fade\" id=\"confirm-delete\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
+        <div class=\"modal-dialog\">
+            <div class=\"modal-content\">
+
+                <div class=\"modal-header\">
+                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>
+                    <h4 class=\"modal-title\" id=\"myModalLabel\">Mensaje de confirmación</h4>
+                </div>
+
+                <div class=\"modal-body\">
+                    <p>¿Desea borrar la lista seleccionada?</p>
+                    <p class=\"debug-url\"></p>
+                </div>
+
+                <div class=\"modal-footer\">
+                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Cancelar</button>
+                    <a class=\"btn btn-danger btn-ok\">Borrar</a>
+                </div>
+            </div>
+        </div>
+        </div>
+
 {% endblock %}
 
 {% block javascripts %}
@@ -378,7 +520,11 @@ class __TwigTemplate_7b0e29c74f7ee669b23ca179486f693a73d1dee3c902c7edcf2991bfd15
             success: function(jqXHR) {
                         \$('#myModal').modal('hide');
 
-
+                        \$('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        \$('#addConfirm').find('.modal-title').html('Añadir')
+                        \$('#addConfirm').modal('show');
+                        \$(\"#addConfirm\").modal();
+                        window.location.reload();
 
                     },
                     error: function(jqXHR) {
@@ -393,11 +539,47 @@ class __TwigTemplate_7b0e29c74f7ee669b23ca179486f693a73d1dee3c902c7edcf2991bfd15
     </script>
 
 
-<script>
+    <script>
         function addReceta(){
         window.location.href= \"http://127.0.0.1/pfg_eneko/web/app_dev.php/\";
         }
     </script>
+
+    <script>
+        var ei;
+        \$('#confirm-delete').on('show.bs.modal', function(e) {
+          ei = e;
+        });
+            \$(\".btn-ok\").click(function () {
+
+                \$.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    url: \$(ei.relatedTarget).data('href'),
+                    success: function(jqXHR) {
+                      console.log(jqXHR);
+                        \$('#'+jqXHR.id).remove();
+                        \$('#confirm-delete').modal('hide');
+
+                        \$('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        \$('#addConfirm').find('.modal-title').html('Borrar')
+                        \$('#addConfirm').modal('show');
+                        \$(\"#addConfirm\").modal();
+
+                    },
+                    error: function(jqXHR) {
+                        \$('#confirm-delete').modal('hide');
+
+                        \$('#addConfirm').find('.modal-body').html(\"La lista No ha sido borrada correctamente\");
+                        \$('#addConfirm').find('.modal-title').html('NO Borrado')
+                        \$('#addConfirm').modal('show');
+                        \$(\"#addConfirm\").modal();
+
+                    },
+                
+            });
+        });
+  </script>
    {% endblock %}";
     }
 }

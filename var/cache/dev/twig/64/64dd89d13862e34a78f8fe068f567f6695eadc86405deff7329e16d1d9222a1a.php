@@ -23,48 +23,48 @@ class __TwigTemplate_157ceb885ff79bfefe61a47e820f7f0c6d7253b10f2d45d752a56291c4e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_72ee65e737a56fd25dbfb2187096322d06dcbf7c74f5c83a6135602ac4f5b56f = $this->env->getExtension("native_profiler");
-        $__internal_72ee65e737a56fd25dbfb2187096322d06dcbf7c74f5c83a6135602ac4f5b56f->enter($__internal_72ee65e737a56fd25dbfb2187096322d06dcbf7c74f5c83a6135602ac4f5b56f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AdminBundle:Utensilio:modify.html.twig"));
+        $__internal_32f5f51458e0675ce2da5cd8776944a0e7074b91132b2f9b340f36e3286d8f2e = $this->env->getExtension("native_profiler");
+        $__internal_32f5f51458e0675ce2da5cd8776944a0e7074b91132b2f9b340f36e3286d8f2e->enter($__internal_32f5f51458e0675ce2da5cd8776944a0e7074b91132b2f9b340f36e3286d8f2e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AdminBundle:Utensilio:modify.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_72ee65e737a56fd25dbfb2187096322d06dcbf7c74f5c83a6135602ac4f5b56f->leave($__internal_72ee65e737a56fd25dbfb2187096322d06dcbf7c74f5c83a6135602ac4f5b56f_prof);
+        $__internal_32f5f51458e0675ce2da5cd8776944a0e7074b91132b2f9b340f36e3286d8f2e->leave($__internal_32f5f51458e0675ce2da5cd8776944a0e7074b91132b2f9b340f36e3286d8f2e_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_48dc0d384108c1629b69fae2b6a5bc56f6f92eb9ca5fd3d588d9b97328564dc9 = $this->env->getExtension("native_profiler");
-        $__internal_48dc0d384108c1629b69fae2b6a5bc56f6f92eb9ca5fd3d588d9b97328564dc9->enter($__internal_48dc0d384108c1629b69fae2b6a5bc56f6f92eb9ca5fd3d588d9b97328564dc9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_338fab7ebf16506f3451f15d4abf8893ace37674fae5e25db034b4ebd5839529 = $this->env->getExtension("native_profiler");
+        $__internal_338fab7ebf16506f3451f15d4abf8893ace37674fae5e25db034b4ebd5839529->enter($__internal_338fab7ebf16506f3451f15d4abf8893ace37674fae5e25db034b4ebd5839529_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Ver/Modificar utensilio ";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entidad"]) ? $context["entidad"] : $this->getContext($context, "entidad")), "nombre", array()), "html", null, true);
         
-        $__internal_48dc0d384108c1629b69fae2b6a5bc56f6f92eb9ca5fd3d588d9b97328564dc9->leave($__internal_48dc0d384108c1629b69fae2b6a5bc56f6f92eb9ca5fd3d588d9b97328564dc9_prof);
+        $__internal_338fab7ebf16506f3451f15d4abf8893ace37674fae5e25db034b4ebd5839529->leave($__internal_338fab7ebf16506f3451f15d4abf8893ace37674fae5e25db034b4ebd5839529_prof);
 
     }
 
     // line 4
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_d0aaac548d5b39a1de48f072d16a9e9f18ba53fdd14f7f515195a791cbc1e6ca = $this->env->getExtension("native_profiler");
-        $__internal_d0aaac548d5b39a1de48f072d16a9e9f18ba53fdd14f7f515195a791cbc1e6ca->enter($__internal_d0aaac548d5b39a1de48f072d16a9e9f18ba53fdd14f7f515195a791cbc1e6ca_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_dcd41462b716e2bbb7a84046b4931e15681713f7bb19553f510c02dbee5d6732 = $this->env->getExtension("native_profiler");
+        $__internal_dcd41462b716e2bbb7a84046b4931e15681713f7bb19553f510c02dbee5d6732->enter($__internal_dcd41462b716e2bbb7a84046b4931e15681713f7bb19553f510c02dbee5d6732_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 5
         $this->displayParentBlock("stylesheets", $context, $blocks);
         echo "
 ";
         
-        $__internal_d0aaac548d5b39a1de48f072d16a9e9f18ba53fdd14f7f515195a791cbc1e6ca->leave($__internal_d0aaac548d5b39a1de48f072d16a9e9f18ba53fdd14f7f515195a791cbc1e6ca_prof);
+        $__internal_dcd41462b716e2bbb7a84046b4931e15681713f7bb19553f510c02dbee5d6732->leave($__internal_dcd41462b716e2bbb7a84046b4931e15681713f7bb19553f510c02dbee5d6732_prof);
 
     }
 
     // line 7
     public function block_body($context, array $blocks = array())
     {
-        $__internal_f752a8c7d98a18a502d36c3f6a6a195e710daa81b583e7c9d6127c4549d68bcb = $this->env->getExtension("native_profiler");
-        $__internal_f752a8c7d98a18a502d36c3f6a6a195e710daa81b583e7c9d6127c4549d68bcb->enter($__internal_f752a8c7d98a18a502d36c3f6a6a195e710daa81b583e7c9d6127c4549d68bcb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_fc876f604eda2daec7bc6e42b46f510c06b3c94fb6bff60e997d2afeca52a926 = $this->env->getExtension("native_profiler");
+        $__internal_fc876f604eda2daec7bc6e42b46f510c06b3c94fb6bff60e997d2afeca52a926->enter($__internal_fc876f604eda2daec7bc6e42b46f510c06b3c94fb6bff60e997d2afeca52a926_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 8
         echo "<!-- Main Content -->
@@ -94,11 +94,18 @@ class __TwigTemplate_157ceb885ff79bfefe61a47e820f7f0c6d7253b10f2d45d752a56291c4e
                                 </div>
                                 <div class=\"col-lg-12\">
                                     <div class=\"card-body\">
-                                        ";
+                                    ";
         // line 29
-        $this->loadTemplate("AdminBundle:Utensilio:form.html.twig", "AdminBundle:Utensilio:modify.html.twig", 29)->display($context);
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formUtensilio"]) ? $context["formUtensilio"] : $this->getContext($context, "formUtensilio")), 'form_start');
+        echo "
+                                        ";
         // line 30
-        echo "                                    </div>
+        $this->loadTemplate("AdminBundle:Utensilio:form.html.twig", "AdminBundle:Utensilio:modify.html.twig", 30)->display($context);
+        // line 31
+        echo "                                    ";
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formUtensilio"]) ? $context["formUtensilio"] : $this->getContext($context, "formUtensilio")), 'form_end');
+        echo "
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +114,7 @@ class __TwigTemplate_157ceb885ff79bfefe61a47e820f7f0c6d7253b10f2d45d752a56291c4e
         <div>       
 ";
         
-        $__internal_f752a8c7d98a18a502d36c3f6a6a195e710daa81b583e7c9d6127c4549d68bcb->leave($__internal_f752a8c7d98a18a502d36c3f6a6a195e710daa81b583e7c9d6127c4549d68bcb_prof);
+        $__internal_fc876f604eda2daec7bc6e42b46f510c06b3c94fb6bff60e997d2afeca52a926->leave($__internal_fc876f604eda2daec7bc6e42b46f510c06b3c94fb6bff60e997d2afeca52a926_prof);
 
     }
 
@@ -123,7 +130,7 @@ class __TwigTemplate_157ceb885ff79bfefe61a47e820f7f0c6d7253b10f2d45d752a56291c4e
 
     public function getDebugInfo()
     {
-        return array (  101 => 30,  99 => 29,  88 => 21,  84 => 20,  70 => 8,  64 => 7,  55 => 5,  49 => 4,  36 => 3,  11 => 1,);
+        return array (  105 => 31,  103 => 30,  99 => 29,  88 => 21,  84 => 20,  70 => 8,  64 => 7,  55 => 5,  49 => 4,  36 => 3,  11 => 1,);
     }
 
     public function getSource()
@@ -156,7 +163,9 @@ class __TwigTemplate_157ceb885ff79bfefe61a47e820f7f0c6d7253b10f2d45d752a56291c4e
                                 </div>
                                 <div class=\"col-lg-12\">
                                     <div class=\"card-body\">
+                                    {{ form_start(formUtensilio)}}
                                         {% include \"AdminBundle:Utensilio:form.html.twig\" %}
+                                    {{ form_end(formUtensilio) }}
                                     </div>
                                 </div>
                             </div>

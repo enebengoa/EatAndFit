@@ -25,32 +25,32 @@ class __TwigTemplate_92c2ae138159418ae65cc8fc0226d0df3bb0e7a6c77eb8ac598b925671f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_21a7c63d78259615152e9bafb1b555585839a764ae402b5ea7612b940a192e5d = $this->env->getExtension("native_profiler");
-        $__internal_21a7c63d78259615152e9bafb1b555585839a764ae402b5ea7612b940a192e5d->enter($__internal_21a7c63d78259615152e9bafb1b555585839a764ae402b5ea7612b940a192e5d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@User/Receta/list.html.twig"));
+        $__internal_f7b4cea1f7a2718a86177172b56a6107380758d34724fc4e9d58176c726991f7 = $this->env->getExtension("native_profiler");
+        $__internal_f7b4cea1f7a2718a86177172b56a6107380758d34724fc4e9d58176c726991f7->enter($__internal_f7b4cea1f7a2718a86177172b56a6107380758d34724fc4e9d58176c726991f7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@User/Receta/list.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_21a7c63d78259615152e9bafb1b555585839a764ae402b5ea7612b940a192e5d->leave($__internal_21a7c63d78259615152e9bafb1b555585839a764ae402b5ea7612b940a192e5d_prof);
+        $__internal_f7b4cea1f7a2718a86177172b56a6107380758d34724fc4e9d58176c726991f7->leave($__internal_f7b4cea1f7a2718a86177172b56a6107380758d34724fc4e9d58176c726991f7_prof);
 
     }
 
     // line 4
     public function block_title($context, array $blocks = array())
     {
-        $__internal_686d3e20536b4123f7456c1ff6d5a83ccbfbc82e20c74a369dd72941a6d82dab = $this->env->getExtension("native_profiler");
-        $__internal_686d3e20536b4123f7456c1ff6d5a83ccbfbc82e20c74a369dd72941a6d82dab->enter($__internal_686d3e20536b4123f7456c1ff6d5a83ccbfbc82e20c74a369dd72941a6d82dab_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_be9c19c8344b2041ede8fb78f22088931554437d7209ca34746ae0f975de7ab3 = $this->env->getExtension("native_profiler");
+        $__internal_be9c19c8344b2041ede8fb78f22088931554437d7209ca34746ae0f975de7ab3->enter($__internal_be9c19c8344b2041ede8fb78f22088931554437d7209ca34746ae0f975de7ab3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Eat&Fit";
         
-        $__internal_686d3e20536b4123f7456c1ff6d5a83ccbfbc82e20c74a369dd72941a6d82dab->leave($__internal_686d3e20536b4123f7456c1ff6d5a83ccbfbc82e20c74a369dd72941a6d82dab_prof);
+        $__internal_be9c19c8344b2041ede8fb78f22088931554437d7209ca34746ae0f975de7ab3->leave($__internal_be9c19c8344b2041ede8fb78f22088931554437d7209ca34746ae0f975de7ab3_prof);
 
     }
 
     // line 7
     public function block_head2($context, array $blocks = array())
     {
-        $__internal_ff3328af2ba069a6beb7beb0ae0cb0dc7887b2d188b5059af9255c71eb590bbc = $this->env->getExtension("native_profiler");
-        $__internal_ff3328af2ba069a6beb7beb0ae0cb0dc7887b2d188b5059af9255c71eb590bbc->enter($__internal_ff3328af2ba069a6beb7beb0ae0cb0dc7887b2d188b5059af9255c71eb590bbc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "head2"));
+        $__internal_06ce558e6e197ea6cc87c700530aa10900e77008d268c25b36d1a896358409fe = $this->env->getExtension("native_profiler");
+        $__internal_06ce558e6e197ea6cc87c700530aa10900e77008d268c25b36d1a896358409fe->enter($__internal_06ce558e6e197ea6cc87c700530aa10900e77008d268c25b36d1a896358409fe_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "head2"));
 
         // line 8
         echo "<a href=\"";
@@ -58,15 +58,15 @@ class __TwigTemplate_92c2ae138159418ae65cc8fc0226d0df3bb0e7a6c77eb8ac598b925671f
         echo "\">Recetas</a>
 ";
         
-        $__internal_ff3328af2ba069a6beb7beb0ae0cb0dc7887b2d188b5059af9255c71eb590bbc->leave($__internal_ff3328af2ba069a6beb7beb0ae0cb0dc7887b2d188b5059af9255c71eb590bbc_prof);
+        $__internal_06ce558e6e197ea6cc87c700530aa10900e77008d268c25b36d1a896358409fe->leave($__internal_06ce558e6e197ea6cc87c700530aa10900e77008d268c25b36d1a896358409fe_prof);
 
     }
 
     // line 11
     public function block_body3($context, array $blocks = array())
     {
-        $__internal_29c33f5c741a95f31bd67a68cd03d04756f49a74b7dd8d64bd12129f6d952f52 = $this->env->getExtension("native_profiler");
-        $__internal_29c33f5c741a95f31bd67a68cd03d04756f49a74b7dd8d64bd12129f6d952f52->enter($__internal_29c33f5c741a95f31bd67a68cd03d04756f49a74b7dd8d64bd12129f6d952f52_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body3"));
+        $__internal_3bb935aa710c3dd96cb2a7c031a10e2dd1026f9fafd606c650abb0c3e15595ba = $this->env->getExtension("native_profiler");
+        $__internal_3bb935aa710c3dd96cb2a7c031a10e2dd1026f9fafd606c650abb0c3e15595ba->enter($__internal_3bb935aa710c3dd96cb2a7c031a10e2dd1026f9fafd606c650abb0c3e15595ba_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body3"));
 
         // line 12
         echo "<div class=\"grid-categories animated wow fadeInLeft\" data-wow-duration=\"1000ms\" data-wow-delay=\"500ms\">
@@ -100,38 +100,45 @@ class __TwigTemplate_92c2ae138159418ae65cc8fc0226d0df3bb0e7a6c77eb8ac598b925671f
         echo "
 \t\t\t\t\t</div>
 \t\t\t\t\t</br>
-\t\t\t\t\t<h4>Menú</h4>
-\t\t\t\t\t<div class=\"buscador\">
-\t\t\t\t\t\t\t";
-        // line 27
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formMenu"]) ? $context["formMenu"] : $this->getContext($context, "formMenu")), 'form_start');
-        echo "
-\t\t\t\t\t\t\t\t<div class=\"form-group\">
-\t\t\t\t\t\t\t\t\t";
-        // line 29
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formMenu"]) ? $context["formMenu"] : $this->getContext($context, "formMenu")), "menu", array()), 'row');
-        echo "
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t";
-        // line 31
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formMenu"]) ? $context["formMenu"] : $this->getContext($context, "formMenu")), 'form_end');
-        echo "
-\t\t\t\t\t\t\t<button id=\"verMenu\" class=\"btn btn-success\" >Ver</button>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
+\t\t\t\t\t";
+        // line 25
+        if (((isset($context["formMenu"]) ? $context["formMenu"] : $this->getContext($context, "formMenu")) != null)) {
+            // line 26
+            echo "\t\t\t\t\t\t<h4>Menú</h4>
+\t\t\t\t\t\t\t\t\t<div class=\"buscador\">
+\t\t\t\t\t\t\t\t\t\t\t";
+            // line 28
+            echo             $this->env->getExtension('form')->renderer->renderBlock((isset($context["formMenu"]) ? $context["formMenu"] : $this->getContext($context, "formMenu")), 'form_start');
+            echo "
+\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t";
+            // line 30
+            echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formMenu"]) ? $context["formMenu"] : $this->getContext($context, "formMenu")), "menu", array()), 'row');
+            echo "
+\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t";
+            // line 32
+            echo             $this->env->getExtension('form')->renderer->renderBlock((isset($context["formMenu"]) ? $context["formMenu"] : $this->getContext($context, "formMenu")), 'form_end');
+            echo "
+\t\t\t\t\t\t\t\t\t\t\t<button id=\"verMenu\" class=\"btn btn-success\" >Ver</button>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t";
+        }
+        // line 36
+        echo "\t\t\t\t</div>
 ";
         
-        $__internal_29c33f5c741a95f31bd67a68cd03d04756f49a74b7dd8d64bd12129f6d952f52->leave($__internal_29c33f5c741a95f31bd67a68cd03d04756f49a74b7dd8d64bd12129f6d952f52_prof);
+        $__internal_3bb935aa710c3dd96cb2a7c031a10e2dd1026f9fafd606c650abb0c3e15595ba->leave($__internal_3bb935aa710c3dd96cb2a7c031a10e2dd1026f9fafd606c650abb0c3e15595ba_prof);
 
     }
 
-    // line 38
+    // line 40
     public function block_body2($context, array $blocks = array())
     {
-        $__internal_8d3d74cda37aab7e454133a704628dc1e50c6a60e961d1d4645841d1e7539faf = $this->env->getExtension("native_profiler");
-        $__internal_8d3d74cda37aab7e454133a704628dc1e50c6a60e961d1d4645841d1e7539faf->enter($__internal_8d3d74cda37aab7e454133a704628dc1e50c6a60e961d1d4645841d1e7539faf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body2"));
+        $__internal_37f6f0c130376af610a308a7188edfe8de793c4a18d689d855b7ddc3778f6739 = $this->env->getExtension("native_profiler");
+        $__internal_37f6f0c130376af610a308a7188edfe8de793c4a18d689d855b7ddc3778f6739->enter($__internal_37f6f0c130376af610a308a7188edfe8de793c4a18d689d855b7ddc3778f6739_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body2"));
 
-        // line 39
+        // line 41
         echo "
 
 
@@ -139,55 +146,65 @@ class __TwigTemplate_92c2ae138159418ae65cc8fc0226d0df3bb0e7a6c77eb8ac598b925671f
 
 \t</br>
 \t";
-        // line 45
+        // line 47
         $context["numReceta"] = 0;
-        // line 46
+        // line 48
         echo "\t<div class=\" blog-head\">
 \t";
-        // line 47
+        // line 49
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")));
         foreach ($context['_seq'] as $context["_key"] => $context["receta"]) {
-            // line 48
+            // line 50
             echo "        ";
             $context["numReceta"] = ((isset($context["numReceta"]) ? $context["numReceta"] : $this->getContext($context, "numReceta")) + 1);
             echo "                                     
 \t\t\t<div class=\"col-md-4 blog-top\">
 \t\t\t\t<div class=\"blog-in\">
 \t\t\t\t\t<img class=\"img-responsive\" src=\"";
-            // line 51
+            // line 53
             echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl(("imagenes/" . $this->getAttribute($context["receta"], "imagen", array()))), "html", null, true);
             echo "\" alt=\" \">
 \t\t\t\t\t<div class=\"blog-grid\">
 \t\t\t\t\t\t<h3><a href=\"";
-            // line 53
+            // line 55
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_user_showReceta", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "nombre", array()), "html", null, true);
             echo "</a></h3>
 \t\t\t\t\t\t<div class=\"date\">
 \t\t\t\t\t\t\t<span class=\"date-in\"><i class=\"glyphicon glyphicon-calendar\"> </i>";
-            // line 55
+            // line 57
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["receta"], "fechaCreacion", array()), "Y-m-d"), "html", null, true);
             echo "</span>
-\t\t\t\t\t\t\t<a href=\"single.html\" class=\"comments\"><i class=\"glyphicon glyphicon-comment\"></i>";
-            // line 56
+\t\t\t\t\t\t\t<a  class=\"comments\"><i class=\"glyphicon glyphicon-comment\"></i>";
+            // line 58
             echo twig_escape_filter($this->env, twig_length_filter($this->env, $this->getAttribute($context["receta"], "comentarios", array())), "html", null, true);
             echo "</a>
 \t\t\t\t\t\t\t<div class=\"clearfix\"> </div>
 \t\t\t\t\t\t</div>
+\t\t\t\t\t\t<p>Calorías: ";
+            // line 61
+            echo twig_escape_filter($this->env, ($this->getAttribute($context["receta"], "calorias", array()) / $this->getAttribute($context["receta"], "numeroComensales", array())), "html", null, true);
+            echo " cal/persona </p>
 \t\t\t\t\t\t<p>";
-            // line 59
+            // line 62
             echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "descripcion", array(0 => 40), "method"), "html", null, true);
             echo "</p>
-\t\t\t\t\t\t<a class=\"btn btn-success\" data-href=";
-            // line 60
-            echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "id", array()), "html", null, true);
-            echo " data-toggle=\"modal\" data-target=\"#confirm-comision\"><i class=\"glyphicon glyphicon-plus\"> </i></a>
-
+\t\t\t\t\t\t";
+            // line 63
+            if (((isset($context["formMenu"]) ? $context["formMenu"] : $this->getContext($context, "formMenu")) != null)) {
+                // line 64
+                echo "\t\t\t\t\t\t<a class=\"btn btn-success\" data-href=";
+                echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "id", array()), "html", null, true);
+                echo " data-toggle=\"modal\" data-target=\"#confirm-comision\"><i class=\"glyphicon glyphicon-plus\"> </i></a>
+\t\t\t\t\t\t";
+            }
+            // line 66
+            echo "
 \t\t\t\t\t\t<div class=\"more\">\t\t\t\t\t\t
 \t\t\t\t\t\t\t<a class=\"link link-yaku\" href=\"";
-            // line 63
+            // line 68
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_user_showReceta", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
             echo "\">
 \t\t\t\t\t\t\t\t<span>L</span><span>e</span><span>e</span><span>r</span> <span>m</span><span>á</span><span>s</span>\t
@@ -197,25 +214,25 @@ class __TwigTemplate_92c2ae138159418ae65cc8fc0226d0df3bb0e7a6c77eb8ac598b925671f
 \t\t\t\t</div>
 \t\t\t</div>\t
 \t";
-            // line 70
+            // line 75
             if ((((isset($context["numReceta"]) ? $context["numReceta"] : $this->getContext($context, "numReceta")) % 3) == 0)) {
-                // line 71
+                // line 76
                 echo "\t\t</div>
 \t\t<div class=\"clearfix\"> </div>
 \t\t<div class=\" blog-head\">
 \t";
             }
-            // line 75
+            // line 80
             echo "\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['receta'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 76
+        // line 81
         echo "\t\t</br>
 \t\t<div class=\"navigation\">
 \t\t\t";
-        // line 78
+        // line 83
         echo $this->env->getExtension('knp_pagination')->render($this->env, (isset($context["pagination"]) ? $context["pagination"] : $this->getContext($context, "pagination")));
         echo "
 \t\t</div>
@@ -259,9 +276,9 @@ class __TwigTemplate_92c2ae138159418ae65cc8fc0226d0df3bb0e7a6c77eb8ac598b925671f
 
                     <div class=\"modal-body\">
                                               ";
-        // line 119
-        $this->loadTemplate("UserBundle:SubMenu:add.html.twig", "@User/Receta/list.html.twig", 119)->display(array_merge($context, array("formSubMenu" => (isset($context["formSubMenu"]) ? $context["formSubMenu"] : $this->getContext($context, "formSubMenu")))));
-        // line 120
+        // line 124
+        $this->loadTemplate("UserBundle:SubMenu:add.html.twig", "@User/Receta/list.html.twig", 124)->display(array_merge($context, array("formSubMenu" => (isset($context["formSubMenu"]) ? $context["formSubMenu"] : $this->getContext($context, "formSubMenu")))));
+        // line 125
         echo "
                         <p class=\"debug-url\"></p>
                     </div>
@@ -276,22 +293,75 @@ class __TwigTemplate_92c2ae138159418ae65cc8fc0226d0df3bb0e7a6c77eb8ac598b925671f
 
 ";
         
-        $__internal_8d3d74cda37aab7e454133a704628dc1e50c6a60e961d1d4645841d1e7539faf->leave($__internal_8d3d74cda37aab7e454133a704628dc1e50c6a60e961d1d4645841d1e7539faf_prof);
+        $__internal_37f6f0c130376af610a308a7188edfe8de793c4a18d689d855b7ddc3778f6739->leave($__internal_37f6f0c130376af610a308a7188edfe8de793c4a18d689d855b7ddc3778f6739_prof);
 
     }
 
-    // line 134
+    // line 139
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_a7961d0495d8c8dcf851f29d653a3ff9433d941d41b587f7b3452bf28d2cc7d5 = $this->env->getExtension("native_profiler");
-        $__internal_a7961d0495d8c8dcf851f29d653a3ff9433d941d41b587f7b3452bf28d2cc7d5->enter($__internal_a7961d0495d8c8dcf851f29d653a3ff9433d941d41b587f7b3452bf28d2cc7d5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_64d23fbf5cac365dbc10d42686e04ae79d7b534eb7a55143b01fde02ff20f1d1 = $this->env->getExtension("native_profiler");
+        $__internal_64d23fbf5cac365dbc10d42686e04ae79d7b534eb7a55143b01fde02ff20f1d1->enter($__internal_64d23fbf5cac365dbc10d42686e04ae79d7b534eb7a55143b01fde02ff20f1d1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 135
+        // line 140
         echo "
-  <script type=\"text/javascript\" src=\"";
-        // line 136
-        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/addReceta.js"), "html", null, true);
-        echo "\"></script>
+  <script>
+
+
+        var data; 
+
+        \$('#confirm-comision').on('show.bs.modal', function(e) 
+        {
+            event.preventDefault();
+            data = \$(e.relatedTarget).data();
+
+        });
+            var requestSend =false;
+            console.log(data);
+            jQuery(\"#recetaAdd\").on('click',(function () 
+            {
+                if(!requestSend)
+                {
+                    requestSend=true;
+
+                    var id = data.href;
+                    
+                    var menu= jQuery('#form_menu').val();
+                    var hora= jQuery('#sub_menu_HoraIngesta').val();
+
+                    jQuery.ajax({
+                        type: 'POST',
+                        url: \"http://127.0.0.1/pfg_eneko/web/app_dev.php/AddSubMenu/\"+menu+\"/\"+id+\"/\"+hora,
+                        data: jQuery(this).serialize(),
+                        success: function(jqXHR) {
+                            jQuery('#confirm-comision').modal('hide');
+\t                        \$('#addConfirm').find('.modal-body').html(jqXHR.message);
+\t                        \$('#addConfirm').find('.modal-title').html('Mensaje de confirmación')
+\t                        \$('#addConfirm').modal('show');
+\t                        \$(\"#addConfirm\").modal();
+                            requestSend=false;
+                        },
+                        error: function(jqXHR)
+                        {
+                        \trequestSend=false;
+
+                        \tjQuery('#confirm-comision').modal('hide');
+                            \$('#addConfirm').find('.modal-body').html(jqXHR.responseJSON.message);
+\t                        \$('#addConfirm').find('.modal-title').html('Mensaje de confirmación')
+\t                        \$('#addConfirm').modal('show');
+\t                        \$(\"#addConfirm\").modal();
+                        }
+                    });
+
+
+                }
+
+            }));
+
+
+
+
+  </script>
 
   <script>
 
@@ -320,7 +390,7 @@ class __TwigTemplate_92c2ae138159418ae65cc8fc0226d0df3bb0e7a6c77eb8ac598b925671f
   </script>
  ";
         
-        $__internal_a7961d0495d8c8dcf851f29d653a3ff9433d941d41b587f7b3452bf28d2cc7d5->leave($__internal_a7961d0495d8c8dcf851f29d653a3ff9433d941d41b587f7b3452bf28d2cc7d5_prof);
+        $__internal_64d23fbf5cac365dbc10d42686e04ae79d7b534eb7a55143b01fde02ff20f1d1->leave($__internal_64d23fbf5cac365dbc10d42686e04ae79d7b534eb7a55143b01fde02ff20f1d1_prof);
 
     }
 
@@ -336,7 +406,7 @@ class __TwigTemplate_92c2ae138159418ae65cc8fc0226d0df3bb0e7a6c77eb8ac598b925671f
 
     public function getDebugInfo()
     {
-        return array (  293 => 136,  290 => 135,  284 => 134,  265 => 120,  263 => 119,  219 => 78,  215 => 76,  209 => 75,  203 => 71,  201 => 70,  191 => 63,  185 => 60,  181 => 59,  175 => 56,  171 => 55,  164 => 53,  159 => 51,  152 => 48,  148 => 47,  145 => 46,  143 => 45,  135 => 39,  129 => 38,  117 => 31,  112 => 29,  107 => 27,  99 => 22,  94 => 20,  90 => 19,  86 => 18,  82 => 17,  77 => 15,  72 => 12,  66 => 11,  56 => 8,  50 => 7,  38 => 4,  11 => 1,);
+        return array (  307 => 140,  301 => 139,  282 => 125,  280 => 124,  236 => 83,  232 => 81,  226 => 80,  220 => 76,  218 => 75,  208 => 68,  204 => 66,  198 => 64,  196 => 63,  192 => 62,  188 => 61,  182 => 58,  178 => 57,  171 => 55,  166 => 53,  159 => 50,  155 => 49,  152 => 48,  150 => 47,  142 => 41,  136 => 40,  128 => 36,  121 => 32,  116 => 30,  111 => 28,  107 => 26,  105 => 25,  99 => 22,  94 => 20,  90 => 19,  86 => 18,  82 => 17,  77 => 15,  72 => 12,  66 => 11,  56 => 8,  50 => 7,  38 => 4,  11 => 1,);
     }
 
     public function getSource()
@@ -365,15 +435,17 @@ class __TwigTemplate_92c2ae138159418ae65cc8fc0226d0df3bb0e7a6c77eb8ac598b925671f
 \t\t\t\t\t\t\t{{form_end(form)}}
 \t\t\t\t\t</div>
 \t\t\t\t\t</br>
-\t\t\t\t\t<h4>Menú</h4>
-\t\t\t\t\t<div class=\"buscador\">
-\t\t\t\t\t\t\t{{form_start(formMenu)}}
-\t\t\t\t\t\t\t\t<div class=\"form-group\">
-\t\t\t\t\t\t\t\t\t{{ form_row(formMenu.menu) }}
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t{{form_end(formMenu)}}
-\t\t\t\t\t\t\t<button id=\"verMenu\" class=\"btn btn-success\" >Ver</button>
-\t\t\t\t\t</div>
+\t\t\t\t\t{% if formMenu!=NULL%}
+\t\t\t\t\t\t<h4>Menú</h4>
+\t\t\t\t\t\t\t\t\t<div class=\"buscador\">
+\t\t\t\t\t\t\t\t\t\t\t{{form_start(formMenu)}}
+\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"form-group\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t{{ form_row(formMenu.menu) }}
+\t\t\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t\t\t{{form_end(formMenu)}}
+\t\t\t\t\t\t\t\t\t\t\t<button id=\"verMenu\" class=\"btn btn-success\" >Ver</button>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t{% endif %}
 \t\t\t\t</div>
 {% endblock %}
 
@@ -396,11 +468,14 @@ class __TwigTemplate_92c2ae138159418ae65cc8fc0226d0df3bb0e7a6c77eb8ac598b925671f
 \t\t\t\t\t\t<h3><a href=\"{{ path('App_user_showReceta', { 'id': receta.id }) }}\">{{receta.nombre}}</a></h3>
 \t\t\t\t\t\t<div class=\"date\">
 \t\t\t\t\t\t\t<span class=\"date-in\"><i class=\"glyphicon glyphicon-calendar\"> </i>{{ receta.fechaCreacion|date('Y-m-d') }}</span>
-\t\t\t\t\t\t\t<a href=\"single.html\" class=\"comments\"><i class=\"glyphicon glyphicon-comment\"></i>{{receta.comentarios|length}}</a>
+\t\t\t\t\t\t\t<a  class=\"comments\"><i class=\"glyphicon glyphicon-comment\"></i>{{receta.comentarios|length}}</a>
 \t\t\t\t\t\t\t<div class=\"clearfix\"> </div>
 \t\t\t\t\t\t</div>
+\t\t\t\t\t\t<p>Calorías: {{receta.calorias/receta.numeroComensales}} cal/persona </p>
 \t\t\t\t\t\t<p>{{receta.descripcion(40)}}</p>
+\t\t\t\t\t\t{% if formMenu!=NULL%}
 \t\t\t\t\t\t<a class=\"btn btn-success\" data-href={{receta.id}} data-toggle=\"modal\" data-target=\"#confirm-comision\"><i class=\"glyphicon glyphicon-plus\"> </i></a>
+\t\t\t\t\t\t{% endif %}
 
 \t\t\t\t\t\t<div class=\"more\">\t\t\t\t\t\t
 \t\t\t\t\t\t\t<a class=\"link link-yaku\" href=\"{{ path('App_user_showReceta', { 'id': receta.id }) }}\">
@@ -476,7 +551,63 @@ class __TwigTemplate_92c2ae138159418ae65cc8fc0226d0df3bb0e7a6c77eb8ac598b925671f
 
 {% block javascripts %}
 
-  <script type=\"text/javascript\" src=\"{{ asset('js/addReceta.js') }}\"></script>
+  <script>
+
+
+        var data; 
+
+        \$('#confirm-comision').on('show.bs.modal', function(e) 
+        {
+            event.preventDefault();
+            data = \$(e.relatedTarget).data();
+
+        });
+            var requestSend =false;
+            console.log(data);
+            jQuery(\"#recetaAdd\").on('click',(function () 
+            {
+                if(!requestSend)
+                {
+                    requestSend=true;
+
+                    var id = data.href;
+                    
+                    var menu= jQuery('#form_menu').val();
+                    var hora= jQuery('#sub_menu_HoraIngesta').val();
+
+                    jQuery.ajax({
+                        type: 'POST',
+                        url: \"http://127.0.0.1/pfg_eneko/web/app_dev.php/AddSubMenu/\"+menu+\"/\"+id+\"/\"+hora,
+                        data: jQuery(this).serialize(),
+                        success: function(jqXHR) {
+                            jQuery('#confirm-comision').modal('hide');
+\t                        \$('#addConfirm').find('.modal-body').html(jqXHR.message);
+\t                        \$('#addConfirm').find('.modal-title').html('Mensaje de confirmación')
+\t                        \$('#addConfirm').modal('show');
+\t                        \$(\"#addConfirm\").modal();
+                            requestSend=false;
+                        },
+                        error: function(jqXHR)
+                        {
+                        \trequestSend=false;
+
+                        \tjQuery('#confirm-comision').modal('hide');
+                            \$('#addConfirm').find('.modal-body').html(jqXHR.responseJSON.message);
+\t                        \$('#addConfirm').find('.modal-title').html('Mensaje de confirmación')
+\t                        \$('#addConfirm').modal('show');
+\t                        \$(\"#addConfirm\").modal();
+                        }
+                    });
+
+
+                }
+
+            }));
+
+
+
+
+  </script>
 
   <script>
 

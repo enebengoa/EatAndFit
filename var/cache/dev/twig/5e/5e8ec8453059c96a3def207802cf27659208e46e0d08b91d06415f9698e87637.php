@@ -24,32 +24,32 @@ class __TwigTemplate_f3e32b8b06e72307182e4d865b3919362a9fa617357cf8cfa73c107eb42
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_20c139db495f7fd132e12bd9b0aca8f7fa28bdf2c9629dc47812f1ce9463dade = $this->env->getExtension("native_profiler");
-        $__internal_20c139db495f7fd132e12bd9b0aca8f7fa28bdf2c9629dc47812f1ce9463dade->enter($__internal_20c139db495f7fd132e12bd9b0aca8f7fa28bdf2c9629dc47812f1ce9463dade_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Ingrediente/list.html.twig"));
+        $__internal_ebbbd812a6df2edca434e93fde5c56385f2ee598c598dda986bfea6d93e76dfc = $this->env->getExtension("native_profiler");
+        $__internal_ebbbd812a6df2edca434e93fde5c56385f2ee598c598dda986bfea6d93e76dfc->enter($__internal_ebbbd812a6df2edca434e93fde5c56385f2ee598c598dda986bfea6d93e76dfc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Ingrediente/list.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_20c139db495f7fd132e12bd9b0aca8f7fa28bdf2c9629dc47812f1ce9463dade->leave($__internal_20c139db495f7fd132e12bd9b0aca8f7fa28bdf2c9629dc47812f1ce9463dade_prof);
+        $__internal_ebbbd812a6df2edca434e93fde5c56385f2ee598c598dda986bfea6d93e76dfc->leave($__internal_ebbbd812a6df2edca434e93fde5c56385f2ee598c598dda986bfea6d93e76dfc_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_cdba76e2a8d29e0cc293e07d6dbc00fcfa1ae1ee5bd8491fd94854163bc61030 = $this->env->getExtension("native_profiler");
-        $__internal_cdba76e2a8d29e0cc293e07d6dbc00fcfa1ae1ee5bd8491fd94854163bc61030->enter($__internal_cdba76e2a8d29e0cc293e07d6dbc00fcfa1ae1ee5bd8491fd94854163bc61030_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_55290135a9eebc47377324f364a82c30369027eb96dfce795a63b5be35fa962e = $this->env->getExtension("native_profiler");
+        $__internal_55290135a9eebc47377324f364a82c30369027eb96dfce795a63b5be35fa962e->enter($__internal_55290135a9eebc47377324f364a82c30369027eb96dfce795a63b5be35fa962e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Lista de ingredientes";
         
-        $__internal_cdba76e2a8d29e0cc293e07d6dbc00fcfa1ae1ee5bd8491fd94854163bc61030->leave($__internal_cdba76e2a8d29e0cc293e07d6dbc00fcfa1ae1ee5bd8491fd94854163bc61030_prof);
+        $__internal_55290135a9eebc47377324f364a82c30369027eb96dfce795a63b5be35fa962e->leave($__internal_55290135a9eebc47377324f364a82c30369027eb96dfce795a63b5be35fa962e_prof);
 
     }
 
     // line 4
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_db61b51ef46be3c8832e53f649b7a313a164a7d469cc136fdb187f525aad63ee = $this->env->getExtension("native_profiler");
-        $__internal_db61b51ef46be3c8832e53f649b7a313a164a7d469cc136fdb187f525aad63ee->enter($__internal_db61b51ef46be3c8832e53f649b7a313a164a7d469cc136fdb187f525aad63ee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_ae430033680605b392e98c02637b0f50df4ff046b7c810ce328c752f20860014 = $this->env->getExtension("native_profiler");
+        $__internal_ae430033680605b392e98c02637b0f50df4ff046b7c810ce328c752f20860014->enter($__internal_ae430033680605b392e98c02637b0f50df4ff046b7c810ce328c752f20860014_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 5
         $this->displayParentBlock("stylesheets", $context, $blocks);
@@ -58,15 +58,15 @@ class __TwigTemplate_f3e32b8b06e72307182e4d865b3919362a9fa617357cf8cfa73c107eb42
     <link href=\"//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\" type=\"text/css\" rel=\"stylesheet\" />
 ";
         
-        $__internal_db61b51ef46be3c8832e53f649b7a313a164a7d469cc136fdb187f525aad63ee->leave($__internal_db61b51ef46be3c8832e53f649b7a313a164a7d469cc136fdb187f525aad63ee_prof);
+        $__internal_ae430033680605b392e98c02637b0f50df4ff046b7c810ce328c752f20860014->leave($__internal_ae430033680605b392e98c02637b0f50df4ff046b7c810ce328c752f20860014_prof);
 
     }
 
     // line 10
     public function block_body($context, array $blocks = array())
     {
-        $__internal_95e926fcb62d5da03f462672c89ceaf287883cad1a071a434e2a6a7abe270e0c = $this->env->getExtension("native_profiler");
-        $__internal_95e926fcb62d5da03f462672c89ceaf287883cad1a071a434e2a6a7abe270e0c->enter($__internal_95e926fcb62d5da03f462672c89ceaf287883cad1a071a434e2a6a7abe270e0c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_8ead2b3f71917fc0b75aca719312c379e1252420035af0d3093a7ee741657dfc = $this->env->getExtension("native_profiler");
+        $__internal_8ead2b3f71917fc0b75aca719312c379e1252420035af0d3093a7ee741657dfc->enter($__internal_8ead2b3f71917fc0b75aca719312c379e1252420035af0d3093a7ee741657dfc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 11
         echo "    <!-- Main Content -->
@@ -85,10 +85,8 @@ class __TwigTemplate_f3e32b8b06e72307182e4d865b3919362a9fa617357cf8cfa73c107eb42
                                     </div>
                                 </div>
                                 <div class=\"col-lg-12\">
-                                    <a class=\"btn btn-default\" href=\"";
-        // line 27
-        echo $this->env->getExtension('routing')->getPath("App_admin_addIngrediente");
-        echo "\">Añadir</a>
+                                    <button type=\"button\" class=\"btn btn-default\" data-toggle=\"modal\" data-target=\"#myModal\"><i class=\"glyphicon glyphicon-plus\"></i>&nbsp;  Añadir nuevo ingrediente</button>
+                                    <hr>
                                     <div class=\"card-body\">
                                         <table id=\"myTable\" class=\"datatable table table-striped\" cellspacing=\"0\" width=\"100%\">
                                             <thead>
@@ -103,57 +101,8 @@ class __TwigTemplate_f3e32b8b06e72307182e4d865b3919362a9fa617357cf8cfa73c107eb42
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                            ";
-        // line 42
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["ingredientes"]) ? $context["ingredientes"] : $this->getContext($context, "ingredientes")));
-        foreach ($context['_seq'] as $context["_key"] => $context["ingrediente"]) {
-            // line 43
-            echo "                                                <tr>
-                                                    <td>";
-            // line 44
-            echo twig_escape_filter($this->env, $this->getAttribute($context["ingrediente"], "nombre", array()), "html", null, true);
-            echo "</td>
-                                                    <td>";
-            // line 45
-            echo twig_escape_filter($this->env, $this->getAttribute($context["ingrediente"], "descripcion", array()), "html", null, true);
-            echo "</td>
-                                                    <td>";
-            // line 46
-            echo twig_escape_filter($this->env, $this->getAttribute($context["ingrediente"], "tipoIngrediente", array()), "html", null, true);
-            echo "</td>
-                                                    <td>";
-            // line 47
-            echo twig_escape_filter($this->env, $this->getAttribute($context["ingrediente"], "unidadMedida", array()), "html", null, true);
-            echo "</td>
-                                                    <td>";
-            // line 48
-            echo twig_escape_filter($this->env, $this->getAttribute($context["ingrediente"], "caloriasUnidad", array()), "html", null, true);
-            echo "</td>
-                                                    <td>";
-            // line 49
-            echo (($this->getAttribute($context["ingrediente"], "celiaco", array())) ? ("Sí") : ("No"));
-            echo "</td>
-                                                    <td>
-                                                        <div class=\"btn-group\" role=\"group\" aria-label=\"Default button group\">
-                                                            <a class=\"btn btn-default\" href=\"";
-            // line 52
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_admin_modifyIngrediente", array("id" => $this->getAttribute($context["ingrediente"], "id", array()))), "html", null, true);
-            echo "\">Ver/Modificar</a>
-                                                            <a class=\"btn btn-default\" data-toggle=\"modal\" data-target=\"#confirm-delete\" data-href=\"";
-            // line 53
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_admin_deleteIngrediente", array("id" => $this->getAttribute($context["ingrediente"], "id", array()))), "html", null, true);
-            echo "\">Eliminar</a>
-                                                        </div>
-                                                    </td> 
-                                                </tr>
-                                            ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['ingrediente'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 58
-        echo "                                        </table>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
@@ -174,6 +123,71 @@ class __TwigTemplate_f3e32b8b06e72307182e4d865b3919362a9fa617357cf8cfa73c107eb42
                 </div>
                 <div class=\"modal-footer\">
                     <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Cancelar</button>
+                    <button class=\"btn btn-danger btn-ok\" id = \"delete\">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal  ADDING -->
+        <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">
+          <div class=\"modal-dialog\">
+
+            <!-- Modal content-->
+            <div class=\"modal-content\">
+              <div class=\"modal-header\">
+                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                <h4 class=\"modal-title\">Añadir Ingrediente</h4>
+              </div>
+              <div class=\"modal-body\">
+                  <div id=\"form_body\">
+                      ";
+        // line 83
+        $this->loadTemplate("AdminBundle:Ingrediente:add.html.twig", "@Admin/Ingrediente/list.html.twig", 83)->display(array_merge($context, array("formIngrediente" => (isset($context["formIngrediente"]) ? $context["formIngrediente"] : $this->getContext($context, "formIngrediente")))));
+        // line 84
+        echo "                  </div>
+              </div>
+              <div class=\"modal-footer\">
+                <button type=\"button\" class=\"from-submit btn btn-default\" data-dismiss=\"modal\">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Modal  ADDING Confirm -->
+        <div id=\"addConfirm\" class=\"modal fade\" role=\"dialog\">
+          <div class=\"modal-dialog\">
+
+            <!-- Modal content-->
+            <div class=\"modal-content\">
+              <div class=\"modal-header\">
+                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                <h4 class=\"modal-title\"></h4>
+              </div>
+              <div class=\"modal-body\">
+
+              </div>
+              <div class=\"modal-footer\">
+                <button  type=\"button\" class=\"from-submit btn btn-default\" data-dismiss=\"modal\">Aceptar</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Mensaje de confirmación de eliminación-->
+    <div class=\"modal fade\" id=\"confirm-delete\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
+        <div class=\"modal-dialog\">
+            <div class=\"modal-content\">
+                <div class=\"modal-header\">
+                    Mensaje de confirmación
+                </div>
+                <div class=\"modal-body\">
+                    ¿Esta seguro de eliminar el elemento seleccionado?
+                </div>
+                <div class=\"modal-footer\">
+                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Cancelar</button>
                     <a class=\"btn btn-danger btn-ok\">Eliminar</a>
                 </div>
             </div>
@@ -182,17 +196,17 @@ class __TwigTemplate_f3e32b8b06e72307182e4d865b3919362a9fa617357cf8cfa73c107eb42
 
 ";
         
-        $__internal_95e926fcb62d5da03f462672c89ceaf287883cad1a071a434e2a6a7abe270e0c->leave($__internal_95e926fcb62d5da03f462672c89ceaf287883cad1a071a434e2a6a7abe270e0c_prof);
+        $__internal_8ead2b3f71917fc0b75aca719312c379e1252420035af0d3093a7ee741657dfc->leave($__internal_8ead2b3f71917fc0b75aca719312c379e1252420035af0d3093a7ee741657dfc_prof);
 
     }
 
-    // line 87
+    // line 135
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_16e23f490282969beadb03b85d3ea5bd8c9db4461a1106ae97f21430c28317ec = $this->env->getExtension("native_profiler");
-        $__internal_16e23f490282969beadb03b85d3ea5bd8c9db4461a1106ae97f21430c28317ec->enter($__internal_16e23f490282969beadb03b85d3ea5bd8c9db4461a1106ae97f21430c28317ec_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_bd7a55370695f0a9f7612771c1a687e3b0dfa1273489b08db27adf6a1ce5dcdd = $this->env->getExtension("native_profiler");
+        $__internal_bd7a55370695f0a9f7612771c1a687e3b0dfa1273489b08db27adf6a1ce5dcdd->enter($__internal_bd7a55370695f0a9f7612771c1a687e3b0dfa1273489b08db27adf6a1ce5dcdd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 88
+        // line 136
         echo "
  <!-- /.Botón de confirmación de eliminar-->
     <script>
@@ -201,13 +215,151 @@ class __TwigTemplate_f3e32b8b06e72307182e4d865b3919362a9fa617357cf8cfa73c107eb42
     </script>
 
     <script>
-        \$(document).ready(function(){\$('#myTable').DataTable();
+    \$(document).ready(function() {
+        var table = \$('#myTable').DataTable( {
+            destroy: true,
+            dom: 'Bfrtip',
+            buttons: [
+                'copyHtml5',
+                'excelHtml5',
+                'csvHtml5',
+                {
+                    extend: 'pdfHtml5',
+                    title: 'Lista de ingredientes',
+                    exportOptions: {
+                        columns: ':visible'
+                    },
+                    download: 'open'
+                },                
+                'colvis',
+                {
+                    text : 'Recargar',
+                    action : function ( e, dt, node, config ) {
+                        dt.ajax.reload();
+                    }
+                }
+            ],
+             \"language\": {
+                \"url\": \"";
+        // line 169
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("datatable/js/Spanish.json"), "html", null, true);
+        echo "\"
+            },
+            autoWidth: false,
+            \"sAjaxDataProp\":\"\",
+            \"sAjaxSource\": \"";
+        // line 173
+        echo $this->env->getExtension('routing')->getPath("App_admin_listIngrediente_reload");
+        echo "\",
+            \"columns\": [
+                {
+                    \"data\": \"nombre\", // can be null or undefined
+                    \"defaultContent\": \"<i>Not set</i>\"
+                },
+                {
+                    \"data\": \"descripcion\", // can be null or undefined
+                    \"defaultContent\": \"<i>Not set</i>\"
+                },
+                {
+                    \"data\": \"tipoIngrediente\", // can be null or undefined
+                    \"defaultContent\": \"<i>Not set</i>\"
+                },  
+                {
+                    \"data\": \"unidadMedida\", // can be null or undefined
+                    \"defaultContent\": \"<i>Not set</i>\"
+                },  
+                {
+                    \"data\": \"caloriasUnidad\", // can be null or undefined
+                    \"defaultContent\": \"<i>Not set</i>\"
+                }, 
+                {
+                    \"data\": \"celiaco\", // can be null or undefined
+                    \"defaultContent\": \"<i>Not set</i>\"
+                },
+                {
+                    \"data\": \"id\",
+                    bSortable: false,
+                    mRender: 
+                    function (data, type, row) {                            
+                           
+                           myUrlShow = \"http://127.0.0.1/pfg_eneko/web/app_dev.php/admin/modifyIngrediente/\"+ data;
+
+                           myUrlEdit = \"http://127.0.0.1/pfg_eneko/web/app_dev.php/admin/deleteIngrediente/\"+ data;
+
+                           return '<a href=\\\"' + myUrlShow + '\\\" class=\"btn btn-primary\" > Ver</a> <a data-href=\\\"' + myUrlEdit + '\\\" class=\"btn btn-default\" data-toggle=\"modal\"data-target=\"#confirm-delete\"> Eliminar</a>';
+                        }
+                }
+                ]
+            });
+        });
+    </script>
+
+    <script>
+        \$('body').on('submit', '.ajaxForm', function (e) {
+
+        e.preventDefault();
+
+        \$.ajax({
+            type: \$(this).attr('method'),
+            url: \$(this).attr('action'),
+            data: \$(this).serialize(),
+            success: function(jqXHR) {
+                        \$('#myModal').modal('hide');
+
+                        \$('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        \$('#addConfirm').find('.modal-title').html('Añadir')
+                        \$('#addConfirm').modal('show');
+                        \$(\"#addConfirm\").modal();
+                        \$('#myTable').DataTable().ajax.reload();
+
+                    },
+                    error: function(jqXHR) {
+                        if (jqXHR.responseJSON.hasOwnProperty('form')) {
+                            \$('#form_body').html(jqXHR.responseJSON.form);
+                        }
+
+                        \$('.form_error').html(jqXHR.responseJSON.message);
+                    },
+            });
+        });
+    </script>
+
+    <script>
+        \$('#confirm-delete').on('show.bs.modal', function(e) {
+
+            \$(\"#delete\").click(function () {
+               
+
+                \$.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    url: \$(e.relatedTarget).data('href'),
+                    success: function(jqXHR) {
+                        \$('#confirm-delete').modal('hide');
+
+                        \$('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        \$('#addConfirm').find('.modal-title').html('Borrar ingrediente')
+                        \$('#addConfirm').modal('show');
+                        \$(\"#addConfirm\").modal();
+                        \$('#myTable').DataTable().ajax.reload(); 
+
+                    },
+                    error: function(jqXHR) {
+                        \$('#confirm-delete').modal('hide');
+
+                        \$('#addConfirm').find('.modal-body').html(jqXHR.responseJSON.message);
+                        \$('#addConfirm').find('.modal-title').html('No ha sido eliminado el ingrediente')
+                        \$('#addConfirm').modal('show');
+                        \$(\"#addConfirm\").modal();
+                    },
+                }); 
+            });
         });
     </script>
 
 ";
         
-        $__internal_16e23f490282969beadb03b85d3ea5bd8c9db4461a1106ae97f21430c28317ec->leave($__internal_16e23f490282969beadb03b85d3ea5bd8c9db4461a1106ae97f21430c28317ec_prof);
+        $__internal_bd7a55370695f0a9f7612771c1a687e3b0dfa1273489b08db27adf6a1ce5dcdd->leave($__internal_bd7a55370695f0a9f7612771c1a687e3b0dfa1273489b08db27adf6a1ce5dcdd_prof);
 
     }
 
@@ -223,7 +375,7 @@ class __TwigTemplate_f3e32b8b06e72307182e4d865b3919362a9fa617357cf8cfa73c107eb42
 
     public function getDebugInfo()
     {
-        return array (  196 => 88,  190 => 87,  156 => 58,  145 => 53,  141 => 52,  135 => 49,  131 => 48,  127 => 47,  123 => 46,  119 => 45,  115 => 44,  112 => 43,  108 => 42,  90 => 27,  72 => 11,  66 => 10,  55 => 5,  49 => 4,  37 => 3,  11 => 1,);
+        return array (  252 => 173,  245 => 169,  210 => 136,  204 => 135,  148 => 84,  146 => 83,  72 => 11,  66 => 10,  55 => 5,  49 => 4,  37 => 3,  11 => 1,);
     }
 
     public function getSource()
@@ -254,7 +406,8 @@ class __TwigTemplate_f3e32b8b06e72307182e4d865b3919362a9fa617357cf8cfa73c107eb42
                                     </div>
                                 </div>
                                 <div class=\"col-lg-12\">
-                                    <a class=\"btn btn-default\" href=\"{{path('App_admin_addIngrediente') }}\">Añadir</a>
+                                    <button type=\"button\" class=\"btn btn-default\" data-toggle=\"modal\" data-target=\"#myModal\"><i class=\"glyphicon glyphicon-plus\"></i>&nbsp;  Añadir nuevo ingrediente</button>
+                                    <hr>
                                     <div class=\"card-body\">
                                         <table id=\"myTable\" class=\"datatable table table-striped\" cellspacing=\"0\" width=\"100%\">
                                             <thead>
@@ -269,22 +422,7 @@ class __TwigTemplate_f3e32b8b06e72307182e4d865b3919362a9fa617357cf8cfa73c107eb42
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                            {% for ingrediente in ingredientes %}
-                                                <tr>
-                                                    <td>{{ingrediente.nombre}}</td>
-                                                    <td>{{ingrediente.descripcion}}</td>
-                                                    <td>{{ingrediente.tipoIngrediente}}</td>
-                                                    <td>{{ingrediente.unidadMedida}}</td>
-                                                    <td>{{ingrediente.caloriasUnidad}}</td>
-                                                    <td>{{ingrediente.celiaco ? 'Sí':'No'}}</td>
-                                                    <td>
-                                                        <div class=\"btn-group\" role=\"group\" aria-label=\"Default button group\">
-                                                            <a class=\"btn btn-default\" href=\"{{path('App_admin_modifyIngrediente',{id : ingrediente.id}) }}\">Ver/Modificar</a>
-                                                            <a class=\"btn btn-default\" data-toggle=\"modal\" data-target=\"#confirm-delete\" data-href=\"{{path('App_admin_deleteIngrediente',{id : ingrediente.id}) }}\">Eliminar</a>
-                                                        </div>
-                                                    </td> 
-                                                </tr>
-                                            {% endfor %}
+                                            </tbody>
                                         </table>
                                     </div>
                                 </div>
@@ -295,6 +433,68 @@ class __TwigTemplate_f3e32b8b06e72307182e4d865b3919362a9fa617357cf8cfa73c107eb42
         <div>
 
 <!-- Mensaje de confirmación de eliminación-->
+    <div class=\"modal fade\" id=\"confirm-delete\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
+        <div class=\"modal-dialog\">
+            <div class=\"modal-content\">
+                <div class=\"modal-header\">
+                    Mensaje de confirmación
+                </div>
+                <div class=\"modal-body\">
+                    ¿Esta seguro de eliminar el elemento seleccionado?
+                </div>
+                <div class=\"modal-footer\">
+                    <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Cancelar</button>
+                    <button class=\"btn btn-danger btn-ok\" id = \"delete\">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal  ADDING -->
+        <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">
+          <div class=\"modal-dialog\">
+
+            <!-- Modal content-->
+            <div class=\"modal-content\">
+              <div class=\"modal-header\">
+                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                <h4 class=\"modal-title\">Añadir Ingrediente</h4>
+              </div>
+              <div class=\"modal-body\">
+                  <div id=\"form_body\">
+                      {% include \"AdminBundle:Ingrediente:add.html.twig\"  with {'formIngrediente': formIngrediente} %}
+                  </div>
+              </div>
+              <div class=\"modal-footer\">
+                <button type=\"button\" class=\"from-submit btn btn-default\" data-dismiss=\"modal\">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Modal  ADDING Confirm -->
+        <div id=\"addConfirm\" class=\"modal fade\" role=\"dialog\">
+          <div class=\"modal-dialog\">
+
+            <!-- Modal content-->
+            <div class=\"modal-content\">
+              <div class=\"modal-header\">
+                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                <h4 class=\"modal-title\"></h4>
+              </div>
+              <div class=\"modal-body\">
+
+              </div>
+              <div class=\"modal-footer\">
+                <button  type=\"button\" class=\"from-submit btn btn-default\" data-dismiss=\"modal\">Aceptar</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Mensaje de confirmación de eliminación-->
     <div class=\"modal fade\" id=\"confirm-delete\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
         <div class=\"modal-dialog\">
             <div class=\"modal-content\">
@@ -323,7 +523,139 @@ class __TwigTemplate_f3e32b8b06e72307182e4d865b3919362a9fa617357cf8cfa73c107eb42
     </script>
 
     <script>
-        \$(document).ready(function(){\$('#myTable').DataTable();
+    \$(document).ready(function() {
+        var table = \$('#myTable').DataTable( {
+            destroy: true,
+            dom: 'Bfrtip',
+            buttons: [
+                'copyHtml5',
+                'excelHtml5',
+                'csvHtml5',
+                {
+                    extend: 'pdfHtml5',
+                    title: 'Lista de ingredientes',
+                    exportOptions: {
+                        columns: ':visible'
+                    },
+                    download: 'open'
+                },                
+                'colvis',
+                {
+                    text : 'Recargar',
+                    action : function ( e, dt, node, config ) {
+                        dt.ajax.reload();
+                    }
+                }
+            ],
+             \"language\": {
+                \"url\": \"{{asset ('datatable/js/Spanish.json')}}\"
+            },
+            autoWidth: false,
+            \"sAjaxDataProp\":\"\",
+            \"sAjaxSource\": \"{{ path('App_admin_listIngrediente_reload')}}\",
+            \"columns\": [
+                {
+                    \"data\": \"nombre\", // can be null or undefined
+                    \"defaultContent\": \"<i>Not set</i>\"
+                },
+                {
+                    \"data\": \"descripcion\", // can be null or undefined
+                    \"defaultContent\": \"<i>Not set</i>\"
+                },
+                {
+                    \"data\": \"tipoIngrediente\", // can be null or undefined
+                    \"defaultContent\": \"<i>Not set</i>\"
+                },  
+                {
+                    \"data\": \"unidadMedida\", // can be null or undefined
+                    \"defaultContent\": \"<i>Not set</i>\"
+                },  
+                {
+                    \"data\": \"caloriasUnidad\", // can be null or undefined
+                    \"defaultContent\": \"<i>Not set</i>\"
+                }, 
+                {
+                    \"data\": \"celiaco\", // can be null or undefined
+                    \"defaultContent\": \"<i>Not set</i>\"
+                },
+                {
+                    \"data\": \"id\",
+                    bSortable: false,
+                    mRender: 
+                    function (data, type, row) {                            
+                           
+                           myUrlShow = \"http://127.0.0.1/pfg_eneko/web/app_dev.php/admin/modifyIngrediente/\"+ data;
+
+                           myUrlEdit = \"http://127.0.0.1/pfg_eneko/web/app_dev.php/admin/deleteIngrediente/\"+ data;
+
+                           return '<a href=\\\"' + myUrlShow + '\\\" class=\"btn btn-primary\" > Ver</a> <a data-href=\\\"' + myUrlEdit + '\\\" class=\"btn btn-default\" data-toggle=\"modal\"data-target=\"#confirm-delete\"> Eliminar</a>';
+                        }
+                }
+                ]
+            });
+        });
+    </script>
+
+    <script>
+        \$('body').on('submit', '.ajaxForm', function (e) {
+
+        e.preventDefault();
+
+        \$.ajax({
+            type: \$(this).attr('method'),
+            url: \$(this).attr('action'),
+            data: \$(this).serialize(),
+            success: function(jqXHR) {
+                        \$('#myModal').modal('hide');
+
+                        \$('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        \$('#addConfirm').find('.modal-title').html('Añadir')
+                        \$('#addConfirm').modal('show');
+                        \$(\"#addConfirm\").modal();
+                        \$('#myTable').DataTable().ajax.reload();
+
+                    },
+                    error: function(jqXHR) {
+                        if (jqXHR.responseJSON.hasOwnProperty('form')) {
+                            \$('#form_body').html(jqXHR.responseJSON.form);
+                        }
+
+                        \$('.form_error').html(jqXHR.responseJSON.message);
+                    },
+            });
+        });
+    </script>
+
+    <script>
+        \$('#confirm-delete').on('show.bs.modal', function(e) {
+
+            \$(\"#delete\").click(function () {
+               
+
+                \$.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    url: \$(e.relatedTarget).data('href'),
+                    success: function(jqXHR) {
+                        \$('#confirm-delete').modal('hide');
+
+                        \$('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        \$('#addConfirm').find('.modal-title').html('Borrar ingrediente')
+                        \$('#addConfirm').modal('show');
+                        \$(\"#addConfirm\").modal();
+                        \$('#myTable').DataTable().ajax.reload(); 
+
+                    },
+                    error: function(jqXHR) {
+                        \$('#confirm-delete').modal('hide');
+
+                        \$('#addConfirm').find('.modal-body').html(jqXHR.responseJSON.message);
+                        \$('#addConfirm').find('.modal-title').html('No ha sido eliminado el ingrediente')
+                        \$('#addConfirm').modal('show');
+                        \$(\"#addConfirm\").modal();
+                    },
+                }); 
+            });
         });
     </script>
 

@@ -17,8 +17,8 @@ class __TwigTemplate_c773b79fdf8762bdaea5d44563dfa1bec7b9bbb967f6251857b490553e7
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b91ba7930f6acba17081acc5eb43faa6478c5ddd755500618b290ec910770d6b = $this->env->getExtension("native_profiler");
-        $__internal_b91ba7930f6acba17081acc5eb43faa6478c5ddd755500618b290ec910770d6b->enter($__internal_b91ba7930f6acba17081acc5eb43faa6478c5ddd755500618b290ec910770d6b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/layout.html.twig"));
+        $__internal_d9c8fb49ebf2e0f26351a7df985501665b7de46d28a58eca0c0770e2a9e93396 = $this->env->getExtension("native_profiler");
+        $__internal_d9c8fb49ebf2e0f26351a7df985501665b7de46d28a58eca0c0770e2a9e93396->enter($__internal_d9c8fb49ebf2e0f26351a7df985501665b7de46d28a58eca0c0770e2a9e93396_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@FOSUser/layout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -184,31 +184,31 @@ class __TwigTemplate_c773b79fdf8762bdaea5d44563dfa1bec7b9bbb967f6251857b490553e7
 
 </html>";
         
-        $__internal_b91ba7930f6acba17081acc5eb43faa6478c5ddd755500618b290ec910770d6b->leave($__internal_b91ba7930f6acba17081acc5eb43faa6478c5ddd755500618b290ec910770d6b_prof);
+        $__internal_d9c8fb49ebf2e0f26351a7df985501665b7de46d28a58eca0c0770e2a9e93396->leave($__internal_d9c8fb49ebf2e0f26351a7df985501665b7de46d28a58eca0c0770e2a9e93396_prof);
 
     }
 
     // line 39
     public function block_fos_user_content($context, array $blocks = array())
     {
-        $__internal_a0e443e8cf6eff7ae2c564df8ad0dd6323e36c7ec6257cf24806311ecc0fe8b5 = $this->env->getExtension("native_profiler");
-        $__internal_a0e443e8cf6eff7ae2c564df8ad0dd6323e36c7ec6257cf24806311ecc0fe8b5->enter($__internal_a0e443e8cf6eff7ae2c564df8ad0dd6323e36c7ec6257cf24806311ecc0fe8b5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
+        $__internal_dcbde345d6e909004ec92729986c891e72264d74e2c0a38b85b55fce2dbeaaf1 = $this->env->getExtension("native_profiler");
+        $__internal_dcbde345d6e909004ec92729986c891e72264d74e2c0a38b85b55fce2dbeaaf1->enter($__internal_dcbde345d6e909004ec92729986c891e72264d74e2c0a38b85b55fce2dbeaaf1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
 
         // line 40
         echo "            ";
         
-        $__internal_a0e443e8cf6eff7ae2c564df8ad0dd6323e36c7ec6257cf24806311ecc0fe8b5->leave($__internal_a0e443e8cf6eff7ae2c564df8ad0dd6323e36c7ec6257cf24806311ecc0fe8b5_prof);
+        $__internal_dcbde345d6e909004ec92729986c891e72264d74e2c0a38b85b55fce2dbeaaf1->leave($__internal_dcbde345d6e909004ec92729986c891e72264d74e2c0a38b85b55fce2dbeaaf1_prof);
 
     }
 
     // line 57
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_45dfbc8e41b4aa43053f52e5c944b69b777e017fd22c3bfd41627e64cf716dec = $this->env->getExtension("native_profiler");
-        $__internal_45dfbc8e41b4aa43053f52e5c944b69b777e017fd22c3bfd41627e64cf716dec->enter($__internal_45dfbc8e41b4aa43053f52e5c944b69b777e017fd22c3bfd41627e64cf716dec_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_3b9ed6eec749c7a5669eba74805da47d463792d661bc50d3928ac7abe31e2b26 = $this->env->getExtension("native_profiler");
+        $__internal_3b9ed6eec749c7a5669eba74805da47d463792d661bc50d3928ac7abe31e2b26->enter($__internal_3b9ed6eec749c7a5669eba74805da47d463792d661bc50d3928ac7abe31e2b26_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         
-        $__internal_45dfbc8e41b4aa43053f52e5c944b69b777e017fd22c3bfd41627e64cf716dec->leave($__internal_45dfbc8e41b4aa43053f52e5c944b69b777e017fd22c3bfd41627e64cf716dec_prof);
+        $__internal_3b9ed6eec749c7a5669eba74805da47d463792d661bc50d3928ac7abe31e2b26->leave($__internal_3b9ed6eec749c7a5669eba74805da47d463792d661bc50d3928ac7abe31e2b26_prof);
 
     }
 

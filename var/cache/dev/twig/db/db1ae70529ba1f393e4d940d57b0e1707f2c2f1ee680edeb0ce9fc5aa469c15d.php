@@ -24,32 +24,32 @@ class __TwigTemplate_b4f114626ec322cecb90ea4cc3504c5aca4922faff86ab578e5c289ca17
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a80283bfda28bfd9c89716b44b7e0e0ad1f1fb334979e7a7b280e312fd5e36b0 = $this->env->getExtension("native_profiler");
-        $__internal_a80283bfda28bfd9c89716b44b7e0e0ad1f1fb334979e7a7b280e312fd5e36b0->enter($__internal_a80283bfda28bfd9c89716b44b7e0e0ad1f1fb334979e7a7b280e312fd5e36b0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/HoraIngesta/list.html.twig"));
+        $__internal_d6a217835068169848a45ca0a8b15355cb1e0f05a4fb371d80565f6766d26ed6 = $this->env->getExtension("native_profiler");
+        $__internal_d6a217835068169848a45ca0a8b15355cb1e0f05a4fb371d80565f6766d26ed6->enter($__internal_d6a217835068169848a45ca0a8b15355cb1e0f05a4fb371d80565f6766d26ed6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/HoraIngesta/list.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_a80283bfda28bfd9c89716b44b7e0e0ad1f1fb334979e7a7b280e312fd5e36b0->leave($__internal_a80283bfda28bfd9c89716b44b7e0e0ad1f1fb334979e7a7b280e312fd5e36b0_prof);
+        $__internal_d6a217835068169848a45ca0a8b15355cb1e0f05a4fb371d80565f6766d26ed6->leave($__internal_d6a217835068169848a45ca0a8b15355cb1e0f05a4fb371d80565f6766d26ed6_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_156bcd90681151fff723fe2afeae1587ae637cd6c9df0a2392916bf499aace2e = $this->env->getExtension("native_profiler");
-        $__internal_156bcd90681151fff723fe2afeae1587ae637cd6c9df0a2392916bf499aace2e->enter($__internal_156bcd90681151fff723fe2afeae1587ae637cd6c9df0a2392916bf499aace2e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_ee74c187e5a0bd8e459ac90e16782ddb12939ddbf3b9b6c4665b35e621f03fb3 = $this->env->getExtension("native_profiler");
+        $__internal_ee74c187e5a0bd8e459ac90e16782ddb12939ddbf3b9b6c4665b35e621f03fb3->enter($__internal_ee74c187e5a0bd8e459ac90e16782ddb12939ddbf3b9b6c4665b35e621f03fb3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Lista de horas de ingesta";
         
-        $__internal_156bcd90681151fff723fe2afeae1587ae637cd6c9df0a2392916bf499aace2e->leave($__internal_156bcd90681151fff723fe2afeae1587ae637cd6c9df0a2392916bf499aace2e_prof);
+        $__internal_ee74c187e5a0bd8e459ac90e16782ddb12939ddbf3b9b6c4665b35e621f03fb3->leave($__internal_ee74c187e5a0bd8e459ac90e16782ddb12939ddbf3b9b6c4665b35e621f03fb3_prof);
 
     }
 
     // line 4
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_aa8ec00102f3cc2e5b1cbc317c03816618e8ab7f742b1079fc078266251e4947 = $this->env->getExtension("native_profiler");
-        $__internal_aa8ec00102f3cc2e5b1cbc317c03816618e8ab7f742b1079fc078266251e4947->enter($__internal_aa8ec00102f3cc2e5b1cbc317c03816618e8ab7f742b1079fc078266251e4947_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_704e0b7b31c2b89f382500680754cf6e5b016ba80bb29a3b4dfe256e785f17e0 = $this->env->getExtension("native_profiler");
+        $__internal_704e0b7b31c2b89f382500680754cf6e5b016ba80bb29a3b4dfe256e785f17e0->enter($__internal_704e0b7b31c2b89f382500680754cf6e5b016ba80bb29a3b4dfe256e785f17e0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 5
         $this->displayParentBlock("stylesheets", $context, $blocks);
@@ -58,15 +58,15 @@ class __TwigTemplate_b4f114626ec322cecb90ea4cc3504c5aca4922faff86ab578e5c289ca17
     <link href=\"//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\" type=\"text/css\" rel=\"stylesheet\" />
 ";
         
-        $__internal_aa8ec00102f3cc2e5b1cbc317c03816618e8ab7f742b1079fc078266251e4947->leave($__internal_aa8ec00102f3cc2e5b1cbc317c03816618e8ab7f742b1079fc078266251e4947_prof);
+        $__internal_704e0b7b31c2b89f382500680754cf6e5b016ba80bb29a3b4dfe256e785f17e0->leave($__internal_704e0b7b31c2b89f382500680754cf6e5b016ba80bb29a3b4dfe256e785f17e0_prof);
 
     }
 
     // line 10
     public function block_body($context, array $blocks = array())
     {
-        $__internal_61cde82e4d461951b73b466a944c6381fec8a0ac792be7c133c5ff261362771c = $this->env->getExtension("native_profiler");
-        $__internal_61cde82e4d461951b73b466a944c6381fec8a0ac792be7c133c5ff261362771c->enter($__internal_61cde82e4d461951b73b466a944c6381fec8a0ac792be7c133c5ff261362771c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_ff237e69868f246907b2db3fdab220f822f701c1bb45dc16c2badc0ebc8681c6 = $this->env->getExtension("native_profiler");
+        $__internal_ff237e69868f246907b2db3fdab220f822f701c1bb45dc16c2badc0ebc8681c6->enter($__internal_ff237e69868f246907b2db3fdab220f822f701c1bb45dc16c2badc0ebc8681c6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 11
         echo "    <!-- Main Content -->
@@ -85,10 +85,7 @@ class __TwigTemplate_b4f114626ec322cecb90ea4cc3504c5aca4922faff86ab578e5c289ca17
                                     </div>
                                 </div>
                                 <div class=\"col-lg-12\">
-                                    <a class=\"btn btn-default\" href=\"";
-        // line 27
-        echo $this->env->getExtension('routing')->getPath("App_admin_addHoraIngesta");
-        echo "\">Añadir</a>
+                                    <button type=\"button\" class=\"btn btn-default\" data-toggle=\"modal\" data-target=\"#myModal\"><i class=\"glyphicon glyphicon-plus\"></i>&nbsp;  Añadir nueva hora de ingesta</button>
                                     <div class=\"card-body\">
                                         <table id=\"myTable\" class=\"datatable table table-striped\" cellspacing=\"0\" width=\"100%\">
                                             <thead>
@@ -155,19 +152,66 @@ class __TwigTemplate_b4f114626ec322cecb90ea4cc3504c5aca4922faff86ab578e5c289ca17
         </div>
     </div>
 
+    <!-- Modal  ADDING -->
+        <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">
+          <div class=\"modal-dialog\">
+
+            <!-- Modal content-->
+            <div class=\"modal-content\">
+              <div class=\"modal-header\">
+                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                <h4 class=\"modal-title\">Añadir Hora de Ingesta</h4>
+              </div>
+              <div class=\"modal-body\">
+                  <div id=\"form_body\">
+                      ";
+        // line 87
+        $this->loadTemplate("AdminBundle:HoraIngesta:add.html.twig", "@Admin/HoraIngesta/list.html.twig", 87)->display(array_merge($context, array("formHora" => (isset($context["formHora"]) ? $context["formHora"] : $this->getContext($context, "formHora")))));
+        // line 88
+        echo "                  </div>
+              </div>
+              <div class=\"modal-footer\">
+                <button type=\"button\" class=\"from-submit btn btn-default\" data-dismiss=\"modal\">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Modal  ADDING Confirm -->
+        <div id=\"addConfirm\" class=\"modal fade\" role=\"dialog\">
+          <div class=\"modal-dialog\">
+
+            <!-- Modal content-->
+            <div class=\"modal-content\">
+              <div class=\"modal-header\">
+                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                <h4 class=\"modal-title\"></h4>
+              </div>
+              <div class=\"modal-body\">
+
+              </div>
+              <div class=\"modal-footer\">
+                <button  type=\"button\" class=\"from-submit btn btn-default\" data-dismiss=\"modal\">Aceptar</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
 ";
         
-        $__internal_61cde82e4d461951b73b466a944c6381fec8a0ac792be7c133c5ff261362771c->leave($__internal_61cde82e4d461951b73b466a944c6381fec8a0ac792be7c133c5ff261362771c_prof);
+        $__internal_ff237e69868f246907b2db3fdab220f822f701c1bb45dc16c2badc0ebc8681c6->leave($__internal_ff237e69868f246907b2db3fdab220f822f701c1bb45dc16c2badc0ebc8681c6_prof);
 
     }
 
-    // line 77
+    // line 121
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_e76b01e0bf6faefd0aa17d57806ba83ed97abfc37e3d704359f59aeba55e4966 = $this->env->getExtension("native_profiler");
-        $__internal_e76b01e0bf6faefd0aa17d57806ba83ed97abfc37e3d704359f59aeba55e4966->enter($__internal_e76b01e0bf6faefd0aa17d57806ba83ed97abfc37e3d704359f59aeba55e4966_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_892ec5082c2ddc4f105f09899db4dbf6aea5864b2eae2e49816e88577a5283bb = $this->env->getExtension("native_profiler");
+        $__internal_892ec5082c2ddc4f105f09899db4dbf6aea5864b2eae2e49816e88577a5283bb->enter($__internal_892ec5082c2ddc4f105f09899db4dbf6aea5864b2eae2e49816e88577a5283bb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 78
+        // line 122
         echo "
  <!-- /.Botón de confirmación de eliminar-->
     <script>
@@ -180,9 +224,40 @@ class __TwigTemplate_b4f114626ec322cecb90ea4cc3504c5aca4922faff86ab578e5c289ca17
         });
     </script>
 
+    !-- /.Para añadir nueva hora de ingesta-->
+    <script>
+        \$('body').on('submit', '.ajaxForm', function (e) {
+
+        e.preventDefault();
+
+        \$.ajax({
+            type: \$(this).attr('method'),
+            url: \$(this).attr('action'),
+            data: \$(this).serialize(),
+            success: function(jqXHR) {
+                        \$('#myModal').modal('hide');
+
+                        \$('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        \$('#addConfirm').find('.modal-title').html('Mensaje de confirmación')
+                        \$('#addConfirm').modal('show');
+                        \$(\"#addConfirm\").modal();
+                        window.location.reload();
+
+                    },
+                    error: function(jqXHR) {
+                        if (jqXHR.responseJSON.hasOwnProperty('form')) {
+                            \$('#form_body').html(jqXHR.responseJSON.form);
+                        }
+
+                        \$('.form_error').html(jqXHR.responseJSON.message);
+                    },
+            });
+        });
+    </script>
+
 ";
         
-        $__internal_e76b01e0bf6faefd0aa17d57806ba83ed97abfc37e3d704359f59aeba55e4966->leave($__internal_e76b01e0bf6faefd0aa17d57806ba83ed97abfc37e3d704359f59aeba55e4966_prof);
+        $__internal_892ec5082c2ddc4f105f09899db4dbf6aea5864b2eae2e49816e88577a5283bb->leave($__internal_892ec5082c2ddc4f105f09899db4dbf6aea5864b2eae2e49816e88577a5283bb_prof);
 
     }
 
@@ -198,7 +273,7 @@ class __TwigTemplate_b4f114626ec322cecb90ea4cc3504c5aca4922faff86ab578e5c289ca17
 
     public function getDebugInfo()
     {
-        return array (  171 => 78,  165 => 77,  131 => 48,  120 => 43,  116 => 42,  110 => 39,  107 => 38,  103 => 37,  90 => 27,  72 => 11,  66 => 10,  55 => 5,  49 => 4,  37 => 3,  11 => 1,);
+        return array (  215 => 122,  209 => 121,  171 => 88,  169 => 87,  128 => 48,  117 => 43,  113 => 42,  107 => 39,  104 => 38,  100 => 37,  72 => 11,  66 => 10,  55 => 5,  49 => 4,  37 => 3,  11 => 1,);
     }
 
     public function getSource()
@@ -229,7 +304,7 @@ class __TwigTemplate_b4f114626ec322cecb90ea4cc3504c5aca4922faff86ab578e5c289ca17
                                     </div>
                                 </div>
                                 <div class=\"col-lg-12\">
-                                    <a class=\"btn btn-default\" href=\"{{path('App_admin_addHoraIngesta') }}\">Añadir</a>
+                                    <button type=\"button\" class=\"btn btn-default\" data-toggle=\"modal\" data-target=\"#myModal\"><i class=\"glyphicon glyphicon-plus\"></i>&nbsp;  Añadir nueva hora de ingesta</button>
                                     <div class=\"card-body\">
                                         <table id=\"myTable\" class=\"datatable table table-striped\" cellspacing=\"0\" width=\"100%\">
                                             <thead>
@@ -277,6 +352,50 @@ class __TwigTemplate_b4f114626ec322cecb90ea4cc3504c5aca4922faff86ab578e5c289ca17
         </div>
     </div>
 
+    <!-- Modal  ADDING -->
+        <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">
+          <div class=\"modal-dialog\">
+
+            <!-- Modal content-->
+            <div class=\"modal-content\">
+              <div class=\"modal-header\">
+                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                <h4 class=\"modal-title\">Añadir Hora de Ingesta</h4>
+              </div>
+              <div class=\"modal-body\">
+                  <div id=\"form_body\">
+                      {% include \"AdminBundle:HoraIngesta:add.html.twig\"  with {'formHora': formHora} %}
+                  </div>
+              </div>
+              <div class=\"modal-footer\">
+                <button type=\"button\" class=\"from-submit btn btn-default\" data-dismiss=\"modal\">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Modal  ADDING Confirm -->
+        <div id=\"addConfirm\" class=\"modal fade\" role=\"dialog\">
+          <div class=\"modal-dialog\">
+
+            <!-- Modal content-->
+            <div class=\"modal-content\">
+              <div class=\"modal-header\">
+                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                <h4 class=\"modal-title\"></h4>
+              </div>
+              <div class=\"modal-body\">
+
+              </div>
+              <div class=\"modal-footer\">
+                <button  type=\"button\" class=\"from-submit btn btn-default\" data-dismiss=\"modal\">Aceptar</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
 {% endblock %}
 
 {% block javascripts %}
@@ -289,6 +408,37 @@ class __TwigTemplate_b4f114626ec322cecb90ea4cc3504c5aca4922faff86ab578e5c289ca17
 
     <script>
         \$(document).ready(function(){\$('#myTable').DataTable();
+        });
+    </script>
+
+    !-- /.Para añadir nueva hora de ingesta-->
+    <script>
+        \$('body').on('submit', '.ajaxForm', function (e) {
+
+        e.preventDefault();
+
+        \$.ajax({
+            type: \$(this).attr('method'),
+            url: \$(this).attr('action'),
+            data: \$(this).serialize(),
+            success: function(jqXHR) {
+                        \$('#myModal').modal('hide');
+
+                        \$('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        \$('#addConfirm').find('.modal-title').html('Mensaje de confirmación')
+                        \$('#addConfirm').modal('show');
+                        \$(\"#addConfirm\").modal();
+                        window.location.reload();
+
+                    },
+                    error: function(jqXHR) {
+                        if (jqXHR.responseJSON.hasOwnProperty('form')) {
+                            \$('#form_body').html(jqXHR.responseJSON.form);
+                        }
+
+                        \$('.form_error').html(jqXHR.responseJSON.message);
+                    },
+            });
         });
     </script>
 

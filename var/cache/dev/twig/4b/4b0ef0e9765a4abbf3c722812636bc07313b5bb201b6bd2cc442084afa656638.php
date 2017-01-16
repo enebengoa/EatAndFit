@@ -15,8 +15,8 @@ class __TwigTemplate_bcebe52878e1455d0c9a39d9a62da94d6ce50bc9dcbccbabc4576e49889
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b4aec80aeb8d41520872e6051bbaa09068d0a6b29133744c040f19c572dee133 = $this->env->getExtension("native_profiler");
-        $__internal_b4aec80aeb8d41520872e6051bbaa09068d0a6b29133744c040f19c572dee133->enter($__internal_b4aec80aeb8d41520872e6051bbaa09068d0a6b29133744c040f19c572dee133_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Email/email.html.twig"));
+        $__internal_a5c79ee2c579cc05e5befe2de8c485e3f3714833d317be4b8d677913acac77f6 = $this->env->getExtension("native_profiler");
+        $__internal_a5c79ee2c579cc05e5befe2de8c485e3f3714833d317be4b8d677913acac77f6->enter($__internal_a5c79ee2c579cc05e5befe2de8c485e3f3714833d317be4b8d677913acac77f6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Email/email.html.twig"));
 
         // line 1
         echo "</br>
@@ -74,7 +74,7 @@ Email: <i> enebengoa@hotmail.com</i>
 
 ";
         
-        $__internal_b4aec80aeb8d41520872e6051bbaa09068d0a6b29133744c040f19c572dee133->leave($__internal_b4aec80aeb8d41520872e6051bbaa09068d0a6b29133744c040f19c572dee133_prof);
+        $__internal_a5c79ee2c579cc05e5befe2de8c485e3f3714833d317be4b8d677913acac77f6->leave($__internal_a5c79ee2c579cc05e5befe2de8c485e3f3714833d317be4b8d677913acac77f6_prof);
 
     }
 

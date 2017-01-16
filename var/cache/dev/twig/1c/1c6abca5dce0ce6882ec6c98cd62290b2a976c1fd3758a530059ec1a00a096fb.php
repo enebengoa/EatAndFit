@@ -15,8 +15,8 @@ class __TwigTemplate_b305056f6d4a5f2f5b9fa7909ea98ad23f7740168773de95e079ce5a92c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d90b6b40e0bfcceb85eaa86a14e207a0ed08218ce35a365a2851ba0f270ccee9 = $this->env->getExtension("native_profiler");
-        $__internal_d90b6b40e0bfcceb85eaa86a14e207a0ed08218ce35a365a2851ba0f270ccee9->enter($__internal_d90b6b40e0bfcceb85eaa86a14e207a0ed08218ce35a365a2851ba0f270ccee9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "KnpPaginatorBundle:Pagination:sliding.html.twig"));
+        $__internal_254768ec0c9673dc5906e2a5724a679fa1cda9c44dc74283414788b3c039b5e3 = $this->env->getExtension("native_profiler");
+        $__internal_254768ec0c9673dc5906e2a5724a679fa1cda9c44dc74283414788b3c039b5e3->enter($__internal_254768ec0c9673dc5906e2a5724a679fa1cda9c44dc74283414788b3c039b5e3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "KnpPaginatorBundle:Pagination:sliding.html.twig"));
 
         // line 2
         echo "
@@ -118,7 +118,7 @@ class __TwigTemplate_b305056f6d4a5f2f5b9fa7909ea98ad23f7740168773de95e079ce5a92c
 ";
         }
         
-        $__internal_d90b6b40e0bfcceb85eaa86a14e207a0ed08218ce35a365a2851ba0f270ccee9->leave($__internal_d90b6b40e0bfcceb85eaa86a14e207a0ed08218ce35a365a2851ba0f270ccee9_prof);
+        $__internal_254768ec0c9673dc5906e2a5724a679fa1cda9c44dc74283414788b3c039b5e3->leave($__internal_254768ec0c9673dc5906e2a5724a679fa1cda9c44dc74283414788b3c039b5e3_prof);
 
     }
 

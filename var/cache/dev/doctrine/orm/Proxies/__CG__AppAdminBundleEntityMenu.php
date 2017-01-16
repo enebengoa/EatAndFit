@@ -64,10 +64,10 @@ class Menu extends \App\AdminBundle\Entity\Menu implements \Doctrine\ORM\Proxy\P
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'id', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'nombre', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'descripcion', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'caloriasTotales', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'fechaCreacion', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'publico', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'celiaco', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'subMenus', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'listas', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'Usuario'];
+            return ['__isInitialized__', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'id', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'nombre', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'descripcion', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'caloriasTotales', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'fechaCreacion', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'publico', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'celiaco', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'subMenus', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'menus_listas', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'Usuario'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'id', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'nombre', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'descripcion', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'caloriasTotales', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'fechaCreacion', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'publico', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'celiaco', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'subMenus', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'listas', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'Usuario'];
+        return ['__isInitialized__', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'id', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'nombre', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'descripcion', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'caloriasTotales', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'fechaCreacion', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'publico', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'celiaco', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'subMenus', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'menus_listas', '' . "\0" . 'App\\AdminBundle\\Entity\\Menu' . "\0" . 'Usuario'];
     }
 
     /**
@@ -367,34 +367,34 @@ class Menu extends \App\AdminBundle\Entity\Menu implements \Doctrine\ORM\Proxy\P
     /**
      * {@inheritDoc}
      */
-    public function addLista(\App\AdminBundle\Entity\Lista $lista)
+    public function addMenusLista(\App\AdminBundle\Entity\menus_listas $menusLista)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addLista', [$lista]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addMenusLista', [$menusLista]);
 
-        return parent::addLista($lista);
+        return parent::addMenusLista($menusLista);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function removeLista(\App\AdminBundle\Entity\Lista $lista)
+    public function removeMenusLista(\App\AdminBundle\Entity\menus_listas $menusLista)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeLista', [$lista]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeMenusLista', [$menusLista]);
 
-        return parent::removeLista($lista);
+        return parent::removeMenusLista($menusLista);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getListas()
+    public function getMenusListas()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getListas', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getMenusListas', []);
 
-        return parent::getListas();
+        return parent::getMenusListas();
     }
 
     /**

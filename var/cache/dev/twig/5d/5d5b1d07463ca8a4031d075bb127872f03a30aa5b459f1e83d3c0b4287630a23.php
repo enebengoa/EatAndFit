@@ -24,51 +24,49 @@ class __TwigTemplate_9b8cbe7a56205dac7cafb5f3d2b6e5ff28c2d4b4e0964d726966a3ab8e0
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_d160b2061d82e5eb994c33e6d520219bf9d3b37b685d8a9bd8aa79ed3a7bcdf9 = $this->env->getExtension("native_profiler");
-        $__internal_d160b2061d82e5eb994c33e6d520219bf9d3b37b685d8a9bd8aa79ed3a7bcdf9->enter($__internal_d160b2061d82e5eb994c33e6d520219bf9d3b37b685d8a9bd8aa79ed3a7bcdf9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AdminBundle:Utensilio:list.html.twig"));
+        $__internal_810c52ff724fed38ab43cdafedd9c7f91fef1d7eb572a462e3e10c726e6c9d47 = $this->env->getExtension("native_profiler");
+        $__internal_810c52ff724fed38ab43cdafedd9c7f91fef1d7eb572a462e3e10c726e6c9d47->enter($__internal_810c52ff724fed38ab43cdafedd9c7f91fef1d7eb572a462e3e10c726e6c9d47_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AdminBundle:Utensilio:list.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_d160b2061d82e5eb994c33e6d520219bf9d3b37b685d8a9bd8aa79ed3a7bcdf9->leave($__internal_d160b2061d82e5eb994c33e6d520219bf9d3b37b685d8a9bd8aa79ed3a7bcdf9_prof);
+        $__internal_810c52ff724fed38ab43cdafedd9c7f91fef1d7eb572a462e3e10c726e6c9d47->leave($__internal_810c52ff724fed38ab43cdafedd9c7f91fef1d7eb572a462e3e10c726e6c9d47_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_2ba8095a9680e92bd0e1cbe619e2094ea066623e05b800957b3e1a00ce562a61 = $this->env->getExtension("native_profiler");
-        $__internal_2ba8095a9680e92bd0e1cbe619e2094ea066623e05b800957b3e1a00ce562a61->enter($__internal_2ba8095a9680e92bd0e1cbe619e2094ea066623e05b800957b3e1a00ce562a61_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_bc113c7619525cec961fd838ffdad96082f145ee7dcc5b85cf63ad4b75952b0e = $this->env->getExtension("native_profiler");
+        $__internal_bc113c7619525cec961fd838ffdad96082f145ee7dcc5b85cf63ad4b75952b0e->enter($__internal_bc113c7619525cec961fd838ffdad96082f145ee7dcc5b85cf63ad4b75952b0e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Lista de utensilios";
         
-        $__internal_2ba8095a9680e92bd0e1cbe619e2094ea066623e05b800957b3e1a00ce562a61->leave($__internal_2ba8095a9680e92bd0e1cbe619e2094ea066623e05b800957b3e1a00ce562a61_prof);
+        $__internal_bc113c7619525cec961fd838ffdad96082f145ee7dcc5b85cf63ad4b75952b0e->leave($__internal_bc113c7619525cec961fd838ffdad96082f145ee7dcc5b85cf63ad4b75952b0e_prof);
 
     }
 
     // line 4
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_3c05a76dafd3a5f6fb54df1f519918522103af3a38e44c0f6881c746c913b2b4 = $this->env->getExtension("native_profiler");
-        $__internal_3c05a76dafd3a5f6fb54df1f519918522103af3a38e44c0f6881c746c913b2b4->enter($__internal_3c05a76dafd3a5f6fb54df1f519918522103af3a38e44c0f6881c746c913b2b4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_b1843f6081cabc49519c027267901e08a60d382c5a3bc9f32a9f96a1eea1b0d7 = $this->env->getExtension("native_profiler");
+        $__internal_b1843f6081cabc49519c027267901e08a60d382c5a3bc9f32a9f96a1eea1b0d7->enter($__internal_b1843f6081cabc49519c027267901e08a60d382c5a3bc9f32a9f96a1eea1b0d7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 5
         $this->displayParentBlock("stylesheets", $context, $blocks);
         echo "
-    <link href=\"https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css\" type=\"text/css\" rel=\"stylesheet\" />
-    <link href=\"//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\" type=\"text/css\" rel=\"stylesheet\" />
 ";
         
-        $__internal_3c05a76dafd3a5f6fb54df1f519918522103af3a38e44c0f6881c746c913b2b4->leave($__internal_3c05a76dafd3a5f6fb54df1f519918522103af3a38e44c0f6881c746c913b2b4_prof);
+        $__internal_b1843f6081cabc49519c027267901e08a60d382c5a3bc9f32a9f96a1eea1b0d7->leave($__internal_b1843f6081cabc49519c027267901e08a60d382c5a3bc9f32a9f96a1eea1b0d7_prof);
 
     }
 
-    // line 10
+    // line 8
     public function block_body($context, array $blocks = array())
     {
-        $__internal_1a40e6c43b36a91ef850f814490eb22f7f27769b39e8c0260bac2870e1ca9eff = $this->env->getExtension("native_profiler");
-        $__internal_1a40e6c43b36a91ef850f814490eb22f7f27769b39e8c0260bac2870e1ca9eff->enter($__internal_1a40e6c43b36a91ef850f814490eb22f7f27769b39e8c0260bac2870e1ca9eff_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_485859ef8d12390605b48b16a1f27adec1661f02aee3dd4deac868d05d7e514e = $this->env->getExtension("native_profiler");
+        $__internal_485859ef8d12390605b48b16a1f27adec1661f02aee3dd4deac868d05d7e514e->enter($__internal_485859ef8d12390605b48b16a1f27adec1661f02aee3dd4deac868d05d7e514e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 11
+        // line 9
         echo "    <!-- Main Content -->
         <div class=\"container-fluid\">
                 <div class=\"side-body\">
@@ -85,10 +83,7 @@ class __TwigTemplate_9b8cbe7a56205dac7cafb5f3d2b6e5ff28c2d4b4e0964d726966a3ab8e0
                                     </div>
                                 </div>
                                 <div class=\"col-lg-12\">
-                                    <a class=\"btn btn-default\" href=\"";
-        // line 27
-        echo $this->env->getExtension('routing')->getPath("App_admin_addUtensilio");
-        echo "\">Añadir</a>
+                                   <button type=\"button\" class=\"btn btn-default\" data-toggle=\"modal\" data-target=\"#myModal\"><i class=\"glyphicon glyphicon-plus\"></i>&nbsp;  Añadir utensilio</button>
                                     <div class=\"card-body\">
                                         <table id=\"myTable\" class=\"datatable table table-striped\" cellspacing=\"0\" width=\"100%\">
                                             <thead>
@@ -100,28 +95,28 @@ class __TwigTemplate_9b8cbe7a56205dac7cafb5f3d2b6e5ff28c2d4b4e0964d726966a3ab8e0
                                             </thead>
                                             <tbody>
                                             ";
-        // line 38
+        // line 36
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["utensilios"]) ? $context["utensilios"] : $this->getContext($context, "utensilios")));
         foreach ($context['_seq'] as $context["_key"] => $context["utensilio"]) {
-            // line 39
+            // line 37
             echo "                                                <tr>
                                                     <td>";
-            // line 40
+            // line 38
             echo twig_escape_filter($this->env, $this->getAttribute($context["utensilio"], "nombre", array()), "html", null, true);
             echo "</td>
                                                     <td>";
-            // line 41
+            // line 39
             echo twig_escape_filter($this->env, $this->getAttribute($context["utensilio"], "descripcion", array()), "html", null, true);
             echo "</td>
                                                         <div class=\"btn-group\" role=\"group\" aria-label=\"Default button group\">
                                                     <td>
                                                             <a class=\"btn btn-default\" href=\"";
-            // line 44
+            // line 42
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_admin_modifyUtensilio", array("id" => $this->getAttribute($context["utensilio"], "id", array()))), "html", null, true);
             echo "\">Ver/Modificar</a>
                                                             <a class=\"btn btn-default\" data-toggle=\"modal\" data-target=\"#confirm-delete\" data-href=\"";
-            // line 45
+            // line 43
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_admin_deleteUtensilio", array("id" => $this->getAttribute($context["utensilio"], "id", array()))), "html", null, true);
             echo "\">Eliminar</a>
                                                     </td> 
@@ -131,7 +126,7 @@ class __TwigTemplate_9b8cbe7a56205dac7cafb5f3d2b6e5ff28c2d4b4e0964d726966a3ab8e0
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['utensilio'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 49
+        // line 47
         echo "                                        </table>
                                     </div>
                                 </div>
@@ -159,38 +154,112 @@ class __TwigTemplate_9b8cbe7a56205dac7cafb5f3d2b6e5ff28c2d4b4e0964d726966a3ab8e0
         </div>
     </div>
 
+    <!-- Modal  ADDING -->
+        <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">
+          <div class=\"modal-dialog\">
+
+            <!-- Modal content-->
+            <div class=\"modal-content\">
+              <div class=\"modal-header\">
+                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                <h4 class=\"modal-title\">Añadir Utensilio</h4>
+              </div>
+              <div class=\"modal-body\">
+                  <div id=\"form_body\">
+                      ";
+        // line 86
+        $this->loadTemplate("AdminBundle:Utensilio:add.html.twig", "AdminBundle:Utensilio:list.html.twig", 86)->display(array_merge($context, array("formUtensilio" => (isset($context["formUtensilio"]) ? $context["formUtensilio"] : $this->getContext($context, "formUtensilio")))));
+        // line 87
+        echo "                  </div>
+              </div>
+              <div class=\"modal-footer\">
+                <button type=\"button\" class=\"from-submit btn btn-default\" data-dismiss=\"modal\">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Modal  ADDING Confirm -->
+        <div id=\"addConfirm\" class=\"modal fade\" role=\"dialog\">
+          <div class=\"modal-dialog\">
+
+            <!-- Modal content-->
+            <div class=\"modal-content\">
+              <div class=\"modal-header\">
+                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                <h4 class=\"modal-title\"></h4>
+              </div>
+              <div class=\"modal-body\">
+
+              </div>
+              <div class=\"modal-footer\">
+                <button  type=\"button\" class=\"from-submit btn btn-default\" data-dismiss=\"modal\">Aceptar</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
 ";
         
-        $__internal_1a40e6c43b36a91ef850f814490eb22f7f27769b39e8c0260bac2870e1ca9eff->leave($__internal_1a40e6c43b36a91ef850f814490eb22f7f27769b39e8c0260bac2870e1ca9eff_prof);
+        $__internal_485859ef8d12390605b48b16a1f27adec1661f02aee3dd4deac868d05d7e514e->leave($__internal_485859ef8d12390605b48b16a1f27adec1661f02aee3dd4deac868d05d7e514e_prof);
 
     }
 
-    // line 78
+    // line 120
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_f3485857f017036400e49047da76e8bbe92dca06e7356281c5b78f2774da2dd5 = $this->env->getExtension("native_profiler");
-        $__internal_f3485857f017036400e49047da76e8bbe92dca06e7356281c5b78f2774da2dd5->enter($__internal_f3485857f017036400e49047da76e8bbe92dca06e7356281c5b78f2774da2dd5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_9991479c597f1251a2f5e18abbd9ed64c660a6c2228c7c9523ab9df9ee1e9534 = $this->env->getExtension("native_profiler");
+        $__internal_9991479c597f1251a2f5e18abbd9ed64c660a6c2228c7c9523ab9df9ee1e9534->enter($__internal_9991479c597f1251a2f5e18abbd9ed64c660a6c2228c7c9523ab9df9ee1e9534_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 79
+        // line 121
         echo "
  <!-- /.Botón de confirmación de eliminar-->
     <script>
         \$('#confirm-delete').on('show.bs.modal', function(e) 
         {\$(this).find('.btn-ok').attr('href', \$(e.relatedTarget).data('href'));});
     </script>
-
-     <!-- /.Buscador -->
-    <script src=\"https://code.jquery.com/jquery-1.12.3.js\"></script>
-    <script src=\"https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js\"></script>
-
     <script>
         \$(document).ready(function(){\$('#myTable').DataTable();
         });
     </script>
 
+    !-- /.Para añadir nuevo utensilio-->
+    <script>
+        \$('body').on('submit', '.ajaxForm', function (e) {
+
+        e.preventDefault();
+
+        \$.ajax({
+            type: \$(this).attr('method'),
+            url: \$(this).attr('action'),
+            data: \$(this).serialize(),
+            success: function(jqXHR) {
+
+                        \$('#myModal').modal('hide');
+
+                        \$('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        \$('#addConfirm').find('.modal-title').html('Mesaje de confirmación')
+                        \$('#addConfirm').modal('show');
+                        \$(\"#addConfirm\").modal();
+                        window.location.reload();
+
+                    },
+                    error: function(jqXHR) {
+                        if (jqXHR.responseJSON.hasOwnProperty('form')) {
+                            \$('#form_body').html(jqXHR.responseJSON.form);
+                        }
+
+                        \$('.form_error').html(jqXHR.responseJSON.message);
+                    },
+            });
+        });
+    </script>
+
 ";
         
-        $__internal_f3485857f017036400e49047da76e8bbe92dca06e7356281c5b78f2774da2dd5->leave($__internal_f3485857f017036400e49047da76e8bbe92dca06e7356281c5b78f2774da2dd5_prof);
+        $__internal_9991479c597f1251a2f5e18abbd9ed64c660a6c2228c7c9523ab9df9ee1e9534->leave($__internal_9991479c597f1251a2f5e18abbd9ed64c660a6c2228c7c9523ab9df9ee1e9534_prof);
 
     }
 
@@ -206,7 +275,7 @@ class __TwigTemplate_9b8cbe7a56205dac7cafb5f3d2b6e5ff28c2d4b4e0964d726966a3ab8e0
 
     public function getDebugInfo()
     {
-        return array (  175 => 79,  169 => 78,  135 => 49,  125 => 45,  121 => 44,  115 => 41,  111 => 40,  108 => 39,  104 => 38,  90 => 27,  72 => 11,  66 => 10,  55 => 5,  49 => 4,  37 => 3,  11 => 1,);
+        return array (  217 => 121,  211 => 120,  173 => 87,  171 => 86,  130 => 47,  120 => 43,  116 => 42,  110 => 39,  106 => 38,  103 => 37,  99 => 36,  70 => 9,  64 => 8,  55 => 5,  49 => 4,  37 => 3,  11 => 1,);
     }
 
     public function getSource()
@@ -216,8 +285,6 @@ class __TwigTemplate_9b8cbe7a56205dac7cafb5f3d2b6e5ff28c2d4b4e0964d726966a3ab8e0
 {% block title %}Lista de utensilios{% endblock %}
 {% block stylesheets %}
 {{ parent() }}
-    <link href=\"https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css\" type=\"text/css\" rel=\"stylesheet\" />
-    <link href=\"//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\" type=\"text/css\" rel=\"stylesheet\" />
 {% endblock %}
 
 {% block body %}
@@ -237,7 +304,7 @@ class __TwigTemplate_9b8cbe7a56205dac7cafb5f3d2b6e5ff28c2d4b4e0964d726966a3ab8e0
                                     </div>
                                 </div>
                                 <div class=\"col-lg-12\">
-                                    <a class=\"btn btn-default\" href=\"{{path('App_admin_addUtensilio') }}\">Añadir</a>
+                                   <button type=\"button\" class=\"btn btn-default\" data-toggle=\"modal\" data-target=\"#myModal\"><i class=\"glyphicon glyphicon-plus\"></i>&nbsp;  Añadir utensilio</button>
                                     <div class=\"card-body\">
                                         <table id=\"myTable\" class=\"datatable table table-striped\" cellspacing=\"0\" width=\"100%\">
                                             <thead>
@@ -286,6 +353,50 @@ class __TwigTemplate_9b8cbe7a56205dac7cafb5f3d2b6e5ff28c2d4b4e0964d726966a3ab8e0
         </div>
     </div>
 
+    <!-- Modal  ADDING -->
+        <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">
+          <div class=\"modal-dialog\">
+
+            <!-- Modal content-->
+            <div class=\"modal-content\">
+              <div class=\"modal-header\">
+                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                <h4 class=\"modal-title\">Añadir Utensilio</h4>
+              </div>
+              <div class=\"modal-body\">
+                  <div id=\"form_body\">
+                      {% include \"AdminBundle:Utensilio:add.html.twig\"  with {'formUtensilio': formUtensilio} %}
+                  </div>
+              </div>
+              <div class=\"modal-footer\">
+                <button type=\"button\" class=\"from-submit btn btn-default\" data-dismiss=\"modal\">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Modal  ADDING Confirm -->
+        <div id=\"addConfirm\" class=\"modal fade\" role=\"dialog\">
+          <div class=\"modal-dialog\">
+
+            <!-- Modal content-->
+            <div class=\"modal-content\">
+              <div class=\"modal-header\">
+                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                <h4 class=\"modal-title\"></h4>
+              </div>
+              <div class=\"modal-body\">
+
+              </div>
+              <div class=\"modal-footer\">
+                <button  type=\"button\" class=\"from-submit btn btn-default\" data-dismiss=\"modal\">Aceptar</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
 {% endblock %}
 
 {% block javascripts %}
@@ -295,13 +406,40 @@ class __TwigTemplate_9b8cbe7a56205dac7cafb5f3d2b6e5ff28c2d4b4e0964d726966a3ab8e0
         \$('#confirm-delete').on('show.bs.modal', function(e) 
         {\$(this).find('.btn-ok').attr('href', \$(e.relatedTarget).data('href'));});
     </script>
-
-     <!-- /.Buscador -->
-    <script src=\"https://code.jquery.com/jquery-1.12.3.js\"></script>
-    <script src=\"https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js\"></script>
-
     <script>
         \$(document).ready(function(){\$('#myTable').DataTable();
+        });
+    </script>
+
+    !-- /.Para añadir nuevo utensilio-->
+    <script>
+        \$('body').on('submit', '.ajaxForm', function (e) {
+
+        e.preventDefault();
+
+        \$.ajax({
+            type: \$(this).attr('method'),
+            url: \$(this).attr('action'),
+            data: \$(this).serialize(),
+            success: function(jqXHR) {
+
+                        \$('#myModal').modal('hide');
+
+                        \$('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        \$('#addConfirm').find('.modal-title').html('Mesaje de confirmación')
+                        \$('#addConfirm').modal('show');
+                        \$(\"#addConfirm\").modal();
+                        window.location.reload();
+
+                    },
+                    error: function(jqXHR) {
+                        if (jqXHR.responseJSON.hasOwnProperty('form')) {
+                            \$('#form_body').html(jqXHR.responseJSON.form);
+                        }
+
+                        \$('.form_error').html(jqXHR.responseJSON.message);
+                    },
+            });
         });
     </script>
 

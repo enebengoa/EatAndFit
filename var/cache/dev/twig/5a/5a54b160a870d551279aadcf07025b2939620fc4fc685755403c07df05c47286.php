@@ -17,8 +17,8 @@ class __TwigTemplate_3f4a9786142e91bf320449ae5d595a7c135e24cd4db7efb5573fabd7edd
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6a519da3de10b0ab7be031922db3eb8784f545094f7cb414555c2a455e07dd51 = $this->env->getExtension("native_profiler");
-        $__internal_6a519da3de10b0ab7be031922db3eb8784f545094f7cb414555c2a455e07dd51->enter($__internal_6a519da3de10b0ab7be031922db3eb8784f545094f7cb414555c2a455e07dd51_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle::layout.html.twig"));
+        $__internal_fe33e96d6ea216ceee65aaf5a2526461a37bcada90812b20b72a2b3e4230e6e6 = $this->env->getExtension("native_profiler");
+        $__internal_fe33e96d6ea216ceee65aaf5a2526461a37bcada90812b20b72a2b3e4230e6e6->enter($__internal_fe33e96d6ea216ceee65aaf5a2526461a37bcada90812b20b72a2b3e4230e6e6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FOSUserBundle::layout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -184,31 +184,31 @@ class __TwigTemplate_3f4a9786142e91bf320449ae5d595a7c135e24cd4db7efb5573fabd7edd
 
 </html>";
         
-        $__internal_6a519da3de10b0ab7be031922db3eb8784f545094f7cb414555c2a455e07dd51->leave($__internal_6a519da3de10b0ab7be031922db3eb8784f545094f7cb414555c2a455e07dd51_prof);
+        $__internal_fe33e96d6ea216ceee65aaf5a2526461a37bcada90812b20b72a2b3e4230e6e6->leave($__internal_fe33e96d6ea216ceee65aaf5a2526461a37bcada90812b20b72a2b3e4230e6e6_prof);
 
     }
 
     // line 39
     public function block_fos_user_content($context, array $blocks = array())
     {
-        $__internal_000eec29b278e2807825b1319f0f448c95a4dfbd7c20d05fd5ec74284a822471 = $this->env->getExtension("native_profiler");
-        $__internal_000eec29b278e2807825b1319f0f448c95a4dfbd7c20d05fd5ec74284a822471->enter($__internal_000eec29b278e2807825b1319f0f448c95a4dfbd7c20d05fd5ec74284a822471_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
+        $__internal_7cccc3bd61c3e36ba080fa20f3aa523f2f1af570e57a4c3f4256a1c7abb1e702 = $this->env->getExtension("native_profiler");
+        $__internal_7cccc3bd61c3e36ba080fa20f3aa523f2f1af570e57a4c3f4256a1c7abb1e702->enter($__internal_7cccc3bd61c3e36ba080fa20f3aa523f2f1af570e57a4c3f4256a1c7abb1e702_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
 
         // line 40
         echo "            ";
         
-        $__internal_000eec29b278e2807825b1319f0f448c95a4dfbd7c20d05fd5ec74284a822471->leave($__internal_000eec29b278e2807825b1319f0f448c95a4dfbd7c20d05fd5ec74284a822471_prof);
+        $__internal_7cccc3bd61c3e36ba080fa20f3aa523f2f1af570e57a4c3f4256a1c7abb1e702->leave($__internal_7cccc3bd61c3e36ba080fa20f3aa523f2f1af570e57a4c3f4256a1c7abb1e702_prof);
 
     }
 
     // line 57
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_81dd992736ba9f0417a4bcb3b8e76f936670ee5b5c6a254dcc7c2334dbfa68a2 = $this->env->getExtension("native_profiler");
-        $__internal_81dd992736ba9f0417a4bcb3b8e76f936670ee5b5c6a254dcc7c2334dbfa68a2->enter($__internal_81dd992736ba9f0417a4bcb3b8e76f936670ee5b5c6a254dcc7c2334dbfa68a2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_3464b3c08f3ce3f7755462df0b0aa448acda12408d1a42e4c0212dd39a197842 = $this->env->getExtension("native_profiler");
+        $__internal_3464b3c08f3ce3f7755462df0b0aa448acda12408d1a42e4c0212dd39a197842->enter($__internal_3464b3c08f3ce3f7755462df0b0aa448acda12408d1a42e4c0212dd39a197842_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         
-        $__internal_81dd992736ba9f0417a4bcb3b8e76f936670ee5b5c6a254dcc7c2334dbfa68a2->leave($__internal_81dd992736ba9f0417a4bcb3b8e76f936670ee5b5c6a254dcc7c2334dbfa68a2_prof);
+        $__internal_3464b3c08f3ce3f7755462df0b0aa448acda12408d1a42e4c0212dd39a197842->leave($__internal_3464b3c08f3ce3f7755462df0b0aa448acda12408d1a42e4c0212dd39a197842_prof);
 
     }
 

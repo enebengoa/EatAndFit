@@ -23,48 +23,48 @@ class __TwigTemplate_777f6fc85965722639ed9a88728cbbec59e0f8ecf1b412978c3b4271b45
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_736543632f9c65ac08da34390364b13f765a6f2a8c32a32c475dd9979e04fab7 = $this->env->getExtension("native_profiler");
-        $__internal_736543632f9c65ac08da34390364b13f765a6f2a8c32a32c475dd9979e04fab7->enter($__internal_736543632f9c65ac08da34390364b13f765a6f2a8c32a32c475dd9979e04fab7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/TipoReceta/modify.html.twig"));
+        $__internal_c5f01b75ae42ae8028314d430cec7dc51babec2d1a81699366a81d36a6d8f9e9 = $this->env->getExtension("native_profiler");
+        $__internal_c5f01b75ae42ae8028314d430cec7dc51babec2d1a81699366a81d36a6d8f9e9->enter($__internal_c5f01b75ae42ae8028314d430cec7dc51babec2d1a81699366a81d36a6d8f9e9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/TipoReceta/modify.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_736543632f9c65ac08da34390364b13f765a6f2a8c32a32c475dd9979e04fab7->leave($__internal_736543632f9c65ac08da34390364b13f765a6f2a8c32a32c475dd9979e04fab7_prof);
+        $__internal_c5f01b75ae42ae8028314d430cec7dc51babec2d1a81699366a81d36a6d8f9e9->leave($__internal_c5f01b75ae42ae8028314d430cec7dc51babec2d1a81699366a81d36a6d8f9e9_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_2744bc88a8e528ec6cd39c2bd2e0bc1bf28bbb1198041a092a4b21ad32ac50c5 = $this->env->getExtension("native_profiler");
-        $__internal_2744bc88a8e528ec6cd39c2bd2e0bc1bf28bbb1198041a092a4b21ad32ac50c5->enter($__internal_2744bc88a8e528ec6cd39c2bd2e0bc1bf28bbb1198041a092a4b21ad32ac50c5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_aff93a5481c7329149112c3ef288a854ddde93477b92e32e05b92e7cc07912b4 = $this->env->getExtension("native_profiler");
+        $__internal_aff93a5481c7329149112c3ef288a854ddde93477b92e32e05b92e7cc07912b4->enter($__internal_aff93a5481c7329149112c3ef288a854ddde93477b92e32e05b92e7cc07912b4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Ver/Modificar tipo de receta ";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entidad"]) ? $context["entidad"] : $this->getContext($context, "entidad")), "nombre", array()), "html", null, true);
         
-        $__internal_2744bc88a8e528ec6cd39c2bd2e0bc1bf28bbb1198041a092a4b21ad32ac50c5->leave($__internal_2744bc88a8e528ec6cd39c2bd2e0bc1bf28bbb1198041a092a4b21ad32ac50c5_prof);
+        $__internal_aff93a5481c7329149112c3ef288a854ddde93477b92e32e05b92e7cc07912b4->leave($__internal_aff93a5481c7329149112c3ef288a854ddde93477b92e32e05b92e7cc07912b4_prof);
 
     }
 
     // line 4
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_253e3787a8e22c4210d40f02143271705416e01597aff8063e41a836cb1b3d4b = $this->env->getExtension("native_profiler");
-        $__internal_253e3787a8e22c4210d40f02143271705416e01597aff8063e41a836cb1b3d4b->enter($__internal_253e3787a8e22c4210d40f02143271705416e01597aff8063e41a836cb1b3d4b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_a6a9b149f0ab7656df9f4d53a67583768cbc6f46a34bc6a90df7e061fa2fe392 = $this->env->getExtension("native_profiler");
+        $__internal_a6a9b149f0ab7656df9f4d53a67583768cbc6f46a34bc6a90df7e061fa2fe392->enter($__internal_a6a9b149f0ab7656df9f4d53a67583768cbc6f46a34bc6a90df7e061fa2fe392_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 5
         $this->displayParentBlock("stylesheets", $context, $blocks);
         echo "
 ";
         
-        $__internal_253e3787a8e22c4210d40f02143271705416e01597aff8063e41a836cb1b3d4b->leave($__internal_253e3787a8e22c4210d40f02143271705416e01597aff8063e41a836cb1b3d4b_prof);
+        $__internal_a6a9b149f0ab7656df9f4d53a67583768cbc6f46a34bc6a90df7e061fa2fe392->leave($__internal_a6a9b149f0ab7656df9f4d53a67583768cbc6f46a34bc6a90df7e061fa2fe392_prof);
 
     }
 
     // line 7
     public function block_body($context, array $blocks = array())
     {
-        $__internal_65b420d06f3d12142765afcaf70cdf89f4dfecc14169edf68fe9122ce2ec4367 = $this->env->getExtension("native_profiler");
-        $__internal_65b420d06f3d12142765afcaf70cdf89f4dfecc14169edf68fe9122ce2ec4367->enter($__internal_65b420d06f3d12142765afcaf70cdf89f4dfecc14169edf68fe9122ce2ec4367_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_47015bc5e3a4a282a87a34dce2de35a19a1730905ec614cd90884fc7e688da81 = $this->env->getExtension("native_profiler");
+        $__internal_47015bc5e3a4a282a87a34dce2de35a19a1730905ec614cd90884fc7e688da81->enter($__internal_47015bc5e3a4a282a87a34dce2de35a19a1730905ec614cd90884fc7e688da81_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 8
         echo "<!-- Main Content -->
@@ -94,11 +94,18 @@ class __TwigTemplate_777f6fc85965722639ed9a88728cbbec59e0f8ecf1b412978c3b4271b45
                                 </div>
                                 <div class=\"col-lg-12\">
                                     <div class=\"card-body\">
-                                        ";
+                                    ";
         // line 29
-        $this->loadTemplate("AdminBundle:TipoReceta:form.html.twig", "@Admin/TipoReceta/modify.html.twig", 29)->display($context);
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formTipo"]) ? $context["formTipo"] : $this->getContext($context, "formTipo")), 'form_start');
+        echo "
+                                        ";
         // line 30
-        echo "                                    </div>
+        $this->loadTemplate("AdminBundle:TipoReceta:form.html.twig", "@Admin/TipoReceta/modify.html.twig", 30)->display($context);
+        // line 31
+        echo "                                    ";
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formTipo"]) ? $context["formTipo"] : $this->getContext($context, "formTipo")), 'form_end');
+        echo "
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +114,7 @@ class __TwigTemplate_777f6fc85965722639ed9a88728cbbec59e0f8ecf1b412978c3b4271b45
         <div>       
 ";
         
-        $__internal_65b420d06f3d12142765afcaf70cdf89f4dfecc14169edf68fe9122ce2ec4367->leave($__internal_65b420d06f3d12142765afcaf70cdf89f4dfecc14169edf68fe9122ce2ec4367_prof);
+        $__internal_47015bc5e3a4a282a87a34dce2de35a19a1730905ec614cd90884fc7e688da81->leave($__internal_47015bc5e3a4a282a87a34dce2de35a19a1730905ec614cd90884fc7e688da81_prof);
 
     }
 
@@ -123,7 +130,7 @@ class __TwigTemplate_777f6fc85965722639ed9a88728cbbec59e0f8ecf1b412978c3b4271b45
 
     public function getDebugInfo()
     {
-        return array (  101 => 30,  99 => 29,  88 => 21,  84 => 20,  70 => 8,  64 => 7,  55 => 5,  49 => 4,  36 => 3,  11 => 1,);
+        return array (  105 => 31,  103 => 30,  99 => 29,  88 => 21,  84 => 20,  70 => 8,  64 => 7,  55 => 5,  49 => 4,  36 => 3,  11 => 1,);
     }
 
     public function getSource()
@@ -156,7 +163,9 @@ class __TwigTemplate_777f6fc85965722639ed9a88728cbbec59e0f8ecf1b412978c3b4271b45
                                 </div>
                                 <div class=\"col-lg-12\">
                                     <div class=\"card-body\">
+                                    {{ form_start(formTipo)}}
                                         {% include \"AdminBundle:TipoReceta:form.html.twig\" %}
+                                    {{ form_end(formTipo) }}
                                     </div>
                                 </div>
                             </div>

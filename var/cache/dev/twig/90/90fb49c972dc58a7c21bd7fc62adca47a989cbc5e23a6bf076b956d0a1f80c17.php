@@ -24,20 +24,20 @@ class __TwigTemplate_58e3ae7f4c5067ef68f393f7e6307f0605c8710ebfa6c0d0055afcf5aa5
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b80b9adebf279389f72b7a026361a2abb91196d3cb27f5535f3a97a7a2a0dfbd = $this->env->getExtension("native_profiler");
-        $__internal_b80b9adebf279389f72b7a026361a2abb91196d3cb27f5535f3a97a7a2a0dfbd->enter($__internal_b80b9adebf279389f72b7a026361a2abb91196d3cb27f5535f3a97a7a2a0dfbd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle:Home:main.html.twig"));
+        $__internal_2cc17cc477a2cee705394ac82d1ba17de6d0309deb03a6da444d146a94fb91a0 = $this->env->getExtension("native_profiler");
+        $__internal_2cc17cc477a2cee705394ac82d1ba17de6d0309deb03a6da444d146a94fb91a0->enter($__internal_2cc17cc477a2cee705394ac82d1ba17de6d0309deb03a6da444d146a94fb91a0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle:Home:main.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_b80b9adebf279389f72b7a026361a2abb91196d3cb27f5535f3a97a7a2a0dfbd->leave($__internal_b80b9adebf279389f72b7a026361a2abb91196d3cb27f5535f3a97a7a2a0dfbd_prof);
+        $__internal_2cc17cc477a2cee705394ac82d1ba17de6d0309deb03a6da444d146a94fb91a0->leave($__internal_2cc17cc477a2cee705394ac82d1ba17de6d0309deb03a6da444d146a94fb91a0_prof);
 
     }
 
     // line 2
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_4a652fc3c51bca4412f0d2b93886070272d26a418b023a1ef47fd4a7e22c5ea9 = $this->env->getExtension("native_profiler");
-        $__internal_4a652fc3c51bca4412f0d2b93886070272d26a418b023a1ef47fd4a7e22c5ea9->enter($__internal_4a652fc3c51bca4412f0d2b93886070272d26a418b023a1ef47fd4a7e22c5ea9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_e3ef440af22a5a8b516c4cd419207e481f6506238678282dac6c698ea5cac5c2 = $this->env->getExtension("native_profiler");
+        $__internal_e3ef440af22a5a8b516c4cd419207e481f6506238678282dac6c698ea5cac5c2->enter($__internal_e3ef440af22a5a8b516c4cd419207e481f6506238678282dac6c698ea5cac5c2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 3
         echo "
@@ -50,27 +50,27 @@ class __TwigTemplate_58e3ae7f4c5067ef68f393f7e6307f0605c8710ebfa6c0d0055afcf5aa5
 
 ";
         
-        $__internal_4a652fc3c51bca4412f0d2b93886070272d26a418b023a1ef47fd4a7e22c5ea9->leave($__internal_4a652fc3c51bca4412f0d2b93886070272d26a418b023a1ef47fd4a7e22c5ea9_prof);
+        $__internal_e3ef440af22a5a8b516c4cd419207e481f6506238678282dac6c698ea5cac5c2->leave($__internal_e3ef440af22a5a8b516c4cd419207e481f6506238678282dac6c698ea5cac5c2_prof);
 
     }
 
     // line 4
     public function block_title($context, array $blocks = array())
     {
-        $__internal_bdb9e2c1e273967fbc04005f44a1562a51d5822fef466d1ac3df331a648e619e = $this->env->getExtension("native_profiler");
-        $__internal_bdb9e2c1e273967fbc04005f44a1562a51d5822fef466d1ac3df331a648e619e->enter($__internal_bdb9e2c1e273967fbc04005f44a1562a51d5822fef466d1ac3df331a648e619e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_90d2fd1df0c6c7f70f81c2c2f881912fd635fbf30aa6cdb41b714ae37f8dd342 = $this->env->getExtension("native_profiler");
+        $__internal_90d2fd1df0c6c7f70f81c2c2f881912fd635fbf30aa6cdb41b714ae37f8dd342->enter($__internal_90d2fd1df0c6c7f70f81c2c2f881912fd635fbf30aa6cdb41b714ae37f8dd342_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Eat&Fit";
         
-        $__internal_bdb9e2c1e273967fbc04005f44a1562a51d5822fef466d1ac3df331a648e619e->leave($__internal_bdb9e2c1e273967fbc04005f44a1562a51d5822fef466d1ac3df331a648e619e_prof);
+        $__internal_90d2fd1df0c6c7f70f81c2c2f881912fd635fbf30aa6cdb41b714ae37f8dd342->leave($__internal_90d2fd1df0c6c7f70f81c2c2f881912fd635fbf30aa6cdb41b714ae37f8dd342_prof);
 
     }
 
     // line 9
     public function block_head($context, array $blocks = array())
     {
-        $__internal_01f602f97b1a5e0d207882e99029d9c91e7ad3580597c0b1f45067d1e9e968b5 = $this->env->getExtension("native_profiler");
-        $__internal_01f602f97b1a5e0d207882e99029d9c91e7ad3580597c0b1f45067d1e9e968b5->enter($__internal_01f602f97b1a5e0d207882e99029d9c91e7ad3580597c0b1f45067d1e9e968b5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "head"));
+        $__internal_ced30c0a4c9c6af0a85aa155bcc3d1b4961a8c1dd87d5a213cdf248e0d40f55a = $this->env->getExtension("native_profiler");
+        $__internal_ced30c0a4c9c6af0a85aa155bcc3d1b4961a8c1dd87d5a213cdf248e0d40f55a->enter($__internal_ced30c0a4c9c6af0a85aa155bcc3d1b4961a8c1dd87d5a213cdf248e0d40f55a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "head"));
 
         // line 10
         echo "\t<div class=\"banner\">
@@ -85,15 +85,15 @@ class __TwigTemplate_58e3ae7f4c5067ef68f393f7e6307f0605c8710ebfa6c0d0055afcf5aa5
     <br></br>\t
 ";
         
-        $__internal_01f602f97b1a5e0d207882e99029d9c91e7ad3580597c0b1f45067d1e9e968b5->leave($__internal_01f602f97b1a5e0d207882e99029d9c91e7ad3580597c0b1f45067d1e9e968b5_prof);
+        $__internal_ced30c0a4c9c6af0a85aa155bcc3d1b4961a8c1dd87d5a213cdf248e0d40f55a->leave($__internal_ced30c0a4c9c6af0a85aa155bcc3d1b4961a8c1dd87d5a213cdf248e0d40f55a_prof);
 
     }
 
     // line 19
     public function block_body($context, array $blocks = array())
     {
-        $__internal_58a2ff8f7289fd86434c700cfeea4ad48f8232334df3a378a2dc3d857abafcbb = $this->env->getExtension("native_profiler");
-        $__internal_58a2ff8f7289fd86434c700cfeea4ad48f8232334df3a378a2dc3d857abafcbb->enter($__internal_58a2ff8f7289fd86434c700cfeea4ad48f8232334df3a378a2dc3d857abafcbb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_046c7dbf7a64a5afbcced1ceefb97e6298dc80ee573e0314428839015dee43a0 = $this->env->getExtension("native_profiler");
+        $__internal_046c7dbf7a64a5afbcced1ceefb97e6298dc80ee573e0314428839015dee43a0->enter($__internal_046c7dbf7a64a5afbcced1ceefb97e6298dc80ee573e0314428839015dee43a0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 20
         echo "<!--content-->
@@ -210,7 +210,7 @@ class __TwigTemplate_58e3ae7f4c5067ef68f393f7e6307f0605c8710ebfa6c0d0055afcf5aa5
                 </a>
                 <a  href=\"";
             // line 114
-            echo $this->env->getExtension('routing')->getPath("App_user_listForo");
+            echo $this->env->getExtension('routing')->getPath("App_user_listLista");
             echo "\">
                     <div class=\"col-md-4 food-grid animated wow fadeInDown\" data-wow-duration=\"1000ms\" data-wow-delay=\"500ms\">
                         <div class=\" hover-fold\">
@@ -298,11 +298,10 @@ class __TwigTemplate_58e3ae7f4c5067ef68f393f7e6307f0605c8710ebfa6c0d0055afcf5aa5
                                                     <li><span><i class=\"glyphicon glyphicon-comment\"> </i>";
             // line 174
             echo twig_escape_filter($this->env, twig_length_filter($this->env, $this->getAttribute($context["receta"], "comentarios", array())), "html", null, true);
-            echo " comentarios</span><b>/</b></li>
-                                                    <li><span><i class=\"glyphicon glyphicon-share\"> </i>Agregar</span></li>
+            echo " comentarios</span></li>
                                                 </ul>
                                                 <p>";
-            // line 177
+            // line 176
             echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "nombre", array(), "method"), "html", null, true);
             echo "</p>
                                             </div>
@@ -310,14 +309,14 @@ class __TwigTemplate_58e3ae7f4c5067ef68f393f7e6307f0605c8710ebfa6c0d0055afcf5aa5
                                     </a>
                                 </div>
                               ";
-            // line 182
+            // line 181
             if (((((isset($context["numReceta"]) ? $context["numReceta"] : $this->getContext($context, "numReceta")) % 2) == 0) && ((isset($context["numReceta"]) ? $context["numReceta"] : $this->getContext($context, "numReceta")) != 4))) {
-                // line 183
+                // line 182
                 echo "                                    </div>
                                     <div class=\"news-bot\">
                                 ";
             }
-            // line 186
+            // line 185
             echo "                            ";
             $context["numReceta"] = ((isset($context["numReceta"]) ? $context["numReceta"] : $this->getContext($context, "numReceta")) + 1);
             echo "  
@@ -327,7 +326,7 @@ class __TwigTemplate_58e3ae7f4c5067ef68f393f7e6307f0605c8710ebfa6c0d0055afcf5aa5
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['receta'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 189
+        // line 188
         echo "                    </div>   
             </div>
         </div>
@@ -336,7 +335,7 @@ class __TwigTemplate_58e3ae7f4c5067ef68f393f7e6307f0605c8710ebfa6c0d0055afcf5aa5
 \t
 ";
         
-        $__internal_58a2ff8f7289fd86434c700cfeea4ad48f8232334df3a378a2dc3d857abafcbb->leave($__internal_58a2ff8f7289fd86434c700cfeea4ad48f8232334df3a378a2dc3d857abafcbb_prof);
+        $__internal_046c7dbf7a64a5afbcced1ceefb97e6298dc80ee573e0314428839015dee43a0->leave($__internal_046c7dbf7a64a5afbcced1ceefb97e6298dc80ee573e0314428839015dee43a0_prof);
 
     }
 
@@ -352,7 +351,7 @@ class __TwigTemplate_58e3ae7f4c5067ef68f393f7e6307f0605c8710ebfa6c0d0055afcf5aa5
 
     public function getDebugInfo()
     {
-        return array (  331 => 189,  321 => 186,  316 => 183,  314 => 182,  306 => 177,  300 => 174,  296 => 173,  289 => 169,  285 => 168,  282 => 167,  278 => 166,  275 => 165,  273 => 164,  258 => 151,  248 => 144,  234 => 132,  213 => 114,  198 => 102,  183 => 90,  166 => 75,  164 => 74,  144 => 57,  129 => 45,  114 => 33,  99 => 20,  93 => 19,  82 => 14,  76 => 10,  70 => 9,  58 => 4,  48 => 5,  46 => 4,  43 => 3,  37 => 2,  11 => 1,);
+        return array (  330 => 188,  320 => 185,  315 => 182,  313 => 181,  305 => 176,  300 => 174,  296 => 173,  289 => 169,  285 => 168,  282 => 167,  278 => 166,  275 => 165,  273 => 164,  258 => 151,  248 => 144,  234 => 132,  213 => 114,  198 => 102,  183 => 90,  166 => 75,  164 => 74,  144 => 57,  129 => 45,  114 => 33,  99 => 20,  93 => 19,  82 => 14,  76 => 10,  70 => 9,  58 => 4,  48 => 5,  46 => 4,  43 => 3,  37 => 2,  11 => 1,);
     }
 
     public function getSource()
@@ -470,7 +469,7 @@ class __TwigTemplate_58e3ae7f4c5067ef68f393f7e6307f0605c8710ebfa6c0d0055afcf5aa5
                         </div>
                     </div>
                 </a>
-                <a  href=\"{{ path('App_user_listForo') }}\">
+                <a  href=\"{{ path('App_user_listLista') }}\">
                     <div class=\"col-md-4 food-grid animated wow fadeInDown\" data-wow-duration=\"1000ms\" data-wow-delay=\"500ms\">
                         <div class=\" hover-fold\">
                           <h4>LISTA DE COMPRA</h4>
@@ -530,8 +529,7 @@ class __TwigTemplate_58e3ae7f4c5067ef68f393f7e6307f0605c8710ebfa6c0d0055afcf5aa5
                                             <div class=\" news-bottom2\">
                                                 <ul class=\"grid-news\">
                                                     <li><span><i class=\"glyphicon glyphicon-calendar\"> </i>{{ receta.fechaCreacion|date('Y-m-d') }}</span><b>/</b></li>
-                                                    <li><span><i class=\"glyphicon glyphicon-comment\"> </i>{{receta.comentarios|length}} comentarios</span><b>/</b></li>
-                                                    <li><span><i class=\"glyphicon glyphicon-share\"> </i>Agregar</span></li>
+                                                    <li><span><i class=\"glyphicon glyphicon-comment\"> </i>{{receta.comentarios|length}} comentarios</span></li>
                                                 </ul>
                                                 <p>{{receta.nombre()}}</p>
                                             </div>

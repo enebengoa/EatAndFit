@@ -23,48 +23,48 @@ class __TwigTemplate_61439d871ae7e15408d93b488a7540fa416396ff9429fcdad2ead0ad912
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_13a910970a5bc5cc3d6de24982adc1dde0fe82ce863a3d4bbf6dbc9f374a1d09 = $this->env->getExtension("native_profiler");
-        $__internal_13a910970a5bc5cc3d6de24982adc1dde0fe82ce863a3d4bbf6dbc9f374a1d09->enter($__internal_13a910970a5bc5cc3d6de24982adc1dde0fe82ce863a3d4bbf6dbc9f374a1d09_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/HoraIngesta/modify.html.twig"));
+        $__internal_3cb5636edcfbae8964674e9b7e6a137d80e41191edc815c9c7213421ac979065 = $this->env->getExtension("native_profiler");
+        $__internal_3cb5636edcfbae8964674e9b7e6a137d80e41191edc815c9c7213421ac979065->enter($__internal_3cb5636edcfbae8964674e9b7e6a137d80e41191edc815c9c7213421ac979065_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/HoraIngesta/modify.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_13a910970a5bc5cc3d6de24982adc1dde0fe82ce863a3d4bbf6dbc9f374a1d09->leave($__internal_13a910970a5bc5cc3d6de24982adc1dde0fe82ce863a3d4bbf6dbc9f374a1d09_prof);
+        $__internal_3cb5636edcfbae8964674e9b7e6a137d80e41191edc815c9c7213421ac979065->leave($__internal_3cb5636edcfbae8964674e9b7e6a137d80e41191edc815c9c7213421ac979065_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_665b0658a214ff35c545e990c899abcf5dca0d8eb33cbc36024f3f8acdeab5f4 = $this->env->getExtension("native_profiler");
-        $__internal_665b0658a214ff35c545e990c899abcf5dca0d8eb33cbc36024f3f8acdeab5f4->enter($__internal_665b0658a214ff35c545e990c899abcf5dca0d8eb33cbc36024f3f8acdeab5f4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_ba80544f990480e7ee8e79cb5e8cc5406b7140bef21b42841ee16267a746aaba = $this->env->getExtension("native_profiler");
+        $__internal_ba80544f990480e7ee8e79cb5e8cc5406b7140bef21b42841ee16267a746aaba->enter($__internal_ba80544f990480e7ee8e79cb5e8cc5406b7140bef21b42841ee16267a746aaba_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Ver/Modificar hora de ingesta ";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entidad"]) ? $context["entidad"] : $this->getContext($context, "entidad")), "nombre", array()), "html", null, true);
         
-        $__internal_665b0658a214ff35c545e990c899abcf5dca0d8eb33cbc36024f3f8acdeab5f4->leave($__internal_665b0658a214ff35c545e990c899abcf5dca0d8eb33cbc36024f3f8acdeab5f4_prof);
+        $__internal_ba80544f990480e7ee8e79cb5e8cc5406b7140bef21b42841ee16267a746aaba->leave($__internal_ba80544f990480e7ee8e79cb5e8cc5406b7140bef21b42841ee16267a746aaba_prof);
 
     }
 
     // line 4
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_5fc1379b4fabe19cc4b07a719e4b8ce4dc9f7e07d791c2efce7b1f0b09cffdc3 = $this->env->getExtension("native_profiler");
-        $__internal_5fc1379b4fabe19cc4b07a719e4b8ce4dc9f7e07d791c2efce7b1f0b09cffdc3->enter($__internal_5fc1379b4fabe19cc4b07a719e4b8ce4dc9f7e07d791c2efce7b1f0b09cffdc3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_417f361bd69e5302e28e47e6a422680a065883cb8ba63cb4db320fd675396175 = $this->env->getExtension("native_profiler");
+        $__internal_417f361bd69e5302e28e47e6a422680a065883cb8ba63cb4db320fd675396175->enter($__internal_417f361bd69e5302e28e47e6a422680a065883cb8ba63cb4db320fd675396175_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 5
         $this->displayParentBlock("stylesheets", $context, $blocks);
         echo "
 ";
         
-        $__internal_5fc1379b4fabe19cc4b07a719e4b8ce4dc9f7e07d791c2efce7b1f0b09cffdc3->leave($__internal_5fc1379b4fabe19cc4b07a719e4b8ce4dc9f7e07d791c2efce7b1f0b09cffdc3_prof);
+        $__internal_417f361bd69e5302e28e47e6a422680a065883cb8ba63cb4db320fd675396175->leave($__internal_417f361bd69e5302e28e47e6a422680a065883cb8ba63cb4db320fd675396175_prof);
 
     }
 
     // line 7
     public function block_body($context, array $blocks = array())
     {
-        $__internal_9b1edcb42599bad40dcc0d29ebbfbd0e41a36aa3834a3c6f274005adea06443c = $this->env->getExtension("native_profiler");
-        $__internal_9b1edcb42599bad40dcc0d29ebbfbd0e41a36aa3834a3c6f274005adea06443c->enter($__internal_9b1edcb42599bad40dcc0d29ebbfbd0e41a36aa3834a3c6f274005adea06443c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_7985db30b59f34f3ca413d4d19418ddc6fc843adb69fa9c110de355586092549 = $this->env->getExtension("native_profiler");
+        $__internal_7985db30b59f34f3ca413d4d19418ddc6fc843adb69fa9c110de355586092549->enter($__internal_7985db30b59f34f3ca413d4d19418ddc6fc843adb69fa9c110de355586092549_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 8
         echo "<!-- Main Content -->
@@ -79,7 +79,7 @@ class __TwigTemplate_61439d871ae7e15408d93b488a7540fa416396ff9429fcdad2ead0ad912
                             <div class=\"card\">
                                 <div class=\"card-header\">
                                     <div class=\"card-title\">
-                                        <div class=\"title\">Ver/Modificar hora de ingesta\"";
+                                        <div class=\"title\">Ver/Modificar hora de ingesta \"";
         // line 20
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entidad"]) ? $context["entidad"] : $this->getContext($context, "entidad")), "nombre", array()), "html", null, true);
         echo "\"
@@ -94,11 +94,18 @@ class __TwigTemplate_61439d871ae7e15408d93b488a7540fa416396ff9429fcdad2ead0ad912
                                 </div>
                                 <div class=\"col-lg-12\">
                                     <div class=\"card-body\">
-                                        ";
+                                    ";
         // line 29
-        $this->loadTemplate("AdminBundle:HoraIngesta:form.html.twig", "@Admin/HoraIngesta/modify.html.twig", 29)->display($context);
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formHora"]) ? $context["formHora"] : $this->getContext($context, "formHora")), 'form_start');
+        echo "
+                                        ";
         // line 30
-        echo "                                    </div>
+        $this->loadTemplate("AdminBundle:HoraIngesta:form.html.twig", "@Admin/HoraIngesta/modify.html.twig", 30)->display($context);
+        // line 31
+        echo "                                    ";
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formHora"]) ? $context["formHora"] : $this->getContext($context, "formHora")), 'form_end');
+        echo "
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +114,7 @@ class __TwigTemplate_61439d871ae7e15408d93b488a7540fa416396ff9429fcdad2ead0ad912
         <div>       
 ";
         
-        $__internal_9b1edcb42599bad40dcc0d29ebbfbd0e41a36aa3834a3c6f274005adea06443c->leave($__internal_9b1edcb42599bad40dcc0d29ebbfbd0e41a36aa3834a3c6f274005adea06443c_prof);
+        $__internal_7985db30b59f34f3ca413d4d19418ddc6fc843adb69fa9c110de355586092549->leave($__internal_7985db30b59f34f3ca413d4d19418ddc6fc843adb69fa9c110de355586092549_prof);
 
     }
 
@@ -123,7 +130,7 @@ class __TwigTemplate_61439d871ae7e15408d93b488a7540fa416396ff9429fcdad2ead0ad912
 
     public function getDebugInfo()
     {
-        return array (  101 => 30,  99 => 29,  88 => 21,  84 => 20,  70 => 8,  64 => 7,  55 => 5,  49 => 4,  36 => 3,  11 => 1,);
+        return array (  105 => 31,  103 => 30,  99 => 29,  88 => 21,  84 => 20,  70 => 8,  64 => 7,  55 => 5,  49 => 4,  36 => 3,  11 => 1,);
     }
 
     public function getSource()
@@ -147,7 +154,7 @@ class __TwigTemplate_61439d871ae7e15408d93b488a7540fa416396ff9429fcdad2ead0ad912
                             <div class=\"card\">
                                 <div class=\"card-header\">
                                     <div class=\"card-title\">
-                                        <div class=\"title\">Ver/Modificar hora de ingesta\"{{entidad.nombre}}\"
+                                        <div class=\"title\">Ver/Modificar hora de ingesta \"{{entidad.nombre}}\"
                                             <a href=\"{{ path('App_admin_listHoraIngesta')}}\">
                                                 <span class=\"glyphicon glyphicon-arrow-up\"></span>
                                             </a>
@@ -156,7 +163,9 @@ class __TwigTemplate_61439d871ae7e15408d93b488a7540fa416396ff9429fcdad2ead0ad912
                                 </div>
                                 <div class=\"col-lg-12\">
                                     <div class=\"card-body\">
+                                    {{ form_start(formHora)}}
                                         {% include \"AdminBundle:HoraIngesta:form.html.twig\" %}
+                                    {{ form_end(formHora) }}
                                     </div>
                                 </div>
                             </div>

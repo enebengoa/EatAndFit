@@ -24,47 +24,47 @@ class __TwigTemplate_62799a4819807308af9329d1925b52ffe9eed02005401e79d291aba6dcb
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c7d32220ec07e2f976b46aba6145281590ed566e352fa0efc8d05ebffc408502 = $this->env->getExtension("native_profiler");
-        $__internal_c7d32220ec07e2f976b46aba6145281590ed566e352fa0efc8d05ebffc408502->enter($__internal_c7d32220ec07e2f976b46aba6145281590ed566e352fa0efc8d05ebffc408502_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Receta/list.html.twig"));
+        $__internal_63f00b09218da38dc24e3ae41878948f89a2e85ccb1018e7c9f52dab69d56d81 = $this->env->getExtension("native_profiler");
+        $__internal_63f00b09218da38dc24e3ae41878948f89a2e85ccb1018e7c9f52dab69d56d81->enter($__internal_63f00b09218da38dc24e3ae41878948f89a2e85ccb1018e7c9f52dab69d56d81_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Receta/list.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_c7d32220ec07e2f976b46aba6145281590ed566e352fa0efc8d05ebffc408502->leave($__internal_c7d32220ec07e2f976b46aba6145281590ed566e352fa0efc8d05ebffc408502_prof);
+        $__internal_63f00b09218da38dc24e3ae41878948f89a2e85ccb1018e7c9f52dab69d56d81->leave($__internal_63f00b09218da38dc24e3ae41878948f89a2e85ccb1018e7c9f52dab69d56d81_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_fc909dfc3af4a37f35579fa0bced10edbede3b6de09b8d5de4413f345d234ec9 = $this->env->getExtension("native_profiler");
-        $__internal_fc909dfc3af4a37f35579fa0bced10edbede3b6de09b8d5de4413f345d234ec9->enter($__internal_fc909dfc3af4a37f35579fa0bced10edbede3b6de09b8d5de4413f345d234ec9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_9116cb1a9ed26dcc42a7aa2976451bdffc8bf9b663807cd064be8825053a45aa = $this->env->getExtension("native_profiler");
+        $__internal_9116cb1a9ed26dcc42a7aa2976451bdffc8bf9b663807cd064be8825053a45aa->enter($__internal_9116cb1a9ed26dcc42a7aa2976451bdffc8bf9b663807cd064be8825053a45aa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Lista de recetas";
         
-        $__internal_fc909dfc3af4a37f35579fa0bced10edbede3b6de09b8d5de4413f345d234ec9->leave($__internal_fc909dfc3af4a37f35579fa0bced10edbede3b6de09b8d5de4413f345d234ec9_prof);
+        $__internal_9116cb1a9ed26dcc42a7aa2976451bdffc8bf9b663807cd064be8825053a45aa->leave($__internal_9116cb1a9ed26dcc42a7aa2976451bdffc8bf9b663807cd064be8825053a45aa_prof);
 
     }
 
     // line 4
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_7a5d4686490bb503c5e477664636c1c629c3699cf2ee2b1751835a08a327167e = $this->env->getExtension("native_profiler");
-        $__internal_7a5d4686490bb503c5e477664636c1c629c3699cf2ee2b1751835a08a327167e->enter($__internal_7a5d4686490bb503c5e477664636c1c629c3699cf2ee2b1751835a08a327167e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_f9a3f45a81cd7f06d95c5a6b7d38685026cdc8f6691cc1d9707bbd47d4652d04 = $this->env->getExtension("native_profiler");
+        $__internal_f9a3f45a81cd7f06d95c5a6b7d38685026cdc8f6691cc1d9707bbd47d4652d04->enter($__internal_f9a3f45a81cd7f06d95c5a6b7d38685026cdc8f6691cc1d9707bbd47d4652d04_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 5
         $this->displayParentBlock("stylesheets", $context, $blocks);
         echo "
 ";
         
-        $__internal_7a5d4686490bb503c5e477664636c1c629c3699cf2ee2b1751835a08a327167e->leave($__internal_7a5d4686490bb503c5e477664636c1c629c3699cf2ee2b1751835a08a327167e_prof);
+        $__internal_f9a3f45a81cd7f06d95c5a6b7d38685026cdc8f6691cc1d9707bbd47d4652d04->leave($__internal_f9a3f45a81cd7f06d95c5a6b7d38685026cdc8f6691cc1d9707bbd47d4652d04_prof);
 
     }
 
     // line 8
     public function block_body($context, array $blocks = array())
     {
-        $__internal_1d959d456e0a6dd4f8c4a8098c0d98c529e8ffee22d9dc12b8061b0ea30031db = $this->env->getExtension("native_profiler");
-        $__internal_1d959d456e0a6dd4f8c4a8098c0d98c529e8ffee22d9dc12b8061b0ea30031db->enter($__internal_1d959d456e0a6dd4f8c4a8098c0d98c529e8ffee22d9dc12b8061b0ea30031db_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_717b2406b8b7719cb9920c6d24880bbb2d4a0e97d875ae3d10a8cb7cfa60fb10 = $this->env->getExtension("native_profiler");
+        $__internal_717b2406b8b7719cb9920c6d24880bbb2d4a0e97d875ae3d10a8cb7cfa60fb10->enter($__internal_717b2406b8b7719cb9920c6d24880bbb2d4a0e97d875ae3d10a8cb7cfa60fb10_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 9
         echo "    <!-- Main Content -->
@@ -202,15 +202,15 @@ class __TwigTemplate_62799a4819807308af9329d1925b52ffe9eed02005401e79d291aba6dcb
 
 ";
         
-        $__internal_1d959d456e0a6dd4f8c4a8098c0d98c529e8ffee22d9dc12b8061b0ea30031db->leave($__internal_1d959d456e0a6dd4f8c4a8098c0d98c529e8ffee22d9dc12b8061b0ea30031db_prof);
+        $__internal_717b2406b8b7719cb9920c6d24880bbb2d4a0e97d875ae3d10a8cb7cfa60fb10->leave($__internal_717b2406b8b7719cb9920c6d24880bbb2d4a0e97d875ae3d10a8cb7cfa60fb10_prof);
 
     }
 
     // line 91
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_f21f1aebe9b0f404eae774d6c66063dd52bb482d4a147b8993eebf4a1bba78d9 = $this->env->getExtension("native_profiler");
-        $__internal_f21f1aebe9b0f404eae774d6c66063dd52bb482d4a147b8993eebf4a1bba78d9->enter($__internal_f21f1aebe9b0f404eae774d6c66063dd52bb482d4a147b8993eebf4a1bba78d9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_afa1147991c9aebc468575fb460ae9e28ebab82b7e61d9a7e74572db37e5ecad = $this->env->getExtension("native_profiler");
+        $__internal_afa1147991c9aebc468575fb460ae9e28ebab82b7e61d9a7e74572db37e5ecad->enter($__internal_afa1147991c9aebc468575fb460ae9e28ebab82b7e61d9a7e74572db37e5ecad_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 92
         echo "
@@ -225,9 +225,39 @@ class __TwigTemplate_62799a4819807308af9329d1925b52ffe9eed02005401e79d291aba6dcb
         });
     </script>
 
+    !-- /.Para añadir nueva receta-->
+    <script>
+        \$('body').on('submit', '.ajaxForm', function (e) {
+
+        e.preventDefault();
+
+        \$.ajax({
+            type: \$(this).attr('method'),
+            url: \$(this).attr('action'),
+            data: \$(this).serialize(),
+            success: function(jqXHR) {
+                        \$('#myModal').modal('hide');
+
+                        \$('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        \$('#addConfirm').find('.modal-title').html('Añadir')
+                        \$('#addConfirm').modal('show');
+                        \$(\"#addConfirm\").modal();
+                        window.location.reload();
+                    },
+                    error: function(jqXHR) {
+                        if (jqXHR.responseJSON.hasOwnProperty('form')) {
+                            \$('#form_body').html(jqXHR.responseJSON.form);
+                        }
+
+                        \$('.form_error').html(jqXHR.responseJSON.message);
+                    },
+            });
+        });
+    </script>
+
 ";
         
-        $__internal_f21f1aebe9b0f404eae774d6c66063dd52bb482d4a147b8993eebf4a1bba78d9->leave($__internal_f21f1aebe9b0f404eae774d6c66063dd52bb482d4a147b8993eebf4a1bba78d9_prof);
+        $__internal_afa1147991c9aebc468575fb460ae9e28ebab82b7e61d9a7e74572db37e5ecad->leave($__internal_afa1147991c9aebc468575fb460ae9e28ebab82b7e61d9a7e74572db37e5ecad_prof);
 
     }
 
@@ -348,6 +378,36 @@ class __TwigTemplate_62799a4819807308af9329d1925b52ffe9eed02005401e79d291aba6dcb
 
     <script>
         \$(document).ready(function(){\$('#myTable').DataTable();
+        });
+    </script>
+
+    !-- /.Para añadir nueva receta-->
+    <script>
+        \$('body').on('submit', '.ajaxForm', function (e) {
+
+        e.preventDefault();
+
+        \$.ajax({
+            type: \$(this).attr('method'),
+            url: \$(this).attr('action'),
+            data: \$(this).serialize(),
+            success: function(jqXHR) {
+                        \$('#myModal').modal('hide');
+
+                        \$('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        \$('#addConfirm').find('.modal-title').html('Añadir')
+                        \$('#addConfirm').modal('show');
+                        \$(\"#addConfirm\").modal();
+                        window.location.reload();
+                    },
+                    error: function(jqXHR) {
+                        if (jqXHR.responseJSON.hasOwnProperty('form')) {
+                            \$('#form_body').html(jqXHR.responseJSON.form);
+                        }
+
+                        \$('.form_error').html(jqXHR.responseJSON.message);
+                    },
+            });
         });
     </script>
 

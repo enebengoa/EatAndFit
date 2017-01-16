@@ -23,48 +23,48 @@ class __TwigTemplate_b6cc2cc19d266ddfa2cd33ab0b52e16b6e665fdad3fc584872cc0bb2a76
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_bb4ecd20fa64c59dfc4ebaea03a681b08f3a4f1bd44ed714378fbe49f530b394 = $this->env->getExtension("native_profiler");
-        $__internal_bb4ecd20fa64c59dfc4ebaea03a681b08f3a4f1bd44ed714378fbe49f530b394->enter($__internal_bb4ecd20fa64c59dfc4ebaea03a681b08f3a4f1bd44ed714378fbe49f530b394_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Tecnica/modify.html.twig"));
+        $__internal_dde9ff0df6279a243b587b0ab14b98c62067f7b666a976295e4afc439f059739 = $this->env->getExtension("native_profiler");
+        $__internal_dde9ff0df6279a243b587b0ab14b98c62067f7b666a976295e4afc439f059739->enter($__internal_dde9ff0df6279a243b587b0ab14b98c62067f7b666a976295e4afc439f059739_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Tecnica/modify.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_bb4ecd20fa64c59dfc4ebaea03a681b08f3a4f1bd44ed714378fbe49f530b394->leave($__internal_bb4ecd20fa64c59dfc4ebaea03a681b08f3a4f1bd44ed714378fbe49f530b394_prof);
+        $__internal_dde9ff0df6279a243b587b0ab14b98c62067f7b666a976295e4afc439f059739->leave($__internal_dde9ff0df6279a243b587b0ab14b98c62067f7b666a976295e4afc439f059739_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_3647ec33c2bf9b8be8b89b39f804e469260848a26d3b0abcd6644f74b6aeed86 = $this->env->getExtension("native_profiler");
-        $__internal_3647ec33c2bf9b8be8b89b39f804e469260848a26d3b0abcd6644f74b6aeed86->enter($__internal_3647ec33c2bf9b8be8b89b39f804e469260848a26d3b0abcd6644f74b6aeed86_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_b47ffa435681f23c37c84a8deb4f99ac714b276c330a308a2bd2b9483d96ba92 = $this->env->getExtension("native_profiler");
+        $__internal_b47ffa435681f23c37c84a8deb4f99ac714b276c330a308a2bd2b9483d96ba92->enter($__internal_b47ffa435681f23c37c84a8deb4f99ac714b276c330a308a2bd2b9483d96ba92_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Ver/Modificar técnica ";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entidad"]) ? $context["entidad"] : $this->getContext($context, "entidad")), "nombre", array()), "html", null, true);
         
-        $__internal_3647ec33c2bf9b8be8b89b39f804e469260848a26d3b0abcd6644f74b6aeed86->leave($__internal_3647ec33c2bf9b8be8b89b39f804e469260848a26d3b0abcd6644f74b6aeed86_prof);
+        $__internal_b47ffa435681f23c37c84a8deb4f99ac714b276c330a308a2bd2b9483d96ba92->leave($__internal_b47ffa435681f23c37c84a8deb4f99ac714b276c330a308a2bd2b9483d96ba92_prof);
 
     }
 
     // line 4
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_4dee5bf16196b386f4b41c17c41db925fb2fe1ebb81b22cee922d65a374c8934 = $this->env->getExtension("native_profiler");
-        $__internal_4dee5bf16196b386f4b41c17c41db925fb2fe1ebb81b22cee922d65a374c8934->enter($__internal_4dee5bf16196b386f4b41c17c41db925fb2fe1ebb81b22cee922d65a374c8934_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_1d5504cbf38204122b31faffb9a56288bee20393b0b972485a0ad3a766ca1ec2 = $this->env->getExtension("native_profiler");
+        $__internal_1d5504cbf38204122b31faffb9a56288bee20393b0b972485a0ad3a766ca1ec2->enter($__internal_1d5504cbf38204122b31faffb9a56288bee20393b0b972485a0ad3a766ca1ec2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 5
         $this->displayParentBlock("stylesheets", $context, $blocks);
         echo "
 ";
         
-        $__internal_4dee5bf16196b386f4b41c17c41db925fb2fe1ebb81b22cee922d65a374c8934->leave($__internal_4dee5bf16196b386f4b41c17c41db925fb2fe1ebb81b22cee922d65a374c8934_prof);
+        $__internal_1d5504cbf38204122b31faffb9a56288bee20393b0b972485a0ad3a766ca1ec2->leave($__internal_1d5504cbf38204122b31faffb9a56288bee20393b0b972485a0ad3a766ca1ec2_prof);
 
     }
 
     // line 7
     public function block_body($context, array $blocks = array())
     {
-        $__internal_88a6006ca82cfab795046bf1d46e90825a915b6d3da7f7eebcb78d376ec978b8 = $this->env->getExtension("native_profiler");
-        $__internal_88a6006ca82cfab795046bf1d46e90825a915b6d3da7f7eebcb78d376ec978b8->enter($__internal_88a6006ca82cfab795046bf1d46e90825a915b6d3da7f7eebcb78d376ec978b8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_9122f53e6c31499798704e046cb0fbae30fe857afeff02ceaad2a11b9a74fff7 = $this->env->getExtension("native_profiler");
+        $__internal_9122f53e6c31499798704e046cb0fbae30fe857afeff02ceaad2a11b9a74fff7->enter($__internal_9122f53e6c31499798704e046cb0fbae30fe857afeff02ceaad2a11b9a74fff7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 8
         echo "<!-- Main Content -->
@@ -94,11 +94,18 @@ class __TwigTemplate_b6cc2cc19d266ddfa2cd33ab0b52e16b6e665fdad3fc584872cc0bb2a76
                                 </div>
                                 <div class=\"col-lg-12\">
                                     <div class=\"card-body\">
-                                        ";
+                                    ";
         // line 29
-        $this->loadTemplate("AdminBundle:Tecnica:form.html.twig", "@Admin/Tecnica/modify.html.twig", 29)->display($context);
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formTecnica"]) ? $context["formTecnica"] : $this->getContext($context, "formTecnica")), 'form_start');
+        echo "
+                                        ";
         // line 30
-        echo "                                    </div>
+        $this->loadTemplate("AdminBundle:Tecnica:form.html.twig", "@Admin/Tecnica/modify.html.twig", 30)->display($context);
+        // line 31
+        echo "                                    ";
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formTecnica"]) ? $context["formTecnica"] : $this->getContext($context, "formTecnica")), 'form_end');
+        echo "
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -107,7 +114,7 @@ class __TwigTemplate_b6cc2cc19d266ddfa2cd33ab0b52e16b6e665fdad3fc584872cc0bb2a76
         <div>       
 ";
         
-        $__internal_88a6006ca82cfab795046bf1d46e90825a915b6d3da7f7eebcb78d376ec978b8->leave($__internal_88a6006ca82cfab795046bf1d46e90825a915b6d3da7f7eebcb78d376ec978b8_prof);
+        $__internal_9122f53e6c31499798704e046cb0fbae30fe857afeff02ceaad2a11b9a74fff7->leave($__internal_9122f53e6c31499798704e046cb0fbae30fe857afeff02ceaad2a11b9a74fff7_prof);
 
     }
 
@@ -123,7 +130,7 @@ class __TwigTemplate_b6cc2cc19d266ddfa2cd33ab0b52e16b6e665fdad3fc584872cc0bb2a76
 
     public function getDebugInfo()
     {
-        return array (  101 => 30,  99 => 29,  88 => 21,  84 => 20,  70 => 8,  64 => 7,  55 => 5,  49 => 4,  36 => 3,  11 => 1,);
+        return array (  105 => 31,  103 => 30,  99 => 29,  88 => 21,  84 => 20,  70 => 8,  64 => 7,  55 => 5,  49 => 4,  36 => 3,  11 => 1,);
     }
 
     public function getSource()
@@ -156,7 +163,9 @@ class __TwigTemplate_b6cc2cc19d266ddfa2cd33ab0b52e16b6e665fdad3fc584872cc0bb2a76
                                 </div>
                                 <div class=\"col-lg-12\">
                                     <div class=\"card-body\">
+                                    {{ form_start(formTecnica)}}
                                         {% include \"AdminBundle:Tecnica:form.html.twig\" %}
+                                    {{ form_end(formTecnica) }}
                                     </div>
                                 </div>
                             </div>

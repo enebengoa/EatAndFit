@@ -24,47 +24,47 @@ class __TwigTemplate_01554e554178b55ac3e0b8f874b36f0e0411008471db0f558c44a5dfb52
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_fbfddd87ca24810c4941dcc4e5a0cde4189043595c135a2c2a14f2040223f6c6 = $this->env->getExtension("native_profiler");
-        $__internal_fbfddd87ca24810c4941dcc4e5a0cde4189043595c135a2c2a14f2040223f6c6->enter($__internal_fbfddd87ca24810c4941dcc4e5a0cde4189043595c135a2c2a14f2040223f6c6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AdminBundle:Usuario:list.html.twig"));
+        $__internal_4bf2ad1dd4853d28c18c58d284bd2751481eb45bf1862536f7370777c42439fd = $this->env->getExtension("native_profiler");
+        $__internal_4bf2ad1dd4853d28c18c58d284bd2751481eb45bf1862536f7370777c42439fd->enter($__internal_4bf2ad1dd4853d28c18c58d284bd2751481eb45bf1862536f7370777c42439fd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AdminBundle:Usuario:list.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_fbfddd87ca24810c4941dcc4e5a0cde4189043595c135a2c2a14f2040223f6c6->leave($__internal_fbfddd87ca24810c4941dcc4e5a0cde4189043595c135a2c2a14f2040223f6c6_prof);
+        $__internal_4bf2ad1dd4853d28c18c58d284bd2751481eb45bf1862536f7370777c42439fd->leave($__internal_4bf2ad1dd4853d28c18c58d284bd2751481eb45bf1862536f7370777c42439fd_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_7877a6ded5c6601dc658ffb55427a04eeb8a807f62ddf81af61c13c69af5eb76 = $this->env->getExtension("native_profiler");
-        $__internal_7877a6ded5c6601dc658ffb55427a04eeb8a807f62ddf81af61c13c69af5eb76->enter($__internal_7877a6ded5c6601dc658ffb55427a04eeb8a807f62ddf81af61c13c69af5eb76_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_eba5961fe9b122a11a49bf34bb66d87167f29d2624506cc78ec25537fa73e428 = $this->env->getExtension("native_profiler");
+        $__internal_eba5961fe9b122a11a49bf34bb66d87167f29d2624506cc78ec25537fa73e428->enter($__internal_eba5961fe9b122a11a49bf34bb66d87167f29d2624506cc78ec25537fa73e428_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Lista de usuarios";
         
-        $__internal_7877a6ded5c6601dc658ffb55427a04eeb8a807f62ddf81af61c13c69af5eb76->leave($__internal_7877a6ded5c6601dc658ffb55427a04eeb8a807f62ddf81af61c13c69af5eb76_prof);
+        $__internal_eba5961fe9b122a11a49bf34bb66d87167f29d2624506cc78ec25537fa73e428->leave($__internal_eba5961fe9b122a11a49bf34bb66d87167f29d2624506cc78ec25537fa73e428_prof);
 
     }
 
     // line 4
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_5d3da4b0c648f3266bb06cee8ec0e7d1a41f6ce6e387bc77b61d64b1c8727206 = $this->env->getExtension("native_profiler");
-        $__internal_5d3da4b0c648f3266bb06cee8ec0e7d1a41f6ce6e387bc77b61d64b1c8727206->enter($__internal_5d3da4b0c648f3266bb06cee8ec0e7d1a41f6ce6e387bc77b61d64b1c8727206_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_46ddad0cddd10381a9968429759cdff664bd7b45a4448b679cde79a1c0940c14 = $this->env->getExtension("native_profiler");
+        $__internal_46ddad0cddd10381a9968429759cdff664bd7b45a4448b679cde79a1c0940c14->enter($__internal_46ddad0cddd10381a9968429759cdff664bd7b45a4448b679cde79a1c0940c14_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 5
         $this->displayParentBlock("stylesheets", $context, $blocks);
         echo "
 ";
         
-        $__internal_5d3da4b0c648f3266bb06cee8ec0e7d1a41f6ce6e387bc77b61d64b1c8727206->leave($__internal_5d3da4b0c648f3266bb06cee8ec0e7d1a41f6ce6e387bc77b61d64b1c8727206_prof);
+        $__internal_46ddad0cddd10381a9968429759cdff664bd7b45a4448b679cde79a1c0940c14->leave($__internal_46ddad0cddd10381a9968429759cdff664bd7b45a4448b679cde79a1c0940c14_prof);
 
     }
 
     // line 8
     public function block_body($context, array $blocks = array())
     {
-        $__internal_b9bbadad31f93e5db06a27f9fb176b62d3e76efa6a0badddc52fb1908e164243 = $this->env->getExtension("native_profiler");
-        $__internal_b9bbadad31f93e5db06a27f9fb176b62d3e76efa6a0badddc52fb1908e164243->enter($__internal_b9bbadad31f93e5db06a27f9fb176b62d3e76efa6a0badddc52fb1908e164243_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_ddf50e792c35aa3d3062034b501dbf3e782a632fe7ee5e9a547f5ecc51ffeacf = $this->env->getExtension("native_profiler");
+        $__internal_ddf50e792c35aa3d3062034b501dbf3e782a632fe7ee5e9a547f5ecc51ffeacf->enter($__internal_ddf50e792c35aa3d3062034b501dbf3e782a632fe7ee5e9a547f5ecc51ffeacf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 9
         echo "    <!-- Main Content -->
@@ -91,35 +91,36 @@ class __TwigTemplate_01554e554178b55ac3e0b8f874b36f0e0411008471db0f558c44a5dfb52
                                                     <th>Nombre</th>
                                                     <th>Email</th>
                                                     <th>Role</th>
+                                                    <th>Estado</th>
                                                     <th></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                             ";
-        // line 37
+        // line 38
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["usuarios"]) ? $context["usuarios"] : $this->getContext($context, "usuarios")));
         foreach ($context['_seq'] as $context["_key"] => $context["usuario"]) {
-            // line 38
+            // line 39
             echo "                                                <tr>
                                                     <td>";
-            // line 39
+            // line 40
             echo twig_escape_filter($this->env, $this->getAttribute($context["usuario"], "id", array()), "html", null, true);
             echo "</td>
                                                     <td>";
-            // line 40
+            // line 41
             echo twig_escape_filter($this->env, $this->getAttribute($context["usuario"], "username", array()), "html", null, true);
             echo "</td>
                                                     <td>";
-            // line 41
+            // line 42
             echo twig_escape_filter($this->env, $this->getAttribute($context["usuario"], "email", array()), "html", null, true);
             echo "</td>
                                                     <td>";
-            // line 42
+            // line 43
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["usuario"], "roles", array()));
             foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
-                // line 43
+                // line 44
                 echo "                                                        ";
                 echo twig_escape_filter($this->env, $context["role"], "html", null, true);
                 echo ",
@@ -128,21 +129,26 @@ class __TwigTemplate_01554e554178b55ac3e0b8f874b36f0e0411008471db0f558c44a5dfb52
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['role'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 44
+            // line 45
+            echo "</td>
+                                                    <td>";
+            // line 46
+            echo (($this->getAttribute($context["usuario"], "locked", array())) ? ("Bloqueado") : ("Desbloqueado"));
             echo "</td>
                                                     <td>
                                                         <a class=\"btn btn-default\" data-toggle=\"modal\" data-target=\"#confirm-delete\" data-href=\"";
-            // line 46
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_admin_deleteUsuario", array("id" => $this->getAttribute($context["usuario"], "id", array()))), "html", null, true);
+            // line 48
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_admin_activateUsuario", array("id" => $this->getAttribute($context["usuario"], "id", array()))), "html", null, true);
             echo "\">Activar/Desactivar</a>
                                                     </td>
+
                                                 </tr>
                                             ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['usuario'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 50
+        // line 53
         echo "                                        </table>
                                     </div>
                                 </div>
@@ -152,7 +158,7 @@ class __TwigTemplate_01554e554178b55ac3e0b8f874b36f0e0411008471db0f558c44a5dfb52
                 </div>
         <div>
 
-<!-- Mensaje de confirmación de eliminación-->
+<!-- Mensaje de confirmación de bloquear/desbloquear-->
     <div class=\"modal fade\" id=\"confirm-delete\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
         <div class=\"modal-dialog\">
             <div class=\"modal-content\">
@@ -160,11 +166,11 @@ class __TwigTemplate_01554e554178b55ac3e0b8f874b36f0e0411008471db0f558c44a5dfb52
                     Mensaje de confirmación
                 </div>
                 <div class=\"modal-body\">
-                    ¿Esta seguro de eliminar el elemento seleccionado?
+                    ¿Esta seguro de bloquear/desbloquear el elemento seleccionado?
                 </div>
                 <div class=\"modal-footer\">
                     <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Cancelar</button>
-                    <a class=\"btn btn-danger btn-ok\">Eliminar</a>
+                    <a class=\"btn btn-danger btn-ok\">Aceptar</a>
                 </div>
             </div>
         </div>
@@ -172,19 +178,19 @@ class __TwigTemplate_01554e554178b55ac3e0b8f874b36f0e0411008471db0f558c44a5dfb52
 
 ";
         
-        $__internal_b9bbadad31f93e5db06a27f9fb176b62d3e76efa6a0badddc52fb1908e164243->leave($__internal_b9bbadad31f93e5db06a27f9fb176b62d3e76efa6a0badddc52fb1908e164243_prof);
+        $__internal_ddf50e792c35aa3d3062034b501dbf3e782a632fe7ee5e9a547f5ecc51ffeacf->leave($__internal_ddf50e792c35aa3d3062034b501dbf3e782a632fe7ee5e9a547f5ecc51ffeacf_prof);
 
     }
 
-    // line 79
+    // line 82
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_b455f63d67624e3973f813bf504e8c58ce4c75970671db15aa834344eaf942f1 = $this->env->getExtension("native_profiler");
-        $__internal_b455f63d67624e3973f813bf504e8c58ce4c75970671db15aa834344eaf942f1->enter($__internal_b455f63d67624e3973f813bf504e8c58ce4c75970671db15aa834344eaf942f1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_86020ede48c75c12a62438ef9db4dd98f4daa28d3f7ddb2aa4849f799ba1915e = $this->env->getExtension("native_profiler");
+        $__internal_86020ede48c75c12a62438ef9db4dd98f4daa28d3f7ddb2aa4849f799ba1915e->enter($__internal_86020ede48c75c12a62438ef9db4dd98f4daa28d3f7ddb2aa4849f799ba1915e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 80
+        // line 83
         echo "
- <!-- /.Botón de confirmación de eliminar-->
+ <!-- /.Botón de confirmación de bloquear/desbloquear-->
     <script>
         \$('#confirm-delete').on('show.bs.modal', function(e) 
         {\$(this).find('.btn-ok').attr('href', \$(e.relatedTarget).data('href'));});
@@ -203,7 +209,7 @@ class __TwigTemplate_01554e554178b55ac3e0b8f874b36f0e0411008471db0f558c44a5dfb52
 
 ";
         
-        $__internal_b455f63d67624e3973f813bf504e8c58ce4c75970671db15aa834344eaf942f1->leave($__internal_b455f63d67624e3973f813bf504e8c58ce4c75970671db15aa834344eaf942f1_prof);
+        $__internal_86020ede48c75c12a62438ef9db4dd98f4daa28d3f7ddb2aa4849f799ba1915e->leave($__internal_86020ede48c75c12a62438ef9db4dd98f4daa28d3f7ddb2aa4849f799ba1915e_prof);
 
     }
 
@@ -219,7 +225,7 @@ class __TwigTemplate_01554e554178b55ac3e0b8f874b36f0e0411008471db0f558c44a5dfb52
 
     public function getDebugInfo()
     {
-        return array (  186 => 80,  180 => 79,  146 => 50,  136 => 46,  132 => 44,  123 => 43,  119 => 42,  115 => 41,  111 => 40,  107 => 39,  104 => 38,  100 => 37,  70 => 9,  64 => 8,  55 => 5,  49 => 4,  37 => 3,  11 => 1,);
+        return array (  192 => 83,  186 => 82,  152 => 53,  141 => 48,  136 => 46,  133 => 45,  124 => 44,  120 => 43,  116 => 42,  112 => 41,  108 => 40,  105 => 39,  101 => 38,  70 => 9,  64 => 8,  55 => 5,  49 => 4,  37 => 3,  11 => 1,);
     }
 
     public function getSource()
@@ -256,6 +262,7 @@ class __TwigTemplate_01554e554178b55ac3e0b8f874b36f0e0411008471db0f558c44a5dfb52
                                                     <th>Nombre</th>
                                                     <th>Email</th>
                                                     <th>Role</th>
+                                                    <th>Estado</th>
                                                     <th></th>
                                                 </tr>
                                             </thead>
@@ -268,9 +275,11 @@ class __TwigTemplate_01554e554178b55ac3e0b8f874b36f0e0411008471db0f558c44a5dfb52
                                                     <td>{% for role in usuario.roles %}
                                                         {{role}},
                                                     {% endfor %}</td>
+                                                    <td>{{usuario.locked ? 'Bloqueado':'Desbloqueado'}}</td>
                                                     <td>
-                                                        <a class=\"btn btn-default\" data-toggle=\"modal\" data-target=\"#confirm-delete\" data-href=\"{{path('App_admin_deleteUsuario',{id : usuario.id}) }}\">Activar/Desactivar</a>
+                                                        <a class=\"btn btn-default\" data-toggle=\"modal\" data-target=\"#confirm-delete\" data-href=\"{{path('App_admin_activateUsuario',{id : usuario.id}) }}\">Activar/Desactivar</a>
                                                     </td>
+
                                                 </tr>
                                             {% endfor %}
                                         </table>
@@ -282,7 +291,7 @@ class __TwigTemplate_01554e554178b55ac3e0b8f874b36f0e0411008471db0f558c44a5dfb52
                 </div>
         <div>
 
-<!-- Mensaje de confirmación de eliminación-->
+<!-- Mensaje de confirmación de bloquear/desbloquear-->
     <div class=\"modal fade\" id=\"confirm-delete\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
         <div class=\"modal-dialog\">
             <div class=\"modal-content\">
@@ -290,11 +299,11 @@ class __TwigTemplate_01554e554178b55ac3e0b8f874b36f0e0411008471db0f558c44a5dfb52
                     Mensaje de confirmación
                 </div>
                 <div class=\"modal-body\">
-                    ¿Esta seguro de eliminar el elemento seleccionado?
+                    ¿Esta seguro de bloquear/desbloquear el elemento seleccionado?
                 </div>
                 <div class=\"modal-footer\">
                     <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Cancelar</button>
-                    <a class=\"btn btn-danger btn-ok\">Eliminar</a>
+                    <a class=\"btn btn-danger btn-ok\">Aceptar</a>
                 </div>
             </div>
         </div>
@@ -304,7 +313,7 @@ class __TwigTemplate_01554e554178b55ac3e0b8f874b36f0e0411008471db0f558c44a5dfb52
 
 {% block javascripts %}
 
- <!-- /.Botón de confirmación de eliminar-->
+ <!-- /.Botón de confirmación de bloquear/desbloquear-->
     <script>
         \$('#confirm-delete').on('show.bs.modal', function(e) 
         {\$(this).find('.btn-ok').attr('href', \$(e.relatedTarget).data('href'));});

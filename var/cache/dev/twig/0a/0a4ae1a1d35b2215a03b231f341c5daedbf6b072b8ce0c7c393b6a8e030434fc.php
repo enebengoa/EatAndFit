@@ -24,20 +24,20 @@ class __TwigTemplate_c0dc12576dc30852e4a6c79564953f6b86d36e231edb22b825e40fb8a4f
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7bb570ce8cb74dcf9c40f5f695fec8f2f7320598aca747f8f083a636f626a28b = $this->env->getExtension("native_profiler");
-        $__internal_7bb570ce8cb74dcf9c40f5f695fec8f2f7320598aca747f8f083a636f626a28b->enter($__internal_7bb570ce8cb74dcf9c40f5f695fec8f2f7320598aca747f8f083a636f626a28b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle:Lista:show.html.twig"));
+        $__internal_fd46e8183d44cc7c579bdaaa34883fac7135ccd3cfa34ad814d70191d9dd4a0f = $this->env->getExtension("native_profiler");
+        $__internal_fd46e8183d44cc7c579bdaaa34883fac7135ccd3cfa34ad814d70191d9dd4a0f->enter($__internal_fd46e8183d44cc7c579bdaaa34883fac7135ccd3cfa34ad814d70191d9dd4a0f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "UserBundle:Lista:show.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_7bb570ce8cb74dcf9c40f5f695fec8f2f7320598aca747f8f083a636f626a28b->leave($__internal_7bb570ce8cb74dcf9c40f5f695fec8f2f7320598aca747f8f083a636f626a28b_prof);
+        $__internal_fd46e8183d44cc7c579bdaaa34883fac7135ccd3cfa34ad814d70191d9dd4a0f->leave($__internal_fd46e8183d44cc7c579bdaaa34883fac7135ccd3cfa34ad814d70191d9dd4a0f_prof);
 
     }
 
     // line 2
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_1ec1e6e9fdc0c868311e1489854bceae8ce5aabc553495dacfc307d6e373ea8f = $this->env->getExtension("native_profiler");
-        $__internal_1ec1e6e9fdc0c868311e1489854bceae8ce5aabc553495dacfc307d6e373ea8f->enter($__internal_1ec1e6e9fdc0c868311e1489854bceae8ce5aabc553495dacfc307d6e373ea8f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_ec8d64f4fea5e1d2544bb39ecafe11ff555c5016b479d0015f279ad8aec5161a = $this->env->getExtension("native_profiler");
+        $__internal_ec8d64f4fea5e1d2544bb39ecafe11ff555c5016b479d0015f279ad8aec5161a->enter($__internal_ec8d64f4fea5e1d2544bb39ecafe11ff555c5016b479d0015f279ad8aec5161a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 3
         echo "
@@ -50,27 +50,27 @@ class __TwigTemplate_c0dc12576dc30852e4a6c79564953f6b86d36e231edb22b825e40fb8a4f
 
  ";
         
-        $__internal_1ec1e6e9fdc0c868311e1489854bceae8ce5aabc553495dacfc307d6e373ea8f->leave($__internal_1ec1e6e9fdc0c868311e1489854bceae8ce5aabc553495dacfc307d6e373ea8f_prof);
+        $__internal_ec8d64f4fea5e1d2544bb39ecafe11ff555c5016b479d0015f279ad8aec5161a->leave($__internal_ec8d64f4fea5e1d2544bb39ecafe11ff555c5016b479d0015f279ad8aec5161a_prof);
 
     }
 
     // line 10
     public function block_title($context, array $blocks = array())
     {
-        $__internal_99da6af03505edc0bee9ea062a62641bc8bb51bf08a923f77ebb3ffe48cff3ab = $this->env->getExtension("native_profiler");
-        $__internal_99da6af03505edc0bee9ea062a62641bc8bb51bf08a923f77ebb3ffe48cff3ab->enter($__internal_99da6af03505edc0bee9ea062a62641bc8bb51bf08a923f77ebb3ffe48cff3ab_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_71b81342456f576c1860eb343c4fcf079b11638eac8b72077b4492b59c603357 = $this->env->getExtension("native_profiler");
+        $__internal_71b81342456f576c1860eb343c4fcf079b11638eac8b72077b4492b59c603357->enter($__internal_71b81342456f576c1860eb343c4fcf079b11638eac8b72077b4492b59c603357_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Eat&Fit";
         
-        $__internal_99da6af03505edc0bee9ea062a62641bc8bb51bf08a923f77ebb3ffe48cff3ab->leave($__internal_99da6af03505edc0bee9ea062a62641bc8bb51bf08a923f77ebb3ffe48cff3ab_prof);
+        $__internal_71b81342456f576c1860eb343c4fcf079b11638eac8b72077b4492b59c603357->leave($__internal_71b81342456f576c1860eb343c4fcf079b11638eac8b72077b4492b59c603357_prof);
 
     }
 
     // line 12
     public function block_body($context, array $blocks = array())
     {
-        $__internal_d15bb079dec4c3371cdada029e8e1e0086b5565a4a871d24be25395ef09c0c80 = $this->env->getExtension("native_profiler");
-        $__internal_d15bb079dec4c3371cdada029e8e1e0086b5565a4a871d24be25395ef09c0c80->enter($__internal_d15bb079dec4c3371cdada029e8e1e0086b5565a4a871d24be25395ef09c0c80_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_b3f15dfb14b963eee4b22b7efe1e996cb7cf219bb0169a8ec35a0bfbe14eeeaf = $this->env->getExtension("native_profiler");
+        $__internal_b3f15dfb14b963eee4b22b7efe1e996cb7cf219bb0169a8ec35a0bfbe14eeeaf->enter($__internal_b3f15dfb14b963eee4b22b7efe1e996cb7cf219bb0169a8ec35a0bfbe14eeeaf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 13
         echo "
@@ -87,9 +87,7 @@ class __TwigTemplate_c0dc12576dc30852e4a6c79564953f6b86d36e231edb22b825e40fb8a4f
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["lista"]) ? $context["lista"] : $this->getContext($context, "lista")), "nombre", array()), "html", null, true);
         echo " \"</a></h3>
                     <label><i class=\"glyphicon glyphicon-menu-up\"></i></label>
-                      </br>
-                      </br>
-                      <button type=\"button\" class=\"btn btn-lg btn-success\" data-toggle=\"modal\" data-target=\"#myModal\"><i class=\"glyphicon glyphicon-plus\"></i> Añadir nuevo ingrediente</button>
+                      </br>                      
                   </div>
             </div>
             <div class=\"row\">
@@ -126,6 +124,34 @@ class __TwigTemplate_c0dc12576dc30852e4a6c79564953f6b86d36e231edb22b825e40fb8a4f
 \t\t\t        <!-- /.col-lg-12 -->
 \t\t\t    </div>
 \t\t\t    <!-- /.row -->
+        </br>
+        <hr>
+        </br>
+            <div class=\"row\">
+                    <div class=\"col-lg-12\">
+                                <div class=\"row\">
+                                </div>
+                                <div class=\"dataTable_wrapper\">
+
+                                    <table class=\"table table-striped table-bordered table-hover\" id=\"dataTables2\">
+                                        <thead>
+                                            <tr>
+                                                 <th>Menú</th>
+                                                <th>Nº comensales</th>
+                                                 <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.table-responsive -->
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
 \t\t\t    <div class=\"clearfix\"></div>
         </div>
     </div>
@@ -162,9 +188,8 @@ class __TwigTemplate_c0dc12576dc30852e4a6c79564953f6b86d36e231edb22b825e40fb8a4f
                         <h4 class=\"modal-title\" id=\"myModalLabel\">Mensaje de confirmación</h4>
                     </div>
 
-                    <div class=\"modal-body\">
-                        <p>¿Desea borrar el ingrediente de esta lista?</p>
-                        <p class=\"debug-url\"></p>
+                    <div class=\"modal-body\" id=\"deleteMessage\">
+                        <p>¿Desea borrar el elemento de esta lista?</p>
                     </div>
 
                     <div class=\"modal-footer\">
@@ -188,9 +213,9 @@ class __TwigTemplate_c0dc12576dc30852e4a6c79564953f6b86d36e231edb22b825e40fb8a4f
               <div class=\"modal-body\">
                   <div id=\"form_body\">
                       ";
-        // line 122
-        $this->loadTemplate("UserBundle:OrdenCompra:add2.html.twig", "UserBundle:Lista:show.html.twig", 122)->display(array_merge($context, array("formOrdenCompra" => (isset($context["formOrdenCompra"]) ? $context["formOrdenCompra"] : $this->getContext($context, "formOrdenCompra")))));
-        // line 123
+        // line 147
+        $this->loadTemplate("UserBundle:OrdenCompra:add2.html.twig", "UserBundle:Lista:show.html.twig", 147)->display(array_merge($context, array("formOrdenCompra" => (isset($context["formOrdenCompra"]) ? $context["formOrdenCompra"] : $this->getContext($context, "formOrdenCompra")))));
+        // line 148
         echo "                  </div>
               </div>
               <div class=\"modal-footer\">
@@ -202,24 +227,24 @@ class __TwigTemplate_c0dc12576dc30852e4a6c79564953f6b86d36e231edb22b825e40fb8a4f
 
 ";
         
-        $__internal_d15bb079dec4c3371cdada029e8e1e0086b5565a4a871d24be25395ef09c0c80->leave($__internal_d15bb079dec4c3371cdada029e8e1e0086b5565a4a871d24be25395ef09c0c80_prof);
+        $__internal_b3f15dfb14b963eee4b22b7efe1e996cb7cf219bb0169a8ec35a0bfbe14eeeaf->leave($__internal_b3f15dfb14b963eee4b22b7efe1e996cb7cf219bb0169a8ec35a0bfbe14eeeaf_prof);
 
     }
 
-    // line 133
+    // line 158
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_c35551d3de20f5b71c5d343881ddb3827ee7db04fce9e1723162c53b29c4938a = $this->env->getExtension("native_profiler");
-        $__internal_c35551d3de20f5b71c5d343881ddb3827ee7db04fce9e1723162c53b29c4938a->enter($__internal_c35551d3de20f5b71c5d343881ddb3827ee7db04fce9e1723162c53b29c4938a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_e68dd119cdc7af167d2d9b90c527b9a8da2ca8313a7b802f86ec7ebaa3f5f31c = $this->env->getExtension("native_profiler");
+        $__internal_e68dd119cdc7af167d2d9b90c527b9a8da2ca8313a7b802f86ec7ebaa3f5f31c->enter($__internal_e68dd119cdc7af167d2d9b90c527b9a8da2ca8313a7b802f86ec7ebaa3f5f31c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 134
+        // line 159
         echo "
     <script src=\"";
-        // line 135
+        // line 160
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("datatable/js/datatables.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 136
+        // line 161
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("datatable/js/dataTables.select.min.js"), "html", null, true);
         echo "\"></script>
 
@@ -234,7 +259,7 @@ class __TwigTemplate_c0dc12576dc30852e4a6c79564953f6b86d36e231edb22b825e40fb8a4f
                 {
                     extend: 'pdfHtml5',
                     title: 'La lista ";
-        // line 148
+        // line 173
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["lista"]) ? $context["lista"] : $this->getContext($context, "lista")), "nombre", array()), "html", null, true);
         echo " tienes los siguientes ingredientes:',
                     exportOptions: {
@@ -253,14 +278,14 @@ class __TwigTemplate_c0dc12576dc30852e4a6c79564953f6b86d36e231edb22b825e40fb8a4f
             ],
              \"language\": {
                 \"url\": \"";
-        // line 164
+        // line 189
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("datatable/js/Spanish.json"), "html", null, true);
         echo "\"
             },
             autoWidth: false,
             \"sAjaxDataProp\":\"\",
             \"sAjaxSource\": \"";
-        // line 168
+        // line 193
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_user_showListaJson", array("id" => $this->getAttribute((isset($context["lista"]) ? $context["lista"] : $this->getContext($context, "lista")), "id", array()))), "html", null, true);
         echo "\",
             \"columns\": [
@@ -296,7 +321,79 @@ class __TwigTemplate_c0dc12576dc30852e4a6c79564953f6b86d36e231edb22b825e40fb8a4f
                     function (data, type, row) {
 
                                Delete= \"http://127.0.0.1/pfg_eneko/web/app_dev.php/deleteOrdenCompra/\"+data;
-                               return '<button onclick=\"modifyEstado(\\''+data+'\\')\" class=\"btn btn-warning\" ><i class=\"glyphicon glyphicon-edit\"> </i> Comprar </button> <button class=\"btn btn-danger\" data-href=\\\"' + Delete + '\\\" data-toggle=\"modal\" data-target=\"#confirm-delete\"><i class=\"glyphicon glyphicon-trash\"> </i> Borrar</button>';
+                               return '<button onclick=\"modifyEstado(\\''+data+'\\')\" class=\"btn btn-warning\" ><i class=\"glyphicon glyphicon-edit\"> </i> Comprar </button>';
+
+                        }
+                }
+                ],
+                select: {
+                    style: 'multi'
+                },
+            });
+        });
+    </script>
+    <script>
+    \$(document).ready(function() {
+        var table = \$('#dataTables2').DataTable( {
+            dom: 'Bfrtip',
+            buttons: [
+                'copyHtml5',
+                'excelHtml5',
+                'csvHtml5',
+                {
+                    extend: 'pdfHtml5',
+                    title: 'La lista ";
+        // line 248
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["lista"]) ? $context["lista"] : $this->getContext($context, "lista")), "nombre", array()), "html", null, true);
+        echo " tienes los siguientes ingredientes:',
+                    exportOptions: {
+                        columns: ':visible'
+                    },
+                    download: 'open'
+                },
+                'colvis',
+                {
+                    text : 'Recargar',
+                    action : function ( e, dt, node, config ) {
+                        dt.ajax.reload();
+                    }
+                },
+                'selectAll'
+            ],
+             \"language\": {
+                \"url\": \"";
+        // line 264
+        echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("datatable/js/Spanish.json"), "html", null, true);
+        echo "\"
+            },
+            autoWidth: false,
+            \"sAjaxDataProp\":\"\",
+            \"sAjaxSource\": \"";
+        // line 268
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_user_showMenuListaJson", array("id" => $this->getAttribute((isset($context["lista"]) ? $context["lista"] : $this->getContext($context, "lista")), "id", array()))), "html", null, true);
+        echo "\",
+            \"columns\": [
+                {
+                    \"data\": \"menu\", // can be null or undefined
+                    \"defaultContent\": \"<i>Not set</i>\"
+                },
+                {
+                    \"data\": \"comensales\", // can be null or undefined
+                    \"defaultContent\": \"<i>Not set</i>\"
+                },
+                {
+                    \"data\": \"idMenu\",
+                    bSortable: false,
+                    \"defaultContent\": \"<i>Not set</i>\",
+                    mRender:
+                    function (data, type, row) {
+
+                               Delete= \"http://127.0.0.1/pfg_eneko/web/app_dev.php/deleteMenuLista/\"+data+\"/\"+'";
+        // line 285
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["lista"]) ? $context["lista"] : $this->getContext($context, "lista")), "id", array()), "html", null, true);
+        echo "';
+
+                               return '<button class=\"btn btn-danger\" data-href=\\\"' + Delete + '\\\" data-toggle=\"modal\" data-target=\"#confirm-delete\"><i class=\"glyphicon glyphicon-trash\"> </i> Borrar</button>';
 
                         }
                 }
@@ -316,7 +413,9 @@ class __TwigTemplate_c0dc12576dc30852e4a6c79564953f6b86d36e231edb22b825e40fb8a4f
                     url: \"http://127.0.0.1/pfg_eneko/web/app_dev.php/modifyEstadoOrdenCompra/\"+data,
                     complete: function(jqXHR) 
                     {
-\t\t\t\t\t\t\t\$('#dataTables').DataTable().ajax.reload();   
+\t\t\t\t\t\t\t\$('#dataTables').DataTable().ajax.reload();
+                            \$('#dataTables2').DataTable().ajax.reload();   
+
                     },
                 });
         };
@@ -337,6 +436,7 @@ class __TwigTemplate_c0dc12576dc30852e4a6c79564953f6b86d36e231edb22b825e40fb8a4f
                         \$(\"#addConfirm\").modal();
 
                         \$('#dataTables').DataTable().ajax.reload();
+                            \$('#dataTables2').DataTable().ajax.reload();  
 
                     }
                 });
@@ -362,6 +462,7 @@ class __TwigTemplate_c0dc12576dc30852e4a6c79564953f6b86d36e231edb22b825e40fb8a4f
                         \$(\"#addConfirm\").modal();
 
                         \$('#dataTables').DataTable().ajax.reload();
+                            \$('#dataTables2').DataTable().ajax.reload();  
 
                     }
             });
@@ -369,7 +470,7 @@ class __TwigTemplate_c0dc12576dc30852e4a6c79564953f6b86d36e231edb22b825e40fb8a4f
     </script>
 ";
         
-        $__internal_c35551d3de20f5b71c5d343881ddb3827ee7db04fce9e1723162c53b29c4938a->leave($__internal_c35551d3de20f5b71c5d343881ddb3827ee7db04fce9e1723162c53b29c4938a_prof);
+        $__internal_e68dd119cdc7af167d2d9b90c527b9a8da2ca8313a7b802f86ec7ebaa3f5f31c->leave($__internal_e68dd119cdc7af167d2d9b90c527b9a8da2ca8313a7b802f86ec7ebaa3f5f31c_prof);
 
     }
 
@@ -385,7 +486,7 @@ class __TwigTemplate_c0dc12576dc30852e4a6c79564953f6b86d36e231edb22b825e40fb8a4f
 
     public function getDebugInfo()
     {
-        return array (  264 => 168,  257 => 164,  238 => 148,  223 => 136,  219 => 135,  216 => 134,  210 => 133,  194 => 123,  192 => 122,  85 => 20,  76 => 13,  70 => 12,  58 => 10,  48 => 6,  43 => 3,  37 => 2,  11 => 1,);
+        return array (  393 => 285,  373 => 268,  366 => 264,  347 => 248,  289 => 193,  282 => 189,  263 => 173,  248 => 161,  244 => 160,  241 => 159,  235 => 158,  219 => 148,  217 => 147,  85 => 20,  76 => 13,  70 => 12,  58 => 10,  48 => 6,  43 => 3,  37 => 2,  11 => 1,);
     }
 
     public function getSource()
@@ -411,9 +512,7 @@ class __TwigTemplate_c0dc12576dc30852e4a6c79564953f6b86d36e231edb22b825e40fb8a4f
                   <div class=\"col-md-12 events-left animated wow fadeInLeft\" data-wow-duration=\"1000ms\" data-wow-delay=\"500ms\">
                     <h3><a href=\"{{ path('App_user_listLista') }}\">Lista de la compra \"{{lista.nombre}} \"</a></h3>
                     <label><i class=\"glyphicon glyphicon-menu-up\"></i></label>
-                      </br>
-                      </br>
-                      <button type=\"button\" class=\"btn btn-lg btn-success\" data-toggle=\"modal\" data-target=\"#myModal\"><i class=\"glyphicon glyphicon-plus\"></i> Añadir nuevo ingrediente</button>
+                      </br>                      
                   </div>
             </div>
             <div class=\"row\">
@@ -450,6 +549,34 @@ class __TwigTemplate_c0dc12576dc30852e4a6c79564953f6b86d36e231edb22b825e40fb8a4f
 \t\t\t        <!-- /.col-lg-12 -->
 \t\t\t    </div>
 \t\t\t    <!-- /.row -->
+        </br>
+        <hr>
+        </br>
+            <div class=\"row\">
+                    <div class=\"col-lg-12\">
+                                <div class=\"row\">
+                                </div>
+                                <div class=\"dataTable_wrapper\">
+
+                                    <table class=\"table table-striped table-bordered table-hover\" id=\"dataTables2\">
+                                        <thead>
+                                            <tr>
+                                                 <th>Menú</th>
+                                                <th>Nº comensales</th>
+                                                 <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.table-responsive -->
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
 \t\t\t    <div class=\"clearfix\"></div>
         </div>
     </div>
@@ -486,9 +613,8 @@ class __TwigTemplate_c0dc12576dc30852e4a6c79564953f6b86d36e231edb22b825e40fb8a4f
                         <h4 class=\"modal-title\" id=\"myModalLabel\">Mensaje de confirmación</h4>
                     </div>
 
-                    <div class=\"modal-body\">
-                        <p>¿Desea borrar el ingrediente de esta lista?</p>
-                        <p class=\"debug-url\"></p>
+                    <div class=\"modal-body\" id=\"deleteMessage\">
+                        <p>¿Desea borrar el elemento de esta lista?</p>
                     </div>
 
                     <div class=\"modal-footer\">
@@ -591,7 +717,67 @@ class __TwigTemplate_c0dc12576dc30852e4a6c79564953f6b86d36e231edb22b825e40fb8a4f
                     function (data, type, row) {
 
                                Delete= \"http://127.0.0.1/pfg_eneko/web/app_dev.php/deleteOrdenCompra/\"+data;
-                               return '<button onclick=\"modifyEstado(\\''+data+'\\')\" class=\"btn btn-warning\" ><i class=\"glyphicon glyphicon-edit\"> </i> Comprar </button> <button class=\"btn btn-danger\" data-href=\\\"' + Delete + '\\\" data-toggle=\"modal\" data-target=\"#confirm-delete\"><i class=\"glyphicon glyphicon-trash\"> </i> Borrar</button>';
+                               return '<button onclick=\"modifyEstado(\\''+data+'\\')\" class=\"btn btn-warning\" ><i class=\"glyphicon glyphicon-edit\"> </i> Comprar </button>';
+
+                        }
+                }
+                ],
+                select: {
+                    style: 'multi'
+                },
+            });
+        });
+    </script>
+    <script>
+    \$(document).ready(function() {
+        var table = \$('#dataTables2').DataTable( {
+            dom: 'Bfrtip',
+            buttons: [
+                'copyHtml5',
+                'excelHtml5',
+                'csvHtml5',
+                {
+                    extend: 'pdfHtml5',
+                    title: 'La lista {{lista.nombre}} tienes los siguientes ingredientes:',
+                    exportOptions: {
+                        columns: ':visible'
+                    },
+                    download: 'open'
+                },
+                'colvis',
+                {
+                    text : 'Recargar',
+                    action : function ( e, dt, node, config ) {
+                        dt.ajax.reload();
+                    }
+                },
+                'selectAll'
+            ],
+             \"language\": {
+                \"url\": \"{{asset ('datatable/js/Spanish.json')}}\"
+            },
+            autoWidth: false,
+            \"sAjaxDataProp\":\"\",
+            \"sAjaxSource\": \"{{ path('App_user_showMenuListaJson', {id : lista.id})}}\",
+            \"columns\": [
+                {
+                    \"data\": \"menu\", // can be null or undefined
+                    \"defaultContent\": \"<i>Not set</i>\"
+                },
+                {
+                    \"data\": \"comensales\", // can be null or undefined
+                    \"defaultContent\": \"<i>Not set</i>\"
+                },
+                {
+                    \"data\": \"idMenu\",
+                    bSortable: false,
+                    \"defaultContent\": \"<i>Not set</i>\",
+                    mRender:
+                    function (data, type, row) {
+
+                               Delete= \"http://127.0.0.1/pfg_eneko/web/app_dev.php/deleteMenuLista/\"+data+\"/\"+'{{ lista.id }}';
+
+                               return '<button class=\"btn btn-danger\" data-href=\\\"' + Delete + '\\\" data-toggle=\"modal\" data-target=\"#confirm-delete\"><i class=\"glyphicon glyphicon-trash\"> </i> Borrar</button>';
 
                         }
                 }
@@ -611,7 +797,9 @@ class __TwigTemplate_c0dc12576dc30852e4a6c79564953f6b86d36e231edb22b825e40fb8a4f
                     url: \"http://127.0.0.1/pfg_eneko/web/app_dev.php/modifyEstadoOrdenCompra/\"+data,
                     complete: function(jqXHR) 
                     {
-\t\t\t\t\t\t\t\$('#dataTables').DataTable().ajax.reload();   
+\t\t\t\t\t\t\t\$('#dataTables').DataTable().ajax.reload();
+                            \$('#dataTables2').DataTable().ajax.reload();   
+
                     },
                 });
         };
@@ -632,6 +820,7 @@ class __TwigTemplate_c0dc12576dc30852e4a6c79564953f6b86d36e231edb22b825e40fb8a4f
                         \$(\"#addConfirm\").modal();
 
                         \$('#dataTables').DataTable().ajax.reload();
+                            \$('#dataTables2').DataTable().ajax.reload();  
 
                     }
                 });
@@ -657,6 +846,7 @@ class __TwigTemplate_c0dc12576dc30852e4a6c79564953f6b86d36e231edb22b825e40fb8a4f
                         \$(\"#addConfirm\").modal();
 
                         \$('#dataTables').DataTable().ajax.reload();
+                            \$('#dataTables2').DataTable().ajax.reload();  
 
                     }
             });

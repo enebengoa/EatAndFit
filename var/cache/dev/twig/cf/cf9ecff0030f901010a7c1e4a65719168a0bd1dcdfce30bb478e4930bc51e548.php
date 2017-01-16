@@ -17,31 +17,31 @@ class __TwigTemplate_a551791bae819b09aa4888f79022ce8b4c9fc0eb1bb3a6a3c8cd52ca3c4
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8dcc1e32b6d7e083a3a60b03184470315aa3df2fbf4237baefd9b71bc3a1810e = $this->env->getExtension("native_profiler");
-        $__internal_8dcc1e32b6d7e083a3a60b03184470315aa3df2fbf4237baefd9b71bc3a1810e->enter($__internal_8dcc1e32b6d7e083a3a60b03184470315aa3df2fbf4237baefd9b71bc3a1810e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Menu/form.html.twig"));
+        $__internal_6fd67bc6ca69187c690eba69ef7800f2e0bfda52c042051a8e5f548c6e700aa5 = $this->env->getExtension("native_profiler");
+        $__internal_6fd67bc6ca69187c690eba69ef7800f2e0bfda52c042051a8e5f548c6e700aa5->enter($__internal_6fd67bc6ca69187c690eba69ef7800f2e0bfda52c042051a8e5f548c6e700aa5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Admin/Menu/form.html.twig"));
 
         // line 1
         $this->displayBlock('body', $context, $blocks);
-        // line 30
+        // line 27
         echo "
 ";
-        // line 31
+        // line 28
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 71
+        // line 68
         echo "
 
 
 ";
         
-        $__internal_8dcc1e32b6d7e083a3a60b03184470315aa3df2fbf4237baefd9b71bc3a1810e->leave($__internal_8dcc1e32b6d7e083a3a60b03184470315aa3df2fbf4237baefd9b71bc3a1810e_prof);
+        $__internal_6fd67bc6ca69187c690eba69ef7800f2e0bfda52c042051a8e5f548c6e700aa5->leave($__internal_6fd67bc6ca69187c690eba69ef7800f2e0bfda52c042051a8e5f548c6e700aa5_prof);
 
     }
 
     // line 1
     public function block_body($context, array $blocks = array())
     {
-        $__internal_d76afd06975894961b5b2ee17d551b6ce633fd9dcf5c25438186d06e8e5819bc = $this->env->getExtension("native_profiler");
-        $__internal_d76afd06975894961b5b2ee17d551b6ce633fd9dcf5c25438186d06e8e5819bc->enter($__internal_d76afd06975894961b5b2ee17d551b6ce633fd9dcf5c25438186d06e8e5819bc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_a26dbd39f9d4639db00278ad458bba02d263c38f7dbf0627f26830e98b83e455 = $this->env->getExtension("native_profiler");
+        $__internal_a26dbd39f9d4639db00278ad458bba02d263c38f7dbf0627f26830e98b83e455->enter($__internal_a26dbd39f9d4639db00278ad458bba02d263c38f7dbf0627f26830e98b83e455_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 2
         echo "\t";
@@ -68,31 +68,25 @@ class __TwigTemplate_a551791bae819b09aa4888f79022ce8b4c9fc0eb1bb3a6a3c8cd52ca3c4
         echo "
 \t</div>
 \t<div class=\"form-group\">
-\t\t";
-        // line 13
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "imagen", array()), 'row');
-        echo "
-\t</div>
-\t<div class=\"form-group\">
 \t\t<p class=\"required\"><b>Recetas </b></p>
 \t\t<ul class=\"tags\" data-prototype=\"";
-        // line 17
+        // line 14
         echo twig_escape_filter($this->env, $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "subMenus", array()), "vars", array()), "prototype", array()), 'widget'), "html_attr");
         echo "\">
 \t        ";
-        // line 19
+        // line 16
         echo "\t        ";
-        // line 20
+        // line 17
         echo "\t        ";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "subMenus", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["subMenu"]) {
-            // line 21
+            // line 18
             echo "\t            <li>";
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($context["subMenu"], "HoraIngesta", array()), 'row');
             echo "</li>
 \t           \t<li>";
-            // line 22
+            // line 19
             echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($context["subMenu"], "recetas", array()), 'row');
             echo "</li>
 \t        ";
@@ -100,34 +94,34 @@ class __TwigTemplate_a551791bae819b09aa4888f79022ce8b4c9fc0eb1bb3a6a3c8cd52ca3c4
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['subMenu'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 24
+        // line 21
         echo "\t    </ul>
 \t</div>
 
 \t\t ";
-        // line 27
+        // line 24
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'errors');
         echo "
 \t";
-        // line 28
+        // line 25
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 ";
         
-        $__internal_d76afd06975894961b5b2ee17d551b6ce633fd9dcf5c25438186d06e8e5819bc->leave($__internal_d76afd06975894961b5b2ee17d551b6ce633fd9dcf5c25438186d06e8e5819bc_prof);
+        $__internal_a26dbd39f9d4639db00278ad458bba02d263c38f7dbf0627f26830e98b83e455->leave($__internal_a26dbd39f9d4639db00278ad458bba02d263c38f7dbf0627f26830e98b83e455_prof);
 
     }
 
-    // line 31
+    // line 28
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_ee5618aafaa12a079a2eb9cb3cd25ed82d3d113777fd93e05b3369859bbaedba = $this->env->getExtension("native_profiler");
-        $__internal_ee5618aafaa12a079a2eb9cb3cd25ed82d3d113777fd93e05b3369859bbaedba->enter($__internal_ee5618aafaa12a079a2eb9cb3cd25ed82d3d113777fd93e05b3369859bbaedba_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_315f2d041e92610f0033dd5a8dac51ec7660991868811c7280bbbcf0b24c3aa0 = $this->env->getExtension("native_profiler");
+        $__internal_315f2d041e92610f0033dd5a8dac51ec7660991868811c7280bbbcf0b24c3aa0->enter($__internal_315f2d041e92610f0033dd5a8dac51ec7660991868811c7280bbbcf0b24c3aa0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 32
+        // line 29
         echo "
 <script src=\"";
-        // line 33
+        // line 30
         echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("js/embededForm.js"), "html", null, true);
         echo "\"></script>
 
@@ -153,7 +147,7 @@ class __TwigTemplate_a551791bae819b09aa4888f79022ce8b4c9fc0eb1bb3a6a3c8cd52ca3c4
 
         \$.ajax({
             url : \"";
-        // line 56
+        // line 53
         echo $this->env->getExtension('routing')->getPath("App_admin_ajax_add_subMenu_form");
         echo "\",
             type: \$form.attr('method'),
@@ -171,7 +165,7 @@ class __TwigTemplate_a551791bae819b09aa4888f79022ce8b4c9fc0eb1bb3a6a3c8cd52ca3c4
 
 ";
         
-        $__internal_ee5618aafaa12a079a2eb9cb3cd25ed82d3d113777fd93e05b3369859bbaedba->leave($__internal_ee5618aafaa12a079a2eb9cb3cd25ed82d3d113777fd93e05b3369859bbaedba_prof);
+        $__internal_315f2d041e92610f0033dd5a8dac51ec7660991868811c7280bbbcf0b24c3aa0->leave($__internal_315f2d041e92610f0033dd5a8dac51ec7660991868811c7280bbbcf0b24c3aa0_prof);
 
     }
 
@@ -182,7 +176,7 @@ class __TwigTemplate_a551791bae819b09aa4888f79022ce8b4c9fc0eb1bb3a6a3c8cd52ca3c4
 
     public function getDebugInfo()
     {
-        return array (  157 => 56,  131 => 33,  128 => 32,  122 => 31,  113 => 28,  109 => 27,  104 => 24,  96 => 22,  91 => 21,  86 => 20,  84 => 19,  80 => 17,  73 => 13,  65 => 10,  59 => 7,  53 => 4,  47 => 2,  41 => 1,  31 => 71,  29 => 31,  26 => 30,  24 => 1,);
+        return array (  151 => 53,  125 => 30,  122 => 29,  116 => 28,  107 => 25,  103 => 24,  98 => 21,  90 => 19,  85 => 18,  80 => 17,  78 => 16,  74 => 14,  65 => 10,  59 => 7,  53 => 4,  47 => 2,  41 => 1,  31 => 68,  29 => 28,  26 => 27,  24 => 1,);
     }
 
     public function getSource()
@@ -197,9 +191,6 @@ class __TwigTemplate_a551791bae819b09aa4888f79022ce8b4c9fc0eb1bb3a6a3c8cd52ca3c4
 \t</div>
 \t<div class=\"form-group\">
 \t\t{{ form_label(form.publico) }}</br>{{ form_widget(form.publico) }}
-\t</div>
-\t<div class=\"form-group\">
-\t\t{{ form_row(form.imagen) }}
 \t</div>
 \t<div class=\"form-group\">
 \t\t<p class=\"required\"><b>Recetas </b></p>

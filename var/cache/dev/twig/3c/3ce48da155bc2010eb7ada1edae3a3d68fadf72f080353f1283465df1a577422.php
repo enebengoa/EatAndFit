@@ -15,8 +15,8 @@ class __TwigTemplate_c188d9eb7c1b6066dfd86d3d156f577c0a197673cd19f372692a50bacf3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_fe2b186a8d7cf9234e435f3f07197209e310ef9d25d1fa2f6dc05d2f837083ee = $this->env->getExtension("native_profiler");
-        $__internal_fe2b186a8d7cf9234e435f3f07197209e310ef9d25d1fa2f6dc05d2f837083ee->enter($__internal_fe2b186a8d7cf9234e435f3f07197209e310ef9d25d1fa2f6dc05d2f837083ee_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@User/OrdenCompra/add2.html.twig"));
+        $__internal_1012585578b44e618342d5713512d98c295b94053ef1acc943836a7d887da9f7 = $this->env->getExtension("native_profiler");
+        $__internal_1012585578b44e618342d5713512d98c295b94053ef1acc943836a7d887da9f7->enter($__internal_1012585578b44e618342d5713512d98c295b94053ef1acc943836a7d887da9f7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@User/OrdenCompra/add2.html.twig"));
 
         // line 1
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formOrdenCompra"]) ? $context["formOrdenCompra"] : $this->getContext($context, "formOrdenCompra")), 'form_start', array("class" => "ajaxForm", "action" => $this->env->getExtension('routing')->getPath("App_user_addOrdenCompraLista", array("id" => $this->getAttribute((isset($context["lista"]) ? $context["lista"] : $this->getContext($context, "lista")), "id", array()))), "attr" => array("class" => "ajaxForm")));
@@ -30,7 +30,7 @@ class __TwigTemplate_c188d9eb7c1b6066dfd86d3d156f577c0a197673cd19f372692a50bacf3
         echo "
 ";
         
-        $__internal_fe2b186a8d7cf9234e435f3f07197209e310ef9d25d1fa2f6dc05d2f837083ee->leave($__internal_fe2b186a8d7cf9234e435f3f07197209e310ef9d25d1fa2f6dc05d2f837083ee_prof);
+        $__internal_1012585578b44e618342d5713512d98c295b94053ef1acc943836a7d887da9f7->leave($__internal_1012585578b44e618342d5713512d98c295b94053ef1acc943836a7d887da9f7_prof);
 
     }
 

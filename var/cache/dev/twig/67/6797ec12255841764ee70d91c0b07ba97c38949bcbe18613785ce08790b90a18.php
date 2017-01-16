@@ -15,8 +15,8 @@ class __TwigTemplate_4c35d5444bbbbccf47f67443462c9933735fd6de6e8edb06b025045f375
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_3955f80bd0da5fc003b3bee7b7908489649e4329385312071a5457af875ed0bb = $this->env->getExtension("native_profiler");
-        $__internal_3955f80bd0da5fc003b3bee7b7908489649e4329385312071a5457af875ed0bb->enter($__internal_3955f80bd0da5fc003b3bee7b7908489649e4329385312071a5457af875ed0bb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@User/Menu/form.html.twig"));
+        $__internal_8eed737b332dcaa6b9d8b51c39713cda3c7bf8dd16d6d7de4204ea5f3171b028 = $this->env->getExtension("native_profiler");
+        $__internal_8eed737b332dcaa6b9d8b51c39713cda3c7bf8dd16d6d7de4204ea5f3171b028->enter($__internal_8eed737b332dcaa6b9d8b51c39713cda3c7bf8dd16d6d7de4204ea5f3171b028_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@User/Menu/form.html.twig"));
 
         // line 1
         echo "\t<div class=\"form-group\">
@@ -39,20 +39,14 @@ class __TwigTemplate_4c35d5444bbbbccf47f67443462c9933735fd6de6e8edb06b025045f375
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formMenu"]) ? $context["formMenu"] : $this->getContext($context, "formMenu")), "publico", array()), 'widget');
         echo "
 \t</div>
-\t<div class=\"form-group\">
-\t\t";
-        // line 11
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formMenu"]) ? $context["formMenu"] : $this->getContext($context, "formMenu")), "imagen", array()), 'row');
-        echo "
-\t</div>
 \t\t ";
-        // line 13
+        // line 10
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["formMenu"]) ? $context["formMenu"] : $this->getContext($context, "formMenu")), 'errors');
         echo "
 
 ";
         
-        $__internal_3955f80bd0da5fc003b3bee7b7908489649e4329385312071a5457af875ed0bb->leave($__internal_3955f80bd0da5fc003b3bee7b7908489649e4329385312071a5457af875ed0bb_prof);
+        $__internal_8eed737b332dcaa6b9d8b51c39713cda3c7bf8dd16d6d7de4204ea5f3171b028->leave($__internal_8eed737b332dcaa6b9d8b51c39713cda3c7bf8dd16d6d7de4204ea5f3171b028_prof);
 
     }
 
@@ -68,7 +62,7 @@ class __TwigTemplate_4c35d5444bbbbccf47f67443462c9933735fd6de6e8edb06b025045f375
 
     public function getDebugInfo()
     {
-        return array (  50 => 13,  45 => 11,  37 => 8,  31 => 5,  25 => 2,  22 => 1,);
+        return array (  44 => 10,  37 => 8,  31 => 5,  25 => 2,  22 => 1,);
     }
 
     public function getSource()
@@ -81,9 +75,6 @@ class __TwigTemplate_4c35d5444bbbbccf47f67443462c9933735fd6de6e8edb06b025045f375
 \t</div>
 \t<div class=\"form-group\">
 \t\t{{ form_label(formMenu.publico) }}</br>{{ form_widget(formMenu.publico) }}
-\t</div>
-\t<div class=\"form-group\">
-\t\t{{ form_row(formMenu.imagen) }}
 \t</div>
 \t\t {{ form_errors(formMenu) }}
 

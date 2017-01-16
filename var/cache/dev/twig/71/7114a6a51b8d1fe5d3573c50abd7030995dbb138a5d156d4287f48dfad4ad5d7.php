@@ -15,8 +15,8 @@ class __TwigTemplate_41dd3e9cd109cd985a43a9a0397f232bbd137da6b22de41bb2733bd5b89
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4b4416215c2129459a4f06448004957bc0be5b4268891a28150d5dda95bd3667 = $this->env->getExtension("native_profiler");
-        $__internal_4b4416215c2129459a4f06448004957bc0be5b4268891a28150d5dda95bd3667->enter($__internal_4b4416215c2129459a4f06448004957bc0be5b4268891a28150d5dda95bd3667_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@User/OrdenCompra/add.html.twig"));
+        $__internal_a0a8f7e134e89c468727007894a445e2c127df3c0de3de1d73b13c49d174efca = $this->env->getExtension("native_profiler");
+        $__internal_a0a8f7e134e89c468727007894a445e2c127df3c0de3de1d73b13c49d174efca->enter($__internal_a0a8f7e134e89c468727007894a445e2c127df3c0de3de1d73b13c49d174efca_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@User/OrdenCompra/add.html.twig"));
 
         // line 1
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["formOrdenCompra"]) ? $context["formOrdenCompra"] : $this->getContext($context, "formOrdenCompra")), 'form_start', array("class" => "ajaxForm", "attr" => array("class" => "ajaxForm")));
@@ -33,7 +33,7 @@ class __TwigTemplate_41dd3e9cd109cd985a43a9a0397f232bbd137da6b22de41bb2733bd5b89
         echo "
 ";
         
-        $__internal_4b4416215c2129459a4f06448004957bc0be5b4268891a28150d5dda95bd3667->leave($__internal_4b4416215c2129459a4f06448004957bc0be5b4268891a28150d5dda95bd3667_prof);
+        $__internal_a0a8f7e134e89c468727007894a445e2c127df3c0de3de1d73b13c49d174efca->leave($__internal_a0a8f7e134e89c468727007894a445e2c127df3c0de3de1d73b13c49d174efca_prof);
 
     }
 

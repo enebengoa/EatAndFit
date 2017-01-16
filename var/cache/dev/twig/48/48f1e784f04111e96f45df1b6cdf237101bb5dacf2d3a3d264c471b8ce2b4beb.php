@@ -24,32 +24,32 @@ class __TwigTemplate_49a4aa386ea7ce44d1d4bfa5d15cc138924c91522a76ba1f34a518842a3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_791dab876e441f095ec70704915afe27529ff0dd6dad30f5bf035411ed4926b6 = $this->env->getExtension("native_profiler");
-        $__internal_791dab876e441f095ec70704915afe27529ff0dd6dad30f5bf035411ed4926b6->enter($__internal_791dab876e441f095ec70704915afe27529ff0dd6dad30f5bf035411ed4926b6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AdminBundle:TemaForo:list.html.twig"));
+        $__internal_1700ec500a6b67a79f62a1b0ef151207bae47f724f6420b86acc03f0ab64f9e3 = $this->env->getExtension("native_profiler");
+        $__internal_1700ec500a6b67a79f62a1b0ef151207bae47f724f6420b86acc03f0ab64f9e3->enter($__internal_1700ec500a6b67a79f62a1b0ef151207bae47f724f6420b86acc03f0ab64f9e3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AdminBundle:TemaForo:list.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_791dab876e441f095ec70704915afe27529ff0dd6dad30f5bf035411ed4926b6->leave($__internal_791dab876e441f095ec70704915afe27529ff0dd6dad30f5bf035411ed4926b6_prof);
+        $__internal_1700ec500a6b67a79f62a1b0ef151207bae47f724f6420b86acc03f0ab64f9e3->leave($__internal_1700ec500a6b67a79f62a1b0ef151207bae47f724f6420b86acc03f0ab64f9e3_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_deb91703092000de8ff3d387a3cc07febb1f4b077c79a8f74669d80efb677ca7 = $this->env->getExtension("native_profiler");
-        $__internal_deb91703092000de8ff3d387a3cc07febb1f4b077c79a8f74669d80efb677ca7->enter($__internal_deb91703092000de8ff3d387a3cc07febb1f4b077c79a8f74669d80efb677ca7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_dc6a728a9aade65ea36405eb8aee074cd45ff4bb687a53e5724cce822c603e5a = $this->env->getExtension("native_profiler");
+        $__internal_dc6a728a9aade65ea36405eb8aee074cd45ff4bb687a53e5724cce822c603e5a->enter($__internal_dc6a728a9aade65ea36405eb8aee074cd45ff4bb687a53e5724cce822c603e5a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Lista de temas de los foros";
         
-        $__internal_deb91703092000de8ff3d387a3cc07febb1f4b077c79a8f74669d80efb677ca7->leave($__internal_deb91703092000de8ff3d387a3cc07febb1f4b077c79a8f74669d80efb677ca7_prof);
+        $__internal_dc6a728a9aade65ea36405eb8aee074cd45ff4bb687a53e5724cce822c603e5a->leave($__internal_dc6a728a9aade65ea36405eb8aee074cd45ff4bb687a53e5724cce822c603e5a_prof);
 
     }
 
     // line 4
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_b51387f3cd91c4507423b94b7396402addd520f718e3e435efd5767d88ca7fcf = $this->env->getExtension("native_profiler");
-        $__internal_b51387f3cd91c4507423b94b7396402addd520f718e3e435efd5767d88ca7fcf->enter($__internal_b51387f3cd91c4507423b94b7396402addd520f718e3e435efd5767d88ca7fcf_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_6e40515f4263dbe500b9ce2bc29830e3b5925d953d007d5fa45774cb38a1ed52 = $this->env->getExtension("native_profiler");
+        $__internal_6e40515f4263dbe500b9ce2bc29830e3b5925d953d007d5fa45774cb38a1ed52->enter($__internal_6e40515f4263dbe500b9ce2bc29830e3b5925d953d007d5fa45774cb38a1ed52_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 5
         $this->displayParentBlock("stylesheets", $context, $blocks);
@@ -58,15 +58,15 @@ class __TwigTemplate_49a4aa386ea7ce44d1d4bfa5d15cc138924c91522a76ba1f34a518842a3
     <link href=\"//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\" type=\"text/css\" rel=\"stylesheet\" />
 ";
         
-        $__internal_b51387f3cd91c4507423b94b7396402addd520f718e3e435efd5767d88ca7fcf->leave($__internal_b51387f3cd91c4507423b94b7396402addd520f718e3e435efd5767d88ca7fcf_prof);
+        $__internal_6e40515f4263dbe500b9ce2bc29830e3b5925d953d007d5fa45774cb38a1ed52->leave($__internal_6e40515f4263dbe500b9ce2bc29830e3b5925d953d007d5fa45774cb38a1ed52_prof);
 
     }
 
     // line 10
     public function block_body($context, array $blocks = array())
     {
-        $__internal_fa215386c2d626d56cd8b557e19861a7312658db32ef1f2f2aa1015ab4ff3bb8 = $this->env->getExtension("native_profiler");
-        $__internal_fa215386c2d626d56cd8b557e19861a7312658db32ef1f2f2aa1015ab4ff3bb8->enter($__internal_fa215386c2d626d56cd8b557e19861a7312658db32ef1f2f2aa1015ab4ff3bb8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_b6e7bea4e77bbb3e3c7b7ec8839a45649a9f40f45c1aa546ab10021572401cc0 = $this->env->getExtension("native_profiler");
+        $__internal_b6e7bea4e77bbb3e3c7b7ec8839a45649a9f40f45c1aa546ab10021572401cc0->enter($__internal_b6e7bea4e77bbb3e3c7b7ec8839a45649a9f40f45c1aa546ab10021572401cc0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 11
         echo "    <!-- Main Content -->
@@ -85,10 +85,7 @@ class __TwigTemplate_49a4aa386ea7ce44d1d4bfa5d15cc138924c91522a76ba1f34a518842a3
                                     </div>
                                 </div>
                                 <div class=\"col-lg-12\">
-                                    <a class=\"btn btn-default\" href=\"";
-        // line 27
-        echo $this->env->getExtension('routing')->getPath("App_admin_addTemaForo");
-        echo "\">Añadir</a>
+                                   <button type=\"button\" class=\"btn btn-default\" data-toggle=\"modal\" data-target=\"#myModal\"><i class=\"glyphicon glyphicon-plus\"></i>&nbsp;  Añadir nuevo tema del foro</button>
                                     <div class=\"card-body\">
                                         <table id=\"myTable\" class=\"datatable table table-striped\" cellspacing=\"0\" width=\"100%\">
                                             <thead>
@@ -123,8 +120,8 @@ class __TwigTemplate_49a4aa386ea7ce44d1d4bfa5d15cc138924c91522a76ba1f34a518842a3
                                                         <div class=\"btn-group\" role=\"group\" aria-label=\"Default button group\">
                                                             <a class=\"btn btn-default\" href=\"";
             // line 46
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_admin_modifyTemaForo", array("id" => $this->getAttribute($context["temaForo"], "id", array()))), "html", null, true);
-            echo "\">Ver/Modificar</a>
+            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_user_showForo", array("id" => $this->getAttribute($context["temaForo"], "id", array()))), "html", null, true);
+            echo "\">Ver</a>
                                                             <a class=\"btn btn-default\" data-toggle=\"modal\" data-target=\"#confirm-delete\" data-href=\"";
             // line 47
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_admin_deleteTemaForo", array("id" => $this->getAttribute($context["temaForo"], "id", array()))), "html", null, true);
@@ -165,19 +162,66 @@ class __TwigTemplate_49a4aa386ea7ce44d1d4bfa5d15cc138924c91522a76ba1f34a518842a3
         </div>
     </div>
 
+    <!-- Modal  ADDING -->
+        <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">
+          <div class=\"modal-dialog\">
+
+            <!-- Modal content-->
+            <div class=\"modal-content\">
+              <div class=\"modal-header\">
+                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                <h4 class=\"modal-title\">Añadir Tema del Foro</h4>
+              </div>
+              <div class=\"modal-body\">
+                  <div id=\"form_body\">
+                      ";
+        // line 91
+        $this->loadTemplate("AdminBundle:TemaForo:add.html.twig", "AdminBundle:TemaForo:list.html.twig", 91)->display(array_merge($context, array("formForo" => (isset($context["formForo"]) ? $context["formForo"] : $this->getContext($context, "formForo")))));
+        // line 92
+        echo "                  </div>
+              </div>
+              <div class=\"modal-footer\">
+                <button type=\"button\" class=\"from-submit btn btn-default\" data-dismiss=\"modal\">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Modal  ADDING Confirm -->
+        <div id=\"addConfirm\" class=\"modal fade\" role=\"dialog\">
+          <div class=\"modal-dialog\">
+
+            <!-- Modal content-->
+            <div class=\"modal-content\">
+              <div class=\"modal-header\">
+                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                <h4 class=\"modal-title\"></h4>
+              </div>
+              <div class=\"modal-body\">
+
+              </div>
+              <div class=\"modal-footer\">
+                <button  type=\"button\" class=\"from-submit btn btn-default\" data-dismiss=\"modal\">Aceptar</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
 ";
         
-        $__internal_fa215386c2d626d56cd8b557e19861a7312658db32ef1f2f2aa1015ab4ff3bb8->leave($__internal_fa215386c2d626d56cd8b557e19861a7312658db32ef1f2f2aa1015ab4ff3bb8_prof);
+        $__internal_b6e7bea4e77bbb3e3c7b7ec8839a45649a9f40f45c1aa546ab10021572401cc0->leave($__internal_b6e7bea4e77bbb3e3c7b7ec8839a45649a9f40f45c1aa546ab10021572401cc0_prof);
 
     }
 
-    // line 81
+    // line 125
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_a7d1fff3c99fc60c7166bcee26b2c100dd1dd452f6650cb39dd707b0194714de = $this->env->getExtension("native_profiler");
-        $__internal_a7d1fff3c99fc60c7166bcee26b2c100dd1dd452f6650cb39dd707b0194714de->enter($__internal_a7d1fff3c99fc60c7166bcee26b2c100dd1dd452f6650cb39dd707b0194714de_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_f8aa1e7285a6f09153277f4dad58510e1136fd0be09bc02d478c47bfb60590cc = $this->env->getExtension("native_profiler");
+        $__internal_f8aa1e7285a6f09153277f4dad58510e1136fd0be09bc02d478c47bfb60590cc->enter($__internal_f8aa1e7285a6f09153277f4dad58510e1136fd0be09bc02d478c47bfb60590cc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 82
+        // line 126
         echo "
  <!-- /.Botón de confirmación de eliminar-->
     <script>
@@ -190,9 +234,41 @@ class __TwigTemplate_49a4aa386ea7ce44d1d4bfa5d15cc138924c91522a76ba1f34a518842a3
         });
     </script>
 
+    
+    <!-- /.Para añadir nuevo menú-->
+    <script>
+        \$('body').on('submit', '.ajaxForm', function (e) {
+
+        e.preventDefault();
+
+        \$.ajax({
+            type: \$(this).attr('method'),
+            url: \$(this).attr('action'),
+            data: \$(this).serialize(),
+            success: function(jqXHR) {
+                        \$('#myModal').modal('hide');
+
+                        \$('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        \$('#addConfirm').find('.modal-title').html('Añadir')
+                        \$('#addConfirm').modal('show');
+                        \$(\"#addConfirm\").modal();
+                        window.location.reload();
+
+                    },
+                    error: function(jqXHR) {
+                        if (jqXHR.responseJSON.hasOwnProperty('form')) {
+                            \$('#form_body').html(jqXHR.responseJSON.form);
+                        }
+
+                        \$('.form_error').html(jqXHR.responseJSON.message);
+                    },
+            });
+        });
+    </script>
+
 ";
         
-        $__internal_a7d1fff3c99fc60c7166bcee26b2c100dd1dd452f6650cb39dd707b0194714de->leave($__internal_a7d1fff3c99fc60c7166bcee26b2c100dd1dd452f6650cb39dd707b0194714de_prof);
+        $__internal_f8aa1e7285a6f09153277f4dad58510e1136fd0be09bc02d478c47bfb60590cc->leave($__internal_f8aa1e7285a6f09153277f4dad58510e1136fd0be09bc02d478c47bfb60590cc_prof);
 
     }
 
@@ -208,7 +284,7 @@ class __TwigTemplate_49a4aa386ea7ce44d1d4bfa5d15cc138924c91522a76ba1f34a518842a3
 
     public function getDebugInfo()
     {
-        return array (  181 => 82,  175 => 81,  141 => 52,  130 => 47,  126 => 46,  120 => 43,  116 => 42,  112 => 41,  109 => 40,  105 => 39,  90 => 27,  72 => 11,  66 => 10,  55 => 5,  49 => 4,  37 => 3,  11 => 1,);
+        return array (  225 => 126,  219 => 125,  181 => 92,  179 => 91,  138 => 52,  127 => 47,  123 => 46,  117 => 43,  113 => 42,  109 => 41,  106 => 40,  102 => 39,  72 => 11,  66 => 10,  55 => 5,  49 => 4,  37 => 3,  11 => 1,);
     }
 
     public function getSource()
@@ -239,7 +315,7 @@ class __TwigTemplate_49a4aa386ea7ce44d1d4bfa5d15cc138924c91522a76ba1f34a518842a3
                                     </div>
                                 </div>
                                 <div class=\"col-lg-12\">
-                                    <a class=\"btn btn-default\" href=\"{{path('App_admin_addTemaForo') }}\">Añadir</a>
+                                   <button type=\"button\" class=\"btn btn-default\" data-toggle=\"modal\" data-target=\"#myModal\"><i class=\"glyphicon glyphicon-plus\"></i>&nbsp;  Añadir nuevo tema del foro</button>
                                     <div class=\"card-body\">
                                         <table id=\"myTable\" class=\"datatable table table-striped\" cellspacing=\"0\" width=\"100%\">
                                             <thead>
@@ -258,7 +334,7 @@ class __TwigTemplate_49a4aa386ea7ce44d1d4bfa5d15cc138924c91522a76ba1f34a518842a3
                                                     <td>{{temaForo.Usuariooo.username}}</td>
                                                     <td>
                                                         <div class=\"btn-group\" role=\"group\" aria-label=\"Default button group\">
-                                                            <a class=\"btn btn-default\" href=\"{{path('App_admin_modifyTemaForo',{id : temaForo.id}) }}\">Ver/Modificar</a>
+                                                            <a class=\"btn btn-default\" href=\"{{path('App_user_showForo',{id : temaForo.id}) }}\">Ver</a>
                                                             <a class=\"btn btn-default\" data-toggle=\"modal\" data-target=\"#confirm-delete\" data-href=\"{{path('App_admin_deleteTemaForo',{id : temaForo.id}) }}\">Eliminar</a>
                                                         </div>
                                                     </td> 
@@ -291,6 +367,50 @@ class __TwigTemplate_49a4aa386ea7ce44d1d4bfa5d15cc138924c91522a76ba1f34a518842a3
         </div>
     </div>
 
+    <!-- Modal  ADDING -->
+        <div id=\"myModal\" class=\"modal fade\" role=\"dialog\">
+          <div class=\"modal-dialog\">
+
+            <!-- Modal content-->
+            <div class=\"modal-content\">
+              <div class=\"modal-header\">
+                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                <h4 class=\"modal-title\">Añadir Tema del Foro</h4>
+              </div>
+              <div class=\"modal-body\">
+                  <div id=\"form_body\">
+                      {% include \"AdminBundle:TemaForo:add.html.twig\"  with {'formForo': formForo} %}
+                  </div>
+              </div>
+              <div class=\"modal-footer\">
+                <button type=\"button\" class=\"from-submit btn btn-default\" data-dismiss=\"modal\">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Modal  ADDING Confirm -->
+        <div id=\"addConfirm\" class=\"modal fade\" role=\"dialog\">
+          <div class=\"modal-dialog\">
+
+            <!-- Modal content-->
+            <div class=\"modal-content\">
+              <div class=\"modal-header\">
+                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>
+                <h4 class=\"modal-title\"></h4>
+              </div>
+              <div class=\"modal-body\">
+
+              </div>
+              <div class=\"modal-footer\">
+                <button  type=\"button\" class=\"from-submit btn btn-default\" data-dismiss=\"modal\">Aceptar</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
 {% endblock %}
 
 {% block javascripts %}
@@ -303,6 +423,38 @@ class __TwigTemplate_49a4aa386ea7ce44d1d4bfa5d15cc138924c91522a76ba1f34a518842a3
 
     <script>
         \$(document).ready(function(){\$('#myTable').DataTable();
+        });
+    </script>
+
+    
+    <!-- /.Para añadir nuevo menú-->
+    <script>
+        \$('body').on('submit', '.ajaxForm', function (e) {
+
+        e.preventDefault();
+
+        \$.ajax({
+            type: \$(this).attr('method'),
+            url: \$(this).attr('action'),
+            data: \$(this).serialize(),
+            success: function(jqXHR) {
+                        \$('#myModal').modal('hide');
+
+                        \$('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        \$('#addConfirm').find('.modal-title').html('Añadir')
+                        \$('#addConfirm').modal('show');
+                        \$(\"#addConfirm\").modal();
+                        window.location.reload();
+
+                    },
+                    error: function(jqXHR) {
+                        if (jqXHR.responseJSON.hasOwnProperty('form')) {
+                            \$('#form_body').html(jqXHR.responseJSON.form);
+                        }
+
+                        \$('.form_error').html(jqXHR.responseJSON.message);
+                    },
+            });
         });
     </script>
 

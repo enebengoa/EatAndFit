@@ -15,8 +15,8 @@ class __TwigTemplate_4e01ba9a391850d34e6cf7c7dffe0cd75b4bf969d71ad5804cc9f171463
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_0e032f0a64706f9958a3982f594204d2106a4b2f16bec0b09161bc019e73e007 = $this->env->getExtension("native_profiler");
-        $__internal_0e032f0a64706f9958a3982f594204d2106a4b2f16bec0b09161bc019e73e007->enter($__internal_0e032f0a64706f9958a3982f594204d2106a4b2f16bec0b09161bc019e73e007_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@User/Menu/listRecetas.html.twig"));
+        $__internal_c701f4883bb7c9dc50b43fe87ea103038f4352e4c7fe29d427a723b25122dd55 = $this->env->getExtension("native_profiler");
+        $__internal_c701f4883bb7c9dc50b43fe87ea103038f4352e4c7fe29d427a723b25122dd55->enter($__internal_c701f4883bb7c9dc50b43fe87ea103038f4352e4c7fe29d427a723b25122dd55_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@User/Menu/listRecetas.html.twig"));
 
         // line 1
         echo "<h2>El menú seleccionado tiene las siguientes recetas: </h2>
@@ -31,12 +31,14 @@ class __TwigTemplate_4e01ba9a391850d34e6cf7c7dffe0cd75b4bf969d71ad5804cc9f171463
         $context['_seq'] = twig_ensure_traversable((isset($context["recetas"]) ? $context["recetas"] : $this->getContext($context, "recetas")));
         foreach ($context['_seq'] as $context["_key"] => $context["receta"]) {
             // line 6
-            echo "                <li><h3>";
+            echo "                <h3><li>";
             echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "nombre", array()), "html", null, true);
-            echo "</h3></li> 
+            echo " (";
+            echo twig_escape_filter($this->env, ($this->getAttribute($context["receta"], "calorias", array()) / $this->getAttribute($context["receta"], "numeroComensales", array())), "html", null, true);
+            echo " cal/persona)</li> </h3>
                 ";
             // line 7
-            $context["calorias"] = ((isset($context["calorias"]) ? $context["calorias"] : $this->getContext($context, "calorias")) + $this->getAttribute($context["receta"], "calorias", array()));
+            $context["calorias"] = ((isset($context["calorias"]) ? $context["calorias"] : $this->getContext($context, "calorias")) + ($this->getAttribute($context["receta"], "calorias", array()) / $this->getAttribute($context["receta"], "numeroComensales", array())));
             echo "                           
         ";
         }
@@ -50,9 +52,9 @@ class __TwigTemplate_4e01ba9a391850d34e6cf7c7dffe0cd75b4bf969d71ad5804cc9f171463
 <h3>Total de calorias: <strong>";
         // line 11
         echo twig_escape_filter($this->env, (isset($context["calorias"]) ? $context["calorias"] : $this->getContext($context, "calorias")), "html", null, true);
-        echo "</strong></h3>";
+        echo "</strong> cal/persona</h3>";
         
-        $__internal_0e032f0a64706f9958a3982f594204d2106a4b2f16bec0b09161bc019e73e007->leave($__internal_0e032f0a64706f9958a3982f594204d2106a4b2f16bec0b09161bc019e73e007_prof);
+        $__internal_c701f4883bb7c9dc50b43fe87ea103038f4352e4c7fe29d427a723b25122dd55->leave($__internal_c701f4883bb7c9dc50b43fe87ea103038f4352e4c7fe29d427a723b25122dd55_prof);
 
     }
 
@@ -68,7 +70,7 @@ class __TwigTemplate_4e01ba9a391850d34e6cf7c7dffe0cd75b4bf969d71ad5804cc9f171463
 
     public function getDebugInfo()
     {
-        return array (  52 => 11,  47 => 8,  39 => 7,  34 => 6,  29 => 5,  27 => 4,  22 => 1,);
+        return array (  54 => 11,  49 => 8,  41 => 7,  34 => 6,  29 => 5,  27 => 4,  22 => 1,);
     }
 
     public function getSource()
@@ -78,11 +80,11 @@ class __TwigTemplate_4e01ba9a391850d34e6cf7c7dffe0cd75b4bf969d71ad5804cc9f171463
 <ol>
 \t\t{% set calorias = 0 %}
         {% for receta in recetas %}
-                <li><h3>{{receta.nombre}}</h3></li> 
-                {% set calorias = calorias + receta.calorias %}                           
+                <h3><li>{{receta.nombre}} ({{receta.calorias/receta.numeroComensales}} cal/persona)</li> </h3>
+                {% set calorias = calorias + (receta.calorias/receta.numeroComensales) %}                           
         {% endfor %}\t   \t\t
 </ol>
 <hr>
-<h3>Total de calorias: <strong>{{calorias}}</strong></h3>";
+<h3>Total de calorias: <strong>{{calorias}}</strong> cal/persona</h3>";
     }
 }

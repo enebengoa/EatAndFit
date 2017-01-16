@@ -10,89 +10,65 @@ class __TwigTemplate_38dd73b595ad67f5b70f0892aa2c94c3a812b182b4a04fdd272786abc27
         $this->parent = false;
 
         $this->blocks = array(
-            'body' => array($this, 'block_body'),
         );
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_abf2cd2549ff4bd0e4210f1f8728c4161a6f6440a2e36ba149f4151beb25df09 = $this->env->getExtension("native_profiler");
-        $__internal_abf2cd2549ff4bd0e4210f1f8728c4161a6f6440a2e36ba149f4151beb25df09->enter($__internal_abf2cd2549ff4bd0e4210f1f8728c4161a6f6440a2e36ba149f4151beb25df09_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AdminBundle:Ingrediente:form.html.twig"));
+        $__internal_80d39aa8911026acf7abce4a3a06071eae2ad61b96c29a3a6dfe44ea0fa48c4c = $this->env->getExtension("native_profiler");
+        $__internal_80d39aa8911026acf7abce4a3a06071eae2ad61b96c29a3a6dfe44ea0fa48c4c->enter($__internal_80d39aa8911026acf7abce4a3a06071eae2ad61b96c29a3a6dfe44ea0fa48c4c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AdminBundle:Ingrediente:form.html.twig"));
 
         // line 1
-        $this->displayBlock('body', $context, $blocks);
-        
-        $__internal_abf2cd2549ff4bd0e4210f1f8728c4161a6f6440a2e36ba149f4151beb25df09->leave($__internal_abf2cd2549ff4bd0e4210f1f8728c4161a6f6440a2e36ba149f4151beb25df09_prof);
-
-    }
-
-    public function block_body($context, array $blocks = array())
-    {
-        $__internal_55b3ba3672e62ce1f9a64f4fc996f7343923dd716337f7d478d3df015e74966a = $this->env->getExtension("native_profiler");
-        $__internal_55b3ba3672e62ce1f9a64f4fc996f7343923dd716337f7d478d3df015e74966a->enter($__internal_55b3ba3672e62ce1f9a64f4fc996f7343923dd716337f7d478d3df015e74966a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
-
+        echo "\t<div class=\"form-group\">
+\t\t";
         // line 2
-        echo "\t<form class=\"blogger\" method=\"post\" >
-\t";
-        // line 3
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formIngrediente"]) ? $context["formIngrediente"] : $this->getContext($context, "formIngrediente")), "nombre", array()), 'row');
         echo "
+\t</div>
 \t<div class=\"form-group\">
 \t\t";
         // line 5
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nombre", array()), 'row');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formIngrediente"]) ? $context["formIngrediente"] : $this->getContext($context, "formIngrediente")), "descripcion", array()), 'row');
         echo "
 \t</div>
 \t<div class=\"form-group\">
 \t\t";
         // line 8
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "descripcion", array()), 'row');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formIngrediente"]) ? $context["formIngrediente"] : $this->getContext($context, "formIngrediente")), "tipoIngrediente", array()), 'label');
+        echo "</br>";
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formIngrediente"]) ? $context["formIngrediente"] : $this->getContext($context, "formIngrediente")), "tipoIngrediente", array()), 'widget');
         echo "
 \t</div>
 \t<div class=\"form-group\">
 \t\t";
         // line 11
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "tipoIngrediente", array()), 'label');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formIngrediente"]) ? $context["formIngrediente"] : $this->getContext($context, "formIngrediente")), "unidadMedida", array()), 'label');
         echo "</br>";
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "tipoIngrediente", array()), 'widget');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formIngrediente"]) ? $context["formIngrediente"] : $this->getContext($context, "formIngrediente")), "unidadMedida", array()), 'widget');
         echo "
 \t</div>
 \t<div class=\"form-group\">
 \t\t";
         // line 14
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "unidadMedida", array()), 'label');
-        echo "</br>";
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "unidadMedida", array()), 'widget');
-        echo "
-\t</div>
-\t<div class=\"form-group\">
-\t\t";
-        // line 17
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "caloriasUnidad", array()), 'row');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formIngrediente"]) ? $context["formIngrediente"] : $this->getContext($context, "formIngrediente")), "caloriasUnidad", array()), 'row');
         echo "
 \t</div>
 \t\t<div class=\"form-group\">
 \t\t";
-        // line 20
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "celiaco", array()), 'label');
+        // line 17
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formIngrediente"]) ? $context["formIngrediente"] : $this->getContext($context, "formIngrediente")), "celiaco", array()), 'label');
         echo "</br>";
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "celiaco", array()), 'widget');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["formIngrediente"]) ? $context["formIngrediente"] : $this->getContext($context, "formIngrediente")), "celiaco", array()), 'widget');
         echo "
 \t</div>
         ";
-        // line 22
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'errors');
+        // line 19
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["formIngrediente"]) ? $context["formIngrediente"] : $this->getContext($context, "formIngrediente")), 'errors');
         echo "
 \t\t
-\t";
-        // line 24
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
-        echo "
-\t</form>
-
 ";
         
-        $__internal_55b3ba3672e62ce1f9a64f4fc996f7343923dd716337f7d478d3df015e74966a->leave($__internal_55b3ba3672e62ce1f9a64f4fc996f7343923dd716337f7d478d3df015e74966a_prof);
+        $__internal_80d39aa8911026acf7abce4a3a06071eae2ad61b96c29a3a6dfe44ea0fa48c4c->leave($__internal_80d39aa8911026acf7abce4a3a06071eae2ad61b96c29a3a6dfe44ea0fa48c4c_prof);
 
     }
 
@@ -101,40 +77,38 @@ class __TwigTemplate_38dd73b595ad67f5b70f0892aa2c94c3a812b182b4a04fdd272786abc27
         return "AdminBundle:Ingrediente:form.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  89 => 24,  84 => 22,  77 => 20,  71 => 17,  63 => 14,  55 => 11,  49 => 8,  43 => 5,  38 => 3,  35 => 2,  23 => 1,);
+        return array (  66 => 19,  59 => 17,  53 => 14,  45 => 11,  37 => 8,  31 => 5,  25 => 2,  22 => 1,);
     }
 
     public function getSource()
     {
-        return "{% block body %}
-\t<form class=\"blogger\" method=\"post\" >
-\t{{ form_start(form) }}
-\t<div class=\"form-group\">
-\t\t{{ form_row(form.nombre) }}
+        return "\t<div class=\"form-group\">
+\t\t{{ form_row(formIngrediente.nombre) }}
 \t</div>
 \t<div class=\"form-group\">
-\t\t{{ form_row(form.descripcion) }}
+\t\t{{ form_row(formIngrediente.descripcion) }}
 \t</div>
 \t<div class=\"form-group\">
-\t\t{{ form_label(form.tipoIngrediente) }}</br>{{ form_widget(form.tipoIngrediente) }}
+\t\t{{ form_label(formIngrediente.tipoIngrediente) }}</br>{{ form_widget(formIngrediente.tipoIngrediente) }}
 \t</div>
 \t<div class=\"form-group\">
-\t\t{{ form_label(form.unidadMedida) }}</br>{{ form_widget(form.unidadMedida) }}
+\t\t{{ form_label(formIngrediente.unidadMedida) }}</br>{{ form_widget(formIngrediente.unidadMedida) }}
 \t</div>
 \t<div class=\"form-group\">
-\t\t{{ form_row(form.caloriasUnidad) }}
+\t\t{{ form_row(formIngrediente.caloriasUnidad) }}
 \t</div>
 \t\t<div class=\"form-group\">
-\t\t{{ form_label(form.celiaco) }}</br>{{ form_widget(form.celiaco) }}
+\t\t{{ form_label(formIngrediente.celiaco) }}</br>{{ form_widget(formIngrediente.celiaco) }}
 \t</div>
-        {{ form_errors(form) }}
+        {{ form_errors(formIngrediente) }}
 \t\t
-\t{{ form_end(form) }}
-\t</form>
-
-{% endblock %}
 ";
     }
 }

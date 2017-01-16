@@ -24,118 +24,137 @@ class __TwigTemplate_cbb6c00c909e27187d65b55e5ffce9a0954341de9c31ebce8a018e9ad53
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f95b82e3a756975e385b82d747538ea8ab65db4eb910070f8bfcfb3e9b15ccf7 = $this->env->getExtension("native_profiler");
-        $__internal_f95b82e3a756975e385b82d747538ea8ab65db4eb910070f8bfcfb3e9b15ccf7->enter($__internal_f95b82e3a756975e385b82d747538ea8ab65db4eb910070f8bfcfb3e9b15ccf7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@User/Menu/show.html.twig"));
+        $__internal_77cc98a0bbcbcdbb0e68560161ff10f5f2de00c0d840c2a498809ab989e36ea3 = $this->env->getExtension("native_profiler");
+        $__internal_77cc98a0bbcbcdbb0e68560161ff10f5f2de00c0d840c2a498809ab989e36ea3->enter($__internal_77cc98a0bbcbcdbb0e68560161ff10f5f2de00c0d840c2a498809ab989e36ea3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@User/Menu/show.html.twig"));
 
+        // line 4
+        $context["calorias"] = 0;
+        // line 5
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute((isset($context["menu"]) ? $context["menu"] : $this->getContext($context, "menu")), "subMenus", array()));
+        foreach ($context['_seq'] as $context["_key"] => $context["submenu"]) {
+            // line 6
+            $context["calorias"] = ((isset($context["calorias"]) ? $context["calorias"] : $this->getContext($context, "calorias")) + ($this->getAttribute($this->getAttribute($context["submenu"], "receta", array()), "calorias", array()) / $this->getAttribute($this->getAttribute($context["submenu"], "receta", array()), "numeroComensales", array())));
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['submenu'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 1
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_f95b82e3a756975e385b82d747538ea8ab65db4eb910070f8bfcfb3e9b15ccf7->leave($__internal_f95b82e3a756975e385b82d747538ea8ab65db4eb910070f8bfcfb3e9b15ccf7_prof);
+        $__internal_77cc98a0bbcbcdbb0e68560161ff10f5f2de00c0d840c2a498809ab989e36ea3->leave($__internal_77cc98a0bbcbcdbb0e68560161ff10f5f2de00c0d840c2a498809ab989e36ea3_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_71d9256a03e08e55b173eaf170b55b095b1d660e1c93757385642f003ac39856 = $this->env->getExtension("native_profiler");
-        $__internal_71d9256a03e08e55b173eaf170b55b095b1d660e1c93757385642f003ac39856->enter($__internal_71d9256a03e08e55b173eaf170b55b095b1d660e1c93757385642f003ac39856_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_6e30dfd22d6561d10efb5b64865cc730a696f0381ed6644a2b96e5a1e12f253b = $this->env->getExtension("native_profiler");
+        $__internal_6e30dfd22d6561d10efb5b64865cc730a696f0381ed6644a2b96e5a1e12f253b->enter($__internal_6e30dfd22d6561d10efb5b64865cc730a696f0381ed6644a2b96e5a1e12f253b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Eat&Fit";
         
-        $__internal_71d9256a03e08e55b173eaf170b55b095b1d660e1c93757385642f003ac39856->leave($__internal_71d9256a03e08e55b173eaf170b55b095b1d660e1c93757385642f003ac39856_prof);
+        $__internal_6e30dfd22d6561d10efb5b64865cc730a696f0381ed6644a2b96e5a1e12f253b->leave($__internal_6e30dfd22d6561d10efb5b64865cc730a696f0381ed6644a2b96e5a1e12f253b_prof);
 
     }
 
-    // line 5
+    // line 8
     public function block_head2($context, array $blocks = array())
     {
-        $__internal_97702fe240f3ece8d12e390155b1cfa788f6551626f7ba5ef443adeeaefe78f7 = $this->env->getExtension("native_profiler");
-        $__internal_97702fe240f3ece8d12e390155b1cfa788f6551626f7ba5ef443adeeaefe78f7->enter($__internal_97702fe240f3ece8d12e390155b1cfa788f6551626f7ba5ef443adeeaefe78f7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "head2"));
+        $__internal_3ad10c516cdc24a539d5c5b5aca1734360e981211df49f2dd6d9f45c157da008 = $this->env->getExtension("native_profiler");
+        $__internal_3ad10c516cdc24a539d5c5b5aca1734360e981211df49f2dd6d9f45c157da008->enter($__internal_3ad10c516cdc24a539d5c5b5aca1734360e981211df49f2dd6d9f45c157da008_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "head2"));
 
         echo "<a href=\"";
         echo $this->env->getExtension('routing')->getPath("App_user_listMenu");
         echo "\">Menú \"";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["menu"]) ? $context["menu"] : $this->getContext($context, "menu")), "nombre", array()), "html", null, true);
-        echo "\"</a>";
+        echo "\" (";
+        echo twig_escape_filter($this->env, (isset($context["calorias"]) ? $context["calorias"] : $this->getContext($context, "calorias")), "html", null, true);
+        echo " cl/persona)</a>";
         
-        $__internal_97702fe240f3ece8d12e390155b1cfa788f6551626f7ba5ef443adeeaefe78f7->leave($__internal_97702fe240f3ece8d12e390155b1cfa788f6551626f7ba5ef443adeeaefe78f7_prof);
+        $__internal_3ad10c516cdc24a539d5c5b5aca1734360e981211df49f2dd6d9f45c157da008->leave($__internal_3ad10c516cdc24a539d5c5b5aca1734360e981211df49f2dd6d9f45c157da008_prof);
 
     }
 
-    // line 7
+    // line 10
     public function block_body2($context, array $blocks = array())
     {
-        $__internal_89b68a8ac2d695202bab3ffe62c6df9ed2b4381796e6a0788ced9a81161c777f = $this->env->getExtension("native_profiler");
-        $__internal_89b68a8ac2d695202bab3ffe62c6df9ed2b4381796e6a0788ced9a81161c777f->enter($__internal_89b68a8ac2d695202bab3ffe62c6df9ed2b4381796e6a0788ced9a81161c777f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body2"));
+        $__internal_d13253b5960b65d4ae48b091052c5981f686c73fbaa80055b7ff7adb8fa97f27 = $this->env->getExtension("native_profiler");
+        $__internal_d13253b5960b65d4ae48b091052c5981f686c73fbaa80055b7ff7adb8fa97f27->enter($__internal_d13253b5960b65d4ae48b091052c5981f686c73fbaa80055b7ff7adb8fa97f27_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body2"));
 
-        // line 8
+        // line 11
         echo "
-<div class=\"col-md-9 blog-header\">
+<div class=\"col-md-12 blog-header\">
 <a class=\"btn btn-lg btn-success\" href=\"";
-        // line 10
+        // line 13
         echo $this->env->getExtension('routing')->getPath("App_user_listReceta");
         echo "\">Añadir nueva receta</a>
 </br>
 </br>
 ";
-        // line 13
+        // line 16
         if (twig_test_empty((isset($context["desayuno"]) ? $context["desayuno"] : $this->getContext($context, "desayuno")))) {
         } else {
-            // line 15
+            // line 18
             echo "<div class=\"col-md-9 blog-header\">
 \t<h2>Desayuno</h2>
 \t";
-            // line 17
+            // line 20
             $context["numReceta"] = 0;
-            // line 18
+            // line 21
             echo "\t<div class=\" blog-head\">
 \t";
-            // line 19
+            // line 22
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable((isset($context["desayuno"]) ? $context["desayuno"] : $this->getContext($context, "desayuno")));
             foreach ($context['_seq'] as $context["_key"] => $context["receta"]) {
-                // line 20
+                // line 23
                 echo "        ";
                 $context["numReceta"] = ((isset($context["numReceta"]) ? $context["numReceta"] : $this->getContext($context, "numReceta")) + 1);
                 echo " 
         <div id=\"";
-                // line 21
+                // line 24
                 echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "id", array()), "html", null, true);
                 echo "-6\">                                    
 \t\t\t<div class=\"col-md-4 blog-top\">
 \t\t\t\t<div class=\"blog-in\">
 \t\t\t\t\t<img class=\"img-responsive\" src=\"";
-                // line 24
+                // line 27
                 echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl(("imagenes/" . $this->getAttribute($context["receta"], "imagen", array()))), "html", null, true);
                 echo "\" alt=\" \">
 \t\t\t\t\t<div class=\"blog-grid\">
 \t\t\t\t\t\t<h3><a href=\"";
-                // line 26
+                // line 29
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_user_showReceta", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
                 echo "\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "nombre", array()), "html", null, true);
                 echo "</a></h3>
 \t\t\t\t\t\t<div class=\"date\">
 \t\t\t\t\t\t\t<span class=\"date-in\"><i class=\"glyphicon glyphicon-calendar\"> </i>";
-                // line 28
+                // line 31
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["receta"], "fechaCreacion", array()), "Y-m-d"), "html", null, true);
                 echo "</span>
 \t\t\t\t\t\t\t<a href=\"single.html\" class=\"comments\"><i class=\"glyphicon glyphicon-comment\"></i>";
-                // line 29
+                // line 32
                 echo twig_escape_filter($this->env, twig_length_filter($this->env, $this->getAttribute($context["receta"], "comentarios", array())), "html", null, true);
                 echo "</a>
 \t\t\t\t\t\t\t<div class=\"clearfix\"> </div>
 \t\t\t\t\t\t</div>
+\t\t\t\t\t\t<p>Calorías: ";
+                // line 35
+                echo twig_escape_filter($this->env, ($this->getAttribute($context["receta"], "calorias", array()) / $this->getAttribute($context["receta"], "numeroComensales", array())), "html", null, true);
+                echo " cl/persona </p>
 \t\t\t\t\t\t<p>";
-                // line 32
+                // line 36
                 echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "descripcion", array(0 => 40), "method"), "html", null, true);
                 echo "</p>
 \t\t\t\t\t\t<button class=\"btn btn-danger\" data-href=\"";
-                // line 33
+                // line 37
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_user_deleteSubMenu", array("receta" => $this->getAttribute($context["receta"], "id", array()), "menu" => $this->getAttribute((isset($context["menu"]) ? $context["menu"] : $this->getContext($context, "menu")), "id", array()), "horaIngesta" => 6)), "html", null, true);
                 echo "\" data-toggle=\"modal\" data-target=\"#confirm-delete\"><i class=\"glyphicon glyphicon-trash\"> </i></button>
 \t\t\t\t\t\t<div class=\"more\">\t\t\t\t\t\t
 \t\t\t\t\t\t\t<a class=\"link link-yaku\" href=\"";
-                // line 35
+                // line 39
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_user_showReceta", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
                 echo "\">
 \t\t\t\t\t\t\t\t<span>L</span><span>e</span><span>e</span><span>r</span> <span>m</span><span>á</span><span>s</span>\t
@@ -146,93 +165,97 @@ class __TwigTemplate_cbb6c00c909e27187d65b55e5ffce9a0954341de9c31ebce8a018e9ad53
 \t\t\t</div>
 \t\t</div>\t
 \t";
-                // line 43
+                // line 47
                 if ((((isset($context["numReceta"]) ? $context["numReceta"] : $this->getContext($context, "numReceta")) % 3) == 0)) {
-                    // line 44
+                    // line 48
                     echo "\t\t</div>
 \t\t<div class=\"clearfix\"> </div>
 \t\t<div class=\" blog-head\">
 \t";
                 }
-                // line 48
+                // line 52
                 echo "\t\t";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['receta'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 49
+            // line 53
             echo "\t\t</br>
 \t</div>
 </div>
 ";
         }
-        // line 53
+        // line 57
         echo "
 ";
-        // line 54
+        // line 58
         if (twig_test_empty((isset($context["almuerzo"]) ? $context["almuerzo"] : $this->getContext($context, "almuerzo")))) {
-            // line 55
+            // line 59
             echo "
 ";
         } else {
-            // line 57
+            // line 61
             echo "
 
 <div class=\"col-md-9 blog-header\">
 \t</br>
 \t<h2>Almuerzo</h2>
 \t";
-            // line 62
+            // line 66
             $context["numReceta"] = 0;
-            // line 63
+            // line 67
             echo "\t<div class=\" blog-head\">
 \t";
-            // line 64
+            // line 68
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable((isset($context["almuerzo"]) ? $context["almuerzo"] : $this->getContext($context, "almuerzo")));
             foreach ($context['_seq'] as $context["_key"] => $context["receta"]) {
-                // line 65
+                // line 69
                 echo "        ";
                 $context["numReceta"] = ((isset($context["numReceta"]) ? $context["numReceta"] : $this->getContext($context, "numReceta")) + 1);
-                // line 66
+                // line 70
                 echo "        <div id=\"";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "id", array()), "html", null, true);
                 echo "-7\">                                      
 \t\t\t<div class=\"col-md-4 blog-top\">
 \t\t\t\t<div class=\"blog-in\">
 \t\t\t\t\t<img class=\"img-responsive\" src=\"";
-                // line 69
+                // line 73
                 echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl(("imagenes/" . $this->getAttribute($context["receta"], "imagen", array()))), "html", null, true);
                 echo "\" alt=\" \">
 \t\t\t\t\t<div class=\"blog-grid\">
 \t\t\t\t\t\t<h3><a href=\"";
-                // line 71
+                // line 75
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_user_showReceta", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
                 echo "\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "nombre", array()), "html", null, true);
                 echo "</a></h3>
 \t\t\t\t\t\t<div class=\"date\">
 \t\t\t\t\t\t\t<span class=\"date-in\"><i class=\"glyphicon glyphicon-calendar\"> </i>";
-                // line 73
+                // line 77
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["receta"], "fechaCreacion", array()), "Y-m-d"), "html", null, true);
                 echo "</span>
 \t\t\t\t\t\t\t<a href=\"single.html\" class=\"comments\"><i class=\"glyphicon glyphicon-comment\"></i>";
-                // line 74
+                // line 78
                 echo twig_escape_filter($this->env, twig_length_filter($this->env, $this->getAttribute($context["receta"], "comentarios", array())), "html", null, true);
                 echo "</a>
 \t\t\t\t\t\t\t<div class=\"clearfix\"> </div>
 \t\t\t\t\t\t</div>
+\t\t\t\t\t\t<p>Calorías: ";
+                // line 81
+                echo twig_escape_filter($this->env, ($this->getAttribute($context["receta"], "calorias", array()) / $this->getAttribute($context["receta"], "numeroComensales", array())), "html", null, true);
+                echo " cl/persona</p>
 \t\t\t\t\t\t<p>";
-                // line 77
+                // line 82
                 echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "descripcion", array(0 => 40), "method"), "html", null, true);
                 echo "</p>
 \t\t\t\t\t\t<button class=\"btn btn-danger\" data-href=\"";
-                // line 78
+                // line 83
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_user_deleteSubMenu", array("receta" => $this->getAttribute($context["receta"], "id", array()), "menu" => $this->getAttribute((isset($context["menu"]) ? $context["menu"] : $this->getContext($context, "menu")), "id", array()), "horaIngesta" => 7)), "html", null, true);
                 echo "\" data-toggle=\"modal\" data-target=\"#confirm-delete\"><i class=\"glyphicon glyphicon-trash\"> </i></button>
 \t\t\t\t\t\t<div class=\"more\">\t\t\t\t\t\t
 \t\t\t\t\t\t\t<a class=\"link link-yaku\" href=\"";
-                // line 80
+                // line 85
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_user_showReceta", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
                 echo "\">
 \t\t\t\t\t\t\t\t<span>L</span><span>e</span><span>e</span><span>r</span> <span>m</span><span>á</span><span>s</span>\t
@@ -243,94 +266,99 @@ class __TwigTemplate_cbb6c00c909e27187d65b55e5ffce9a0954341de9c31ebce8a018e9ad53
 \t\t\t</div>\t
 \t\t</div>\t
 \t";
-                // line 88
+                // line 93
                 if ((((isset($context["numReceta"]) ? $context["numReceta"] : $this->getContext($context, "numReceta")) % 3) == 0)) {
-                    // line 89
+                    // line 94
                     echo "\t\t</div>
 \t\t<div class=\"clearfix\"> </div>
 \t\t<div class=\" blog-head\">
 \t";
                 }
-                // line 93
+                // line 98
                 echo "\t\t";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['receta'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 94
+            // line 99
             echo "\t\t</br>
 \t</div>
 </div>
 
 ";
         }
-        // line 99
+        // line 104
         echo "
 
 
 ";
-        // line 102
+        // line 107
         if (twig_test_empty((isset($context["comida"]) ? $context["comida"] : $this->getContext($context, "comida")))) {
-            // line 103
+            // line 108
             echo "
 ";
         } else {
-            // line 105
+            // line 110
             echo "<div class=\"col-md-9 blog-header\">
+\t</br>
 \t<h2>Comida</h2>
 \t";
-            // line 107
+            // line 113
             $context["numReceta"] = 0;
-            // line 108
+            // line 114
             echo "\t<div class=\" blog-head\">
 \t";
-            // line 109
+            // line 115
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable((isset($context["comida"]) ? $context["comida"] : $this->getContext($context, "comida")));
             foreach ($context['_seq'] as $context["_key"] => $context["receta"]) {
-                // line 110
+                // line 116
                 echo "        ";
                 $context["numReceta"] = ((isset($context["numReceta"]) ? $context["numReceta"] : $this->getContext($context, "numReceta")) + 1);
                 echo " 
         <div id=\"";
-                // line 111
+                // line 117
                 echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "id", array()), "html", null, true);
                 echo "-8\">                                     
 \t\t\t<div class=\"col-md-4 blog-top\">
 \t\t\t\t<div class=\"blog-in\">
 \t\t\t\t\t<img class=\"img-responsive\" src=\"";
-                // line 114
+                // line 120
                 echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl(("imagenes/" . $this->getAttribute($context["receta"], "imagen", array()))), "html", null, true);
                 echo "\" alt=\" \">
 \t\t\t\t\t<div class=\"blog-grid\">
 \t\t\t\t\t\t<h3><a href=\"";
-                // line 116
+                // line 122
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_user_showReceta", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
                 echo "\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "nombre", array()), "html", null, true);
                 echo "</a></h3>
 \t\t\t\t\t\t<div class=\"date\">
 \t\t\t\t\t\t\t<span class=\"date-in\"><i class=\"glyphicon glyphicon-calendar\"> </i>";
-                // line 118
+                // line 124
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["receta"], "fechaCreacion", array()), "Y-m-d"), "html", null, true);
                 echo "</span>
 \t\t\t\t\t\t\t<a href=\"single.html\" class=\"comments\"><i class=\"glyphicon glyphicon-comment\"></i>";
-                // line 119
+                // line 125
                 echo twig_escape_filter($this->env, twig_length_filter($this->env, $this->getAttribute($context["receta"], "comentarios", array())), "html", null, true);
                 echo "</a>
 \t\t\t\t\t\t\t<div class=\"clearfix\"> </div>
 \t\t\t\t\t\t</div>
+\t\t\t\t\t\t<p>Calorías: ";
+                // line 128
+                echo twig_escape_filter($this->env, ($this->getAttribute($context["receta"], "calorias", array()) / $this->getAttribute($context["receta"], "numeroComensales", array())), "html", null, true);
+                echo " cl/persona</p>
 \t\t\t\t\t\t<p>";
-                // line 122
+                // line 129
                 echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "descripcion", array(0 => 40), "method"), "html", null, true);
                 echo "</p>
 \t\t\t\t\t\t<button class=\"btn btn-danger\" data-href=\"";
-                // line 123
+                // line 130
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_user_deleteSubMenu", array("receta" => $this->getAttribute($context["receta"], "id", array()), "menu" => $this->getAttribute((isset($context["menu"]) ? $context["menu"] : $this->getContext($context, "menu")), "id", array()), "horaIngesta" => 8)), "html", null, true);
                 echo "\" data-toggle=\"modal\" data-target=\"#confirm-delete\"><i class=\"glyphicon glyphicon-trash\"> </i></button>
 \t\t\t\t\t\t<div class=\"more\">\t\t\t\t\t\t
 \t\t\t\t\t\t\t<a class=\"link link-yaku\" href=\"";
-                // line 125
+                // line 132
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_user_showReceta", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
                 echo "\">
 \t\t\t\t\t\t\t\t<span>L</span><span>e</span><span>e</span><span>r</span> <span>m</span><span>á</span><span>s</span>\t
@@ -341,91 +369,96 @@ class __TwigTemplate_cbb6c00c909e27187d65b55e5ffce9a0954341de9c31ebce8a018e9ad53
 \t\t\t</div>\t
 \t\t</div>\t
 \t";
-                // line 133
+                // line 140
                 if ((((isset($context["numReceta"]) ? $context["numReceta"] : $this->getContext($context, "numReceta")) % 3) == 0)) {
-                    // line 134
+                    // line 141
                     echo "\t\t</div>
 \t\t<div class=\"clearfix\"> </div>
 \t\t<div class=\" blog-head\">
 \t";
                 }
-                // line 138
+                // line 145
                 echo "\t\t";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['receta'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 139
+            // line 146
             echo "\t\t</br>
 \t</div>
 </div>
 ";
         }
-        // line 143
+        // line 150
         echo "
 ";
-        // line 144
+        // line 151
         if (twig_test_empty((isset($context["merienda"]) ? $context["merienda"] : $this->getContext($context, "merienda")))) {
-            // line 145
+            // line 152
             echo "
 ";
         } else {
-            // line 147
+            // line 154
             echo "<div class=\"col-md-9 blog-header\">
+\t</br>
 \t<h2>Merienda</h2>
 \t";
-            // line 149
+            // line 157
             $context["numReceta"] = 0;
-            // line 150
+            // line 158
             echo "\t<div class=\" blog-head\">
 \t";
-            // line 151
+            // line 159
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable((isset($context["merienda"]) ? $context["merienda"] : $this->getContext($context, "merienda")));
             foreach ($context['_seq'] as $context["_key"] => $context["receta"]) {
-                // line 152
+                // line 160
                 echo "        ";
                 $context["numReceta"] = ((isset($context["numReceta"]) ? $context["numReceta"] : $this->getContext($context, "numReceta")) + 1);
                 echo " 
         <div id=\"";
-                // line 153
+                // line 161
                 echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "id", array()), "html", null, true);
                 echo "-9\">                                     
 \t\t\t<div class=\"col-md-4 blog-top\">
 \t\t\t\t<div class=\"blog-in\">
 \t\t\t\t\t<img class=\"img-responsive\" src=\"";
-                // line 156
+                // line 164
                 echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl(("imagenes/" . $this->getAttribute($context["receta"], "imagen", array()))), "html", null, true);
                 echo "\" alt=\" \">
 \t\t\t\t\t<div class=\"blog-grid\">
 \t\t\t\t\t\t<h3><a href=\"";
-                // line 158
+                // line 166
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_user_showReceta", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
                 echo "\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "nombre", array()), "html", null, true);
                 echo "</a></h3>
 \t\t\t\t\t\t<div class=\"date\">
 \t\t\t\t\t\t\t<span class=\"date-in\"><i class=\"glyphicon glyphicon-calendar\"> </i>";
-                // line 160
+                // line 168
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["receta"], "fechaCreacion", array()), "Y-m-d"), "html", null, true);
                 echo "</span>
 \t\t\t\t\t\t\t<a href=\"single.html\" class=\"comments\"><i class=\"glyphicon glyphicon-comment\"></i>";
-                // line 161
+                // line 169
                 echo twig_escape_filter($this->env, twig_length_filter($this->env, $this->getAttribute($context["receta"], "comentarios", array())), "html", null, true);
                 echo "</a>
 \t\t\t\t\t\t\t<div class=\"clearfix\"> </div>
 \t\t\t\t\t\t</div>
+\t\t\t\t\t\t<p>Calorías: ";
+                // line 172
+                echo twig_escape_filter($this->env, ($this->getAttribute($context["receta"], "calorias", array()) / $this->getAttribute($context["receta"], "numeroComensales", array())), "html", null, true);
+                echo " cl/persona</p>
 \t\t\t\t\t\t<p>";
-                // line 164
+                // line 173
                 echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "descripcion", array(0 => 40), "method"), "html", null, true);
                 echo "</p>
 \t\t\t\t\t\t<button class=\"btn btn-danger\" data-href=\"";
-                // line 165
+                // line 174
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_user_deleteSubMenu", array("receta" => $this->getAttribute($context["receta"], "id", array()), "menu" => $this->getAttribute((isset($context["menu"]) ? $context["menu"] : $this->getContext($context, "menu")), "id", array()), "horaIngesta" => 9)), "html", null, true);
                 echo "\" data-toggle=\"modal\" data-target=\"#confirm-delete\"><i class=\"glyphicon glyphicon-trash\"> </i></button>
 \t\t\t\t\t\t<div class=\"more\">\t\t\t\t\t\t
 \t\t\t\t\t\t\t<a class=\"link link-yaku\" href=\"";
-                // line 167
+                // line 176
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_user_showReceta", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
                 echo "\">
 \t\t\t\t\t\t\t\t<span>L</span><span>e</span><span>e</span><span>r</span> <span>m</span><span>á</span><span>s</span>\t
@@ -436,91 +469,96 @@ class __TwigTemplate_cbb6c00c909e27187d65b55e5ffce9a0954341de9c31ebce8a018e9ad53
 \t\t\t</div>\t
 \t\t</div>\t
 \t";
-                // line 175
+                // line 184
                 if ((((isset($context["numReceta"]) ? $context["numReceta"] : $this->getContext($context, "numReceta")) % 3) == 0)) {
-                    // line 176
+                    // line 185
                     echo "\t\t</div>
 \t\t<div class=\"clearfix\"> </div>
 \t\t<div class=\" blog-head\">
 \t";
                 }
-                // line 180
+                // line 189
                 echo "\t\t";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['receta'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 181
+            // line 190
             echo "\t\t</br>
 \t</div>
 </div>
 ";
         }
-        // line 185
+        // line 194
         echo "
 ";
-        // line 186
+        // line 195
         if (twig_test_empty((isset($context["cena"]) ? $context["cena"] : $this->getContext($context, "cena")))) {
-            // line 187
+            // line 196
             echo "
 ";
         } else {
-            // line 189
+            // line 198
             echo "<div class=\"col-md-9 blog-header\">
+\t</br>
 \t<h2>Cena</h2>
 \t";
-            // line 191
+            // line 201
             $context["numReceta"] = 0;
-            // line 192
+            // line 202
             echo "\t<div class=\" blog-head\">
 \t";
-            // line 193
+            // line 203
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable((isset($context["cena"]) ? $context["cena"] : $this->getContext($context, "cena")));
             foreach ($context['_seq'] as $context["_key"] => $context["receta"]) {
-                // line 194
+                // line 204
                 echo "        ";
                 $context["numReceta"] = ((isset($context["numReceta"]) ? $context["numReceta"] : $this->getContext($context, "numReceta")) + 1);
                 echo " 
         <div id=\"";
-                // line 195
+                // line 205
                 echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "id", array()), "html", null, true);
                 echo "-10\">                                     
 \t\t\t<div class=\"col-md-4 blog-top\">
 \t\t\t\t<div class=\"blog-in\">
 \t\t\t\t\t<img class=\"img-responsive\" src=\"";
-                // line 198
+                // line 208
                 echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl(("imagenes/" . $this->getAttribute($context["receta"], "imagen", array()))), "html", null, true);
                 echo "\" alt=\" \">
 \t\t\t\t\t<div class=\"blog-grid\">
 \t\t\t\t\t\t<h3><a href=\"";
-                // line 200
+                // line 210
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_user_showReceta", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
                 echo "\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "nombre", array()), "html", null, true);
                 echo "</a></h3>
 \t\t\t\t\t\t<div class=\"date\">
 \t\t\t\t\t\t\t<span class=\"date-in\"><i class=\"glyphicon glyphicon-calendar\"> </i>";
-                // line 202
+                // line 212
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["receta"], "fechaCreacion", array()), "Y-m-d"), "html", null, true);
                 echo "</span>
 \t\t\t\t\t\t\t<a href=\"single.html\" class=\"comments\"><i class=\"glyphicon glyphicon-comment\"></i>";
-                // line 203
+                // line 213
                 echo twig_escape_filter($this->env, twig_length_filter($this->env, $this->getAttribute($context["receta"], "comentarios", array())), "html", null, true);
                 echo "</a>
 \t\t\t\t\t\t\t<div class=\"clearfix\"> </div>
 \t\t\t\t\t\t</div>
+\t\t\t\t\t\t<p>Calorías: ";
+                // line 216
+                echo twig_escape_filter($this->env, ($this->getAttribute($context["receta"], "calorias", array()) / $this->getAttribute($context["receta"], "numeroComensales", array())), "html", null, true);
+                echo " cl/persona</p>
 \t\t\t\t\t\t<p>";
-                // line 206
+                // line 217
                 echo twig_escape_filter($this->env, $this->getAttribute($context["receta"], "descripcion", array(0 => 40), "method"), "html", null, true);
                 echo "</p>
 \t\t\t\t\t\t<button class=\"btn btn-danger\" data-href=\"";
-                // line 207
+                // line 218
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_user_deleteSubMenu", array("receta" => $this->getAttribute($context["receta"], "id", array()), "menu" => $this->getAttribute((isset($context["menu"]) ? $context["menu"] : $this->getContext($context, "menu")), "id", array()), "horaIngesta" => 10)), "html", null, true);
                 echo "\" data-toggle=\"modal\" data-target=\"#confirm-delete\"><i class=\"glyphicon glyphicon-trash\"> </i></button>
 \t\t\t\t\t\t<div class=\"more\">\t\t\t\t\t\t
 \t\t\t\t\t\t\t<a class=\"link link-yaku\" href=\"";
-                // line 209
+                // line 220
                 echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("App_user_showReceta", array("id" => $this->getAttribute($context["receta"], "id", array()))), "html", null, true);
                 echo "\">
 \t\t\t\t\t\t\t\t<span>L</span><span>e</span><span>e</span><span>r</span> <span>m</span><span>á</span><span>s</span>\t
@@ -531,27 +569,27 @@ class __TwigTemplate_cbb6c00c909e27187d65b55e5ffce9a0954341de9c31ebce8a018e9ad53
 \t\t\t</div>\t
 \t\t</div>\t
 \t";
-                // line 217
+                // line 228
                 if ((((isset($context["numReceta"]) ? $context["numReceta"] : $this->getContext($context, "numReceta")) % 3) == 0)) {
-                    // line 218
+                    // line 229
                     echo "\t\t</div>
 \t\t<div class=\"clearfix\"> </div>
 \t\t<div class=\" blog-head\">
 \t";
                 }
-                // line 222
+                // line 233
                 echo "\t\t";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['receta'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 223
+            // line 234
             echo "\t\t</br>
 \t</div>
 </div>
 ";
         }
-        // line 227
+        // line 238
         echo "</div>
 
 
@@ -578,17 +616,17 @@ class __TwigTemplate_cbb6c00c909e27187d65b55e5ffce9a0954341de9c31ebce8a018e9ad53
 
 ";
         
-        $__internal_89b68a8ac2d695202bab3ffe62c6df9ed2b4381796e6a0788ced9a81161c777f->leave($__internal_89b68a8ac2d695202bab3ffe62c6df9ed2b4381796e6a0788ced9a81161c777f_prof);
+        $__internal_d13253b5960b65d4ae48b091052c5981f686c73fbaa80055b7ff7adb8fa97f27->leave($__internal_d13253b5960b65d4ae48b091052c5981f686c73fbaa80055b7ff7adb8fa97f27_prof);
 
     }
 
-    // line 252
+    // line 263
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_95470f311d3128c69460fc5c98b87bec1093fbfdbb3ba5c9b3bbaf6bdc947e01 = $this->env->getExtension("native_profiler");
-        $__internal_95470f311d3128c69460fc5c98b87bec1093fbfdbb3ba5c9b3bbaf6bdc947e01->enter($__internal_95470f311d3128c69460fc5c98b87bec1093fbfdbb3ba5c9b3bbaf6bdc947e01_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_e472a5c9df3aa3835c504277b74f26c1f39922f45dde46d074719bc4d2943a35 = $this->env->getExtension("native_profiler");
+        $__internal_e472a5c9df3aa3835c504277b74f26c1f39922f45dde46d074719bc4d2943a35->enter($__internal_e472a5c9df3aa3835c504277b74f26c1f39922f45dde46d074719bc4d2943a35_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 253
+        // line 264
         echo "<script>
         \$('#confirm-delete').on('show.bs.modal', function(e) {
             \$(\".btn-ok\").click(function () {
@@ -627,7 +665,7 @@ class __TwigTemplate_cbb6c00c909e27187d65b55e5ffce9a0954341de9c31ebce8a018e9ad53
   
  ";
         
-        $__internal_95470f311d3128c69460fc5c98b87bec1093fbfdbb3ba5c9b3bbaf6bdc947e01->leave($__internal_95470f311d3128c69460fc5c98b87bec1093fbfdbb3ba5c9b3bbaf6bdc947e01_prof);
+        $__internal_e472a5c9df3aa3835c504277b74f26c1f39922f45dde46d074719bc4d2943a35->leave($__internal_e472a5c9df3aa3835c504277b74f26c1f39922f45dde46d074719bc4d2943a35_prof);
 
     }
 
@@ -643,7 +681,7 @@ class __TwigTemplate_cbb6c00c909e27187d65b55e5ffce9a0954341de9c31ebce8a018e9ad53
 
     public function getDebugInfo()
     {
-        return array (  592 => 253,  586 => 252,  555 => 227,  549 => 223,  543 => 222,  537 => 218,  535 => 217,  524 => 209,  519 => 207,  515 => 206,  509 => 203,  505 => 202,  498 => 200,  493 => 198,  487 => 195,  482 => 194,  478 => 193,  475 => 192,  473 => 191,  469 => 189,  465 => 187,  463 => 186,  460 => 185,  454 => 181,  448 => 180,  442 => 176,  440 => 175,  429 => 167,  424 => 165,  420 => 164,  414 => 161,  410 => 160,  403 => 158,  398 => 156,  392 => 153,  387 => 152,  383 => 151,  380 => 150,  378 => 149,  374 => 147,  370 => 145,  368 => 144,  365 => 143,  359 => 139,  353 => 138,  347 => 134,  345 => 133,  334 => 125,  329 => 123,  325 => 122,  319 => 119,  315 => 118,  308 => 116,  303 => 114,  297 => 111,  292 => 110,  288 => 109,  285 => 108,  283 => 107,  279 => 105,  275 => 103,  273 => 102,  268 => 99,  261 => 94,  255 => 93,  249 => 89,  247 => 88,  236 => 80,  231 => 78,  227 => 77,  221 => 74,  217 => 73,  210 => 71,  205 => 69,  198 => 66,  195 => 65,  191 => 64,  188 => 63,  186 => 62,  179 => 57,  175 => 55,  173 => 54,  170 => 53,  164 => 49,  158 => 48,  152 => 44,  150 => 43,  139 => 35,  134 => 33,  130 => 32,  124 => 29,  120 => 28,  113 => 26,  108 => 24,  102 => 21,  97 => 20,  93 => 19,  90 => 18,  88 => 17,  84 => 15,  81 => 13,  75 => 10,  71 => 8,  65 => 7,  49 => 5,  37 => 3,  11 => 1,);
+        return array (  630 => 264,  624 => 263,  593 => 238,  587 => 234,  581 => 233,  575 => 229,  573 => 228,  562 => 220,  557 => 218,  553 => 217,  549 => 216,  543 => 213,  539 => 212,  532 => 210,  527 => 208,  521 => 205,  516 => 204,  512 => 203,  509 => 202,  507 => 201,  502 => 198,  498 => 196,  496 => 195,  493 => 194,  487 => 190,  481 => 189,  475 => 185,  473 => 184,  462 => 176,  457 => 174,  453 => 173,  449 => 172,  443 => 169,  439 => 168,  432 => 166,  427 => 164,  421 => 161,  416 => 160,  412 => 159,  409 => 158,  407 => 157,  402 => 154,  398 => 152,  396 => 151,  393 => 150,  387 => 146,  381 => 145,  375 => 141,  373 => 140,  362 => 132,  357 => 130,  353 => 129,  349 => 128,  343 => 125,  339 => 124,  332 => 122,  327 => 120,  321 => 117,  316 => 116,  312 => 115,  309 => 114,  307 => 113,  302 => 110,  298 => 108,  296 => 107,  291 => 104,  284 => 99,  278 => 98,  272 => 94,  270 => 93,  259 => 85,  254 => 83,  250 => 82,  246 => 81,  240 => 78,  236 => 77,  229 => 75,  224 => 73,  217 => 70,  214 => 69,  210 => 68,  207 => 67,  205 => 66,  198 => 61,  194 => 59,  192 => 58,  189 => 57,  183 => 53,  177 => 52,  171 => 48,  169 => 47,  158 => 39,  153 => 37,  149 => 36,  145 => 35,  139 => 32,  135 => 31,  128 => 29,  123 => 27,  117 => 24,  112 => 23,  108 => 22,  105 => 21,  103 => 20,  99 => 18,  96 => 16,  90 => 13,  86 => 11,  80 => 10,  62 => 8,  50 => 3,  43 => 1,  37 => 6,  33 => 5,  31 => 4,  11 => 1,);
     }
 
     public function getSource()
@@ -651,12 +689,15 @@ class __TwigTemplate_cbb6c00c909e27187d65b55e5ffce9a0954341de9c31ebce8a018e9ad53
         return "{% extends 'UserBundle::layout_menu.html.twig' %}
 
 {% block title %}Eat&Fit{% endblock%}
-
-{% block head2 %}<a href=\"{{ path('App_user_listMenu') }}\">Menú \"{{menu.nombre}}\"</a>{% endblock %}
+\t\t\t{% set calorias = 0 %}
+            {% for submenu in menu.subMenus %} 
+                {% set calorias = calorias + (submenu.receta.calorias/submenu.receta.numeroComensales) %}                           
+            {% endfor %}
+{% block head2 %}<a href=\"{{ path('App_user_listMenu') }}\">Menú \"{{menu.nombre}}\" ({{calorias}} cl/persona)</a>{% endblock %}
 
 {% block body2 %}
 
-<div class=\"col-md-9 blog-header\">
+<div class=\"col-md-12 blog-header\">
 <a class=\"btn btn-lg btn-success\" href=\"{{path('App_user_listReceta') }}\">Añadir nueva receta</a>
 </br>
 </br>
@@ -679,6 +720,7 @@ class __TwigTemplate_cbb6c00c909e27187d65b55e5ffce9a0954341de9c31ebce8a018e9ad53
 \t\t\t\t\t\t\t<a href=\"single.html\" class=\"comments\"><i class=\"glyphicon glyphicon-comment\"></i>{{receta.comentarios|length}}</a>
 \t\t\t\t\t\t\t<div class=\"clearfix\"> </div>
 \t\t\t\t\t\t</div>
+\t\t\t\t\t\t<p>Calorías: {{receta.calorias/receta.numeroComensales}} cl/persona </p>
 \t\t\t\t\t\t<p>{{receta.descripcion(40)}}</p>
 \t\t\t\t\t\t<button class=\"btn btn-danger\" data-href=\"{{ path('App_user_deleteSubMenu', { 'receta': receta.id , 'menu': menu.id, 'horaIngesta' : 6}) }}\" data-toggle=\"modal\" data-target=\"#confirm-delete\"><i class=\"glyphicon glyphicon-trash\"> </i></button>
 \t\t\t\t\t\t<div class=\"more\">\t\t\t\t\t\t
@@ -724,6 +766,7 @@ class __TwigTemplate_cbb6c00c909e27187d65b55e5ffce9a0954341de9c31ebce8a018e9ad53
 \t\t\t\t\t\t\t<a href=\"single.html\" class=\"comments\"><i class=\"glyphicon glyphicon-comment\"></i>{{receta.comentarios|length}}</a>
 \t\t\t\t\t\t\t<div class=\"clearfix\"> </div>
 \t\t\t\t\t\t</div>
+\t\t\t\t\t\t<p>Calorías: {{receta.calorias/receta.numeroComensales}} cl/persona</p>
 \t\t\t\t\t\t<p>{{receta.descripcion(40)}}</p>
 \t\t\t\t\t\t<button class=\"btn btn-danger\" data-href=\"{{ path('App_user_deleteSubMenu', { 'receta': receta.id , 'menu': menu.id, 'horaIngesta' : 7}) }}\" data-toggle=\"modal\" data-target=\"#confirm-delete\"><i class=\"glyphicon glyphicon-trash\"> </i></button>
 \t\t\t\t\t\t<div class=\"more\">\t\t\t\t\t\t
@@ -753,6 +796,7 @@ class __TwigTemplate_cbb6c00c909e27187d65b55e5ffce9a0954341de9c31ebce8a018e9ad53
 
 {% else %}
 <div class=\"col-md-9 blog-header\">
+\t</br>
 \t<h2>Comida</h2>
 \t{% set numReceta=0%}
 \t<div class=\" blog-head\">
@@ -769,6 +813,7 @@ class __TwigTemplate_cbb6c00c909e27187d65b55e5ffce9a0954341de9c31ebce8a018e9ad53
 \t\t\t\t\t\t\t<a href=\"single.html\" class=\"comments\"><i class=\"glyphicon glyphicon-comment\"></i>{{receta.comentarios|length}}</a>
 \t\t\t\t\t\t\t<div class=\"clearfix\"> </div>
 \t\t\t\t\t\t</div>
+\t\t\t\t\t\t<p>Calorías: {{receta.calorias/receta.numeroComensales}} cl/persona</p>
 \t\t\t\t\t\t<p>{{receta.descripcion(40)}}</p>
 \t\t\t\t\t\t<button class=\"btn btn-danger\" data-href=\"{{ path('App_user_deleteSubMenu', { 'receta': receta.id , 'menu': menu.id, 'horaIngesta' : 8}) }}\" data-toggle=\"modal\" data-target=\"#confirm-delete\"><i class=\"glyphicon glyphicon-trash\"> </i></button>
 \t\t\t\t\t\t<div class=\"more\">\t\t\t\t\t\t
@@ -795,6 +840,7 @@ class __TwigTemplate_cbb6c00c909e27187d65b55e5ffce9a0954341de9c31ebce8a018e9ad53
 
 {% else %}
 <div class=\"col-md-9 blog-header\">
+\t</br>
 \t<h2>Merienda</h2>
 \t{% set numReceta=0%}
 \t<div class=\" blog-head\">
@@ -811,6 +857,7 @@ class __TwigTemplate_cbb6c00c909e27187d65b55e5ffce9a0954341de9c31ebce8a018e9ad53
 \t\t\t\t\t\t\t<a href=\"single.html\" class=\"comments\"><i class=\"glyphicon glyphicon-comment\"></i>{{receta.comentarios|length}}</a>
 \t\t\t\t\t\t\t<div class=\"clearfix\"> </div>
 \t\t\t\t\t\t</div>
+\t\t\t\t\t\t<p>Calorías: {{receta.calorias/receta.numeroComensales}} cl/persona</p>
 \t\t\t\t\t\t<p>{{receta.descripcion(40)}}</p>
 \t\t\t\t\t\t<button class=\"btn btn-danger\" data-href=\"{{ path('App_user_deleteSubMenu', { 'receta': receta.id , 'menu': menu.id, 'horaIngesta' : 9}) }}\" data-toggle=\"modal\" data-target=\"#confirm-delete\"><i class=\"glyphicon glyphicon-trash\"> </i></button>
 \t\t\t\t\t\t<div class=\"more\">\t\t\t\t\t\t
@@ -837,6 +884,7 @@ class __TwigTemplate_cbb6c00c909e27187d65b55e5ffce9a0954341de9c31ebce8a018e9ad53
 
 {% else %}
 <div class=\"col-md-9 blog-header\">
+\t</br>
 \t<h2>Cena</h2>
 \t{% set numReceta=0%}
 \t<div class=\" blog-head\">
@@ -853,6 +901,7 @@ class __TwigTemplate_cbb6c00c909e27187d65b55e5ffce9a0954341de9c31ebce8a018e9ad53
 \t\t\t\t\t\t\t<a href=\"single.html\" class=\"comments\"><i class=\"glyphicon glyphicon-comment\"></i>{{receta.comentarios|length}}</a>
 \t\t\t\t\t\t\t<div class=\"clearfix\"> </div>
 \t\t\t\t\t\t</div>
+\t\t\t\t\t\t<p>Calorías: {{receta.calorias/receta.numeroComensales}} cl/persona</p>
 \t\t\t\t\t\t<p>{{receta.descripcion(40)}}</p>
 \t\t\t\t\t\t<button class=\"btn btn-danger\" data-href=\"{{ path('App_user_deleteSubMenu', { 'receta': receta.id , 'menu': menu.id, 'horaIngesta' : 10}) }}\" data-toggle=\"modal\" data-target=\"#confirm-delete\"><i class=\"glyphicon glyphicon-trash\"> </i></button>
 \t\t\t\t\t\t<div class=\"more\">\t\t\t\t\t\t
