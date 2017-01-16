@@ -30,6 +30,7 @@
                                                     <th>Nombre</th>
                                                     <th>Email</th>
                                                     <th>Role</th>
+                                                    <th>Estado</th>
                                                     <th></th>
                                                 </tr>
                                             </thead>
@@ -42,9 +43,11 @@
                                                     <td>{% for role in usuario.roles %}
                                                         {{role}},
                                                     {% endfor %}</td>
+                                                    <td>{{usuario.locked ? 'Bloqueado':'Desbloqueado'}}</td>
                                                     <td>
-                                                        <a class="btn btn-default" data-toggle="modal" data-target="#confirm-delete" data-href="{{path('App_admin_deleteUsuario',{id : usuario.id}) }}">Activar/Desactivar</a>
+                                                        <a class="btn btn-default" data-toggle="modal" data-target="#confirm-delete" data-href="{{path('App_admin_activateUsuario',{id : usuario.id}) }}">Activar/Desactivar</a>
                                                     </td>
+
                                                 </tr>
                                             {% endfor %}
                                         </table>
@@ -56,7 +59,7 @@
                 </div>
         <div>
 
-<!-- Mensaje de confirmación de eliminación-->
+<!-- Mensaje de confirmación de bloquear/desbloquear-->
     <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -64,11 +67,11 @@
                     Mensaje de confirmación
                 </div>
                 <div class="modal-body">
-                    ¿Esta seguro de eliminar el elemento seleccionado?
+                    ¿Esta seguro de bloquear/desbloquear el elemento seleccionado?
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                    <a class="btn btn-danger btn-ok">Eliminar</a>
+                    <a class="btn btn-danger btn-ok">Aceptar</a>
                 </div>
             </div>
         </div>
@@ -78,7 +81,7 @@
 
 {% block javascripts %}
 
- <!-- /.Botón de confirmación de eliminar-->
+ <!-- /.Botón de confirmación de bloquear/desbloquear-->
     <script>
         $('#confirm-delete').on('show.bs.modal', function(e) 
         {$(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));});
