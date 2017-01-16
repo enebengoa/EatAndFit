@@ -4,6 +4,8 @@ namespace App\AdminBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * Ingrediente
@@ -59,6 +61,11 @@ class Ingrediente
     /**
      * @var int
      *
+      * @Assert\Range(
+     *      min = 0,
+     *     minMessage = "Tiene que ser mayor de 0"
+     *  
+     * )
      * @ORM\Column(name="caloriasUnidad", type="integer")
      */
     private $caloriasUnidad;
