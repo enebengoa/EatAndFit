@@ -3,9 +3,9 @@
 <ol>
 		{% set calorias = 0 %}
         {% for receta in recetas %}
-                <li><h3>{{receta.nombre}}</h3></li> 
-                {% set calorias = calorias + receta.calorias %}                           
+                <h3><li>{{receta.nombre}} ({{receta.calorias/receta.numeroComensales}} cal/persona)</li> </h3>
+                {% set calorias = calorias + (receta.calorias/receta.numeroComensales) %}                           
         {% endfor %}	   		
 </ol>
 <hr>
-<h3>Total de calorias: <strong>{{calorias}}</strong></h3>
+<h3>Total de calorias: <strong>{{calorias}}</strong> cal/persona</h3>
