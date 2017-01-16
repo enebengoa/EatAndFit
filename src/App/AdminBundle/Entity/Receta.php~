@@ -74,6 +74,11 @@ class Receta
         /**
      * @var int
      *
+     * @Assert\Range(
+     *      min = 1,
+     *     minMessage = "Tiene que ser para al menos 1 comensal"
+     *  
+     * )
      * @ORM\Column(name="numeroComensales", type="integer")
      */
     private $numeroComensales;
@@ -93,7 +98,7 @@ class Receta
     private $celiaco;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", nullable=true)
      * @Assert\File(
      * maxSize="6000000",
      * mimeTypes = {"image/png","image/jpeg", "image/gif", "image/png", "image/tiff","image/jpg"},

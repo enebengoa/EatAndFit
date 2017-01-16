@@ -74,6 +74,11 @@ class Receta
         /**
      * @var int
      *
+     * @Assert\Range(
+     *      min = 1,
+     *     minMessage = "Tiene que ser para al menos 1 comensal"
+     *  
+     * )
      * @ORM\Column(name="numeroComensales", type="integer")
      */
     private $numeroComensales;
