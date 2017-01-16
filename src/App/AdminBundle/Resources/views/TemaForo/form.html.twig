@@ -1,15 +1,9 @@
-{% block body %}
-	<form class="blogger" method="post" >
-	{{ form_start(form) }}
-	<div class="form-group">
-		{{ form_row(form.nombre) }}
-	</div>
-	<div class="form-group">
-		{{ form_row(form.descripcion) }}
-	</div>
-        {{ form_errors(form) }}
-		
-	{{ form_end(form) }}
-	</form>
 
-{% endblock %}
+	<div class="form-group">
+		{{ form_row(formForo.nombre) }}
+	</div>
+	<div class="form-group">
+		{{ form_row(formForo.descripcion) }}
+	</div>
+        {{ form_errors(formForo) }}
+		

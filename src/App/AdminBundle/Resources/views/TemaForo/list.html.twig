@@ -24,7 +24,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
-                                    <a class="btn btn-default" href="{{path('App_admin_addTemaForo') }}">Añadir</a>
+                                   <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-plus"></i>&nbsp;  Añadir nuevo tema del foro</button>
                                     <div class="card-body">
                                         <table id="myTable" class="datatable table table-striped" cellspacing="0" width="100%">
                                             <thead>
@@ -43,7 +43,7 @@
                                                     <td>{{temaForo.Usuariooo.username}}</td>
                                                     <td>
                                                         <div class="btn-group" role="group" aria-label="Default button group">
-                                                            <a class="btn btn-default" href="{{path('App_admin_modifyTemaForo',{id : temaForo.id}) }}">Ver/Modificar</a>
+                                                            <a class="btn btn-default" href="{{path('App_user_showForo',{id : temaForo.id}) }}">Ver</a>
                                                             <a class="btn btn-default" data-toggle="modal" data-target="#confirm-delete" data-href="{{path('App_admin_deleteTemaForo',{id : temaForo.id}) }}">Eliminar</a>
                                                         </div>
                                                     </td> 
@@ -76,6 +76,50 @@
         </div>
     </div>
 
+    <!-- Modal  ADDING -->
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Añadir Tema del Foro</h4>
+              </div>
+              <div class="modal-body">
+                  <div id="form_body">
+                      {% include "AdminBundle:TemaForo:add.html.twig"  with {'formForo': formForo} %}
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="from-submit btn btn-default" data-dismiss="modal">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Modal  ADDING Confirm -->
+        <div id="addConfirm" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"></h4>
+              </div>
+              <div class="modal-body">
+
+              </div>
+              <div class="modal-footer">
+                <button  type="button" class="from-submit btn btn-default" data-dismiss="modal">Aceptar</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
 {% endblock %}
 
 {% block javascripts %}
@@ -88,6 +132,38 @@
 
     <script>
         $(document).ready(function(){$('#myTable').DataTable();
+        });
+    </script>
+
+    
+    <!-- /.Para añadir nuevo menú-->
+    <script>
+        $('body').on('submit', '.ajaxForm', function (e) {
+
+        e.preventDefault();
+
+        $.ajax({
+            type: $(this).attr('method'),
+            url: $(this).attr('action'),
+            data: $(this).serialize(),
+            success: function(jqXHR) {
+                        $('#myModal').modal('hide');
+
+                        $('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        $('#addConfirm').find('.modal-title').html('Añadir')
+                        $('#addConfirm').modal('show');
+                        $("#addConfirm").modal();
+                        window.location.reload();
+
+                    },
+                    error: function(jqXHR) {
+                        if (jqXHR.responseJSON.hasOwnProperty('form')) {
+                            $('#form_body').html(jqXHR.responseJSON.form);
+                        }
+
+                        $('.form_error').html(jqXHR.responseJSON.message);
+                    },
+            });
         });
     </script>
 
