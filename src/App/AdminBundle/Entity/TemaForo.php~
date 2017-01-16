@@ -60,12 +60,7 @@ class TemaForo
 
     private $comentarios;
 
-      /**
-    * @ORM\OneToMany(targetEntity="Puntuacion", mappedBy="Temaforo")
-    */
-
-    private $puntuaciones;
-
+    
     
     /**
      * Constructor
@@ -73,7 +68,6 @@ class TemaForo
     public function __construct()
     {
         $this->comentarios = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->puntuaciones = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -214,39 +208,5 @@ class TemaForo
     public function getComentarios()
     {
         return $this->comentarios;
-    }
-
-    /**
-     * Add puntuacione
-     *
-     * @param \App\AdminBundle\Entity\Puntuacion $puntuacione
-     *
-     * @return TemaForo
-     */
-    public function addPuntuacione(\App\AdminBundle\Entity\Puntuacion $puntuacione)
-    {
-        $this->puntuaciones[] = $puntuacione;
-
-        return $this;
-    }
-
-    /**
-     * Remove puntuacione
-     *
-     * @param \App\AdminBundle\Entity\Puntuacion $puntuacione
-     */
-    public function removePuntuacione(\App\AdminBundle\Entity\Puntuacion $puntuacione)
-    {
-        $this->puntuaciones->removeElement($puntuacione);
-    }
-
-    /**
-     * Get puntuaciones
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getPuntuaciones()
-    {
-        return $this->puntuaciones;
     }
 }
