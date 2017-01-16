@@ -1,0 +1,5 @@
+{{ form_start(formLista, {'class': 'ajaxForm', 'action': path('App_user_addLista'), 'attr': {'class': 'ajaxForm'}}) }}
+
+{% include "AdminBundle:Lista:form.html.twig"  with {'formLista': formLista} %}
+
+{{ form_end(formLista) }}

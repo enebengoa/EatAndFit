@@ -1,0 +1,168 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block title %}Lista de listas{% endblock %}
+{% block stylesheets %}
+{{ parent() }}
+    <link href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+    <!-- Main Content -->
+        <div class="container-fluid">
+                <div class="side-body">
+                    <div class="page-title">
+                        <span class="title">LISTAS</span>
+                        <div class="description"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-title">
+                                    <div class="title">Lista de listas</div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-plus"></i>&nbsp;  Añadir nueva lista</button>
+                                    <hr>
+                                    <div class="card-body">
+                                        <table id="myTable" class="datatable table table-striped" cellspacing="0" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>Nombre</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% for lista in listas %}
+                                                <tr>
+                                                    <td>{{lista.nombre}}</td>
+                                                    <td>
+                                                        <div class="btn-group" role="group" aria-label="Default button group">
+                                                            <a class="btn btn-default" href="{{path('App_user_showLista',{id : lista.id}) }}">Ver</a>
+                                                            <a class="btn btn-default" data-toggle="modal" data-target="#confirm-delete" data-href="{{path('App_admin_deleteLista',{id : lista.id}) }}">Eliminar</a>
+                                                        </div>
+                                                    </td> 
+                                                </tr>
+                                            {% endfor %}
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <div>
+
+<!-- Mensaje de confirmación de eliminación-->
+    <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    Mensaje de confirmación
+                </div>
+                <div class="modal-body">
+                    ¿Esta seguro de eliminar el elemento seleccionado?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-danger btn-ok">Eliminar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal  ADDING -->
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Añadir Lista</h4>
+              </div>
+              <div class="modal-body">
+                  <div id="form_body">
+                      {% include "AdminBundle:Lista:add.html.twig"  with {'formLista': formLista} %}
+                  </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="from-submit btn btn-default" data-dismiss="modal">Cancelar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Modal  ADDING Confirm -->
+        <div id="addConfirm" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"></h4>
+              </div>
+              <div class="modal-body">
+
+              </div>
+              <div class="modal-footer">
+                <button  type="button" class="from-submit btn btn-default" data-dismiss="modal">Aceptar</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+   
+
+{% endblock %}
+
+{% block javascripts %}
+
+ <!-- /.Botón de confirmación de eliminar-->
+    <script>
+        $('#confirm-delete').on('show.bs.modal', function(e) 
+        {$(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));});
+    </script>
+
+    <script>
+        $(document).ready(function(){$('#myTable').DataTable();
+        });
+    </script>
+
+    <!-- /.Para añadir nueva lista-->
+    <script>
+        $('body').on('submit', '.ajaxForm', function (e) {
+
+        e.preventDefault();
+
+        $.ajax({
+            type: $(this).attr('method'),
+            url: $(this).attr('action'),
+            data: $(this).serialize(),
+            success: function(jqXHR) {
+                        $('#myModal').modal('hide');
+
+                        $('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        $('#addConfirm').find('.modal-title').html('Añadir')
+                        $('#addConfirm').modal('show');
+                        $("#addConfirm").modal();
+                        window.location.reload();
+
+                    },
+                    error: function(jqXHR) {
+                        if (jqXHR.responseJSON.hasOwnProperty('form')) {
+                            $('#form_body').html(jqXHR.responseJSON.form);
+                        }
+
+                        $('.form_error').html(jqXHR.responseJSON.message);
+                    },
+            });
+        });
+    </script>
+
+{% endblock %}
