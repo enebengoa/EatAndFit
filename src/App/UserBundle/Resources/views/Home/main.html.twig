@@ -111,7 +111,7 @@
                         </div>
                     </div>
                 </a>
-                <a  href="{{ path('App_user_listForo') }}">
+                <a  href="{{ path('App_user_listLista') }}">
                     <div class="col-md-4 food-grid animated wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
                         <div class=" hover-fold">
                           <h4>LISTA DE COMPRA</h4>
@@ -171,8 +171,7 @@
                                             <div class=" news-bottom2">
                                                 <ul class="grid-news">
                                                     <li><span><i class="glyphicon glyphicon-calendar"> </i>{{ receta.fechaCreacion|date('Y-m-d') }}</span><b>/</b></li>
-                                                    <li><span><i class="glyphicon glyphicon-comment"> </i>{{receta.comentarios|length}} comentarios</span><b>/</b></li>
-                                                    <li><span><i class="glyphicon glyphicon-share"> </i>Agregar</span></li>
+                                                    <li><span><i class="glyphicon glyphicon-comment"> </i>{{receta.comentarios|length}} comentarios</span></li>
                                                 </ul>
                                                 <p>{{receta.nombre()}}</p>
                                             </div>
