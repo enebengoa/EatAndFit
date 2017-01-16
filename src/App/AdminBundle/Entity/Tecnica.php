@@ -52,7 +52,7 @@ class Tecnica
     /**
      * @var string
      *
-     * @ORM\Column(name="vid", type="text")
+     * @ORM\Column(name="vid", type="text", nullable=true)
      */
     private $vid;
 
