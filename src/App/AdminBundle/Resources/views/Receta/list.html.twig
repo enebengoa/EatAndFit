@@ -101,4 +101,34 @@
         });
     </script>
 
+    !-- /.Para añadir nueva receta-->
+    <script>
+        $('body').on('submit', '.ajaxForm', function (e) {
+
+        e.preventDefault();
+
+        $.ajax({
+            type: $(this).attr('method'),
+            url: $(this).attr('action'),
+            data: $(this).serialize(),
+            success: function(jqXHR) {
+                        $('#myModal').modal('hide');
+
+                        $('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        $('#addConfirm').find('.modal-title').html('Añadir')
+                        $('#addConfirm').modal('show');
+                        $("#addConfirm").modal();
+                        window.location.reload();
+                    },
+                    error: function(jqXHR) {
+                        if (jqXHR.responseJSON.hasOwnProperty('form')) {
+                            $('#form_body').html(jqXHR.responseJSON.form);
+                        }
+
+                        $('.form_error').html(jqXHR.responseJSON.message);
+                    },
+            });
+        });
+    </script>
+
 {% endblock %}
