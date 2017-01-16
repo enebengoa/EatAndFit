@@ -1,10 +1,18 @@
-        $('#confirm-comision').on('show.bs.modal', function(e) {
+
+        var data; 
+
+        $('#confirm-comision').on('show.bs.modal', function(e) 
+        {
             event.preventDefault();
-            var data = $(e.relatedTarget).data();
+            data = $(e.relatedTarget).data();
+        });
 
             $('.btn-ok', this).data('href', data.href);
             var requestSend =false;
-            jQuery("#recetaAdd").on('click',(function () {
+            jQuery("#recetaAdd").on('click',(function () 
+            {
+                            console.log("ffff");
+
                 if(!requestSend)
                 {
                     requestSend=true;
@@ -22,7 +30,8 @@
                             jQuery('#confirm-comision').modal('hide');
                             requestSend=false;
                         },
-                        error: function(jqXHR) {
+                        error: function(jqXHR)
+                        {
                             if (jqXHR.responseJSON.hasOwnProperty('form')) {
                                 jQuery('#form_body').html(jqXHR.responseJSON.form);
                             }
@@ -38,4 +47,3 @@
                 }
 
             }));
-        });
