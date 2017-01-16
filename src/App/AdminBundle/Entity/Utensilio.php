@@ -41,13 +41,6 @@ class Utensilio
      */
     private $descripcion;
 
-        /**
-     * @var int
-     *
-     * @ORM\Column(name="rating", type="integer")
-     */
-    private $rating;
-
      /**
      * @ORM\Column(type="string")
      * @Assert\File(
