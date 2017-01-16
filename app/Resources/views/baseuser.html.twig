@@ -72,6 +72,7 @@
                                 {% if is_granted("ROLE_ADMIN") %}
                                 <li><a  href="{{ path('App_admin_homepage') }}">Admin</a></li>
                                 {% endif %}
+                                <li><a  href="{{ path('App_user_PYR') }}">P y R</a></li>
                                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                                 <li><a  href="{{ path('fos_user_security_logout') }}">Logout</a></li>
                                 {% else %}
