@@ -38,7 +38,7 @@ class RecetaType extends AbstractType
                     'Difícil' => 3,
             ),"required"=>"required"))
             ->add('horasIngesta',EntityType::class,array('class' => 'AdminBundle:HoraIngesta','multiple' => true,"label"=>"Horas de ingesta","required"=>"required","attr"=>array("class"=>"from-name form-control")))
-            ->add('imagen', FileType::class, array('label' => 'Imagen ', 'data_class' => null))
+            ->add('imagen', FileType::class, array("required"=>false,'label' => 'Imagen ', 'data_class' => null))
             ->add('cantidadesUtilizadas', CollectionType::class, array(
                     'entry_type' => CantidadUtilizadaType::class,
                     'allow_add' => true,
