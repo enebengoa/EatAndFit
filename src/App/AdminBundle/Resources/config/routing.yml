@@ -6,6 +6,10 @@ App_admin_addIngrediente:
     path:     /addIngrediente
     defaults: { _controller: AdminBundle:Admin:addIngrediente }
 
+App_admin_listIngrediente_reload:
+    path:     /reloadIngrediente
+    defaults: { _controller: AdminBundle:Admin:renderJsonIngrediente }
+
 App_admin_listIngrediente:
     path:     /listIngrediente
     defaults: { _controller: AdminBundle:Admin:listIngrediente }
@@ -177,6 +181,10 @@ App_admin_listUsuario:
 App_admin_deleteUsuario:
     path:     /deleteUsuario/{id}
     defaults: { _controller: AdminBundle:Admin:deleteUsuario }
+
+App_admin_activateUsuario:
+    path:     /activateUsuario/{id}
+    defaults: { _controller: AdminBundle:Admin:activateUsuario }
 
 App_admin_addTipoUsuario:
     path:     /addTipoUsuario
