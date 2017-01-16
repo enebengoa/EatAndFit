@@ -1,42 +1,5 @@
-{% extends 'baseuser.html.twig' %}
+{{ form_start(formForo, {'class': 'ajaxForm', 'action': path('App_user_addForo'), 'attr': {'class': 'ajaxForm'}}) }}
 
-{% block title %}Añadir  nuevo foro {% endblock %}
-{% block stylesheets %}
-{{ parent() }}
-	<link href="{{ asset('css/form.css') }}" type="text/css" rel="stylesheet" />
-{% endblock %}
-{% block body %}
-<!-- Main Content -->
-<div class="content" id="content-down">
-    <div class="content-top-top">
-        <div class="container">
-              <div class="events-top">
-                  <div class="col-md-4 events-left animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
-                    <h3><a href="{{ path('App_user_listForo') }}">Nuevo foro</a></h3>
-                    <label><i class="glyphicon glyphicon-menu-up"></i></label>
-                    <span></span>
-                  </div>
-                  <div class="clearfix"> </div>
-            </div>    
-            <div class="content-mid">
-                    <div class="col-xs-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <div class="card-title">
-                                        <div class="title">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="card-body">
-                                       {% include "AdminBundle:TemaForo:form.html.twig" %}
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </div>
-</div>
-{% endblock %}
+{% include "UserBundle:Foro:form.html.twig"  with {'formForo': formForo} %}
+
+{{ form_end(formForo) }}
