@@ -24,7 +24,7 @@ class Lista
     /**
      * @var string
      *
-     * @ORM\Column(name="nombre", type="string", length=255, unique=true)
+     * @ORM\Column(name="nombre", type="string", length=255)
      */
     private $nombre;
 
@@ -52,23 +52,22 @@ class Lista
     */
     private $Usuario;
 
-        // ...
-    /**
-     * @ORM\ManyToMany(targetEntity="Menu", mappedBy="listas")
-     */
-    private $menus;
+         /**
+    * @ORM\OneToMany(targetEntity="menus_listas", mappedBy="Lista",cascade={"all"})
+    */
+
+    private $menus_listas;
  
     
+   
     /**
      * Constructor
      */
     public function __construct()
     {
         $this->ordenescompras = new \Doctrine\Common\Collections\ArrayCollection();
-        $this->menus = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->menus_listas = new \Doctrine\Common\Collections\ArrayCollection();
     }
-
-   
 
     /**
      * Get id
@@ -187,36 +186,36 @@ class Lista
     }
 
     /**
-     * Add menu
+     * Add menusLista
      *
-     * @param \App\AdminBundle\Entity\Menu $menu
+     * @param \App\AdminBundle\Entity\menus_listas $menusLista
      *
      * @return Lista
      */
-    public function addMenu(\App\AdminBundle\Entity\Menu $menu)
+    public function addMenusLista(\App\AdminBundle\Entity\menus_listas $menusLista)
     {
-        $this->menus[] = $menu;
+        $this->menus_listas[] = $menusLista;
 
         return $this;
     }
 
     /**
-     * Remove menu
+     * Remove menusLista
      *
-     * @param \App\AdminBundle\Entity\Menu $menu
+     * @param \App\AdminBundle\Entity\menus_listas $menusLista
      */
-    public function removeMenu(\App\AdminBundle\Entity\Menu $menu)
+    public function removeMenusLista(\App\AdminBundle\Entity\menus_listas $menusLista)
     {
-        $this->menus->removeElement($menu);
+        $this->menus_listas->removeElement($menusLista);
     }
 
     /**
-     * Get menus
+     * Get menusListas
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getMenus()
+    public function getMenusListas()
     {
-        return $this->menus;
+        return $this->menus_listas;
     }
 }
