@@ -2,6 +2,10 @@ App_user_homepage:
     path:     /
     defaults: { _controller: UserBundle:User:home }
 
+App_user_PYR:
+    path:     /PreguntasRespuestas
+    defaults: { _controller: UserBundle:User:PYR }
+
 App_user_contacto:
     path:     /contacto
     defaults: { _controller: UserBundle:User:contacto}
@@ -43,11 +47,14 @@ App_user_listMenu:
 App_user_addMenu:
     path:     /AddMenu
     defaults: { _controller: UserBundle:User:addMenu}
-    condition: "request.isXmlHttpRequest()"
 
 App_user_showMenu:
     path:     /ShowMenu/{id}
     defaults: { _controller: UserBundle:User:showMenu}
+
+App_user_deleteMenu:
+    path:     /deleteMenu/{id}
+    defaults: { _controller: UserBundle:User:deleteMenu}
 
 App_user_addSubMenu:
     path:     /AddSubMenu/{Menu}/{Receta}/{horasIngesta}
@@ -70,10 +77,17 @@ App_user_showLista:
     path:     /showLista/{id}
     defaults: { _controller: UserBundle:User:showLista}
 
+App_user_deleteLista:
+    path:     /deleteLista/{id}
+    defaults: { _controller: UserBundle:User:deleteLista}
+
 App_user_showListaJson:
     path:     /showListaJson/{id}
     defaults: { _controller: UserBundle:User:renderJsonShowLista}
 
+App_user_showMenuListaJson:
+    path:     /showMenuListaJson/{id}
+    defaults: { _controller: UserBundle:User:renderJsonShowMenuLista}
 
 App_user_addOrdenCompra:
     path:     /AddOrdenCompra/{Lista}/{Menu}/{cantidad}
@@ -103,6 +117,10 @@ App_user_add_comentario:
     path:     /addComentario/{id}{user}
     defaults: { _controller: UserBundle:Comentario:addComentario}
 
+App_user_add_comentario_foro:
+    path:     /addComentarioForo/{id}{user}
+    defaults: { _controller: UserBundle:Comentario:addComentarioForo}
+
 App_user_add_puntuacion:
     path:     /addPuntuacion/{id2}{user2}
     defaults: { _controller: UserBundle:Comentario:addPuntuacion}
@@ -122,3 +140,11 @@ App_user_deleteOrdenCompra:
 App_user_modifyEstadoOrdenCompra:
     path:     /modifyEstadoOrdenCompra/{id}
     defaults: { _controller: UserBundle:User:modifyEstado}
+
+App_user_getNumeroComensales:
+    path:     /GetNumeroComensales/{Menu}/{Lista}
+    defaults: { _controller: UserBundle:User:comensales}
+
+App_user_deleteMenuLista:
+    path:     /deleteMenuLista/{Menu}/{Lista}
+    defaults: { _controller: UserBundle:User:deleteMenuLista}
