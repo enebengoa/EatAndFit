@@ -1,0 +1,77 @@
+{% extends 'UserBundle::layout_blog.html.twig' %}
+
+{% block title %}Eat&Fit{% endblock%}
+
+{% block head2 %}<a href="{{ path('App_user_homepage') }}">Preguntas y Respuestas</a>{% endblock %}
+
+{% block body2 %}
+
+<!--content-->
+<div class="col-md-9 ">
+	<div class="single">
+		<div class="single-top">
+			<div class="panel-group" id="accordion">
+
+				  <div class="panel panel-default">
+					    <div class="panel-heading">
+						      <h4 class="panel-title">
+							        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+							        ¿Cómo puedo agregar un menú a una lista de la compra?
+							        </a>
+						      </h4>
+					    </div>
+					    <div id="collapse1" class="panel-collapse collapse">
+						      <div class="panel-body">...
+						      </div>
+					    </div>
+				  </div>
+
+				  <div class="panel panel-default">
+					    <div class="panel-heading">
+						      <h4 class="panel-title">
+							        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+							        Pasos para personalizar mi dieta
+							        </a>
+						      </h4>
+					    </div>
+					    <div id="collapse2" class="panel-collapse collapse">
+						      <div class="panel-body">...
+						      </div>
+					    </div>
+				  </div>
+
+				  <div class="panel panel-default">
+					    <div class="panel-heading">
+						      <h4 class="panel-title">
+							        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+							        ¿Es posible agregar una receta a una lista?
+							        </a>
+						      </h4>
+					    </div>
+					    <div id="collapse3" class="panel-collapse collapse">
+						      <div class="panel-body">...
+						      </div>
+					    </div>
+				  </div>
+
+				  <div class="panel panel-default">
+					    <div class="panel-heading">
+						      <h4 class="panel-title">
+							        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+							        Pasos a seguir para crear un nuevo menú
+							        </a>
+						      </h4>
+					    </div>
+					    <div id="collapse4" class="panel-collapse collapse">
+						      <div class="panel-body">...
+						      </div>
+					    </div>
+				  </div>
+		
+			</div>		
+		</div>						
+	</div>
+</div>
+
+{% endblock %}
+
