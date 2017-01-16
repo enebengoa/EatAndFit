@@ -1,8 +1,11 @@
 {% extends 'UserBundle::layout_menu.html.twig' %}
 
 {% block title %}Eat&Fit{% endblock%}
-
-{% block head2 %}<a href="{{ path('App_user_listMenu') }}">Menú "{{menu.nombre}}"</a>{% endblock %}
+			{% set calorias = 0 %}
+            {% for submenu in menu.subMenus %} 
+                {% set calorias = calorias + (submenu.receta.calorias/submenu.receta.numeroComensales) %}                           
+            {% endfor %}
+{% block head2 %}<a href="{{ path('App_user_listMenu') }}">Menú "{{menu.nombre}}" ({{calorias}} cl/persona)</a>{% endblock %}
 
 {% block body2 %}
 
@@ -18,7 +21,7 @@
 	<div class=" blog-head">
 	{% for receta in desayuno %}
         {% set numReceta=numReceta+1%} 
-        <div id="{{receta.id}}-6">                                    
+        <div id="{{receta.id}}-1">                                    
 			<div class="col-md-4 blog-top">
 				<div class="blog-in">
 					<img class="img-responsive" src="{{ asset ('imagenes/'~receta.imagen)}}" alt=" ">
@@ -29,8 +32,8 @@
 							<a href="single.html" class="comments"><i class="glyphicon glyphicon-comment"></i>{{receta.comentarios|length}}</a>
 							<div class="clearfix"> </div>
 						</div>
-						<p>{{receta.descripcion(40)}}</p>
-						<button class="btn btn-danger" data-href="{{ path('App_user_deleteSubMenu', { 'receta': receta.id , 'menu': menu.id, 'horaIngesta' : 6}) }}" data-toggle="modal" data-target="#confirm-delete"><i class="glyphicon glyphicon-trash"> </i></button>
+						<p><srong>Calorías: </strong> {{receta.calorias/receta.numeroComensales}} cl/persona </p>
+						<button class="btn btn-danger" data-href="{{ path('App_user_deleteSubMenu', { 'receta': receta.id , 'menu': menu.id, 'horaIngesta' : 1}) }}" data-toggle="modal" data-target="#confirm-delete"><i class="glyphicon glyphicon-trash"> </i></button>
 						<div class="more">						
 							<a class="link link-yaku" href="{{ path('App_user_showReceta', { 'id': receta.id }) }}">
 								<span>L</span><span>e</span><span>e</span><span>r</span> <span>m</span><span>á</span><span>s</span>	
@@ -63,7 +66,7 @@
 	<div class=" blog-head">
 	{% for receta in almuerzo %}
         {% set numReceta=numReceta+1%}
-        <div id="{{receta.id}}-7">                                      
+        <div id="{{receta.id}}-2">                                      
 			<div class="col-md-4 blog-top">
 				<div class="blog-in">
 					<img class="img-responsive" src="{{ asset ('imagenes/'~receta.imagen)}}" alt=" ">
@@ -74,8 +77,8 @@
 							<a href="single.html" class="comments"><i class="glyphicon glyphicon-comment"></i>{{receta.comentarios|length}}</a>
 							<div class="clearfix"> </div>
 						</div>
-						<p>{{receta.descripcion(40)}}</p>
-						<button class="btn btn-danger" data-href="{{ path('App_user_deleteSubMenu', { 'receta': receta.id , 'menu': menu.id, 'horaIngesta' : 7}) }}" data-toggle="modal" data-target="#confirm-delete"><i class="glyphicon glyphicon-trash"> </i></button>
+						<p><srong>Calorías: </strong> {{receta.calorias/receta.numeroComensales}} cl/persona</p>
+						<button class="btn btn-danger" data-href="{{ path('App_user_deleteSubMenu', { 'receta': receta.id , 'menu': menu.id, 'horaIngesta' : 2}) }}" data-toggle="modal" data-target="#confirm-delete"><i class="glyphicon glyphicon-trash"> </i></button>
 						<div class="more">						
 							<a class="link link-yaku" href="{{ path('App_user_showReceta', { 'id': receta.id }) }}">
 								<span>L</span><span>e</span><span>e</span><span>r</span> <span>m</span><span>á</span><span>s</span>	
@@ -103,12 +106,13 @@
 
 {% else %}
 <div class="col-md-9 blog-header">
+	</br>
 	<h2>Comida</h2>
 	{% set numReceta=0%}
 	<div class=" blog-head">
 	{% for receta in comida %}
         {% set numReceta=numReceta+1%} 
-        <div id="{{receta.id}}-8">                                     
+        <div id="{{receta.id}}-3">                                     
 			<div class="col-md-4 blog-top">
 				<div class="blog-in">
 					<img class="img-responsive" src="{{ asset ('imagenes/'~receta.imagen)}}" alt=" ">
@@ -119,8 +123,8 @@
 							<a href="single.html" class="comments"><i class="glyphicon glyphicon-comment"></i>{{receta.comentarios|length}}</a>
 							<div class="clearfix"> </div>
 						</div>
-						<p>{{receta.descripcion(40)}}</p>
-						<button class="btn btn-danger" data-href="{{ path('App_user_deleteSubMenu', { 'receta': receta.id , 'menu': menu.id, 'horaIngesta' : 8}) }}" data-toggle="modal" data-target="#confirm-delete"><i class="glyphicon glyphicon-trash"> </i></button>
+						<p><srong>Calorías: </strong> {{receta.calorias/receta.numeroComensales}} cl/persona</p>
+						<button class="btn btn-danger" data-href="{{ path('App_user_deleteSubMenu', { 'receta': receta.id , 'menu': menu.id, 'horaIngesta' : 3}) }}" data-toggle="modal" data-target="#confirm-delete"><i class="glyphicon glyphicon-trash"> </i></button>
 						<div class="more">						
 							<a class="link link-yaku" href="{{ path('App_user_showReceta', { 'id': receta.id }) }}">
 								<span>L</span><span>e</span><span>e</span><span>r</span> <span>m</span><span>á</span><span>s</span>	
@@ -145,12 +149,13 @@
 
 {% else %}
 <div class="col-md-9 blog-header">
+	</br>
 	<h2>Merienda</h2>
 	{% set numReceta=0%}
 	<div class=" blog-head">
 	{% for receta in merienda %}
         {% set numReceta=numReceta+1%} 
-        <div id="{{receta.id}}-9">                                     
+        <div id="{{receta.id}}-4">                                     
 			<div class="col-md-4 blog-top">
 				<div class="blog-in">
 					<img class="img-responsive" src="{{ asset ('imagenes/'~receta.imagen)}}" alt=" ">
@@ -161,8 +166,8 @@
 							<a href="single.html" class="comments"><i class="glyphicon glyphicon-comment"></i>{{receta.comentarios|length}}</a>
 							<div class="clearfix"> </div>
 						</div>
-						<p>{{receta.descripcion(40)}}</p>
-						<button class="btn btn-danger" data-href="{{ path('App_user_deleteSubMenu', { 'receta': receta.id , 'menu': menu.id, 'horaIngesta' : 9}) }}" data-toggle="modal" data-target="#confirm-delete"><i class="glyphicon glyphicon-trash"> </i></button>
+						<p><srong>Calorías: </strong> {{receta.calorias/receta.numeroComensales}} cl/persona</p>
+						<button class="btn btn-danger" data-href="{{ path('App_user_deleteSubMenu', { 'receta': receta.id , 'menu': menu.id, 'horaIngesta' : 4}) }}" data-toggle="modal" data-target="#confirm-delete"><i class="glyphicon glyphicon-trash"> </i></button>
 						<div class="more">						
 							<a class="link link-yaku" href="{{ path('App_user_showReceta', { 'id': receta.id }) }}">
 								<span>L</span><span>e</span><span>e</span><span>r</span> <span>m</span><span>á</span><span>s</span>	
@@ -187,12 +192,13 @@
 
 {% else %}
 <div class="col-md-9 blog-header">
+	</br>
 	<h2>Cena</h2>
 	{% set numReceta=0%}
 	<div class=" blog-head">
 	{% for receta in cena %}
         {% set numReceta=numReceta+1%} 
-        <div id="{{receta.id}}-10">                                     
+        <div id="{{receta.id}}-6">                                     
 			<div class="col-md-4 blog-top">
 				<div class="blog-in">
 					<img class="img-responsive" src="{{ asset ('imagenes/'~receta.imagen)}}" alt=" ">
@@ -203,8 +209,8 @@
 							<a href="single.html" class="comments"><i class="glyphicon glyphicon-comment"></i>{{receta.comentarios|length}}</a>
 							<div class="clearfix"> </div>
 						</div>
-						<p>{{receta.descripcion(40)}}</p>
-						<button class="btn btn-danger" data-href="{{ path('App_user_deleteSubMenu', { 'receta': receta.id , 'menu': menu.id, 'horaIngesta' : 10}) }}" data-toggle="modal" data-target="#confirm-delete"><i class="glyphicon glyphicon-trash"> </i></button>
+						<p><srong>Calorías: </strong> {{receta.calorias/receta.numeroComensales}} cl/persona</p>
+						<button class="btn btn-danger" data-href="{{ path('App_user_deleteSubMenu', { 'receta': receta.id , 'menu': menu.id, 'horaIngesta' : 6}) }}" data-toggle="modal" data-target="#confirm-delete"><i class="glyphicon glyphicon-trash"> </i></button>
 						<div class="more">						
 							<a class="link link-yaku" href="{{ path('App_user_showReceta', { 'id': receta.id }) }}">
 								<span>L</span><span>e</span><span>e</span><span>r</span> <span>m</span><span>á</span><span>s</span>	
