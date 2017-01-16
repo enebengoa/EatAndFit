@@ -9,7 +9,6 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
-use blackknight467\StarRatingBundle\Form\RatingType;
 
 class UtensilioType extends AbstractType
 {
@@ -22,8 +21,7 @@ class UtensilioType extends AbstractType
         $builder
             ->add('nombre',TextType::class,array("label"=>"Nombre","required"=>"required","attr"=>array("class"=>"from-name form-control")))
             ->add('descripcion',TextareaType::class,array("label"=>"Descripción","required"=>"required","attr"=>array("class"=>"from-name form-control")))
-            ->add('imagen', FileType::class, array('label' => 'Imagen ',"required"=>false,'data_class' => null))
-            ->add('rating', RatingType::class, ['label' => 'Rating'])
+            ->add('imagen', FileType::class, array('label' => 'Imagen ',"required"=>"required",'data_class' => null))
             ->add('Guardar',SubmitType::class,array("attr"=>array("class"=>"from-submit btn btn-primary")))
         ;
     }
