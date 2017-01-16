@@ -17,4 +17,14 @@ class IngredienteRepository extends \Doctrine\ORM\EntityRepository
 		return $qp->getQuery()->getSingleScalarResult();
 	}
 
+	public function listIngredienteTable()
+    {
+        return $this->getEntityManager()
+            ->createQueryBuilder()
+            ->select('i.id','i.nombre', 'i.descripcion', 'i.tipoIngrediente', 'i.unidadMedida', 'i.caloriasUnidad', 'i.celiaco')
+            ->from('AdminBundle:Ingrediente', 'i')
+            ->getQuery()
+            ->getResult();
+    }
+
 }
