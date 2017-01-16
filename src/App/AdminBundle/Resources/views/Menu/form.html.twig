@@ -10,9 +10,6 @@
 		{{ form_label(form.publico) }}</br>{{ form_widget(form.publico) }}
 	</div>
 	<div class="form-group">
-		{{ form_row(form.imagen) }}
-	</div>
-	<div class="form-group">
 		<p class="required"><b>Recetas </b></p>
 		<ul class="tags" data-prototype="{{ form_widget(form.subMenus.vars.prototype)|e('html_attr') }}">
 	        {# iterate over each existing item and render its only field: you want #}
