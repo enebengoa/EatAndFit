@@ -1,17 +1,12 @@
-{% block body %}
-	{{ form_start(form) }}
+
 	<div class="form-group">
-		{{ form_row(form.nombre) }}
+		{{ form_row(formUtensilio.nombre) }}
 	</div>
 	<div class="form-group">
-		{{ form_row(form.descripcion) }}
+		{{ form_row(formUtensilio.descripcion) }}
 	</div>
 	<div class="form-group">
-		{{ form_row(form.rating) }}
+		{{ form_row(formUtensilio.imagen) }}
 	</div>
-	<div class="form-group">
-		{{ form_row(form.imagen) }}
-	</div>
-        {{ form_errors(form) }}
-	{{ form_end(form) }}
-{% endblock %}
+        {{ form_errors(formUtensilio) }}
+
