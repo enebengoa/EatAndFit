@@ -20,12 +20,16 @@ use App\AdminBundle\Entity\Menu;
 use App\AdminBundle\Form\Type\MenuType;
 use App\AdminBundle\Entity\SubMenu;
 use App\AdminBundle\Form\Type\SubMenuType;
+use App\AdminBundle\Entity\Lista;
+use App\AdminBundle\Form\Type\ListaType;
 use App\AdminBundle\Entity\TemaForo;
 use App\AdminBundle\Form\Type\TemaForoType;
 use App\AdminBundle\Entity\Comentario;
 use App\AdminBundle\Form\Type\ComentarioType;
 use App\AdminBundle\Entity\TipoUsuario;
 use App\AdminBundle\Form\Type\TipoUsuarioType;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 
 class AdminController extends Controller
 {
@@ -53,20 +57,39 @@ class AdminController extends Controller
             $em->persist($Ingrediente);
             $em->flush();
              
-            return $this->redirect($this->generateUrl('App_admin_listIngrediente'));
+            if ($request->isXmlHttpRequest()) {
+              
+                return new JsonResponse(array('message' => 'El ingrediente '.$Ingrediente->getNombre().' ha sido creado correctamente'), 200);
+
+            }
         }
-        return $this->render('AdminBundle:Ingrediente:add.html.twig', array('Ingrediente' => $Ingrediente,'form'   => $form->createView()));  
+        if ($request->isXmlHttpRequest()) {
+            return new JsonResponse( array('form' => $this->renderView('AdminBundle:Ingrediente:add.html.twig', array('Ingrediente' => $Ingrediente,'form' => $form->createView()))), 400);
+
+        }
     }
 
     public function listIngredienteAction(Request $request)
     {
 
-        $em = $this->getDoctrine()->getManager();
-        $ingredientes= $em->getRepository('AdminBundle:Ingrediente')->findAll();
+        $ingrediente = new Ingrediente();
+       $formIngrediente=$this->createForm(IngredienteType::class,$ingrediente, array('action'=>$this->generateUrl('App_admin_addIngrediente'),'method'=>'POST'));
 
 
-    return $this->render('AdminBundle:Ingrediente:list.html.twig', array('ingredientes' => $ingredientes));
+    return $this->render('AdminBundle:Ingrediente:list.html.twig', array('ingrediente'=>$ingrediente,'formIngrediente'   => $formIngrediente->createView()));
     }
+
+    public function renderJsonIngredienteAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $ingredientes= $em->getRepository('AdminBundle:Ingrediente')->listIngredienteTable();
+
+        $serializer = $this->get('jms_serializer');
+        $response = $serializer->serialize($ingredientes,'json');
+
+        return new Response($response);
+    }
+
 
     public function modifyIngredienteAction(Request $request, $id)
     {
@@ -75,31 +98,38 @@ class AdminController extends Controller
         {
             throw $this->createNotFoundException('No entity found');
         }
-        $form = $this->createForm(IngredienteType::class, $entidad);
-        $form->handleRequest($request);;
-        if ($form->isValid()) {
+        $formIngrediente = $this->createForm(IngredienteType::class, $entidad);
+        $formIngrediente->handleRequest($request);
+        if ($formIngrediente->isValid()) {
+            
             $em = $this->getDoctrine()->getManager();
             $em->persist($entidad);
             $em->flush();
             return $this->redirect($this->generateUrl('App_admin_listIngrediente'));
         }
-        return $this->render('AdminBundle:Ingrediente:modify.html.twig', array('entidad' => $entidad,'form'   => $form->createView()));  
+        return $this->render('AdminBundle:Ingrediente:modify.html.twig', array('entidad' => $entidad,'formIngrediente'   => $formIngrediente->createView()));  
     }
 
-    public function deleteIngredienteAction($id)
+    public function deleteIngredienteAction(Ingrediente $entidad, Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        $entidad = $em->getRepository('AdminBundle:Ingrediente')->findOneBy(array('id' => $id));
-
-
-        if (!$entidad) {
-            throw $this->createNotFoundException('No entity found');
-        }
-
-        $em->remove($entidad);
+        if ($entidad->getCantidadesUtilizadas()->isEmpty() ) {
+            $em->remove($entidad);
         $em->flush();
 
-        return $this->redirect($this->generateUrl('App_admin_listIngrediente')) ;
+        if ($request->isXmlHttpRequest()) {
+              
+                return new JsonResponse(array('message' => 'El ingrediente '.$entidad->getNombre().' ha sido eliminado correctamente'), 200);
+
+         }
+        } else {
+              
+                return new JsonResponse(array('message' => 'El ingrediente '.$entidad->getNombre().' es utilizado por una o más recetas'), 400);
+
+         }
+
+        
+
     }
 
         public function addTipoRecetaAction(Request $request)
@@ -113,9 +143,16 @@ class AdminController extends Controller
             $em->persist($TipoReceta);
             $em->flush();
              
-            return $this->redirect($this->generateUrl('App_admin_listTipoReceta'));
+             if ($request->isXmlHttpRequest()) {
+              
+                return new JsonResponse(array('message' => 'El tipo de receta '.$TipoReceta->getNombre().' ha sido creada correctamente'), 200);
+
+            }
         }
-        return $this->render('AdminBundle:TipoReceta:add.html.twig', array('TipoReceta' => $TipoReceta,'form'   => $form->createView()));  
+        if ($request->isXmlHttpRequest()) {
+            return new JsonResponse( array('form' => $this->renderView('AdminBundle:TipoReceta:add.html.twig', array('TipoReceta' => $TipoReceta,'form' => $form->createView()))), 400);
+
+        }
     }
 
     public function listTipoRecetaAction(Request $request)
@@ -123,9 +160,10 @@ class AdminController extends Controller
 
         $em = $this->getDoctrine()->getManager();
         $tiposReceta= $em->getRepository('AdminBundle:TipoReceta')->findAll();
+        $tipo = new TipoReceta();
+        $formTipo=$this->createForm(TipoRecetaType::class,$tipo, array('action'=>$this->generateUrl('App_admin_addTipoReceta'),'method'=>'POST'));
 
-
-    return $this->render('AdminBundle:TipoReceta:list.html.twig', array('tiposReceta' => $tiposReceta));
+    return $this->render('AdminBundle:TipoReceta:list.html.twig', array('tiposReceta' => $tiposReceta, 'formTipo' => $formTipo->createView()));
     }
 
     public function modifyTipoRecetaAction(Request $request, $id)
@@ -135,15 +173,15 @@ class AdminController extends Controller
         {
             throw $this->createNotFoundException('No entity found');
         }
-        $form = $this->createForm(TipoRecetaType::class, $entidad);
-        $form->handleRequest($request);;
-        if ($form->isValid()) {
+        $formTipo = $this->createForm(TipoRecetaType::class, $entidad);
+        $formTipo->handleRequest($request);;
+        if ($formTipo->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($entidad);
             $em->flush();
             return $this->redirect($this->generateUrl('App_admin_listTipoReceta'));
         }
-        return $this->render('AdminBundle:TipoReceta:modify.html.twig', array('entidad' => $entidad,'form'   => $form->createView()));  
+        return $this->render('AdminBundle:TipoReceta:modify.html.twig', array('entidad' => $entidad,'formTipo'   => $formTipo->createView()));  
     }
 
     public function deleteTipoRecetaAction($id)
@@ -173,9 +211,16 @@ class AdminController extends Controller
             $em->persist($HoraIngesta);
             $em->flush();
              
-            return $this->redirect($this->generateUrl('App_admin_listHoraIngesta'));
+            if ($request->isXmlHttpRequest()) {
+              
+                return new JsonResponse(array('message' => 'La hora de ingesta '.$HoraIngesta->getNombre().' ha sido creada correctamente'), 200);
+
+            }
         }
-        return $this->render('AdminBundle:HoraIngesta:add.html.twig', array('HoraIngesta' => $HoraIngesta,'form'   => $form->createView()));  
+        if ($request->isXmlHttpRequest()) {
+            return new JsonResponse( array('form' => $this->renderView('AdminBundle:HoraIngesta:add.html.twig', array('HoraIngesta' => $HoraIngesta,'form' => $form->createView()))), 400);
+
+        }
     }
 
     public function listHoraIngestaAction(Request $request)
@@ -183,9 +228,12 @@ class AdminController extends Controller
 
         $em = $this->getDoctrine()->getManager();
         $horasIngesta= $em->getRepository('AdminBundle:HoraIngesta')->findAll();
+        $hora = new HoraIngesta();
+        $formHora=$this->createForm(HoraIngestaType::class,$hora, array('action'=>$this->generateUrl('App_admin_addHoraIngesta'),'method'=>'POST'));
 
 
-    return $this->render('AdminBundle:HoraIngesta:list.html.twig', array('horasIngesta' => $horasIngesta));
+
+    return $this->render('AdminBundle:HoraIngesta:list.html.twig', array('horasIngesta' => $horasIngesta, 'formHora' => $formHora->createView()));
     }
 
     public function modifyHoraIngestaAction(Request $request, $id)
@@ -195,15 +243,15 @@ class AdminController extends Controller
         {
             throw $this->createNotFoundException('No entity found');
         }
-        $form = $this->createForm(HoraIngestaType::class, $entidad);
-        $form->handleRequest($request);;
-        if ($form->isValid()) {
+        $formHora = $this->createForm(HoraIngestaType::class, $entidad);
+        $formHora->handleRequest($request);;
+        if ($formHora->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($entidad);
             $em->flush();
             return $this->redirect($this->generateUrl('App_admin_listHoraIngesta'));
         }
-        return $this->render('AdminBundle:HoraIngesta:modify.html.twig', array('entidad' => $entidad,'form'   => $form->createView()));  
+        return $this->render('AdminBundle:HoraIngesta:modify.html.twig', array('entidad' => $entidad,'formHora'   => $formHora->createView()));  
     }
 
     public function deleteHoraIngestaAction($id)
@@ -228,18 +276,27 @@ class AdminController extends Controller
         $form   = $this->createForm(UtensilioType::class, $Utensilio);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+        
+          
+                $file = $Utensilio->getImagen();    
+                $fileName = $this->get('app.brochure_uploader')->upload($file);
+                $Utensilio->setImagen($fileName);
             
-            $file = $Utensilio->getImagen();
-            $fileName = $this->get('app.brochure_uploader')->upload($file);
-            $Utensilio->setImagen($fileName);
-
+        
             $em = $this->getDoctrine()->getManager();
             $em->persist($Utensilio);
             $em->flush();
              
-            return $this->redirect($this->generateUrl('App_admin_listUtensilio'));
+            if ($request->isXmlHttpRequest()) {
+              
+                return new JsonResponse(array('message' => 'El utensilio '.$Utensilio->getNombre().' ha sido creada correctamente'), 200);
+
+            }
         }
-        return $this->render('AdminBundle:Utensilio:add.html.twig', array('Utensilio' => $Utensilio,'form'   => $form->createView()));  
+        if ($request->isXmlHttpRequest()) {
+            return new JsonResponse( array('form' => $this->renderView('AdminBundle:Utensilio:add.html.twig', array('Utensilio' => $Utensilio,'form' => $form->createView()))), 400);
+
+        }
     }
 
     public function listUtensilioAction(Request $request)
@@ -247,9 +304,12 @@ class AdminController extends Controller
 
         $em = $this->getDoctrine()->getManager();
         $utensilios= $em->getRepository('AdminBundle:Utensilio')->findAll();
+        $utensilio = new Utensilio();
+        $formUtensilio=$this->createForm(UtensilioType::class,$utensilio, array('action'=>$this->generateUrl('App_admin_addUtensilio'),'method'=>'POST'));
 
 
-    return $this->render('AdminBundle:Utensilio:list.html.twig', array('utensilios' => $utensilios));
+
+    return $this->render('AdminBundle:Utensilio:list.html.twig', array('utensilios' => $utensilios, 'formUtensilio' => $formUtensilio->createView()));
     }
 
         public function modifyUtensilioAction(Request $request, $id)
@@ -260,18 +320,33 @@ class AdminController extends Controller
             throw $this->createNotFoundException('No entity found');
         }
 
-        $form = $this->createForm(UtensilioType::class, $entidad);
-        $form->handleRequest($request);;
-        if ($form->isValid()) {
-            $file = $entidad->getImagen();
-            $fileName = $this->get('app.brochure_uploader')->upload($file);
-            $entidad->setImagen($fileName);
+        $formUtensilio = $this->createForm(UtensilioType::class, $entidad);
+        $fileOld=$entidad->getImagen();
+
+        $formUtensilio->handleRequest($request);;
+        if ($formUtensilio->isValid()) 
+        {  
+            $file=$entidad->getImagen();
+            if($file!=NULL)
+            {
+                $file = $entidad->getImagen();
+                $fileName = $this->get('app.brochure_uploader')->upload($file);
+                $entidad->setImagen($fileName);
+                if($fileOld!=NULL)     
+                {
+                    unlink($this->container->getParameter("brochures_directory")."/".$fileOld);
+                }      
+            }
+            else
+            {
+                $entidad->setImagen($fileOld);
+            }
             $em = $this->getDoctrine()->getManager();
             $em->persist($entidad);
             $em->flush();
             return $this->redirect($this->generateUrl('App_admin_listUtensilio'));
         }
-        return $this->render('AdminBundle:Utensilio:modify.html.twig', array('entidad' => $entidad,'form'   => $form->createView()));  
+        return $this->render('AdminBundle:Utensilio:modify.html.twig', array('entidad' => $entidad,'formUtensilio'   => $formUtensilio->createView()));  
     }
 
     public function deleteUtensilioAction($id)
@@ -296,14 +371,22 @@ class AdminController extends Controller
         $form   = $this->createForm(TecnicaType::class, $Tecnica);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+            $Tecnica->setFechaCreacion(new \DateTime());
         
             $em = $this->getDoctrine()->getManager();
             $em->persist($Tecnica);
             $em->flush();
              
-            return $this->redirect($this->generateUrl('App_admin_listTecnica'));
+            if ($request->isXmlHttpRequest()) {
+              
+                return new JsonResponse(array('message' => 'La técnica '.$Tecnica->getNombre().' ha sido creada correctamente'), 200);
+
+            }
         }
-        return $this->render('AdminBundle:Tecnica:add.html.twig', array('Tecnica' => $Tecnica,'form'   => $form->createView()));  
+        if ($request->isXmlHttpRequest()) {
+            return new JsonResponse( array('form' => $this->renderView('AdminBundle:Tecnica:add.html.twig', array('Tecnica' => $Tecnica,'form' => $form->createView()))), 400);
+
+        }
     }
 
      public function listTecnicaAction(Request $request)
@@ -311,9 +394,12 @@ class AdminController extends Controller
 
         $em = $this->getDoctrine()->getManager();
         $tecnicas= $em->getRepository('AdminBundle:Tecnica')->findAll();
+        $tecnica = new Tecnica();
+        $formTecnica=$this->createForm(TecnicaType::class,$tecnica, array('action'=>$this->generateUrl('App_admin_addTecnica'),'method'=>'POST'));
 
 
-    return $this->render('AdminBundle:Tecnica:list.html.twig', array('tecnicas' => $tecnicas));
+
+    return $this->render('AdminBundle:Tecnica:list.html.twig', array('tecnicas' => $tecnicas, 'formTecnica' => $formTecnica->createView()));
     }
 
     public function showTecnicaAction($id)
@@ -336,15 +422,15 @@ class AdminController extends Controller
         {
             throw $this->createNotFoundException('No entity found');
         }
-        $form = $this->createForm(TecnicaType::class, $entidad);
-        $form->handleRequest($request);;
-        if ($form->isValid()) {
+        $formTecnica = $this->createForm(TecnicaType::class, $entidad);
+        $formTecnica->handleRequest($request);;
+        if ($formTecnica->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($entidad);
             $em->flush();
             return $this->redirect($this->generateUrl('App_admin_listTecnica'));
         }
-        return $this->render('AdminBundle:Tecnica:modify.html.twig', array('entidad' => $entidad,'form'   => $form->createView()));  
+        return $this->render('AdminBundle:Tecnica:modify.html.twig', array('entidad' => $entidad,'formTecnica'   => $formTecnica->createView()));  
     }
 
     public function deleteTecnicaAction($id)
@@ -388,6 +474,7 @@ class AdminController extends Controller
             }
             $Receta->setCalorias($caloriasTotales);
             $Receta->setCeliaco($celiaco);
+            $Receta->setMediaPuntuacion(0);
             $em = $this->getDoctrine()->getManager();
             $em->persist($Receta);
             $em->flush();
@@ -431,8 +518,39 @@ class AdminController extends Controller
             throw $this->createNotFoundException('No entity found');
         }
         $form = $this->createForm(RecetaType::class, $entidad);
+        $fileOld=$entidad->getImagen();
+
         $form->handleRequest($request);;
-        if ($form->isValid()) {
+        if ($form->isValid()) 
+        {  
+            $caloriasTotales=0;
+            $celiaco=true;
+            $cantidadesUtilizadas=$entidad->getCantidadesUtilizadas();
+            foreach ($cantidadesUtilizadas as $cantidadUtilizada) 
+            {
+                $caloriasTotales=$caloriasTotales+$cantidadUtilizada->getIngrediente()->getCaloriasUnidad()*$cantidadUtilizada->getCantidad();
+                if($cantidadUtilizada->getIngrediente()->getCeliaco()==false)
+                {
+                    $celiaco=false;
+                }
+            }
+            $entidad->setCalorias($caloriasTotales);
+            $entidad->setCeliaco($celiaco);
+            $file=$entidad->getImagen();
+            if($file!=NULL)
+            {
+                $file = $entidad->getImagen();
+                $fileName = $this->get('app.brochure_uploader')->upload($file);
+                $entidad->setImagen($fileName);
+                if($fileOld!=NULL)     
+                {
+                    unlink($this->container->getParameter("brochures_directory")."/".$fileOld);
+                }      
+            }
+            else
+            {
+                $entidad->setImagen($fileOld);
+            }
             $em = $this->getDoctrine()->getManager();
             $em->persist($entidad);
             $em->flush();
@@ -498,10 +616,16 @@ class AdminController extends Controller
             $em->persist($Menu);
             $em->flush();
              
-            return $this->redirect($this->generateUrl('App_admin_listMenu'));
+           if ($request->isXmlHttpRequest()) {
+              
+                return new JsonResponse(array('message' => 'El menú '.$Menu->getNombre().' ha sido creado correctamente'), 200);
+
+            }
         }
-        return $this->render('AdminBundle:Menu:add.html.twig', array('Menu' => $Menu,'form'   => $form->createView()));  
-    }
+        if ($request->isXmlHttpRequest()) {
+            return new JsonResponse( array('form' => $this->renderView('AdminBundle:Menu:add.html.twig', array('Menu' => $Menu,'form' => $form->createView()))), 400);
+
+        }}
 
     public function SubMenuAjaxFormAction(Request $request)
     {//AJAX PARA EMBEDED
@@ -518,9 +642,12 @@ class AdminController extends Controller
 
         $em = $this->getDoctrine()->getManager();
         $menus= $em->getRepository('AdminBundle:Menu')->findAll();
+        $menu = new Menu();
+        $formMenu=$this->createForm(MenuType::class,$menu, array('action'=>$this->generateUrl('App_user_addMenu'),'method'=>'POST'));
 
 
-    return $this->render('AdminBundle:Menu:list.html.twig', array('menus' => $menus));
+
+    return $this->render('AdminBundle:Menu:list.html.twig', array('menus' => $menus, 'formMenu' => $formMenu->createView()));
     }
 
     public function modifyMenuAction(Request $request, $id)
@@ -570,9 +697,16 @@ class AdminController extends Controller
             $em->persist($TemaForo);
             $em->flush();
              
-            return $this->redirect($this->generateUrl('App_admin_listTemaForo'));
+            if ($request->isXmlHttpRequest()) {
+              
+                return new JsonResponse(array('message' => 'El tema del foro '.$TemaForo->getNombre().' ha sido creado correctamente'), 200);
+
+            }
         }
-        return $this->render('AdminBundle:TemaForo:add.html.twig', array('TemaForo' => $TemaForo,'form'   => $form->createView()));  
+        if ($request->isXmlHttpRequest()) {
+            return new JsonResponse( array('form' => $this->renderView('AdminBundle:TemaForo:add.html.twig', array('TemaForo' => $TemaForo,'form' => $form->createView()))), 400);
+
+        }
     }
 
      public function listTemaForoAction(Request $request)
@@ -580,9 +714,12 @@ class AdminController extends Controller
 
         $em = $this->getDoctrine()->getManager();
         $temasForos= $em->getRepository('AdminBundle:TemaForo')->findAll();
+        $foro = new TemaForo();
+        $formForo=$this->createForm(TemaForoType::class,$foro, array('action'=>$this->generateUrl('App_admin_addTemaForo'),'method'=>'POST'));
 
 
-    return $this->render('AdminBundle:TemaForo:list.html.twig', array('temasForos' => $temasForos));
+
+    return $this->render('AdminBundle:TemaForo:list.html.twig', array('temasForos' => $temasForos, 'formForo' => $formForo->createView()));
     }
 
     public function modifyTemaForoAction(Request $request, $id)
@@ -619,6 +756,63 @@ class AdminController extends Controller
         return $this->redirect($this->generateUrl('App_admin_listTemaForo')) ;
     }
 
+    public function listListaAction(Request $request)
+    {
+
+        $em = $this->getDoctrine()->getManager();
+        $listas= $em->getRepository('AdminBundle:Lista')->findAll();
+        $lista = new Lista();
+        $formLista=$this->createForm(ListaType::class,$lista, array('action'=>$this->generateUrl('App_admin_addLista'),'method'=>'POST'));
+
+
+    return $this->render('AdminBundle:Lista:list.html.twig', array('listas' => $listas, 'formLista' => $formLista->createView()));
+    }
+
+     public function addListaAction(Request $request)
+    {
+        $lista = new Lista();
+        $form   = $this->createForm(ListaType::class, $lista);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $lista->setFechaCreacion(new \DateTime());
+            $lista->setUsuario($this->getUser());
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($lista);
+            $flush=$em->flush();
+            if ($request->isXmlHttpRequest()) {
+              
+                return new JsonResponse(array('message' => 'La lista '.$lista->getNombre().' ha sido creada correctamente'), 200);
+
+            }
+        }
+        if ($request->isXmlHttpRequest()) {
+            return new JsonResponse( array('form' => $this->renderView('AdminBundle:Lista:add.html.twig', array('lista' => $lista,'form' => $form->createView()))), 400);
+
+        }
+    }
+
+    public function deleteListaAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $entidad = $em->getRepository('AdminBundle:Lista')->findOneBy(array('id' => $id));
+
+
+        if (!$entidad) {
+            throw $this->createNotFoundException('No entity found');
+        }
+       $ordenesCompra = $entidad->getOrdenescompras();
+       foreach ($ordenesCompra as $orden) 
+       {
+         $em->remove($orden);
+       }
+        $em->remove($entidad);
+        $em->flush();
+
+        return $this->redirect($this->generateUrl('App_admin_listLista')) ;
+    }
+
      public function listUsuarioAction(Request $request)
     {
 
@@ -627,6 +821,33 @@ class AdminController extends Controller
 
 
     return $this->render('AdminBundle:Usuario:list.html.twig', array('usuarios' => $usuarios));
+    }
+
+    public function activateUsuarioAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $entidad = $em->getRepository('AdminBundle:Usuario')->findOneBy(array('id' => $id));
+
+
+        if (!$entidad) {
+            throw $this->createNotFoundException('No entity found');
+        }  
+        if($entidad->isLocked())
+        {
+
+            $entidad->setLocked(false);
+        }
+        else
+        {
+            $entidad->setLocked(true);
+        }
+        
+
+
+        $em->persist($entidad);
+        $em->flush();
+
+        return $this->redirect($this->generateUrl('App_admin_listUsuario')) ;
     }
 
     public function deleteUsuarioAction($id)
