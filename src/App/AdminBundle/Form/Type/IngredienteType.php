@@ -29,7 +29,7 @@ class IngredienteType extends AbstractType
                     'Grasa' => 'Grasa',
                     'Azucar' => 'Azucar',
                     'Otros' => 'Otros',
-            ),"required"=>"required"))
+            ),"required"=>"required", "attr"=>array("class"=>"from-name form-control")))
             ->add('unidadMedida', ChoiceType::class, array("label"=>"Unidad de medida",
                 'choices'  => array(
                     'Gramos' => 'Gramos',
@@ -38,7 +38,7 @@ class IngredienteType extends AbstractType
                     'Tazas' => 'Tazas',
                     'Cucharadas' => 'Cucharadas',
                     'Cucharaditas' => 'Cucharaditas',
-            ),"required"=>"required"))
+            ),"required"=>"required", "attr"=>array("class"=>"from-name form-control")))
             ->add('caloriasUnidad', IntegerType::class,array("label"=>"Calorias por unidad","required"=>"required","attr"=>array("class"=>"from-name form-control")))
             ->add('celiaco', ChoiceType::class, array("label"=>"Apto para celiacos",
                 'choices'  => array(
