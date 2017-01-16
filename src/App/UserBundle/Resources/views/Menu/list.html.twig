@@ -48,7 +48,7 @@
 	<div class=" blog-head">
 	{% for menu in pagination %}
         {% set numMenu=numMenu+1%}                                     
-			<div class="col-md-4 blog-top">
+			<div class="col-md-4 blog-top" id="{{menu.id}}">
 				<div class="blog-in">
 					<div class="blog-grid">
 						<h3><a href="{{ path('App_user_showMenu', { 'id': menu.id }) }}">{{menu.nombre}}</a></h3>
@@ -56,9 +56,17 @@
 							<span class="date-in"><i class="glyphicon glyphicon-calendar"> </i>{{ menu.fechaCreacion|date('Y-m-d') }}</span>
 							<div class="clearfix"> </div>
 						</div>
-						<p>{{menu.descripcion(40)}}</p>
-            <a class="btn btn-success" data-href={{menu.id}} data-toggle="modal" data-target="#confirm-comision"><i class="glyphicon glyphicon-plus"> </i></a>
-						<div class="more">						
+            {% set calorias = 0 %}
+            {% for submenu in menu.subMenus %} 
+                {% set calorias = calorias + (submenu.receta.calorias/submenu.receta.numeroComensales) %}                           
+            {% endfor %}
+            <p><string>Calorías:</strong> {{calorias}} cl/persona </p>
+            <button class="btn btn-success" data-href={{menu.id}} data-toggle="modal" data-target="#confirm-comision" onclick="myFunction({{menu.id}})"><i class="glyphicon glyphicon-plus"> </i></button>
+						{% if menu.Usuario == app.user %}
+                <button class="btn btn-danger" data-href="{{ path('App_user_deleteMenu', { 'id': menu.id }) }}" data-toggle="modal" data-target="#confirm-delete"><i class="glyphicon glyphicon-trash"> </i></button>
+            {% endif %}
+
+            <div class="more">						
 							<a class="link link-yaku" href="{{ path('App_user_showMenu', { 'id': menu.id }) }}">
 								<span>L</span><span>e</span><span>e</span><span>r</span> <span>m</span><span>á</span><span>s</span>	
 							</a>
@@ -141,19 +149,67 @@
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                        <a id="menuAdd"class="btn btn-success btn-ok">Guardar</a>
+                        <a id="menuAdd"class="btn btn-success btn-ok" >Guardar</a>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Mensaje de confirmación</h4>
+                </div>
+
+                <div class="modal-body">
+                    <p>¿Desea borrar el menú seleccionado?</p>
+                    <p class="debug-url"></p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-danger btn-ok" id="delete">Borrar</a>
+                </div>
+            </div>
+        </div>
         </div>
 
 {% endblock %}
 
 {% block javascripts %}
 <script>
+
+        function myFunction(menu) {
+                                          console.log("myfunction");
+
+                            var lista= jQuery('#form_lista').val();
+          $.ajax({
+            type: 'POST',
+            url: "http://127.0.0.1/pfg_eneko/web/app_dev.php/GetNumeroComensales/"+menu+"/"+lista,
+            data: $(this).serialize(),
+            success: function(jqXHR) {
+                                        console.log(jqXHR);
+
+                    document.getElementById("orden_compra_cantidad").value = parseInt(jqXHR.message);
+                    },
+                    error: function(jqXHR) {
+
+                      document.getElementById("orden_compra_cantidad").value = jqXHR.message;
+                                  console.log("myfunction");
+
+                    },
+            });
+        }
+        
+
         $('body').on('submit', '.ajaxForm', function (e) {
+                                          console.log("body");
 
         e.preventDefault();
+
 
         $.ajax({
             type: $(this).attr('method'),
@@ -163,9 +219,10 @@
                         $('#myModal').modal('hide');
 
                         $('#addConfirm').find('.modal-body').html(jqXHR.message);
-                        $('#addConfirm').find('.modal-title').html('Añadir')
+                        $('#addConfirm').find('.modal-title').html('Mensaje de confirmación')
                         $('#addConfirm').modal('show');
                         $("#addConfirm").modal();
+                        window.location.reload();
 
                     },
                     error: function(jqXHR) {
@@ -179,5 +236,95 @@
         });
     </script>
 
-<script type="text/javascript" src="{{ asset('js/addMenuOrdenCompra.js') }}"></script>
+    <script>
+        var ei;
+        $('#confirm-delete').on('show.bs.modal', function(e) {
+                                                  console.log("delete");
+
+          ei = e;
+        });
+            $("#delete").click(function () {
+                                                  console.log("delete");
+
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    url: $(ei.relatedTarget).data('href'),
+                    success: function(jqXHR) {
+                      console.log(jqXHR);
+                        $('#'+jqXHR.id).remove();
+                        $('#confirm-delete').modal('hide');
+
+                        $('#addConfirm').find('.modal-body').html(jqXHR.message);
+                        $('#addConfirm').find('.modal-title').html('Borrar')
+                        $('#addConfirm').modal('show');
+                        $("#addConfirm").modal();
+
+                    },
+                    error: function(jqXHR) {
+                        $('#confirm-delete').modal('hide');
+
+                        $('#addConfirm').find('.modal-body').html("El menu No ha sido borrado");
+                        $('#addConfirm').find('.modal-title').html('NO Borrado')
+                        $('#addConfirm').modal('show');
+                        $("#addConfirm").modal();
+
+                    }
+                
+            });
+        });
+  </script>
+
+<script>
+        var requestSend =false;
+        var data;
+        $('#confirm-comision').on('show.bs.modal', function(e) {
+                                                                console.log("cpmi");
+
+            event.preventDefault();
+            data = $(e.relatedTarget).data();
+
+            $('.btn-ok', this).data('href', data.href);
+            
+
+           });
+            jQuery("#menuAdd").on('click',(function () {
+                                                        console.log("eeee");
+
+                if(!requestSend)
+                {
+                    requestSend=true;
+
+                    var id = jQuery(this).data('href');
+                    
+                    var lista= jQuery('#form_lista').val();
+                    var cantidad= jQuery('#orden_compra_cantidad').val();
+
+                    $.ajax({
+                        type: 'POST',
+                        url: "http://127.0.0.1/pfg_eneko/web/app_dev.php/AddOrdenCompra/"+lista+"/"+id+"/"+cantidad,
+                        data: $(this).serialize(),
+                        success: function(jqXHR) {
+                            jQuery('#confirm-comision').modal('hide');
+                            requestSend=false;
+                            $('#addConfirm').find('.modal-body').html(jqXHR.message);
+                            $('#addConfirm').find('.modal-title').html('Añadido')
+                            $('#addConfirm').modal('show');
+                            $("#addConfirm").modal();
+                        },
+                        error: function(jqXHR) {
+                            console.log(jqXHR);
+
+                            jQuery('#confirm-comision').modal('hide');
+                            requestSend=false;
+                            $('#addConfirm').find('.modal-body').html('El menú ha sido agregado correctamente a la lista');
+                            $('#addConfirm').find('.modal-title').html('Mensaje de confirmación')
+                            $('#addConfirm').modal('show');
+                            $("#addConfirm").modal();
+
+                        }
+                    });
+                }
+            }));
+</script>
    {% endblock %}
