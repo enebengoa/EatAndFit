@@ -28,7 +28,7 @@ class MenuType extends AbstractType
                 'choices'  => array(
                     'Sí' => 1,
                     'No' => 0,
-            ),"required"=>"required"))
+            ),"required"=>"required", "attr"=>array("class"=>"from-name form-control")))
             ->add('Guardar',SubmitType::class,array("attr"=>array("class"=>"from-submit btn btn-primary")))
         ;
     }
