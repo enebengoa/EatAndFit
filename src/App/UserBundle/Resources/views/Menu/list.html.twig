@@ -307,7 +307,7 @@
                         success: function(jqXHR) {
                             jQuery('#confirm-comision').modal('hide');
                             requestSend=false;
-                            $('#addConfirm').find('.modal-body').html(jqXHR.message);
+                            $('#addConfirm').find('.modal-body').html("El menú seleccionado ha sido añadido correctamente");
                             $('#addConfirm').find('.modal-title').html('Añadido')
                             $('#addConfirm').modal('show');
                             $("#addConfirm").modal();

@@ -313,16 +313,20 @@
     </script>
 
     <script>
+        var ei;
         $('#confirm-delete').on('show.bs.modal', function(e) {
+
+            ei=e;
+            });
             $(".btn-ok").click(function () {
                 $.ajax({
                     type: 'POST',
                     dataType: 'json',
-                    url: $(e.relatedTarget).data('href'),
-                    success: function(jqXHR) {
+                    url: $(ei.relatedTarget).data('href'),
+                    complete: function(jqXHR) {
                         $('#confirm-delete').modal('hide');
-                        $('#addConfirm').find('.modal-body').html(jqXHR.message);
-                        $('#addConfirm').find('.modal-title').html('Borrar')
+                        $('#addConfirm').find('.modal-body').html("El menu seleccionado ha sido eliminado");
+                        $('#addConfirm').find('.modal-title').html('Mensaje de confirmación')
                         $('#addConfirm').modal('show');
                         $("#addConfirm").modal();
 
@@ -332,7 +336,7 @@
                     }
                 });
             });
-        });
+        
     </script>
 
     <script>
